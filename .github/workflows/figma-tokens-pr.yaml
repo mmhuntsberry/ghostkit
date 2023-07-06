@@ -25,6 +25,6 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           author_name: Matthew Huntsberry
-          author_email: matt.huntsberry@hearst.com
+          author_email: mmhuntsberry@gmail.com
           message: "chore: style-dictionary output"
           add: "."
