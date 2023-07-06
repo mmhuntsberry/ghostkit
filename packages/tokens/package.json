@@ -4,7 +4,8 @@
   "description": "",
   "main": "build/css/global.css",
   "scripts": {
-    "build": "node build-tokens.js"
+    "build": "node build-tokens.js",
+    "pack": "npm pack"
   },
   "keywords": [],
   "author": "",
