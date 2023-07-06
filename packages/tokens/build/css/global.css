@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 06 Jul 2023 16:51:54 GMT
+ * Generated on Thu, 06 Jul 2023 18:47:47 GMT
  */
 
 :root {
@@ -98,7 +98,6 @@
   --gradient-overlay-darkop-shade: linear-gradient(90deg, #303030d9 0%, #30303000 100%);
   --gradient-overlay-light-bottom-shade: linear-gradient(90deg, #ffffff00 0%, #ffffffd9 100%);
   --gradient-overlay-lightop-shade: linear-gradient(90deg, #ffffffd9 0%, #ffffff00 100%);
-  --bg: https://images.unsplash.com/photo-1502680390469-be75c86b636f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80;
   --radii-base: 3px; /* the base for our radii tokens */
   --radii-xs: 1.5px;
   --radii-sm: 3px;
@@ -221,15 +220,15 @@
   --theme-success-muted: #11763d;
   --theme-success-emphasis: #18a957;
   --theme-success-on-success: #ffffff;
-  --theme-status-buttons-textbutton: #4f46e5;
-  --theme-status-buttons-primary: #e879f9;
-  --theme-status-buttons-primary-hover: #f0abfc;
-  --theme-status-buttons-primary-outline: #701a75;
-  --theme-status-buttons-success: #10b981;
-  --theme-status-buttons-success-hover: #a7f3d0;
-  --theme-status-buttons-success-outline: #064e3b;
-  --theme-status-buttons-warning: #e95c7b;
-  --theme-status-buttons-warning-hover: #f2a2b3;
+  --theme-status-textbutton: #4f46e5;
+  --theme-status-primary: #e879f9;
+  --theme-status-primary-hover: #f0abfc;
+  --theme-status-primary-outline: #701a75;
+  --theme-status-success: #10b981;
+  --theme-status-success-hover: #a7f3d0;
+  --theme-status-success-outline: #064e3b;
+  --theme-status-warning: #e95c7b;
+  --theme-status-warning-hover: #f2a2b3;
   --theme-input-background: #ffffff;
   --theme-input-text: #424242;
   --theme-input-placeholder: #9e9e9e;
