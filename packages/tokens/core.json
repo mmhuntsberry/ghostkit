@@ -921,7 +921,11 @@
           "type": "color"
         }
       },
+<<<<<<< HEAD
       "status": {
+=======
+      "statusButtons": {
+>>>>>>> 2af00a6 (chore: add react storybook and sd transforms)
         "textbutton": {
           "value": "{colors.indigo.600}",
           "type": "color"
