@@ -560,6 +560,11 @@
       "xl": {
         "value": "64",
         "type": "sizing"
+      },
+      "test": {
+        "value": "1000px",
+        "type": "sizing",
+        "description": "I am a test and should be deleted.\n\n-Matt"
       }
     }
   },
