@@ -1,19 +1,18 @@
 name: Process Figma Tokens PR
 
-on: pull_request
+on:
+  pull_request:
+    branches:
+      - "figma-tokens"
 
 jobs:
-  run_if: # only if base branch is "figma-tokens"
+  run_if:
     if: ${{ github.head_ref == 'figma-tokens' }}
     name: Process Figma Tokens
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      # checkout to the head of this PR
-      - uses: actions/checkout@master
-        with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/checkout@v2
 
       - name: Install Dependencies
         run: npm install
@@ -21,16 +20,20 @@ jobs:
       - name: Run style-dictionary
         run: npx nx build tokens
 
-      - name: Bump patch version
+      - name: Bump patch version and generate changelog
         run: |
           cd packages/tokens
+          npm install -g standard-version
           npm version patch --no-git-tag-version
-          cd $GITHUB_WORKSPACE
+          standard-version --skip.tag
 
-      - name: Commit changes
+      - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
         with:
           author_name: Matthew Huntsberry
           author_email: mmhuntsberry@gmail.com
           message: "chore: style-dictionary output"
           add: "."
+
+      - name: Push tags
+        run: git push origin --tags
