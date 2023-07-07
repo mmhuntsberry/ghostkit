@@ -21,7 +21,7 @@ jobs:
       - name: Run style-dictionary
         run: npx nx build tokens
 
-      - name: Bump version and update package
+      - name: Bump patch version
         run: |
           cd package/tokens
           npm version patch --no-git-tag-version
