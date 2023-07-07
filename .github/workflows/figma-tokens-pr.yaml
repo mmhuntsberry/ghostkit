@@ -25,7 +25,7 @@ jobs:
           cd packages/tokens
           npm install -g standard-version
           npm version patch --no-git-tag-version
-          standard-version --skip.tag
+          standard-version --skip.tag --infile CHANGELOG.md
 
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
