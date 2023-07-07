@@ -23,7 +23,7 @@ jobs:
 
       - name: Bump patch version
         run: |
-          cd package/tokens
+          cd packages/tokens
           npm version patch --no-git-tag-version
           cd $GITHUB_WORKSPACE
 
