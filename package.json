@@ -1,6 +1,6 @@
 {
   "name": "ghostkit",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "storybook": "npx nx run components:storybook"
