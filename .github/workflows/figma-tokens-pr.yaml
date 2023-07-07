@@ -21,6 +21,9 @@ jobs:
       - name: Run style-dictionary
         run: npx nx build tokens
 
+      - name: Update Patch version
+        run: npx nx run tokens:version --releaseAs=patch --preid=alpha
+
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
