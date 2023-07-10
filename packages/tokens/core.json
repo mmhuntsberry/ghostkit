@@ -560,6 +560,10 @@
       "xl": {
         "value": "64",
         "type": "sizing"
+      },
+      "xxl": {
+        "value": "128",
+        "type": "sizing"
       }
     }
   },
