@@ -20,6 +20,11 @@ jobs:
       - name: Run style-dictionary
         run: npx nx build tokens
 
+      - name: Run who am i
+        run: |
+          git config --global user.email "mmhuntsberry@gmail.com"
+          git config --global user.name "mmhuntsberry"
+
       - name: Bump patch version and generate changelog
         run: |
           cd packages/tokens
