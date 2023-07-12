@@ -1,9 +1,6 @@
 name: Figma Tokens Sync
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     types:
       - closed
@@ -24,15 +21,7 @@ jobs:
       - name: Check branch name
         id: check_branch
         run: |
-          if [[ "${{ github.ref }}" != "refs/heads/main" ]]; then
-            echo "This workflow only runs for the main branch. Exiting..."
-            exit 1
-          fi
-
-      - name: Check if pull request is from figma-tokens branch
-        id: check_pr_branch
-        run: |
-          if [[ "${{ github.event.pull_request.base.ref }}" != "figma-tokens" ]]; then
+          if [[ "${{ github.head_ref }}" != "figma-tokens" ]]; then
             echo "This workflow only runs for pull requests from the figma-tokens branch. Exiting..."
             exit 1
           fi
