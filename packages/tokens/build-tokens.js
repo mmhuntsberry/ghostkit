@@ -17,6 +17,17 @@ StyleDictionary.registerTransform({
 });
 
 StyleDictionary.registerTransform({
+  name: "toolkit/spacing/px",
+  type: "value",
+  matcher: function (token) {
+    return token.attributes.category === "spacing";
+  },
+  transformer: function (token) {
+    return token.original.value + "px";
+  },
+});
+
+StyleDictionary.registerTransform({
   name: "toolkit/fontSize/rem",
   type: "value",
   matcher: function (token) {
@@ -28,7 +39,7 @@ StyleDictionary.registerTransform({
 });
 
 const sd = StyleDictionary.extend({
-  source: ["*.json"],
+  source: ["core.json"],
   platforms: {
     css: {
       transforms: [
@@ -47,6 +58,7 @@ const sd = StyleDictionary.extend({
         "ts/color/modifiers",
         "name/cti/kebab",
         "toolkit/radii/px",
+        "toolkit/spacing/px",
         "toolkit/fontSize/rem",
       ],
       buildPath: "build/css/",
