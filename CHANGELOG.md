@@ -2,9 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### 0.0.6 (2023-07-12)
-
-### 0.0.4 (2023-07-07)
+### 0.0.1 (2023-07-07)
 
 
 ### Features
@@ -24,12 +22,3 @@ All notable changes to this project will be documented in this file. See [standa
 * remove project.json file ([7c2f6cd](https://github.com/mmhuntsberry/ghostkit/commit/7c2f6cd9da3de2e0f1469aa673065d1b81f23865))
 * this token doesn't belong ([0a470e4](https://github.com/mmhuntsberry/ghostkit/commit/0a470e441782925a2a6bbca2980aaa69b08a7d93))
 * type ([72d7345](https://github.com/mmhuntsberry/ghostkit/commit/72d7345a4d152082f3552696b441c053bf9a3749))
-
-### [0.0.2](https://github.com/mmhuntsberry/ghostkit/compare/tokens@0.0.1...tokens@0.0.2) (2023-07-06)
-
-### 0.0.1 (2023-07-06)
-
-
-### Features
-
-* add npmignore and pack script ([43e6b1e](https://github.com/mmhuntsberry/ghostkit/commit/43e6b1e8367be7517ab4743291f4836df839a006))

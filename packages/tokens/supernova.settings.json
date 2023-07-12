@@ -1,0 +1,20 @@
+{
+  "mode": "single-file",
+  "mapping": [
+    {
+      "tokenSets": [
+        "base/colors",
+        "base/dimension",
+        "base/radii",
+        "base/shadows",
+        "base/typography"
+      ],
+      "supernovaBrand": "Default"
+    }
+  ],
+  "settings": {
+    "dryRun": false,
+    "verbose": false,
+    "preciseCopy": false
+  }
+}
