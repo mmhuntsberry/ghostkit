@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Jul 2023 16:24:26 GMT
+ * Generated on Wed, 12 Jul 2023 16:48:26 GMT
  */
 
 :root {
@@ -130,16 +130,16 @@
   --sizing-lg: 48px;
   --sizing-xl: 64px;
   --sizing-base: 16px;
-  --spacing-lg: 16;
-  --spacing-md: 12;
-  --spacing-sm: 8;
-  --spacing-xl: 20;
-  --spacing-xs: 4; /* The base token for spacing */
-  --spacing-2xl: 24;
-  --spacing-3xl: 32;
-  --spacing-4xl: 64;
-  --spacing-xxs: 2;
-  --spacing-base: 4;
+  --spacing-lg: 16px;
+  --spacing-md: 12px;
+  --spacing-sm: 8px;
+  --spacing-xl: 20px;
+  --spacing-xs: 4px; /* The base token for spacing */
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  --spacing-4xl: 64px;
+  --spacing-xxs: 2px;
+  --spacing-base: 4px;
   --font-size-base: 16;
   --font-size-scale: 1.2;
   --font-size-xs: 11;
