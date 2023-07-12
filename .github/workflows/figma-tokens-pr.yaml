@@ -1,9 +1,6 @@
 name: Process Figma Tokens PR
 
-on:
-  pull_request:
-    branches:
-      - "figma-tokens"
+on: pull_request
 
 jobs:
   run_if:
@@ -12,7 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Install Dependencies
         run: npm install
