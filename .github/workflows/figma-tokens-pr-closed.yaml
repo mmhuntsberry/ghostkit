@@ -51,7 +51,7 @@ jobs:
       - name: Build packages
         run: |
           npx nx run @mmhuntsberry/tokens:pack
-      - run: cd packages/tokens/dist
-      - run: npm publish
+          cd packages/tokens/dist
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GH_PACKAGE_TOKEN}}
