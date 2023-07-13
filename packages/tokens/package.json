@@ -19,7 +19,10 @@
 >>>>>>> cae4bd7 (chore(release): 0.0.1)
   "description": "",
   "main": "build/css/index.css",
+<<<<<<< HEAD
   "type": "commonjs",
+=======
+>>>>>>> eb1e33e (chore: resolve conflicts)
   "scripts": {
     "build": "node build-tokens.js",
     "pack": "mkdir -p dist && npm pack && mv *.tgz dist/ && cd dist",
