@@ -28,13 +28,13 @@ StyleDictionary.registerTransform({
 });
 
 StyleDictionary.registerTransform({
-  name: "toolkit/fontSize/rem",
+  name: "toolkit/fontSize/px",
   type: "value",
   matcher: function (token) {
     return token.attributes.category === "fontSize";
   },
   transformer: function (token) {
-    return token.original.value;
+    return token.original.value + "px";
   },
 });
 
@@ -59,7 +59,7 @@ const sd = StyleDictionary.extend({
         "name/cti/kebab",
         "toolkit/radii/px",
         "toolkit/spacing/px",
-        "toolkit/fontSize/rem",
+        "toolkit/fontSize/px",
       ],
       buildPath: "build/css/",
       files: [
