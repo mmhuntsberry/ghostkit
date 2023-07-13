@@ -523,9 +523,8 @@
         "value": "16"
       },
       "test": {
-        "value": "144px",
-        "type": "sizing",
-        "description": "I am only a test and should be deleted"
+        "value": "144",
+        "type": "sizing"
       }
     },
     "spacing": {
