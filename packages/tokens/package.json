@@ -1,11 +1,13 @@
 {
   "name": "tokens",
-  "version": "0.0.14",
+  "version": "0.0.0-semantic-release",
   "description": "",
   "main": "build/css/index.css",
+  "type": "commonjs",
   "scripts": {
     "build": "node build-tokens.js",
-    "pack": "npm pack"
+    "pack": "npm pack",
+    "release": "semantic-release"
   },
   "repository": {
     "type": "git",
