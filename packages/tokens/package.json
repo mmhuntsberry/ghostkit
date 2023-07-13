@@ -2,6 +2,7 @@
   "name": "tokens",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "0.0.16",
 =======
   "version": "0.0.0-semantic-release",
@@ -9,6 +10,9 @@
 =======
   "version": "0.0.0",
 >>>>>>> 4ca439e (chore: remove all semantic version plus)
+=======
+  "version": "0.0.1",
+>>>>>>> cae4bd7 (chore(release): 0.0.1)
   "description": "",
   "main": "build/css/index.css",
   "type": "commonjs",
