@@ -35,7 +35,7 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: cd package/tokens/dist
+      - run: cd packages/tokens/dist
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GH_PAT_PR}}
