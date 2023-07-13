@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "build": "node build-tokens.js",
-    "pack": "npm pack",
+    "pack": "mkdir -p dist && npm pack && mv *.tgz dist/ && cd dist",
     "release": "semantic-release"
   },
   "repository": {
