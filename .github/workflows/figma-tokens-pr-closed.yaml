@@ -50,7 +50,7 @@ jobs:
       - run: npm ci
       - name: Build packages
         run: |
-          npx nx run tokens:pack
+          npx nx run @mmhuntsberry/tokens:pack
       - run: cd packages/tokens/dist
       - run: npm publish
         env:

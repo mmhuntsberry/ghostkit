@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.5 (2023-07-13)
+
+
+### Bug Fixes
+
+* build command ([138d5b8](https://github.com/mmhuntsberry/ghostkit/commit/138d5b88bfa24031d34e93bc220dc0bdb69fd425))
+
 ### 0.0.3 (2023-07-13)
 
 ### 0.0.1 (2023-07-13)
