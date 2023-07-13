@@ -1,28 +1,6 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "name": "tokens",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "version": "0.0.16",
-=======
-  "version": "0.0.0-semantic-release",
->>>>>>> 1eedd81 (feat: add release workflow with semantic release)
-=======
-  "version": "0.0.0",
->>>>>>> 4ca439e (chore: remove all semantic version plus)
-=======
-=======
-=======
->>>>>>> e00f61c (chore: blow it away)
-=======
->>>>>>> 103cefa (chore: resolve conflict)
   "name": "@mmhuntsberry/tokens",
->>>>>>> 28cf33f (chore: comment out workflow to test)
   "version": "0.0.1",
->>>>>>> cae4bd7 (chore(release): 0.0.1)
   "description": "",
   "main": "build/css/index.css",
   "type": "commonjs",

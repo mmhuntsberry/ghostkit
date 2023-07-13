@@ -1,40 +1,5 @@
 # name: Node.js Package
 
-<<<<<<< HEAD
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    types:
-      - closed
-
-env:
-  HUSKY: 0
-
-jobs:
-  main:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ${{ github.workspace }}
-    strategy:
-      matrix:
-        node-version: [16]
-        npm-version: [8]
-        yarn-version: ["1.22.x"]
-        pnpm-version: [7]
-    steps:
-      # ... (existing steps omitted for brevity)
-
-      - name: Release
-        if: ${{ github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true) }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT_PR }}
-          NPM_TOKEN: ${{ secrets.GH_PAT_PR }}
-        run: |
-          npx nx affected --target release --projects=tokens
-=======
 # on:
 #   push:
 #     branches:
@@ -62,4 +27,3 @@ jobs:
 #       - run: npm publish
 #         env:
 #           NODE_AUTH_TOKEN: ${{secrets.GH_PAT_PR}}
->>>>>>> 6f7f235 (chore: resolve merge conflicts)
