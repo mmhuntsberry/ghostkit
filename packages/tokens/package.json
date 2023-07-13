@@ -1,6 +1,7 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "tokens",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,20 +17,18 @@
 =======
 =======
 >>>>>>> e00f61c (chore: blow it away)
+=======
+>>>>>>> 103cefa (chore: resolve conflict)
   "name": "@mmhuntsberry/tokens",
 >>>>>>> 28cf33f (chore: comment out workflow to test)
   "version": "0.0.1",
 >>>>>>> cae4bd7 (chore(release): 0.0.1)
   "description": "",
   "main": "build/css/index.css",
-<<<<<<< HEAD
   "type": "commonjs",
-=======
->>>>>>> eb1e33e (chore: resolve conflicts)
   "scripts": {
     "build": "node build-tokens.js",
-    "pack": "mkdir -p dist && npm pack && mv *.tgz dist/ && cd dist",
-    "release": "semantic-release"
+    "pack": "mkdir -p dist && npm pack && mv *.tgz dist/ && cd dist"
   },
   "repository": {
     "type": "git",
@@ -38,25 +37,6 @@
   },
   "publishConfig": {
     "@mmhuntsberry:registry": "https://npm.pkg.github.com/"
-=======
-  "name": "tokens",
-  "version": "0.0.0",
-  "description": "",
-  "main": "build/css/index.css",
-  "type": "commonjs",
-  "scripts": {
-    "build": "node build-tokens.js",
-    "pack": "npm pack",
-    "release": "semantic-release"
->>>>>>> 92163d7 (chore: resolve conflicts)
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mmhuntsberry/ghostkit.git",
-    "directory": "packages/tokens"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [],
   "author": "",
