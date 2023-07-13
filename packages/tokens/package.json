@@ -1,10 +1,14 @@
 {
   "name": "tokens",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "0.0.16",
 =======
   "version": "0.0.0-semantic-release",
 >>>>>>> 1eedd81 (feat: add release workflow with semantic release)
+=======
+  "version": "0.0.0",
+>>>>>>> 4ca439e (chore: remove all semantic version plus)
   "description": "",
   "main": "build/css/index.css",
   "type": "commonjs",
