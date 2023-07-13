@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import "@ghostkit/tokens";
+import "@mmhuntsberry/tokens";
 
 type ButtonProps = {
   variant: "primary" | "secondary" | "tertiary";
