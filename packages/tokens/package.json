@@ -2,7 +2,7 @@
   "name": "tokens",
   "version": "0.0.16",
   "description": "",
-  "main": "build/css/global.css",
+  "main": "build/css/index.css",
   "scripts": {
     "build": "node build-tokens.js",
     "pack": "npm pack"
