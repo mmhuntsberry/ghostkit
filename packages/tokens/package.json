@@ -40,7 +40,7 @@
     "@mmhuntsberry:registry": "https://npm.pkg.github.com/"
 =======
   "name": "tokens",
-  "version": "0.0.0-semantic-release",
+  "version": "0.0.0",
   "description": "",
   "main": "build/css/index.css",
   "type": "commonjs",
