@@ -14,20 +14,19 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ${{ github.workspace }}
-    strategy:
-      matrix:
-        node-version: [16]
-        npm-version: [8]
-        yarn-version: ["1.22.x"]
-        pnpm-version: [7]
     steps:
-      # ... (existing steps omitted for brevity)
+      - uses: actions/checkout@master
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Install Dependencies
         run: npm install
+
+      - name: Run who am i
+        run: |
+          git config --global user.email "mmhuntsberry@gmail.com"
+          git config --global user.name "mmhuntsberry"
 
       - name: Release
         if: ${{ github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true) }}
