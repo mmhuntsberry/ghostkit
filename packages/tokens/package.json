@@ -36,6 +36,14 @@
   "publishConfig": {
     "@mmhuntsberry:registry": "https://npm.pkg.github.com/"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmhuntsberry/ghostkit.git",
+    "directory": "packages/tokens"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
