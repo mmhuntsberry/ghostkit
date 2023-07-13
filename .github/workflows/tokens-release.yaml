@@ -20,7 +20,7 @@ jobs:
 
       - name: Build packages
         run: |
-          npx nx build tokens
+          npx nx run tokens:pack
 
   publish-gpr:
     needs: build
@@ -35,8 +35,7 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: cd package/tokens
-      - run: mkdir -p dist && npm pack && mv *.tgz dist/ && cd dist
+      - run: cd package/tokens/dist
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GH_PAT_PR}}
