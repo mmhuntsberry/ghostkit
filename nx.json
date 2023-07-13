@@ -1,4 +1,10 @@
 {
+  "projects": {
+    "tokens": {
+      "root": "packages/tokens",
+      "projectType": "library"
+    }
+  },
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx/tasks-runners/default",
