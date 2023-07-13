@@ -1,11 +1,17 @@
 {
   "name": "tokens",
+<<<<<<< HEAD
   "version": "0.0.16",
+=======
+  "version": "0.0.0-semantic-release",
+>>>>>>> 1eedd81 (feat: add release workflow with semantic release)
   "description": "",
   "main": "build/css/index.css",
+  "type": "commonjs",
   "scripts": {
     "build": "node build-tokens.js",
-    "pack": "npm pack"
+    "pack": "npm pack",
+    "release": "semantic-release"
   },
   "repository": {
     "type": "git",

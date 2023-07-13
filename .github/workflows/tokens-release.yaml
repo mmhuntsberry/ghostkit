@@ -31,7 +31,7 @@ jobs:
       - name: Release
         if: ${{ github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true) }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT_PR }}
+          NPM_TOKEN: ${{ secrets.GH_PAT_PR }}
         run: |
           npx nx affected --target release --projects=tokens

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
@@ -53,3 +54,5 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 * add npmignore and pack script ([43e6b1e](https://github.com/mmhuntsberry/ghostkit/commit/43e6b1e8367be7517ab4743291f4836df839a006))
+=======
+>>>>>>> 1eedd81 (feat: add release workflow with semantic release)
