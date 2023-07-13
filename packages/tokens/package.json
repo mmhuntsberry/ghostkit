@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "tokens",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,9 @@
   "version": "0.0.0",
 >>>>>>> 4ca439e (chore: remove all semantic version plus)
 =======
+=======
+  "name": "@mmhuntsberry/tokens",
+>>>>>>> 28cf33f (chore: comment out workflow to test)
   "version": "0.0.1",
 >>>>>>> cae4bd7 (chore(release): 0.0.1)
   "description": "",
@@ -23,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mmhuntsberry/ghostkit.git",
+    "url": "git@github.com:mmhuntsberry/ghostkit.git",
     "directory": "packages/tokens"
   },
   "publishConfig": {
