@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.16 (2023-07-13)
+
+
+### Bug Fixes
+
+* remove unneeded dimension ([ffb2366](https://github.com/mmhuntsberry/ghostkit/commit/ffb23663266db582d528843f852d1e202126ea2c))
+
 ### 0.0.14 (2023-07-12)
 
 
