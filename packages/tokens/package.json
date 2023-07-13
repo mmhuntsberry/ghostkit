@@ -27,7 +27,7 @@
     "directory": "packages/tokens"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "@mmhuntsberry:registry": "https://npm.pkg.github.com/"
   },
   "keywords": [],
   "author": "",
