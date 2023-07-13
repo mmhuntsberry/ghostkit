@@ -8,8 +8,8 @@ on:
     types:
       - closed
 
-env:
-  HUSKY: 0
+# env:
+#   HUSKY: 0
 
 jobs:
   main:
