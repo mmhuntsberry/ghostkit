@@ -18,7 +18,7 @@ jobs:
         run: npm install
 
       - name: Run style-dictionary
-        run: npx nx build tokens
+        run: npx nx build @mmhuntsberry/tokens
 
       - name: Run who am i
         run: |
