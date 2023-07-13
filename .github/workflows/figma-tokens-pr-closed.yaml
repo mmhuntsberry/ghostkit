@@ -54,4 +54,4 @@ jobs:
       - run: cd packages/tokens/dist
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GH_PAT_PR}}
+          NODE_AUTH_TOKEN: ${{secrets.GH_PACKAGE_TOKEN}}
