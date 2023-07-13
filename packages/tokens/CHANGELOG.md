@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cae4bd7 (chore(release): 0.0.1)
 # Changelog
@@ -103,3 +104,5 @@ All notable changes to this project will be documented in this file. See [standa
 - type ([72d7345](https://github.com/mmhuntsberry/ghostkit/commit/72d7345a4d152082f3552696b441c053bf9a3749))
 - update token values to fix descrepencies ([a9efee8](https://github.com/mmhuntsberry/ghostkit/commit/a9efee882325669a098b8d028b73a663df14ad58))
 >>>>>>> 0df1b66 (chore: resolve conflicts)
+=======
+>>>>>>> e00f61c (chore: blow it away)

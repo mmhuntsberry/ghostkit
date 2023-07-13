@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "tokens",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@
 >>>>>>> 4ca439e (chore: remove all semantic version plus)
 =======
 =======
+=======
+>>>>>>> e00f61c (chore: blow it away)
   "name": "@mmhuntsberry/tokens",
 >>>>>>> 28cf33f (chore: comment out workflow to test)
   "version": "0.0.1",
@@ -35,6 +38,17 @@
   },
   "publishConfig": {
     "@mmhuntsberry:registry": "https://npm.pkg.github.com/"
+=======
+  "name": "tokens",
+  "version": "0.0.0-semantic-release",
+  "description": "",
+  "main": "build/css/index.css",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node build-tokens.js",
+    "pack": "npm pack",
+    "release": "semantic-release"
+>>>>>>> 92163d7 (chore: resolve conflicts)
   },
   "repository": {
     "type": "git",
