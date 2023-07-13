@@ -2,10 +2,18 @@
   "name": "tokens",
   "version": "0.0.14",
   "description": "",
-  "main": "build/css/global.css",
+  "main": "build/css/index.css",
   "scripts": {
     "build": "node build-tokens.js",
     "pack": "npm pack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmhuntsberry/ghostkit.git",
+    "directory": "packages/tokens"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [],
   "author": "",
