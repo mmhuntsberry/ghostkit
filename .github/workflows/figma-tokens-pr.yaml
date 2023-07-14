@@ -1,48 +1,3 @@
-# name: Process Figma Tokens PR
-
-# on: pull_request
-
-# jobs:
-#   run_if:
-#     if: ${{ github.head_ref == 'figma-tokens' }}
-#     name: Process Figma Tokens
-#     runs-on: ubuntu-latest
-#     timeout-minutes: 5
-#     steps:
-#       - uses: actions/checkout@master
-#         with:
-#           repository: ${{ github.event.pull_request.head.repo.full_name }}
-#           ref: ${{ github.event.pull_request.head.ref }}
-
-#       - name: Install Dependencies
-#         run: npm install
-
-#       - name: Run style-dictionary
-#         run: npx nx build @mmhuntsberry/tokens
-
-#       - name: Run who am i
-#         run: |
-#           git config --global user.email "mmhuntsberry@gmail.com"
-#           git config --global user.name "mmhuntsberry"
-
-#       - name: Bump patch version and generate changelog
-#         run: |
-#           cd packages/tokens
-#           npm install -g standard-version
-#           npm version patch --no-git-tag-version
-#           standard-version --skip.tag --infile CHANGELOG.md
-
-#       - name: Commit and push changes
-#         uses: EndBug/add-and-commit@v9
-#         with:
-#           author_name: Matthew Huntsberry
-#           author_email: mmhuntsberry@gmail.com
-#           message: "chore: style-dictionary output"
-#           add: "."
-
-#       - name: Push tags
-#         run: git push origin --tags
-
 name: Process Figma Tokens PR
 
 on: pull_request
@@ -54,10 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.ref }}
+
       - name: Install Dependencies
         run: npm install
 
@@ -69,29 +25,27 @@ jobs:
           git config --global user.email "mmhuntsberry@gmail.com"
           git config --global user.name "mmhuntsberry"
 
-      - name: Bump version and generate changelog
+      - name: Bump patch version and generate changelog
+        id: version
         run: |
           cd packages/tokens
           npm install -g standard-version
-          npx standard-version --skip.tag --infile CHANGELOG.md --release-as ${{ matrix.version }}
-          export TAG=$(git describe --abbrev=0 --tags)
+          export VERSION=$(npm version patch --no-git-tag-version)
+          standard-version --skip.tag --infile CHANGELOG.md
 
       - name: Commit and push changes
-        run: |
-          git commit -am "chore: style-dictionary output"
-          git push origin HEAD:${{ github.ref }}
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: Matthew Huntsberry
+          author_email: mmhuntsberry@gmail.com
+          message: "chore: style-dictionary output (version ${{ env.VERSION }})"
+          add: "."
 
-      - name: Create and push tag
-        run: |
-          git tag $TAG
-          git push origin $TAG
-
-      - name: Create release
+      - name: Create Release
         uses: actions/create-release@v1
         with:
-          tag_name: $TAG
-          release_name: Release $TAG
+          tag_name: ${{ env.VERSION }}
+          release_name: Release ${{ env.VERSION }}
           body: |
-            Release $TAG
-          draft: false
-          prerelease: false
+            Changelog:
+            $(cat packages/tokens/CHANGELOG.md)
