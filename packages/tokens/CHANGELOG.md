@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.15 (2023-07-14)
+
+
+### Bug Fixes
+
+* broken font file path ([b7a9622](https://github.com/mmhuntsberry/ghostkit/commit/b7a96226f0e5e43119b9aee55ff6873de26404c7))
+
 ### 0.0.13 (2023-07-14)
 
 ### 0.0.11 (2023-07-13)
