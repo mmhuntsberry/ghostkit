@@ -3,16 +3,17 @@
   font-weight: 400 700;
   font-display: swap;
   font-style: oblique 0deg 10deg;
-  src: url("../../fonts/Inter.otf") format("woff2");
+  /* src: url("./fonts/Inter.otf") format("woff2"); */
+  src: url("../fonts/Inter.otf") format("woff2");
 }
 
 @font-face {
   font-family: "Tiempos Headline";
-  src: url("../../fonts/tiempos-headline-web-medium.eot"); /* IE9 Compat Modes */
-  src: url("../../fonts/tiempos-headline-web-medium.eot?#iefix")
+  src: url("../fonts/tiempos-headline-web-medium.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/tiempos-headline-web-medium.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("../../fonts/tiempos-headline-web-medium.woff2")
+    /* IE6-IE8 */ url("../fonts/tiempos-headline-web-medium.woff2")
       format("woff2"),
-    /* Super Modern Browsers */
-      url("../../fonts/tiempos-headline-web-medium.woff") format("woff"); /* Pretty Modern Browsers */
+    /* Super Modern Browsers */ url("../fonts/tiempos-headline-web-medium.woff")
+      format("woff"); /* Pretty Modern Browsers */
 }
