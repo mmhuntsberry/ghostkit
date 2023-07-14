@@ -522,9 +522,10 @@
         "type": "sizing",
         "value": "16"
       },
-      "test": {
-        "value": "144",
-        "type": "sizing"
+      "big": {
+        "value": "196px",
+        "type": "sizing",
+        "description": "Really really big!!!! Just a test.  Should be deleted."
       }
     },
     "spacing": {
