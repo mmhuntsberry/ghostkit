@@ -57,5 +57,5 @@ jobs:
           draft: false
           prerelease: false
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT_PR }}
+          GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
       # Additional steps as needed
