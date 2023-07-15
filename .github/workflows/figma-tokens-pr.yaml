@@ -47,23 +47,26 @@ jobs:
           git push origin ${{ env.VERSION }}
 
       - name: Create Release
-        uses: actions/github-script@v5
-        with:
-          script: |
+        run: |
+          npm install --save @octokit/rest
+          node -e '
             const { Octokit } = require("@octokit/rest");
             const octokit = new Octokit({ auth: process.env.GH_PACKAGE_TOKEN });
-
+            
             const { data: release } = await octokit.repos.createRelease({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
+              owner: process.env.GITHUB_REPOSITORY_OWNER,
+              repo: process.env.GITHUB_REPOSITORY,
               tag_name: process.env.VERSION,
               name: "Release " + process.env.VERSION,
-              body: "Changelog:\n" + execSync("git log $(git describe --tags --abbrev=0)..HEAD --pretty=format:\"- %s%n\"").toString(),
+              body: "Changelog:\n" + require("child_process").execSync("git log $(git describe --tags --abbrev=0)..HEAD --pretty=format:\"- %s%n\"").toString(),
               draft: false,
               prerelease: false
             });
-
+            
             console.log("Release created:", release.html_url);
+          '
         env:
           GH_PACKAGE_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
           VERSION: ${{ env.VERSION }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
