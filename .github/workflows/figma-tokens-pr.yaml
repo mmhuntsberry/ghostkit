@@ -29,7 +29,7 @@ jobs:
         run: |
           cd packages/tokens
           npm install -g standard-version
-          export VERSION=$(npm version patch --no-git-tag-version)
+          export VERSION=$(npm version patch --no-git-tag-version | sed -e 's/^v//' )
           standard-version --skip.tag --infile CHANGELOG.md
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
