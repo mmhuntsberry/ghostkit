@@ -43,15 +43,10 @@ jobs:
         id: recent_commits
         run: |
           git log --pretty=format:"- %s (%h)" --no-merges -n 10 > recent_commits.txt
-          echo "::set-env name=RECENT_COMMITS::$(cat recent_commits.txt)"
 
-      - name: Commit and push changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: Matthew Huntsberry
-          author_email: mmhuntsberry@gmail.com
-          message: "chore: style-dictionary output (version ${{ env.VERSION }})"
-          add: "."
+      - name: Save Recent Commits to Environment File
+        run: |
+          echo "RECENT_COMMITS=$(cat recent_commits.txt)" >> $GITHUB_ENV
 
       - name: Create Tag and Release
         id: create_release
