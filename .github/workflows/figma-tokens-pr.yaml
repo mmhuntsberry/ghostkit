@@ -1,5 +1,4 @@
 name: Process Figma Tokens PR
-
 on: pull_request
 
 jobs:
@@ -41,20 +40,13 @@ jobs:
           message: "chore: style-dictionary output (version ${{ env.VERSION }})"
           add: "."
 
-      - name: Create Git tag
-        id: create_tag
-        run: |
-          git tag ${{ env.VERSION }}
-          git push origin ${{ env.VERSION }}
-
-      - name: Create Release
-        id: create_release
+      - name: Create Tag and Release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ steps.create_tag.outputs.tag }}
-          release_name: Release ${{ steps.create_tag.outputs.tag }}
+          tag_name: ${{ env.VERSION }}
+          release_name: Release ${{ env.VERSION }}
           body: |
             Changes in this Release
             - First Change
