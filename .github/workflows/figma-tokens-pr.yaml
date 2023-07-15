@@ -31,7 +31,7 @@ jobs:
           npm install -g standard-version
           npm version patch --no-git-tag-version
           awk -v version=$(awk -F \" '$2 == "version" {print $4}' package.json) '/^## \[v/ && $0 ~ version {p=1; print; next} p && /^## \[v/ {exit} p' CHANGELOG.md > changelog.tmp
-          echo "::set-env name=CHANGELOG::$(cat changelog.tmp)"
+          CHANGELOG=$(cat changelog.tmp)
 
       - name: extract version number
         run: |
@@ -47,6 +47,9 @@ jobs:
           author_email: mmhuntsberry@gmail.com
           message: "chore: style-dictionary output (version ${{ env.VERSION }})"
           add: "."
+
+      - name: Set Environment Variable
+        run: echo "CHANGELOG=$CHANGELOG" >> $GITHUB_ENV
 
       - name: Create Tag and Release
         id: create_release
