@@ -54,5 +54,6 @@ jobs:
           body: |
             Changelog:
             $(git log $(git describe --tags --abbrev=0)..HEAD --pretty=format:"- %s%n")
-
+          env:
+            GITHUB_TOKEN: ${{ secrets.GH_PAT_PR }}
       # Additional steps as needed
