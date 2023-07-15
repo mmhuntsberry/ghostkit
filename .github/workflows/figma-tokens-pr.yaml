@@ -29,9 +29,9 @@ jobs:
         run: |
           cd packages/tokens
           npm install -g standard-version
-          export VERSION=$(npm version patch --no-git-tag-version | sed -e 's/^v//' )
-          standard-version --skip.tag --infile CHANGELOG.md
+          export VERSION=$(npm version patch --no-git-tag-version)
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
+          standard-version --skip.tag --infile CHANGELOG.md
 
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
