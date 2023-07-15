@@ -30,8 +30,8 @@ jobs:
           cd packages/tokens
           npm install -g standard-version
           npm version patch --no-git-tag-version
-          CHANGELOG=$(npx standard-changelog --infile CHANGELOG.md --commit-path packages/tokens)
-          echo "$CHANGELOG" >> $GITHUB_ENV
+          awk -v version=$(awk -F \" '$2 == "version" {print $4}' package.json) '/^## \[v/ && $0 ~ version {p=1; print; next} p && /^## \[v/ {exit} p' CHANGELOG.md > changelog.tmp
+          echo "::set-env name=CHANGELOG::$(cat changelog.tmp)"
 
       - name: extract version number
         run: |
