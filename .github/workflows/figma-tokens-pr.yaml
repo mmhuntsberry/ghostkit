@@ -41,6 +41,11 @@ jobs:
           message: "chore: style-dictionary output (version ${{ env.VERSION }})"
           add: "."
 
+      - name: Create Git tag
+        run: |
+          git tag ${{ env.VERSION }}
+          git push origin ${{ env.VERSION }}
+
       - name: Create Release
         uses: actions/create-release@v1
         with:
@@ -48,6 +53,6 @@ jobs:
           release_name: Release ${{ env.VERSION }}
           body: |
             Changelog:
-            $(cat packages/tokens/CHANGELOG.md)
+            $(git log $(git describe --tags --abbrev=0)..HEAD --pretty=format:"- %s%n")
 
-# Test comment
+      # Additional steps as needed
