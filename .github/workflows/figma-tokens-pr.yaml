@@ -42,12 +42,13 @@ jobs:
           add: "."
 
       - name: Create Tag and Release
+        id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ steps.version.outputs.version_tag }}
-          release_name: Release ${{ steps.version.outputs.version_tag }}
+          release_name: ${{ steps.version.outputs.version_tag }}
           body: |
             Changes in this Release
             - First Change
