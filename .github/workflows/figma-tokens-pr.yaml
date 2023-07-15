@@ -31,6 +31,8 @@ jobs:
           npm install -g standard-version
           npm version patch --no-git-tag-version
           standard-version --skip.tag --infile CHANGELOG.md
+          CHANGELOG=$(standard-version --skip.tag --infile CHANGELOG.md)
+          echo "$CHANGELOG" >> $GITHUB_ENV
 
       - name: extract version number
         run: |
@@ -56,9 +58,6 @@ jobs:
         with:
           tag_name: ${{ env.VERSION }}
           release_name: ${{ env.VERSION }}
-          body: |
-            Changes in this Release
-            - First Change
-            - Second Change
+          body: ${{ env.CHANGELOG }}
           draft: false
           prerelease: false
