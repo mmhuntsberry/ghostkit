@@ -30,8 +30,7 @@ jobs:
           cd packages/tokens
           npm install -g standard-version
           npm version patch --no-git-tag-version
-          awk -v version=$(awk -F \" '$2 == "version" {print $4}' package.json) '/^## \[v/ && $0 ~ version {p=1; print; next} p && /^## \[v/ {exit} p' CHANGELOG.md > changelog.tmp
-          CHANGELOG=$(cat changelog.tmp)
+          standard-version --skip.tag --infile CHANGELOG.md
 
       - name: extract version number
         run: |
@@ -40,6 +39,12 @@ jobs:
           echo "VERSION=$BUILD_VERSION" >> $GITHUB_ENV
           echo ${{ env.VERSION }}
 
+      - name: Get Recent Commits
+        id: recent_commits
+        run: |
+          git log --pretty=format:"- %s (%h)" --no-merges -n 10 > recent_commits.txt
+          echo "::set-env name=RECENT_COMMITS::$(cat recent_commits.txt)"
+
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
         with:
@@ -47,9 +52,6 @@ jobs:
           author_email: mmhuntsberry@gmail.com
           message: "chore: style-dictionary output (version ${{ env.VERSION }})"
           add: "."
-
-      - name: Set Environment Variable
-        run: echo "CHANGELOG=$CHANGELOG" >> $GITHUB_ENV
 
       - name: Create Tag and Release
         id: create_release
@@ -60,6 +62,8 @@ jobs:
         with:
           tag_name: ${{ env.VERSION }}
           release_name: ${{ env.VERSION }}
-          body: ${{ env.CHANGELOG }}
+          body: |
+            Changes in this Release:
+            ${{ env.RECENT_COMMITS }}
           draft: false
           prerelease: false
