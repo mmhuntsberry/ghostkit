@@ -47,26 +47,16 @@ jobs:
           git push origin ${{ env.VERSION }}
 
       - name: Create Release
-        run: |
-          npm install --save @octokit/rest
-          node -e '
-            const { Octokit } = require("@octokit/rest");
-            const octokit = new Octokit({ auth: process.env.GH_PACKAGE_TOKEN });
-            
-            const { data: release } = await octokit.repos.createRelease({
-              owner: process.env.GITHUB_REPOSITORY_OWNER,
-              repo: process.env.GITHUB_REPOSITORY,
-              tag_name: process.env.VERSION,
-              name: "Release " + process.env.VERSION,
-              body: "Changelog:\n" + require("child_process").execSync("git log $(git describe --tags --abbrev=0)..HEAD --pretty=format:\"- %s%n\"").toString(),
-              draft: false,
-              prerelease: false
-            });
-            
-            console.log("Release created:", release.html_url);
-          '
+        id: create_release
+        uses: actions/create-release@v1
         env:
-          GH_PACKAGE_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
-          VERSION: ${{ env.VERSION }}
-          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            Changes in this Release
+            - First Change
+            - Second Change
+          draft: false
+          prerelease: false
