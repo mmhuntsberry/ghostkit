@@ -31,13 +31,14 @@ jobs:
           npm install -g standard-version
           export VERSION=$(npm version patch --no-git-tag-version)
           standard-version --skip.tag --infile CHANGELOG.md
+          echo "::set-output name=version_tag::${VERSION}"
 
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
         with:
           author_name: Matthew Huntsberry
           author_email: mmhuntsberry@gmail.com
-          message: "chore: style-dictionary output (version ${{ env.VERSION }})"
+          message: "chore: style-dictionary output (version ${{ steps.version.outputs.version_tag }})"
           add: "."
 
       - name: Create Tag and Release
@@ -45,8 +46,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ env.VERSION }}
-          release_name: Release ${{ env.VERSION }}
+          tag_name: ${{ steps.version.outputs.version_tag }}
+          release_name: Release ${{ steps.version.outputs.version_tag }}
           body: |
             Changes in this Release
             - First Change
