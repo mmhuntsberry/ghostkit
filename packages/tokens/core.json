@@ -521,11 +521,6 @@
       "base": {
         "type": "sizing",
         "value": "16"
-      },
-      "big": {
-        "value": "196px",
-        "type": "sizing",
-        "description": "Really really big!!!! Just a test.  Should be deleted."
       }
     },
     "spacing": {
