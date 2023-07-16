@@ -24,16 +24,13 @@ jobs:
           git config --global user.email "mmhuntsberry@gmail.com"
           git config --global user.name "mmhuntsberry"
 
-      # - name: Bump patch version and generate changelog
-      #   id: version
-      #   run: |
-      #     cd packages/tokens
-      #     npm install -g standard-version
-      #     npm version patch --no-git-tag-version
-      #     standard-version --skip.tag --infile CHANGELOG.md
-      - name: Bump Version and Generate Changelog
+      - name: Bump patch version and generate changelog
+        id: version
         run: |
-          npx release-please npm --token ${{ secrets.GITHUB_TOKEN }}
+          cd packages/tokens
+          npm install -g standard-version
+          npm version patch --no-git-tag-version
+          standard-version --skip.tag --infile CHANGELOG.md
 
       - name: extract version number
         run: |
