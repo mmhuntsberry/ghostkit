@@ -24,23 +24,20 @@ jobs:
           git config --global user.email "mmhuntsberry@gmail.com"
           git config --global user.name "mmhuntsberry"
 
-      # - name: Bump patch version and generate changelog
-      #   id: version
-      #   run: |
-      #     cd packages/tokens
-      #     npm install -g standard-version
-      #     npm version patch --no-git-tag-version
-      #     standard-version --skip.tag --infile CHANGELOG.md
-      - name: Bump Version and Generate Changelog
-        run: |
-          npx release-please npm --token ${{ secrets.GITHUB_TOKEN }}
-
-      - name: extract version number
+      - name: Bump patch version and generate changelog
+        id: version
         run: |
           cd packages/tokens
-          BUILD_VERSION=$(awk -F \" '$2 == "version" {print $4}' package.json)
-          echo "VERSION=$BUILD_VERSION" >> $GITHUB_ENV
-          echo ${{ env.VERSION }}
+          npm install -g standard-version
+          npm version patch --no-git-tag-version
+          standard-version --skip.tag --infile CHANGELOG.md
+
+      # - name: extract version number
+      #   run: |
+      #     cd packages/tokens
+      #     BUILD_VERSION=$(awk -F \" '$2 == "version" {print $4}' package.json)
+      #     echo "VERSION=$BUILD_VERSION" >> $GITHUB_ENV
+      #     echo ${{ env.VERSION }}
 
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
@@ -50,15 +47,15 @@ jobs:
           message: "chore: style-dictionary output (version ${{ env.VERSION }})"
           add: "."
 
-      - name: Create Tag and Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VERSION: ${{ env.VERSION }}
-        with:
-          tag_name: ${{ env.VERSION }}
-          release_name: ${{ env.VERSION }}
-          body: ${{ env.CHANGELOG }}
-          draft: false
-          prerelease: false
+      # - name: Create Tag and Release
+      #   id: create_release
+      #   uses: actions/create-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     VERSION: ${{ env.VERSION }}
+      #   with:
+      #     tag_name: ${{ env.VERSION }}
+      #     release_name: ${{ env.VERSION }}
+      #     body: ${{ env.CHANGELOG }}
+      #     draft: false
+      #     prerelease: false
