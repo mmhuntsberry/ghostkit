@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.52 (2023-07-16)
+
+
+### Bug Fixes
+
+* node version and remove release-please ([fc6bebd](https://github.com/mmhuntsberry/ghostkit/commit/fc6bebdedfe2d95037c3d06384ee9388a2eafe31))
+
 ### 0.0.47 (2023-07-15)
 
 - we really want this! ([8714fdf](https://github.com/mmhuntsberry/ghostkit/commit/8714fdf4a42f01543f701c1bb1407313e5854f29))
