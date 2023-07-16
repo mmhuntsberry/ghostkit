@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 16 Jul 2023 16:21:13 GMT
+ * Generated on Sun, 16 Jul 2023 16:27:32 GMT
  */
 
 :root {
@@ -130,7 +130,6 @@
   --sizing-lg: 48px;
   --sizing-xl: 64px;
   --sizing-base: 16px;
-  --sizing-big: 196px; /* Really really big!!!! Just a test.  Should be deleted. */
   --spacing-lg: 16px;
   --spacing-md: 12px;
   --spacing-sm: 8px;
