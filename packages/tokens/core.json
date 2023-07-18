@@ -521,6 +521,11 @@
       "base": {
         "type": "sizing",
         "value": "16"
+      },
+      "big": {
+        "value": "144px",
+        "type": "sizing",
+        "description": "I am a big token"
       }
     },
     "spacing": {
