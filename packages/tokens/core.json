@@ -526,6 +526,11 @@
         "value": "144px",
         "type": "sizing",
         "description": "I am a big token"
+      },
+      "test": {
+        "value": "196px",
+        "type": "sizing",
+        "description": "Let's create a test token to show how creation and integration works."
       }
     },
     "spacing": {
