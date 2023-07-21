@@ -10,5 +10,6 @@ export const Default = {
   args: {
     children: "Button Text",
     type: "primary",
+    disabled: false,
   },
 };

@@ -4,7 +4,8 @@ import "@mmhuntsberry/tokens";
 
 type ButtonProps = {
   variant: "primary" | "secondary" | "tertiary";
-  state?: "default" | "hover" | "focused" | "disabled";
+  disabled?: boolean;
+  // state?: "default" | "hover" | "focused" | "disabled";
   children?: React.ReactNode;
 };
 
@@ -14,7 +15,7 @@ const StyledButton = styled.button<ButtonProps>`
   }
   align-items: center;
   background: ${(props) =>
-    props.variant === "primary" && "var(--colors-fuchsia-500)"};
+    props.variant === "primary" && "var(--theme-accent-default)"};
   /* border: ${(props) =>
     props.variant === "primary" && `1px solid var(--theme-accent-default)`}; */
   border: none;
@@ -30,10 +31,30 @@ const StyledButton = styled.button<ButtonProps>`
   outline: none;
   padding: 12px;
   text-transform: uppercase;
+  transition: background 0.2s ease-in-out;
+
+  &:hover {
+    background: ${(props) =>
+      props.variant === "primary" && "var(--theme-accent-muted)"};
+  }
+
+  &:disabled {
+    background: var(--theme-accent-disabled);
+    color: var(--theme-fg-on-disabled);
+    cursor: not-allowed;
+  }
 `;
 
-const Button: React.FC<ButtonProps> = ({ children, variant = "primary" }) => {
-  return <StyledButton variant={variant}>{children}</StyledButton>;
+const Button: React.FC<ButtonProps> = ({
+  children,
+  disabled = false,
+  variant = "primary",
+}) => {
+  return (
+    <StyledButton disabled={disabled} variant={variant}>
+      {children}
+    </StyledButton>
+  );
 };
 
 export default Button;
