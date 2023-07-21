@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "storybook": "npx nx run components:storybook"
+    "storybook": "npx nx run components:storybook",
+    "build-storybook": "npx nx run components:build-storybook",
+    "chromatic": "npx chromatic"
   },
   "private": true,
   "devDependencies": {
@@ -31,6 +33,7 @@
     "@vitejs/plugin-react": "^4.0.0",
     "@vitest/ui": "^0.32.0",
     "babel-jest": "^29.4.1",
+    "chromatic": "^6.19.9",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-import": "2.27.5",
@@ -60,5 +63,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tslib": "^2.3.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "ghostkit@0.0.1"
 }
