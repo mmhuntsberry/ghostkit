@@ -19,6 +19,7 @@
     "@nx/react": "^16.5.0",
     "@nx/storybook": "^16.5.0",
     "@nx/vite": "16.5.0",
+    "@storybook/addon-docs": "^7.1.1",
     "@storybook/addon-essentials": "^7.0.24",
     "@storybook/core-common": "^7.0.24",
     "@storybook/core-server": "^7.0.24",

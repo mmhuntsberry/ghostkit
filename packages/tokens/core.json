@@ -730,7 +730,7 @@
         "value": "3"
       }
     },
-    "theme": {
+    "dark": {
       "bg": {
         "muted": {
           "type": "color",
@@ -874,7 +874,7 @@
       "border": {
         "default": {
           "type": "color",
-          "value": "{theme.bg.subtle}"
+          "value": "{dark.bg.subtle}"
         }
       },
       "shadow": {
@@ -984,7 +984,7 @@
         "value": "4"
       }
     },
-    "theme": {
+    "resin": {
       "bg": {
         "muted": {
           "type": "color",
@@ -1327,187 +1327,6 @@
       "headlines": {
         "type": "fontFamilies",
         "value": "Tiempos Headline"
-      }
-    }
-  },
-  "semantic/theme": {
-    "theme": {
-      "fg": {
-        "on-dark": {
-          "type": "color",
-          "value": "{colors.white}"
-        },
-        "opacity": {
-          "1": {
-            "type": "color",
-            "value": "rgba({theme.bg.surface}, 0.01)"
-          },
-          "5": {
-            "type": "color",
-            "value": "rgba({theme.bg.surface}, 0.05)"
-          },
-          "10": {
-            "type": "color",
-            "value": "rgba({theme.bg.surface}, 0.1)"
-          },
-          "20": {
-            "type": "color",
-            "value": "rgba({theme.bg.surface}, 0.2)"
-          },
-          "30": {
-            "type": "color",
-            "value": "rgba({theme.bg.surface}, 0.3)"
-          },
-          "40": {
-            "type": "color",
-            "value": "rgba({theme.bg.surface}, 0.4)"
-          },
-          "50": {
-            "type": "color",
-            "value": "rgba({theme.bg.surface}, 0.5)"
-          },
-          "60": {
-            "type": "color",
-            "value": "rgba({theme.bg.surface}, 0.6)"
-          },
-          "70": {
-            "type": "color",
-            "value": "rgba({theme.bg.surface}, 0.7)"
-          },
-          "80": {
-            "type": "color",
-            "value": "rgba({theme.bg.surface}, 0.8)"
-          },
-          "90": {
-            "type": "color",
-            "value": "rgba({theme.bg.surface}, 0.9)"
-          }
-        }
-      },
-      "shadow": {
-        "base": {
-          "type": "color",
-          "value": "rgba({theme.shadow.color}, {theme.shadow.opacity.base})"
-        },
-        "blur": {
-          "type": "color",
-          "value": "rgba({theme.shadow.color}, {theme.shadow.opacity.blur})"
-        }
-      },
-      "overlay": {
-        "bg": {
-          "type": "color",
-          "value": "{colors.black}"
-        }
-      }
-    },
-    "shadows": {
-      "theme": {
-        "20": {
-          "type": "boxShadow",
-          "value": [
-            {
-              "x": "0",
-              "y": "{shadows.y.20}",
-              "blur": "{shadows.blur.20}",
-              "type": "dropShadow",
-              "color": "{theme.shadow.blur}",
-              "spread": "0"
-            },
-            {
-              "x": "0",
-              "y": "0",
-              "blur": "{shadows.blur.base}",
-              "type": "dropShadow",
-              "color": "{theme.shadow.color}",
-              "spread": "0"
-            }
-          ]
-        },
-        "40": {
-          "type": "boxShadow",
-          "value": [
-            {
-              "x": "0",
-              "y": "{shadows.y.40}",
-              "blur": "{shadows.blur.40}",
-              "type": "dropShadow",
-              "color": "{theme.shadow.blur}",
-              "spread": "0"
-            },
-            {
-              "x": "0",
-              "y": "0",
-              "blur": "{shadows.blur.base}",
-              "type": "dropShadow",
-              "color": "{theme.shadow.color}",
-              "spread": "0"
-            }
-          ]
-        },
-        "60": {
-          "type": "boxShadow",
-          "value": [
-            {
-              "x": "0",
-              "y": "{shadows.y.60}",
-              "blur": "{shadows.blur.60}",
-              "type": "dropShadow",
-              "color": "{theme.shadow.blur}",
-              "spread": "0"
-            },
-            {
-              "x": "0",
-              "y": "0",
-              "blur": "{shadows.blur.base}",
-              "type": "dropShadow",
-              "color": "{theme.shadow.color}",
-              "spread": "0"
-            }
-          ]
-        },
-        "80": {
-          "type": "boxShadow",
-          "value": [
-            {
-              "x": "0",
-              "y": "{shadows.y.80}",
-              "blur": "{shadows.blur.80}",
-              "type": "dropShadow",
-              "color": "{theme.shadow.blur}",
-              "spread": "0"
-            },
-            {
-              "x": "0",
-              "y": "0",
-              "blur": "{shadows.blur.base}",
-              "type": "dropShadow",
-              "color": "{theme.shadow.color}",
-              "spread": "0"
-            }
-          ]
-        },
-        "100": {
-          "type": "boxShadow",
-          "value": [
-            {
-              "x": "0",
-              "y": "{shadows.y.100}",
-              "blur": "{shadows.blur.100}",
-              "type": "dropShadow",
-              "color": "{theme.shadow.blur}",
-              "spread": "0"
-            },
-            {
-              "x": "0",
-              "y": "0",
-              "blur": "{shadows.blur.base}",
-              "type": "dropShadow",
-              "color": "{theme.shadow.color}",
-              "spread": "0"
-            }
-          ]
-        }
       }
     }
   },
@@ -2109,7 +1928,6 @@
         "base/colors": "source",
         "base/shadows": "source",
         "base/dimension": "source",
-        "semantic/theme": "enabled",
         "base/typography": "source",
         "semantic/typography": "enabled"
       },
@@ -2123,7 +1941,6 @@
         "base/colors": "source",
         "base/shadows": "source",
         "base/dimension": "source",
-        "semantic/theme": "enabled",
         "base/typography": "source",
         "semantic/typography": "enabled"
       },
@@ -2138,7 +1955,6 @@
         "themes/dark": "enabled",
         "base/shadows": "source",
         "base/dimension": "source",
-        "semantic/theme": "enabled",
         "base/typography": "source",
         "semantic/typography": "enabled"
       },
@@ -2154,7 +1970,6 @@
       "base/typography",
       "themes/dark",
       "themes/resin",
-      "semantic/theme",
       "semantic/typography"
     ]
   }

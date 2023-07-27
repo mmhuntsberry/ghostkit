@@ -1,0 +1,65 @@
+import {
+  ArgsTable,
+  ArgTypes,
+  Story,
+  Canvas,
+  Description,
+  Meta,
+  Unstyled,
+  Controls,
+} from "@storybook/blocks";
+import Button from "./Button.tsx";
+import * as ButtonStories from "./Button.stories.tsx";
+
+<Meta of={ButtonStories} title="Buttons" />
+
+<Unstyled>
+<h1 class="headline--1">Button</h1>
+
+- [Overview](#overview)
+- [Props](#props)
+- [Variants](#variants)
+- [Usage](#usage)
+
+<h2 id="overview" class="headline--2">
+  Overview
+</h2>
+
+---
+
+<p class="documentation__body">
+  The Button component is used to trigger an action or event, such as submitting
+  a form, opening a dialog, canceling an action, or performing a delete
+  operation. Buttons communicate actions that users can take.
+</p>
+
+<Canvas>
+  <Story of={ButtonStories} name="Primary" />
+</Canvas>
+
+<h2 id="props" class="headline--2">
+  Props
+</h2>
+
+---
+
+<ArgTypes of={ButtonStories.Primary} exclude={["theme"]} />
+
+<h2 id="variants" class="headline--2">
+  Variants
+</h2>
+
+---
+
+<h3 class="headline--3">Button kinds</h3>
+
+<Canvas name="Kinds">
+  <Story of={ButtonStories.Kinds}></Story>
+</Canvas>
+
+<h3 class="headline--3">Disabled</h3>
+
+<Canvas name="Disabled">
+  <Story of={ButtonStories.Disabled}></Story>
+</Canvas>
+</Unstyled>

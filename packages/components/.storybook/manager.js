@@ -1,0 +1,26 @@
+// import "@storybook/addon-docs/register";
+// import "@storybook/addon-interactions/register";
+// import "@storybook/addon-actions/register";
+// import "@storybook/addon-links/register";
+import { create } from "@storybook/theming";
+import { addons } from "@storybook/addons";
+import logo from "./Logo/resin_black.svg";
+
+window.STORYBOOK_GA_ID = "UA-308574295";
+window.STORYBOOK_REACT_GA_OPTIONS = {};
+
+const theme = create({
+  base: "light",
+  brandImage: logo,
+  brandUrl: "",
+  barSelectedColor: "#3d53f5",
+  brandTitle: "Resin Design",
+  background: {
+    hoverable: "rgba(#3d53f5, 0.1)",
+  },
+  hoverable: "rgba(#3d53f5, 0.1)",
+});
+
+addons.setConfig({
+  theme,
+});

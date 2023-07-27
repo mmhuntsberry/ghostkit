@@ -1,0 +1,68 @@
+{/* Colors.mdx */}
+
+import {
+  Canvas,
+  Story,
+  Meta,
+  ColorPalette,
+  ColorItem,
+  Unstyled,
+} from "@storybook/blocks";
+import * as ColorStories from "./Colors.stories.tsx";
+
+import "@mmhuntsberry/tokens";
+
+<Meta of={ColorStories} title="Colors" />
+
+<Unstyled>
+
+<h1 class="headline--1">Color</h1>
+
+- [Overview](#overview)
+- [Color Primitives](#color-primitives)
+  - [Red](#red)
+  - [Blue](#blue)
+  - [Grey](#grey)
+  - [Green](#green)
+  - [Indigo](#indigo)
+  - [Yellow](#yellow)
+  - [Emerald](#emerald)
+  - [Fushia](#fushia)
+  - [White](#white)
+  - [Black](#black)
+- [Semantic Colors](#semantic-colors)
+- [Gradients](#gradients)
+
+<h2 class="headline--2">Overview</h2>
+
+---
+
+<p class="documentation__body">
+  lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis
+  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
+
+<h2 class="headline--2">Color Primitives</h2>
+
+<p class="documentation__body">
+  Color primitives are a fundamental unit of color representation used in
+  digital systems, forming the basis of all color in our design system. They are
+  used to create color tokens
+</p>
+
+---
+
+<h3 id="red" class="headline--3">
+  Red
+</h3>
+
+<Story of={ColorStories.Red} />
+
+<h3 id="blue" class="headline--3">
+  Blue
+</h3>
+
+<Story of={ColorStories.Blue} />
+
+</Unstyled>
