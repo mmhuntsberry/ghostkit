@@ -1,66 +1,29 @@
-import ColorBlock from "../../storybook/ColorBlock";
-import cssFileContent from "@mmhuntsberry/tokens?inline";
-import { parseCssCustomProperties } from "../../../helpers";
+import ColorBlocks from "../../storybook/ColorBlocks";
+import TokenTable from "../../storybook/TokenTable";
 
 export default {
-  component: ColorBlock,
-  render: (args: any, { loaded: { tokens, color } }) => (
-    <div
-      style={{
-        border: "1px solid var(--colors-grey-400)",
-        borderRadius: "var(--radii-md)",
-        padding: "var(--spacing-lg)",
-      }}
-    >
-      {tokens
-        .filter((x) => x.name.includes("colors"))
-        .filter((x) => x.name.includes(color))
-        .map((token) => (
-          <ColorBlock
-            key={token.value}
-            color={token.value}
-            tokenName={token.token}
-            name={token.name}
-          />
-        ))}
-    </div>
-  ),
+  component: ColorBlocks,
   argTypes: {},
 };
 
 export const Red = {
   args: {},
-  loaders: [
-    async () => ({
-      tokens: await parseCssCustomProperties(cssFileContent),
-      color: "red",
-    }),
-  ],
-  parameters: {
-    chromatic: { delay: 1000 },
-  },
+  render: (args: any) => (
+    <div className="storyblock">
+      <TokenTable>
+        <ColorBlocks color="red" />
+      </TokenTable>
+    </div>
+  ),
 };
 
-// export const Blue = {
-//   args: {},
-//   render: (args: any) => (
-//     <div
-//       style={{
-//         border: "1px solid var(--colors-grey-400)",
-//         borderRadius: "var(--radii-md)",
-//         padding: "var(--spacing-lg)",
-//       }}
-//     >
-//       {customPropertiesArray
-//         .filter((x) => x.name.includes("colors"))
-//         .filter((x) => x.name.includes("blue"))
-//         .map((token) => (
-//           <ColorBlock
-//             color={token.value}
-//             tokenName={token.token}
-//             name={token.name}
-//           />
-//         ))}
-//     </div>
-//   ),
-// };
+export const Blue = {
+  args: {},
+  render: (args: any) => (
+    <div className="storyblock">
+      <TokenTable>
+        <ColorBlocks color="blue" />
+      </TokenTable>
+    </div>
+  ),
+};

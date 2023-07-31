@@ -1,30 +1,17 @@
-import SizeBlock from "../../storybook/SizeBlock";
-// import { customPropertiesArray } from "../../../helpers";
+import TokenTable from "../../storybook/TokenTable";
+import SizeBlocks from "../../storybook/SizeBlocks";
 
 export default {
-  component: SizeBlock,
+  component: SizeBlocks,
 };
 
 export const Sizes = {
   args: {},
   render: (args: any) => (
-    <div
-      style={{
-        border: "1px solid var(--colors-grey-400)",
-        borderRadius: "var(--radii-md)",
-        padding: "var(--spacing-lg)",
-      }}
-    >
-      {/* {customPropertiesArray
-        .filter((x) => x.name.includes("sizing"))
-        .filter((x) => !x.name.includes("base"))
-        .map((token) => (
-          <SizeBlock
-            tokenName={token.token}
-            name={token.name}
-            value={token.value}
-          />
-        ))} */}
+    <div className="storyblock">
+      <TokenTable>
+        <SizeBlocks />
+      </TokenTable>
     </div>
   ),
 };

@@ -73,7 +73,7 @@ export const Primary = {
 
 export const Kinds = {
   render: (args: ButtonProps) => (
-    <div style={{ display: "flex", gap: "var(--spacing-xl)" }}>
+    <div className="sb-button-container">
       <Button {...args} />
       <Button {...args} kind="secondary" />
       <Button {...args} kind="text" />
@@ -93,7 +93,7 @@ export const Kinds = {
 
 export const Disabled = {
   render: (args: ButtonProps) => (
-    <div style={{ display: "flex", gap: "var(--spacing-xl)" }}>
+    <div className="sb-button-container">
       <Button {...args} />
       <Button {...args} kind="secondary" />
       <Button {...args} kind="text" />
@@ -113,7 +113,7 @@ export const Disabled = {
 
 export const LightMode = {
   render: (args: ButtonProps) => (
-    <div style={{ display: "flex", gap: "var(--spacing-xl)" }}>
+    <div className="sb-button-container">
       <Button {...args} />
       <Button {...args} kind="secondary" />
       <Button {...args} kind="text" />
@@ -133,7 +133,7 @@ export const LightMode = {
 
 export const DarkMode = {
   render: (args: ButtonProps) => (
-    <div style={{ display: "flex", gap: "var(--spacing-xl)" }}>
+    <div className="sb-button-container">
       <Button {...args} />
       <Button {...args} kind="secondary" />
       <Button {...args} kind="text" />
