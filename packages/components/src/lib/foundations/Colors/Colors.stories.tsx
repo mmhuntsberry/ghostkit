@@ -6,6 +6,8 @@ export default {
   argTypes: {},
 };
 
+console.log(customPropertiesArray);
+
 export const Red = {
   args: {},
   render: (args: any) => (
@@ -16,40 +18,55 @@ export const Red = {
         padding: "var(--spacing-lg)",
       }}
     >
-      {customPropertiesArray
-        .filter((x) => x.name.includes("colors"))
-        .filter((x) => x.name.includes("red"))
-        .map((token) => (
-          <ColorBlock
-            color={token.value}
-            tokenName={token.token}
-            name={token.name}
-          />
-        ))}
+      <ColorBlock color="Red 50" tokenName="colors-red-50" name="Red 50" />
+      <ColorBlock color="Red 100" tokenName="colors-red-100" name="Red 100" />
     </div>
   ),
 };
+// export const Red = {
+//   args: {},
+//   render: (args: any) => (
+//     <div
+//       style={{
+//         border: "1px solid var(--colors-grey-400)",
+//         borderRadius: "var(--radii-md)",
+//         padding: "var(--spacing-lg)",
+//       }}
+//     >
+//       {customPropertiesArray
+//         .filter((x) => x.name.includes("colors"))
+//         .filter((x) => x.name.includes("red"))
+//         .map((token) => (
+//           <ColorBlock
+//             color={token.value}
+//             tokenName={token.token}
+//             name={token.name}
+//           />
+//         ))}
+//     </div>
+//   ),
+// };
 
-export const Blue = {
-  args: {},
-  render: (args: any) => (
-    <div
-      style={{
-        border: "1px solid var(--colors-grey-400)",
-        borderRadius: "var(--radii-md)",
-        padding: "var(--spacing-lg)",
-      }}
-    >
-      {customPropertiesArray
-        .filter((x) => x.name.includes("colors"))
-        .filter((x) => x.name.includes("blue"))
-        .map((token) => (
-          <ColorBlock
-            color={token.value}
-            tokenName={token.token}
-            name={token.name}
-          />
-        ))}
-    </div>
-  ),
-};
+// export const Blue = {
+//   args: {},
+//   render: (args: any) => (
+//     <div
+//       style={{
+//         border: "1px solid var(--colors-grey-400)",
+//         borderRadius: "var(--radii-md)",
+//         padding: "var(--spacing-lg)",
+//       }}
+//     >
+//       {customPropertiesArray
+//         .filter((x) => x.name.includes("colors"))
+//         .filter((x) => x.name.includes("blue"))
+//         .map((token) => (
+//           <ColorBlock
+//             color={token.value}
+//             tokenName={token.token}
+//             name={token.name}
+//           />
+//         ))}
+//     </div>
+//   ),
+// };
