@@ -3,7 +3,6 @@ import type { ButtonProps } from "./Button";
 
 export default {
   component: Button,
-  // excludeStories: /.*Disabled$/,
   argTypes: {
     children: {
       type: {
@@ -29,6 +28,13 @@ export default {
       },
       defaultValue: false,
     },
+    mode: {
+      options: ["light", "dark"],
+      control: {
+        type: "radio",
+      },
+      defaultValue: "light",
+    },
     size: {
       options: ["sm", "md", "lg"],
       control: {
@@ -41,7 +47,7 @@ export default {
       defaultValue: "md",
     },
     theme: {
-      options: ["toolkit", "dark"],
+      options: ["toolkit", "resin"],
       control: {
         type: "radio",
       },
@@ -59,9 +65,6 @@ export default {
   },
 };
 
-/**
- *
- */
 export const Primary = {
   args: {
     children: "Button Text",
@@ -102,6 +105,49 @@ export const Disabled = {
     kind: "primary",
   },
   parameters: {
+    controls: {
+      disable: true,
+    },
+  },
+};
+
+export const LightMode = {
+  render: (args: ButtonProps) => (
+    <div style={{ display: "flex", gap: "var(--spacing-xl)" }}>
+      <Button {...args} />
+      <Button {...args} kind="secondary" />
+      <Button {...args} kind="text" />
+    </div>
+  ),
+  args: {
+    children: "Button Text",
+    kind: "primary",
+    mode: "light",
+  },
+  parameters: {
+    controls: {
+      disable: true,
+    },
+  },
+};
+
+export const DarkMode = {
+  render: (args: ButtonProps) => (
+    <div style={{ display: "flex", gap: "var(--spacing-xl)" }}>
+      <Button {...args} />
+      <Button {...args} kind="secondary" />
+      <Button {...args} kind="text" />
+    </div>
+  ),
+  args: {
+    children: "Button Text",
+    kind: "primary",
+    mode: "dark",
+  },
+  parameters: {
+    backgrounds: {
+      default: "dark",
+    },
     controls: {
       disable: true,
     },

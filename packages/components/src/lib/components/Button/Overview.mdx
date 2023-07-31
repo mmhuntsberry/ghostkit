@@ -10,56 +10,66 @@ import {
 } from "@storybook/blocks";
 import Button from "./Button.tsx";
 import * as ButtonStories from "./Button.stories.tsx";
+import { PageTitle } from "../../storybook/PageTitle.tsx";
+import { SectionTitle } from "../../storybook/SectionTitle.tsx";
+import { SubTitle } from "../../storybook/SubTitle.tsx";
 
 <Meta of={ButtonStories} title="Buttons" />
 
 <Unstyled>
-<h1 class="headline--1">Button</h1>
+<PageTitle>Button</PageTitle>
 
 - [Overview](#overview)
 - [Props](#props)
 - [Variants](#variants)
+- [Modes](#modes)
 - [Usage](#usage)
 
-<h2 id="overview" class="headline--2">
-  Overview
-</h2>
+<SectionTitle id="overview">Overview</SectionTitle>
 
 ---
 
-<p class="documentation__body">
-  The Button component is used to trigger an action or event, such as submitting
-  a form, opening a dialog, canceling an action, or performing a delete
-  operation. Buttons communicate actions that users can take.
-</p>
+The Button component is used to trigger an action or event, such as submitting
+a form, opening a dialog, canceling an action, or performing a delete
+operation. Buttons communicate actions that users can take.
 
 <Canvas>
   <Story of={ButtonStories} name="Primary" />
 </Canvas>
 
-<h2 id="props" class="headline--2">
-  Props
-</h2>
+<SectionTitle id="props">Props</SectionTitle>
 
 ---
 
 <ArgTypes of={ButtonStories.Primary} exclude={["theme"]} />
 
-<h2 id="variants" class="headline--2">
-  Variants
-</h2>
+<SectionTitle id="variants">Variants</SectionTitle>
 
 ---
 
-<h3 class="headline--3">Button kinds</h3>
+<SubTitle>Button kinds</SubTitle>
 
-<Canvas name="Kinds">
+<Canvas withToolbar name="Kinds">
   <Story of={ButtonStories.Kinds}></Story>
 </Canvas>
 
-<h3 class="headline--3">Disabled</h3>
+<SubTitle>Disabled</SubTitle>
 
-<Canvas name="Disabled">
+<Canvas withToolbar name="Disabled">
   <Story of={ButtonStories.Disabled}></Story>
+</Canvas>
+
+<SectionTitle id="modes">Modes</SectionTitle>
+
+<SubTitle>Light</SubTitle>
+
+<Canvas withToolbar name="LightMode">
+  <Story of={ButtonStories.LightMode}></Story>
+</Canvas>
+
+<SubTitle>Dark</SubTitle>
+
+<Canvas withToolbar name="DarkMode" style={{backgroundColor: 'var(--colors-black)'}}>
+  <Story of={ButtonStories.DarkMode}></Story>
 </Canvas>
 </Unstyled>

@@ -1,0 +1,17 @@
+:root {
+  /***** RADII *****/
+  --toolkit-button-radius: var(--radii-sm);
+
+  /***** Size *****/
+  --toolkit-button-size-primary-sm: var(--spacing-sm);
+  --toolkit-button-size-primary-md: var(--spacing-md);
+  --toolkit-button-size-primary-lg: var(--spacing-lg);
+
+  --toolkit-button-size-secondary-sm: var(--spacing-sm);
+  --toolkit-button-size-secondary-md: var(--spacing-md);
+  --toolkit-button-size-secondary-lg: var(--spacing-lg);
+
+  --toolkit-button-size-text-sm: var(--resin-button-size-text-md);
+  --toolkit-button-size-text-md: var(--spacing-md);
+  --toolkit-button-size-text-lg: var(--resin-button-size-text-md);
+}

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 import "@mmhuntsberry/tokens";
-import { S } from "vitest/dist/types-198fd1d9";
 
 export type SizeBlockProps = {
   tokenName: string;

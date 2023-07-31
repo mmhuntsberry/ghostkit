@@ -1,23 +1,13 @@
 import ColorBlock from "../../storybook/ColorBlock";
-import { customPropertiesArray } from "../helpers";
+import { customPropertiesArray } from "../../../helpers";
 
 export default {
   component: ColorBlock,
-
-  // excludeStories: /.*Disabled$/,
   argTypes: {},
 };
 
-console.log(customPropertiesArray);
-
-/**
- * The Button component is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation. Buttons communicate actions that users can take.
- */
 export const Red = {
-  args: {
-    color: "Red 50",
-    tokenName: "--colors-red-50",
-  },
+  args: {},
   render: (args: any) => (
     <div
       style={{
@@ -41,10 +31,7 @@ export const Red = {
 };
 
 export const Blue = {
-  args: {
-    // color: "Red 50",
-    // tokenName: "--colors-red-50",
-  },
+  args: {},
   render: (args: any) => (
     <div
       style={{

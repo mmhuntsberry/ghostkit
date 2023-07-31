@@ -1,5 +1,3 @@
-{/* Colors.mdx */}
-
 import {
   Canvas,
   Story,
@@ -9,6 +7,9 @@ import {
   Unstyled,
 } from "@storybook/blocks";
 import * as ColorStories from "./Colors.stories.tsx";
+import { PageTitle } from "../../storybook/PageTitle.tsx";
+import { SectionTitle } from "../../storybook/SectionTitle.tsx";
+import { SubTitle } from "../../storybook/SubTitle.tsx";
 
 import "@mmhuntsberry/tokens";
 
@@ -16,7 +17,7 @@ import "@mmhuntsberry/tokens";
 
 <Unstyled>
 
-<h1 class="headline--1">Color</h1>
+<PageTitle>Color</PageTitle>
 
 - [Overview](#overview)
 - [Color Primitives](#color-primitives)
@@ -33,35 +34,27 @@ import "@mmhuntsberry/tokens";
 - [Semantic Colors](#semantic-colors)
 - [Gradients](#gradients)
 
-<h2 class="headline--2">Overview</h2>
+<SectionTitle id="overview">Overview</SectionTitle>
 
 ---
 
-<p class="documentation__body">
-  lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis
-  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-</p>
+lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-<h2 class="headline--2">Color Primitives</h2>
+<SectionTitle id="color-primitives">Color Primitives</SectionTitle>
 
-<p class="documentation__body">
-  Color primitives are a fundamental unit of color representation used in
-  digital systems, forming the basis of all color in our design system. They are
-  used to create color tokens
-</p>
+Color primitives are a fundamental unit of color representation used in
+digital systems, forming the basis of all color in our design system. They are
+used to create color tokens
 
 ---
 
-<h3 id="red" class="headline--3">
-  Red
-</h3>
+<SubTitle id="red">Red</SubTitle>
 
 <Story of={ColorStories.Red} />
 
-<h3 id="blue" class="headline--3">
-  Blue
-</h3>
+<SubTitle id="blue">Blue</SubTitle>
 
 <Story of={ColorStories.Blue} />
 

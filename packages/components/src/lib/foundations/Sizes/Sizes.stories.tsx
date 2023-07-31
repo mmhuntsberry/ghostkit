@@ -1,5 +1,5 @@
 import SizeBlock from "../../storybook/SizeBlock";
-import { customPropertiesArray } from "../helpers";
+import { customPropertiesArray } from "../../../helpers";
 
 export default {
   component: SizeBlock,

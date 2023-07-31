@@ -7,6 +7,7 @@ export type ButtonProps = {
   kind: "primary" | "secondary" | "text";
   size?: "sm" | "md" | "lg";
   theme?: string;
+  mode?: string;
   children?: React.ReactNode;
 };
 
@@ -17,18 +18,16 @@ const StyledButton = styled.button<ButtonProps>`
 
   align-items: center;
   background: ${(props) =>
-    `var(--${props.theme}-button-color-background-${props.kind}-default)`};
+    `var(--${props.theme}-button-color-background-${props.kind}-default-on-${props.mode})`};
   border: ${(props) =>
-    `var(--${props.theme}-button-border-${props.kind}-default)`};
+    `var(--${props.theme}-button-border-${props.kind}-default-on-${props.mode})`};
   border-radius: ${(props) => `var(--${props.theme}-button-radius)`};
   color: ${(props) =>
-    `var(--${props.theme}-button-color-text-${props.kind}-default)`};
+    `var(--${props.theme}-button-color-text-${props.kind}-default-on-${props.mode})`};
   cursor: pointer;
   display: flex;
   font: var(--typography-button-normal-bold);
   justify-content: center;
-  /* letter-spacing: -0.00813rem; */
-  /* max-height: 2.5rem; */
   outline: none;
   padding: ${(props) =>
     `var(--${props.theme}-button-size-${props.kind}-${props.size})`};
@@ -37,21 +36,24 @@ const StyledButton = styled.button<ButtonProps>`
 
   &:hover {
     background: ${(props) =>
-      `var(--${props.theme}-button-color-background-${props.kind}-hover)`};
+      `var(--${props.theme}-button-color-background-${props.kind}-hover-on-${props.mode})`};
   }
 
   &:disabled {
     background: ${(props) =>
-      `var(--${props.theme}-button-color-background-${props.kind}-disabled)`};
-    color: var(--theme-fg-on-disabled);
+      `var(--${props.theme}-button-color-background-${props.kind}-disabled-on-${props.mode})`};
+    color: ${(props) =>
+      `var(--${props.theme}-button-color-text-${props.kind}-disabled-on-${props.mode})`};
+    border: ${(props) =>
+      `var(--${props.theme}-button-border-${props.kind}-disabled-on-${props.mode})`};
     cursor: not-allowed;
   }
 
   &:focus {
     box-shadow: ${(props) =>
-      `var(--${props.theme}-button-color-shadow-${props.kind}-focus);`};
+      `var(--${props.theme}-button-color-shadow-${props.kind}-focus-on-${props.mode});`};
     border: ${(props) =>
-      `var(--${props.theme}-button-border-${props.kind}-focus)`};
+      `var(--${props.theme}-button-border-${props.kind}-focus-on-${props.mode})`};
   }
 `;
 
@@ -59,11 +61,18 @@ const Button: React.FC<ButtonProps> = ({
   children,
   disabled = false,
   kind = "primary",
+  mode = "light",
   size = "md",
   theme = "toolkit",
 }) => {
   return (
-    <StyledButton disabled={disabled} size={size} theme={theme} kind={kind}>
+    <StyledButton
+      disabled={disabled}
+      kind={kind}
+      mode={mode}
+      size={size}
+      theme={theme}
+    >
       {children}
     </StyledButton>
   );
