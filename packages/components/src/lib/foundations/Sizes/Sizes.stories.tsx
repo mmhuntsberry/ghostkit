@@ -1,5 +1,5 @@
 import SizeBlock from "../../storybook/SizeBlock";
-import { customPropertiesArray } from "../../../helpers";
+// import { customPropertiesArray } from "../../../helpers";
 
 export default {
   component: SizeBlock,
@@ -15,7 +15,7 @@ export const Sizes = {
         padding: "var(--spacing-lg)",
       }}
     >
-      {customPropertiesArray
+      {/* {customPropertiesArray
         .filter((x) => x.name.includes("sizing"))
         .filter((x) => !x.name.includes("base"))
         .map((token) => (
@@ -24,7 +24,7 @@ export const Sizes = {
             name={token.name}
             value={token.value}
           />
-        ))}
+        ))} */}
     </div>
   ),
 };
