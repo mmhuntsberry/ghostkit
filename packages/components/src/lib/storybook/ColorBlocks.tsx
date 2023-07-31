@@ -8,8 +8,8 @@ export type ColorBlocksProps = {
   color: string;
 };
 
-const ColorBlocks: React.FC<ColorBlocksProps> = ({ color }) => {
-  return customPropertiesArray
+const ColorBlocks: React.FC<ColorBlocksProps> = async ({ color }) => {
+  return await customPropertiesArray
     .filter((x) => x.name.includes("colors"))
     .filter((x) => x.name.includes(color))
     .map((token) => (
