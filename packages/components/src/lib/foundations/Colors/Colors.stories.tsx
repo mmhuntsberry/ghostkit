@@ -36,6 +36,9 @@ export const Red = {
       color: "red",
     }),
   ],
+  parameters: {
+    chromatic: { delay: 1000 },
+  },
 };
 
 // export const Blue = {
