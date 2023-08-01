@@ -1,5 +1,8 @@
 name: Pre Release Publish
 
+```jsx
+name: Figma Tokens Sync
+
 on:
   push:
     branches:
@@ -18,18 +21,19 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-
-      # Check if anything in the package has changed
+      
+      # Check if anything in the package has changed and store the result in an environment file
       - name: Check package changes
         id: check_package_changes
-        run: echo ::set-output name=changes::$(git diff --name-only HEAD^..HEAD | grep 'package/' || true)
-
+        run: echo "changes=$(git diff --name-only HEAD^..HEAD | grep 'package/' || true)" >> $GITHUB_ENV
+      
       # Publish components only when package has changed
       - name: Build packages and publish
-        if: ${{ steps.check_package_changes.outputs.changes != '' }}
+        if: env.CHANGES
         run: |
           npx nx build components
           cd dist
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
+```
