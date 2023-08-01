@@ -9,7 +9,12 @@ type TokenBlockProps = {
   type: "color" | "size";
 };
 
-const TokenRow = styled.tr`
+type TokenRow = {
+  children?: React.ReactNode;
+  type: "color" | "size";
+};
+
+const TokenRow = styled.tr<TokenRow>`
   &:not(:last-child) {
     margin-bottom: var(--spacing-xl);
   }
