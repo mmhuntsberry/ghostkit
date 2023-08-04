@@ -74,7 +74,7 @@ export const Primary = {
 export const Kinds = {
   render: (args: ButtonProps) => (
     <div className="sb-button-container">
-      <Button {...args} />
+      <Button {...args} onClick={args.onClick} />
       <Button {...args} kind="secondary" />
       <Button {...args} kind="text" />
     </div>
@@ -82,6 +82,7 @@ export const Kinds = {
   args: {
     children: "Button Text",
     kind: "primary",
+    onClick: () => console.log("Hello"),
   },
 
   parameters: {

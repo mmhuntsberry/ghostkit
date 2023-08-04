@@ -1,6 +1,5 @@
 import React from "react";
 import TokenBlock from "./TokenBlock";
-import "@mmhuntsberry/tokens";
 
 export type ColorBlockProps = {
   tokenName: string;

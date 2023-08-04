@@ -1,8 +1,6 @@
 import React from "react";
 import SizeBlock from "./SizeBlock";
 
-import "@mmhuntsberry/tokens";
-
 export type SizeBlocksProps = {
   base?: number;
 };

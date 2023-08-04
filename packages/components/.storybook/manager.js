@@ -1,5 +1,6 @@
 import { create } from "@storybook/theming";
 import { addons } from "@storybook/addons";
+
 import logo from "./Logo/resin_black.svg";
 
 window.STORYBOOK_GA_ID = "UA-308574295";

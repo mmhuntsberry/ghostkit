@@ -2,14 +2,14 @@ import React from "react";
 import styled from "@emotion/styled";
 import "@mmhuntsberry/tokens";
 
-export type ButtonProps = {
+export interface ButtonProps {
   disabled?: boolean;
   kind: "primary" | "secondary" | "text";
   size?: "sm" | "md" | "lg";
   theme?: string;
   mode?: string;
   children?: React.ReactNode;
-};
+}
 
 const StyledButton = styled.button<ButtonProps>`
   * {
@@ -64,6 +64,7 @@ export const Button: React.FC<ButtonProps> = ({
   mode = "light",
   size = "md",
   theme = "toolkit",
+  ...props
 }) => {
   return (
     <StyledButton
@@ -72,6 +73,7 @@ export const Button: React.FC<ButtonProps> = ({
       mode={mode}
       size={size}
       theme={theme}
+      {...props}
     >
       {children}
     </StyledButton>

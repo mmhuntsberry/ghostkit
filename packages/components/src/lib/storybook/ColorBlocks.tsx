@@ -1,8 +1,6 @@
 import React from "react";
 import ColorBlock from "./ColorBlock";
 
-import "@mmhuntsberry/tokens";
-
 export type ColorBlocksProps = {
   color: string;
 };

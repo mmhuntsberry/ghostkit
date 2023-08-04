@@ -1,6 +1,5 @@
 import { FC } from "react";
 import styled from "@emotion/styled";
-import "@mmhuntsberry/tokens";
 
 interface SubTitle {
   id?: string;
