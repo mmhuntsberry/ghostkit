@@ -14,7 +14,7 @@ const StyledButton = styled.button<ButtonProps>`
   }
   align-items: center;
   background: ${(props) =>
-    props.variant === "primary" && "var(--theme-accent-default)"};
+    props.variant === "primary" && "var(--colors-fuchsia-500)"};
   /* border: ${(props) =>
     props.variant === "primary" && `1px solid var(--theme-accent-default)`}; */
   border: none;
