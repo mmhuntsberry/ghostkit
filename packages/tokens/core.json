@@ -983,8 +983,8 @@
       }
     },
     "buttons": {
-      "value": "{letterSpacing.buttons}",
-      "type": "letterSpacing"
+      "type": "letterSpacing",
+      "value": "{letterSpacing.buttons}"
     },
     "shadows": {
       "blur": {
@@ -1008,29 +1008,29 @@
     },
     "borderFocus": {
       "sm": {
+        "type": "border",
         "value": {
           "color": "{colors.indigo.500}",
           "width": "{borderWidth.sm}"
-        },
-        "type": "border"
+        }
       }
     },
     "borderWidth": {
       "sm": {
-        "value": "{borderWidth.base}",
-        "type": "borderWidth"
+        "type": "borderWidth",
+        "value": "{borderWidth.base}"
       },
       "xs": {
-        "value": "{borderWidth.base} - 1",
-        "type": "borderWidth"
+        "type": "borderWidth",
+        "value": "{borderWidth.base} - 1"
       },
       "base": {
-        "value": "2",
-        "type": "other"
+        "type": "other",
+        "value": "2"
       },
       "icon": {
-        "value": "1.5",
-        "type": "borderWidth"
+        "type": "borderWidth",
+        "value": "1.5"
       }
     },
     "fontWeights": {

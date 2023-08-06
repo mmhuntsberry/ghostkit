@@ -1,0 +1,65 @@
+:root {
+  /***** BACKGROUND ****/
+  /* Default */
+  --toolkit-button-color-background-primary-default-on-dark: var(
+    --dark-accent-default
+  );
+  --toolkit-button-color-background-secondary-default-on-dark: var(
+    --dark-bg-surface
+  );
+  --toolkit-button-color-background-text-default-on-dark: transparent;
+
+  /* Disabled */
+  --toolkit-button-color-background-primary-disabled-on-dark: var(
+    --dark-accent-disabled
+  );
+  --toolkit-button-color-background-secondary-disabled-on-dark: var(
+    --dark-bg-disabled
+  );
+  --toolkit-button-color-background-text-disabled-on-dark: none;
+
+  /* Hover */
+  --toolkit-button-color-background-primary-hover-on-dark: var(
+    --dark-accent-muted
+  );
+  --toolkit-button-color-background-secondary-hover-on-dark: var(
+    --dark-bg-muted
+  );
+  --toolkit-button-color-background-text-hover-on-dark: var(
+    --dark-accent-subtle
+  );
+
+  /**** BORDER *****/
+  /* Default */
+  --toolkit-button-border-primary-default-on-dark: none;
+  --toolkit-button-border-secondary-default-on-dark: 1px solid
+    var(--dark-fg-default);
+  --toolkit-button-border-text-default-on-dark: none;
+
+  /* Disable */
+  --toolkit-button-border-primary-disabled-on-dark: none;
+  --toolkit-button-border-secondary-disabled-on-dark: 1px solid
+    var(--dark-fg-disabled);
+  --toolkit-button-border-text-disabled-on-dark: none;
+
+  /* Focus */
+  --toolkit-button-border-primary-focus-on-dark: none;
+  --toolkit-button-border-secondary-focus-on-dark: 1px solid
+    var(--dark-accent-focus);
+  --toolkit-button-border-text-focus-on-dark: none;
+
+  /***** SHADOW *****/
+  /* Focus */
+  --toolkit-button-color-shadow-primary-focus-on-dark: inset 0 0 0 2px
+    var(--dark-accent-focus);
+  --toolkit-button-color-shadow-secondary-focus-on-dark: inset 0 0 0 1px
+    var(--dark-accent-focus);
+  --toolkit-button-color-shadow-text-focus-on-dark: inset 0 0 0 2px
+    var(--dark-accent-focus);
+
+  /**** TEXT *****/
+  /* Default */
+  --toolkit-button-color-text-primary-default-on-dark: var(--dark-fg-on-accent);
+  --toolkit-button-color-text-secondary-default-on-dark: var(--dark-fg-default);
+  --toolkit-button-color-text-text-default-on-dark: var(--colors-indigo-600);
+}

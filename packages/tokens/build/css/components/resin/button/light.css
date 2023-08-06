@@ -1,0 +1,80 @@
+:root {
+  /******* BACKGROUNDS *******/
+  /* Default */
+  --toolkit-button-color-background-primary-default-on-light: var(
+    --resin-accent-default
+  );
+  --toolkit-button-color-background-secondary-default-on-light: var(
+    --resin-bg-surface
+  );
+  --toolkit-button-color-background-text-default-on-light: transparent;
+
+  /* Disabled */
+  --toolkit-button-color-background-primary-disabled-on-light: var(
+    --resin-accent-disabled
+  );
+  --toolkit-button-color-background-secondary-disabled-on-light: var(
+    --resin-bg-disabled
+  );
+  --toolkit-button-color-background-text-disabled-on-light: none;
+
+  /* Hover */
+  --toolkit-button-color-background-primary-hover-on-light: var(
+    --resin-accent-muted
+  );
+  --toolkit-button-color-background-secondary-hover-on-light: var(
+    --resin-bg-muted
+  );
+  --toolkit-button-color-background-text-hover-on-light: var(
+    --resin-accent-subtle
+  );
+
+  /****** BORDERS ******/
+  /* Default */
+  --toolkit-button-border-primary-default-on-light: none;
+  --toolkit-button-border-secondary-default-on-light: 1px solid
+    var(--resin-fg-default);
+  --toolkit-button-border-text-default-on-light: none;
+
+  /* Disable */
+  --toolkit-button-border-primary-disabled-on-light: none;
+  --toolkit-button-border-secondary-disabled-on-light: 1px solid
+    var(--resin-fg-disabled);
+  --toolkit-button-border-text-disabled-on-light: none;
+
+  /* Focus */
+  --toolkit-button-border-primary-focus-on-light: none;
+  --toolkit-button-border-secondary-focus-on-light: 1px solid
+    var(--resin-accent-focus);
+  --toolkit-button-border-text-focus-on-light: none;
+
+  /****** SHADOW ******/
+  /* Focus */
+  --toolkit-button-color-shadow-primary-focus-on-light: inset 0 0 0 2px
+    var(--resin-accent-focus);
+  --toolkit-button-color-shadow-secondary-focus-on-light: inset 0 0 0 1px
+    var(--resin-accent-focus);
+  --toolkit-button-color-shadow-text-focus-on-light: inset 0 0 0 2px
+    var(--resin-accent-focus);
+
+  /***** TEXT *****/
+  /* Default */
+  --toolkit-button-color-text-primary-default-on-light: var(
+    --resin-fg-on-accent
+  );
+  --toolkit-button-color-text-secondary-default-on-light: var(
+    --resin-fg-default
+  );
+  --toolkit-button-color-text-text-default-on-light: var(--colors-indigo-600);
+
+  /* Disabled */
+  --toolkit-button-color-text-primary-disabled-on-light: var(
+    --resin-fg-on-disabled
+  );
+  --toolkit-button-color-text-secondary-disabled-on-light: var(
+    --resin-fg-on-disabled
+  );
+  --toolkit-button-color-text-text-disabled-on-light: var(
+    --resin-fg-on-disabled
+  );
+}
