@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.12 (2023-08-06)
+
+
+### Bug Fixes
+
+* bump version and add component level tokens ([27a05d9](https://github.com/mmhuntsberry/ghostkit/commit/27a05d9f765f7f301d0c6245aee1adc89d104db0))
+
 ### 0.0.15 (2023-08-06)
 
 
