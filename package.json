@@ -64,7 +64,5 @@
     "react": ">=16.0.0 <19.0.0",
     "react-dom": ">=16.0.0 <19.0.0",
     "tslib": "^2.3.0"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "ghostkit@0.0.1"
+  }
 }
