@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 31 Jul 2023 14:22:59 GMT
+ * Generated on Tue, 18 Jul 2023 16:43:29 GMT
  */
 
 :root {
@@ -12,7 +12,7 @@
   --radii-xl: 16px;
   --radii-2xl: 20px;
   --radii-rounded: 100px;
-  --colors-red-50: #FDF1F4;
+  --colors-red-50: #fdf1f4;
   --colors-red-100: #fce8ec;
   --colors-red-200: #f9d0d9;
   --colors-red-300: #f2a2b3;
@@ -44,9 +44,9 @@
   --colors-grey-700: #616161;
   --colors-grey-800: #424242;
   --colors-grey-900: #323232;
-  --colors-grey-950: #1F1F1F;
+  --colors-grey-950: #1f1f1f;
   --colors-black: #171717;
-  --colors-green-50: #F4FBF7;
+  --colors-green-50: #f4fbf7;
   --colors-green-100: #e8f6ee;
   --colors-green-200: #d1eedd;
   --colors-green-300: #a3ddbc;
@@ -69,7 +69,7 @@
   --colors-indigo-800: #3730a3;
   --colors-indigo-900: #312e81;
   --colors-indigo-950: #1e1b4b;
-  --colors-yellow-50: #FFFBF5;
+  --colors-yellow-50: #fffbf5;
   --colors-yellow-100: #fff8eb;
   --colors-yellow-200: #fff1d7;
   --colors-yellow-300: #ffe4af;
@@ -79,7 +79,7 @@
   --colors-yellow-700: #664b16;
   --colors-yellow-800: #33250b;
   --colors-yellow-900: #191306;
-  --colors-yellow-950: #0C0903;
+  --colors-yellow-950: #0c0903;
   --colors-emerald-50: #ecfdf5;
   --colors-emerald-100: #d1fae5;
   --colors-emerald-200: #a7f3d0;
@@ -102,10 +102,26 @@
   --colors-fuchsia-800: #86198f;
   --colors-fuchsia-900: #701a75;
   --colors-fuchsia-950: #4a044e;
-  --gradient-overlay-darkop-shade: linear-gradient(90deg, #303030d9 0%, #30303000 100%);
-  --gradient-overlay-lightop-shade: linear-gradient(90deg, #ffffffd9 0%, #ffffff00 100%);
-  --gradient-overlay-dark-bottom-shade: linear-gradient(90deg, #30303000 0%, #303030d9 100%);
-  --gradient-overlay-light-bottom-shade: linear-gradient(90deg, #ffffff00 0%, #ffffffd9 100%);
+  --gradient-overlay-darkop-shade: linear-gradient(
+    90deg,
+    #303030d9 0%,
+    #30303000 100%
+  );
+  --gradient-overlay-lightop-shade: linear-gradient(
+    90deg,
+    #ffffffd9 0%,
+    #ffffff00 100%
+  );
+  --gradient-overlay-dark-bottom-shade: linear-gradient(
+    90deg,
+    #30303000 0%,
+    #303030d9 100%
+  );
+  --gradient-overlay-light-bottom-shade: linear-gradient(
+    90deg,
+    #ffffff00 0%,
+    #ffffffd9 100%
+  );
   --shadows-y-20: 1px;
   --shadows-y-40: 2px;
   --shadows-y-60: 4px;
@@ -166,70 +182,86 @@
   --letter-spacing-captions: 0em;
   --letter-spacing-headlines: -0.01em;
   --paragraph-spacing-default: 0;
-  --dark-bg-muted: #424242;
-  --dark-bg-canvas: #323232;
-  --dark-bg-subtle: #616161;
-  --dark-bg-surface: #1F1F1F;
-  --dark-fg-muted: #e0e0e0;
-  --dark-fg-subtle: #9e9e9e;
-  --dark-fg-default: #ffffff;
-  --dark-fg-disabled: #bdbdbd;
-  --dark-fg-on-accent: #171717;
-  --dark-fg-on-disabled: #757575;
-  --dark-info-muted: #d8ddfd;
-  --dark-info-normal: #b1bafb;
-  --dark-info-subtle: #8b98f9;
-  --dark-info-default: #6475f7;
-  --dark-info-on-info: #171717;
-  --dark-info-emphasis: #3d53f5;
-  --dark-error-muted: #9c0f2e;
-  --dark-error-subtle: #df1642;
-  --dark-error-default: #e95c7b;
-  --dark-error-emphasis: #f2a2b3;
-  --dark-error-on-error: #ffffff;
-  --dark-input-fg-disabled: #616161;
-  --dark-input-text: #f5f5f5;
-  --dark-input-border-default: #616161;
-  --dark-input-border-disabled: #424242;
-  --dark-input-background: #1F1F1F;
-  --dark-input-placeholder: #e0e0e0;
-  --dark-accent-focus: #6366f1;
-  --dark-accent-icons: #ffffff;
-  --dark-accent-muted: #3142c4;
-  --dark-accent-subtle: #060818;
-  --dark-accent-default: #6475f7;
-  --dark-accent-disabled: #424242;
-  --dark-accent-emphasis: #8b98f9;
-  --dark-border-black: #ffffff;
-  --dark-border-white: #171717;
-  --dark-shadow-color: #D0D0D3;
-  --dark-shadow-opacity-base: 0.95;
-  --dark-shadow-opacity-blur: 0.12;
-  --dark-status-primary: #e879f9;
-  --dark-status-success: #10b981;
-  --dark-status-warning: #e95c7b;
-  --dark-status-textbutton: #4f46e5;
-  --dark-status-primary-hover: #d946ef;
-  --dark-status-success-hover: #34d399;
-  --dark-status-warning-hover: #f2a2b3;
-  --dark-status-primary-outline: #701a75;
-  --dark-status-success-outline: #064e3b;
-  --dark-success-muted: #e8f6ee;
-  --dark-success-subtle: #5dc389;
-  --dark-success-default: #a3ddbc;
-  --dark-success-emphasis: #d1eedd;
-  --dark-success-on-success: #171717;
-  --dark-warning-muted: #fff8eb;
-  --dark-warning-subtle: #ffcf74;
-  --dark-warning-default: #ffe4af;
-  --dark-warning-emphasis: #fff1d7;
-  --dark-warning-on-warning: #171717;
+  --theme-bg-muted: #e0e0e0;
+  --theme-bg-canvas: #f5f5f5;
+  --theme-bg-subtle: #eeeeee;
+  --theme-bg-surface: #fcfcfc;
+  --theme-fg-muted: #616161;
+  --theme-fg-subtle: #9e9e9e;
+  --theme-fg-default: #171717;
+  --theme-fg-disabled: #bdbdbd;
+  --theme-fg-on-accent: #ffffff;
+  --theme-fg-on-disabled: #757575;
+  --theme-fg-on-dark: #ffffff;
+  --theme-fg-opacity-1: rgba(252, 252, 252, 0.01);
+  --theme-fg-opacity-5: rgba(252, 252, 252, 0.05);
+  --theme-fg-opacity-10: rgba(252, 252, 252, 0.1);
+  --theme-fg-opacity-20: rgba(252, 252, 252, 0.2);
+  --theme-fg-opacity-30: rgba(252, 252, 252, 0.3);
+  --theme-fg-opacity-40: rgba(252, 252, 252, 0.4);
+  --theme-fg-opacity-50: rgba(252, 252, 252, 0.5);
+  --theme-fg-opacity-60: rgba(252, 252, 252, 0.6);
+  --theme-fg-opacity-70: rgba(252, 252, 252, 0.7);
+  --theme-fg-opacity-80: rgba(252, 252, 252, 0.8);
+  --theme-fg-opacity-90: rgba(252, 252, 252, 0.9);
+  --theme-info-muted: #b1bafb;
+  --theme-info-subtle: #d8ddfd;
+  --theme-info-default: #3142c4;
+  --theme-info-on-info: #ffffff;
+  --theme-info-emphasis: #3d53f5;
+  --theme-info-normal: #8b98f9;
+  --theme-error-muted: #e95c7b;
+  --theme-error-subtle: #fce8ec;
+  --theme-error-default: #9c0f2e;
+  --theme-error-emphasis: #df1642;
+  --theme-error-on-error: #ffffff;
+  --theme-input-fg-disabled: #e0e0e0;
+  --theme-input-text: #424242;
+  --theme-input-border-default: #e0e0e0;
+  --theme-input-border-disabled: #eeeeee;
+  --theme-input-background: #ffffff;
+  --theme-input-placeholder: #757575;
+  --theme-accent-muted: #6475f7;
+  --theme-accent-subtle: #eceefe;
+  --theme-accent-default: #3d53f5;
+  --theme-accent-disabled: #e0e0e0;
+  --theme-accent-emphasis: #3142c4;
+  --theme-accent-focus: #6366f1;
+  --theme-accent-icons: #171717;
+  --theme-border-default: #eeeeee;
+  --theme-border-black: #171717;
+  --theme-border-white: #ffffff;
+  --theme-shadow-color: #303133;
+  --theme-shadow-opacity-base: 0.05;
+  --theme-shadow-opacity-blur: 0.08;
+  --theme-shadow-base: rgba(48, 49, 51, 0.05);
+  --theme-shadow-blur: rgba(48, 49, 51, 0.08);
+  --theme-success-muted: #5dc389;
+  --theme-success-subtle: #e8f6ee;
+  --theme-success-default: #11763d;
+  --theme-success-emphasis: #18a957;
+  --theme-success-on-success: #ffffff;
+  --theme-warning-muted: #ffe4af;
+  --theme-warning-subtle: #fff8eb;
+  --theme-warning-default: #b38327;
+  --theme-warning-emphasis: #ffbb38;
+  --theme-warning-on-warning: #171717;
+  --theme-status-primary: #e879f9;
+  --theme-status-success: #10b981;
+  --theme-status-warning: #e95c7b;
+  --theme-status-textbutton: #4f46e5;
+  --theme-status-primary-hover: #f0abfc;
+  --theme-status-success-hover: #a7f3d0;
+  --theme-status-warning-hover: #f2a2b3;
+  --theme-status-primary-outline: #701a75;
+  --theme-status-success-outline: #064e3b;
+  --theme-overlay-bg: #171717;
   --buttons: -0.01em;
   --text-case-buttons: uppercase;
   --text-case-none: none;
   --text-case-captions: uppercase;
   --text-case-headlines: none;
-  --border-focus-sm: 2px  #6366f1;
+  --border-focus-sm: 2px #6366f1;
   --border-width-sm: 2;
   --border-width-xs: 1;
   --border-width-base: 2;
@@ -320,6 +352,12 @@
   --typography-headline-4-regular: 400 34px/1.3 Tiempos Headline;
   --typography-headline-5-bold: 700 23px/1.3 Tiempos Headline;
   --typography-headline-5-regular: 400 23px/1.3 Tiempos Headline;
+  --typography-tip-bold: 700 13px/1.5 Inter;
+  --typography-tip-regular: 400 13px/1.5 Inter;
+  --typography-blockquote-bold: 700 13px/1.5 Inter;
+  --typography-blockquote-regular: 400 13px/1.5 Inter;
+  --typography-dropcap-bold: 700 16px/1.5 Tiempos Headline;
+  --typography-dropcap-regular: 400 16px/1.5 Tiempos Headline;
   --documentation-body-bold-xl: 700 112px/140% Inter;
   --documentation-body-bold-large: 700 48px/140% Inter;
   --documentation-body-bold-small: 700 20px/140% Inter;
