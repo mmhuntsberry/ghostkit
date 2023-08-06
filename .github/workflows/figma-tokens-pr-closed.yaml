@@ -54,4 +54,4 @@ jobs:
           cd packages/tokens/dist
           npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GH_PACKAGE_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
