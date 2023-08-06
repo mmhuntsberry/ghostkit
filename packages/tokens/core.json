@@ -989,8 +989,8 @@
     "shadows": {
       "blur": {
         "base": {
-          "type": "other",
-          "value": "0.5"
+          "value": "0.5",
+          "type": "other"
         }
       }
     },
@@ -1002,8 +1002,8 @@
     },
     "textCase": {
       "buttons": {
-        "type": "textCase",
-        "value": "{textCase.buttons}"
+        "value": "{textCase.buttons}",
+        "type": "textCase"
       }
     },
     "borderFocus": {
