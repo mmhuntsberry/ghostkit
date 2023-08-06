@@ -19,16 +19,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
 
-      # Check if anything in the package has changed and store the result in an environment file
-      # - name: Check package changes
-      #   id: check_package_changes
-      #   run: |
-      #     changed_files=$(git log -1 --name-only --pretty=format: HEAD^..HEAD)
-      #     echo "$changed_files" | grep '^package/' > $GITHUB_ENV
-
-      # Publish components only when package has changed
       - name: Build packages and publish
-        # if: env.CHANGES
         run: |
           npx nx build components
           cd dist
