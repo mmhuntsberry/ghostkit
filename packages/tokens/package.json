@@ -1,6 +1,6 @@
 {
   "name": "@mmhuntsberry/tokens",
-  "version": "0.0.9",
+  "version": "0.0.15",
   "description": "",
   "main": "build/css/index.css",
   "type": "commonjs",
