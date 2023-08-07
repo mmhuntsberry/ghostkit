@@ -25,7 +25,7 @@ jobs:
       - name: Get local package.json version
         id: local_version
         run: |
-          local_version=$(cat package.json | jq -r '.version')
+          local_version=$(cat packages/tokens/package.json | jq -r '.version')
           echo "local_version=$local_version" >> $GITHUB_ENV
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
