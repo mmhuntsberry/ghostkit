@@ -521,6 +521,11 @@
       "base": {
         "value": "16",
         "type": "sizing"
+      },
+      "test": {
+        "value": "144px",
+        "type": "sizing",
+        "description": "This is a test"
       }
     },
     "spacing": {
