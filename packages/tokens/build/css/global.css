@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 06 Aug 2023 17:08:53 GMT
+ * Generated on Mon, 07 Aug 2023 00:12:06 GMT
  */
 
 :root {
@@ -118,22 +118,22 @@
   --shadows-blur-80: 8;
   --shadows-blur-100: 50;
   --shadows-blur-base: 0.5;
-  --sizing-xxs: 16px;
+  --sizing-2xs: 16px;
   --sizing-xs: 24px;
   --sizing-sm: 32px;
   --sizing-md: 40px;
   --sizing-lg: 48px;
   --sizing-xl: 64px;
   --sizing-base: 16px;
-  --spacing-lg: 16px;
-  --spacing-md: 12px;
-  --spacing-sm: 8px;
-  --spacing-xl: 20px;
+  --spacing-2xs: 2px;
   --spacing-xs: 4px; /* The base token for spacing */
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
   --spacing-2xl: 24px;
   --spacing-3xl: 32px;
   --spacing-4xl: 64px;
-  --spacing-xxs: 2px;
   --spacing-base: 4px;
   --font-size-base: 16px;
   --font-size-scale: 1.2px;
