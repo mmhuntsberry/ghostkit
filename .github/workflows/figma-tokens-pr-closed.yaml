@@ -17,12 +17,16 @@ jobs:
         run: |
           latest_version=$(npm show @mmhuntsberry/tokens version)
           echo "latest_version=$latest_version" >> $GITHUB_ENV
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
 
       - name: Get local package.json version
         id: local_version
         run: |
           local_version=$(cat packages/tokens/package.json | jq -r '.version')
           echo "local_version=$local_version" >> $GITHUB_ENV
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
 
       - name: Compare versions and create file
         run: |
@@ -31,6 +35,8 @@ jobs:
           else
             echo "run_publish_job=false" > run_publish.txt
           fi
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
 
       - name: Upload result
         uses: actions/upload-artifact@v2
