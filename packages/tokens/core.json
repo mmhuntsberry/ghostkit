@@ -494,7 +494,7 @@
   },
   "base/dimension": {
     "sizing": {
-      "xxs": {
+      "2xs": {
         "value": "{sizing.base}",
         "type": "sizing"
       },
