@@ -1,4 +1,4 @@
-name: Figma Tokens Sync
+name: Figma Tokens Publish
 
 on:
   push:
@@ -6,7 +6,40 @@ on:
       - main
 
 jobs:
+  check-package-version:
+    runs-on: ubuntu-latest
+    outputs:
+      run_publish_job: ${{ steps.compare_versions.outputs.run_publish_job }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Get latest published version from NPM
+        id: npm_version
+        run: |
+          latest_version=$(npm show @mmhuntsberry/tokens version)
+          echo "latest_version=$latest_version" >> $GITHUB_ENV
+
+      - name: Get local package.json version
+        id: local_version
+        run: |
+          local_version=$(cat package.json | jq -r '.version')
+          echo "local_version=$local_version" >> $GITHUB_ENV
+
+      - name: Compare versions and set output
+        id: compare_versions
+        run: |
+          if [ "${{ env.latest_version }}" != "${{ env.local_version }}" ]; then
+            echo "Versions don't match."
+            echo "run_publish_job=true" >> $GITHUB_ENV
+          else
+            echo "Versions match."
+            echo "run_publish_job=false" >> $GITHUB_ENV
+          fi
+
   publish-tokens-gpr:
+    needs: check-package-version
+    if: needs.check-package-version.outputs.run_publish_job == 'true'
     runs-on: ubuntu-latest
     permissions:
       packages: write
@@ -19,7 +52,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - name: Build packages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/figma-tokens'
         run: |
           npx nx run @mmhuntsberry/tokens:pack
           cd packages/tokens/dist
