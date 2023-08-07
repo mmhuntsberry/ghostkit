@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 07 Aug 2023 00:12:06 GMT
+ * Generated on Mon, 07 Aug 2023 00:30:15 GMT
  */
 
 :root {
@@ -125,6 +125,7 @@
   --sizing-lg: 48px;
   --sizing-xl: 64px;
   --sizing-base: 16px;
+  --sizing-test: 144px; /* This is a test */
   --spacing-2xs: 2px;
   --spacing-xs: 4px; /* The base token for spacing */
   --spacing-sm: 8px;
