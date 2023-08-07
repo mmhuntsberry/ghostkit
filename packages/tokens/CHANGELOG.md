@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.14 (2023-08-07)
+
+
+### Bug Fixes
+
+* rename xxs token to match naming style ([fdbde75](https://github.com/mmhuntsberry/ghostkit/commit/fdbde7553fd3ae003415368260a720db9b56d0be))
+
 ### 0.0.12 (2023-08-06)
 
 
