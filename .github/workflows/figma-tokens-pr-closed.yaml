@@ -1,15 +1,12 @@
 name: Figma Tokens Sync
 
 on:
-  pull_request:
-    types:
-      - closed
+  push:
     branches:
-      - figma-tokens
+      - main
 
 jobs:
   publish-tokens-gpr:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     permissions:
       packages: write
@@ -22,6 +19,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - name: Build packages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/figma-tokens'
         run: |
           npx nx run @mmhuntsberry/tokens:pack
           cd packages/tokens/dist
