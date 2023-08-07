@@ -4,39 +4,12 @@ on:
   pull_request:
     types:
       - closed
+    branches:
+      - figma-token
 
 jobs:
-  sync_tokens:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Install Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
-
-      - name: Check branch name
-        id: check_branch
-        run: |
-          if [[ "${{ github.head_ref }}" != "figma-tokens" ]]; then
-            echo "This workflow only runs for pull requests from the figma-tokens branch. Exiting..."
-            exit 1
-          fi
-
-      - name: Install Supernova CLI dependency
-        run: npm install -g @supernovaio/cli
-
-      - name: Synchronize tokens with Supernova
-        run: |
-          supernova sync-tokens \
-            --apiKey="${{ secrets.SN_ACCESS_TOKEN_FTP }}" \
-            --designSystemId="56717" \
-            --tokenFilePath "${{ github.workspace }}/packages/tokens/core.json" \
-            --configFilePath "${{ github.workspace }}/packages/tokens/supernova.settings.json"
-  publish-gpr:
+  publish-tokens-gpr:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     permissions:
       packages: write
