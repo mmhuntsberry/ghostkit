@@ -8,8 +8,6 @@ on:
 jobs:
   check-package-version:
     runs-on: ubuntu-latest
-    outputs:
-      run_publish_job: ${{ steps.compare_versions.outputs.run_publish_job }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -19,45 +17,61 @@ jobs:
         run: |
           latest_version=$(npm show @mmhuntsberry/tokens version)
           echo "latest_version=$latest_version" >> $GITHUB_ENV
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
 
       - name: Get local package.json version
         id: local_version
         run: |
           local_version=$(cat packages/tokens/package.json | jq -r '.version')
           echo "local_version=$local_version" >> $GITHUB_ENV
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
 
-      - name: Compare versions and set output
-        id: compare_versions
+      - name: Compare versions and create file
         run: |
-          if [ "${{ env.latest_version }}" != "${{ env.local_version }}" ]; then
-            echo "Versions don't match."
-            echo "run_publish_job=true" >> $GITHUB_ENV
+          if [ "$latest_version" != "$local_version" ]; then
+            echo "run_publish_job=true" > run_publish.txt
           else
-            echo "Versions match."
-            echo "run_publish_job=false" >> $GITHUB_ENV
+            echo "run_publish_job=false" > run_publish.txt
           fi
+
+      - name: Upload result
+        uses: actions/upload-artifact@v2
+        with:
+          name: result
+          path: run_publish.txt
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
 
   publish-tokens-gpr:
     needs: check-package-version
-    if: needs.check-package-version.outputs.run_publish_job == 'true'
     runs-on: ubuntu-latest
     permissions:
       packages: write
       contents: read
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Download result
+        uses: actions/download-artifact@v2
+        with:
+          name: result
+
+      - id: set-publish-flag
+        run: echo "RUN_PUBLISH_JOB=$(cat run_publish.txt)" >> $GITHUB_ENV
+
+      - name: Checkout code
+        if: env.RUN_PUBLISH_JOB == 'run_publish_job=true'
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        if: env.RUN_PUBLISH_JOB == 'run_publish_job=true'
+        uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - name: Build packages
+
+      - name: Install dependencies
+        if: env.RUN_PUBLISH_JOB == 'run_publish_job=true'
+        run: npm ci
+
+      - name: Build and publish packages
+        if: env.RUN_PUBLISH_JOB == 'run_publish_job=true'
         run: |
           npx nx run @mmhuntsberry/tokens:pack
           cd packages/tokens/dist
