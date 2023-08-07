@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.20 (2023-08-07)
+
+
+### Bug Fixes
+
+* remove test token ([c41a67e](https://github.com/mmhuntsberry/ghostkit/commit/c41a67e2c05731d0362d64c2fb44a96556887ffa))
+
 ### 0.0.18 (2023-08-07)
 
 
