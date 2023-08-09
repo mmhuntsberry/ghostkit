@@ -41,8 +41,7 @@
   },
   "github": {
     "release": true,
-    "releaseName": "Release: components ${version}",
-    "tokenRef": "NODE_AUTH_TOKEN"
+    "releaseName": "Release: components ${version}"
   },
   "hooks": {
     "before:bump": "npx nx build components",
