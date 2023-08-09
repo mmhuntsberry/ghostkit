@@ -27,8 +27,8 @@ jobs:
 
           # configure Git username and email
           git config user.name "$ACTOR_USERNAME"
-          # git config user.email "$ACTOR_EMAIL"
-          # git config user.email "mmhuntsberry@gmail.com"
+          git config user.email "$ACTOR_EMAIL"
+
 
           # Display the configured user name and email for verification
           git config user.name
