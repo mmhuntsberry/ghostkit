@@ -38,7 +38,7 @@
     "release": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "dotenv release-it -- --config=./packages/components/grid/.release-it.json"
+        "command": "dotenv release-it -- --config=./packages/components/.release-it.json"
       }
     },
     "test": {
