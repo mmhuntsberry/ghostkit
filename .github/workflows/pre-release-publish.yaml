@@ -19,6 +19,20 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
 
+      - name: Set Git Config
+        run: |
+          # Get the event actor's username and email
+          ACTOR_USERNAME="${GITHUB_ACTOR}"
+          ACTOR_EMAIL="${GITHUB_ACTOR}@users.noreply.github.com"
+
+          # configure Git username and email
+          git config user.name "$ACTOR_USERNAME"
+          git config user.email "$ACTOR_EMAIL"
+
+          # Display the configured user name and email for verification
+          git config user.name
+          git config user.email
+
       - name: Build packages and publish
         run: |
           npx nx release components --ci --preRelease=alpha --no-npm
