@@ -21,8 +21,7 @@ jobs:
 
       - name: Build packages and publish
         run: |
-          npx nx build components
-          cd dist
-          npm publish
+          npx nx release components --ci --preRelease=alpha --no-npm
+          npx nx publish components
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
