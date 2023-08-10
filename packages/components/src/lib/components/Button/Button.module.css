@@ -1,0 +1,199 @@
+/* Button.module.css */
+
+.button {
+  box-sizing: border-box;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  transition: background 0.2s ease-in-out;
+}
+
+/***** PRIMARY *****/
+.primary {
+  background: var(--toolkit-button-color-background-primary-default-on-light);
+  border: var(--toolkit-button-border-primary-default-on-light);
+  border-radius: var(--toolkit-button-radius);
+  color: var(--toolkit-button-color-text-primary-default-on-light);
+  font: var(--typography-button-normal-bold);
+}
+
+.primary[data-size="sm"] {
+  padding: var(--toolkit-button-size-primary-sm);
+}
+
+.primary[data-size="md"] {
+  padding: var(--toolkit-button-size-primary-md);
+}
+
+.primary[data-size="lg"] {
+  padding: var(--toolkit-button-size-primary-lg);
+}
+
+.primary:hover {
+  background: var(--toolkit-button-color-background-primary-hover-on-light);
+}
+
+.primary:disabled {
+  background: var(--toolkit-button-color-background-primary-disabled-on-light);
+  color: var(--toolkit-button-color-text-primary-disabled-on-light);
+  border: var(--toolkit-button-border-primary-disabled-on-light);
+  cursor: not-allowed;
+}
+
+.primary:focus {
+  box-shadow: var(--toolkit-button-color-shadow-primary-focus-on-light);
+  border: var(--toolkit-button-border-primary-focus-on-light);
+}
+
+/* Add styles for secondary and text buttons similarly */
+.secondary {
+  background: var(--toolkit-button-color-background-secondary-default-on-light);
+  border: var(--toolkit-button-border-secondary-default-on-light);
+  border-radius: var(--toolkit-button-radius);
+  color: var(--toolkit-button-color-text-secondary-default-on-light);
+  font: var(--typography-button-normal-bold);
+}
+
+.secondary[data-size="sm"] {
+  padding: var(--toolkit-button-size-secondary-sm);
+}
+
+.secondary[data-size="md"] {
+  padding: var(--toolkit-button-size-secondary-md);
+}
+
+.secondary[data-size="lg"] {
+  padding: var(--toolkit-button-size-secondary-lg);
+}
+
+.secondary:hover {
+  background: var(--toolkit-button-color-background-secondary-hover-on-light);
+}
+
+.secondary:disabled {
+  background: var(
+    --toolkit-button-color-background-secondary-disabled-on-light
+  );
+  color: var(--toolkit-button-color-text-secondary-disabled-on-light);
+  border: var(--toolkit-button-border-secondary-disabled-on-light);
+  cursor: not-allowed;
+}
+
+.secondary:focus {
+  box-shadow: var(--toolkit-button-color-shadow-secondary-focus-on-light);
+  border: var(--toolkit-button-border-secondary-focus-on-light);
+}
+
+/***** TEXT *****/
+.text {
+  background: var(--toolkit-button-color-background-text-default-on-light);
+  border: var(--toolkit-button-border-text-default-on-light);
+  border-radius: var(--toolkit-button-radius);
+  color: var(--toolkit-button-color-text-text-default-on-light);
+  font: var(--typography-button-normal-bold);
+}
+
+.text[data-size="sm"] {
+  padding: var(--toolkit-button-size-text-sm);
+}
+
+.text[data-size="md"] {
+  padding: var(--toolkit-button-size-text-md);
+}
+
+.text[data-size="lg"] {
+  padding: var(--toolkit-button-size-text-lg);
+}
+
+.text:hover {
+  background: var(--toolkit-button-color-background-text-hover-on-light);
+}
+
+.text:disabled {
+  background: var(--toolkit-button-color-background-text-disabled-on-light);
+  color: var(--toolkit-button-color-text-text-disabled-on-light);
+  border: var(--toolkit-button-border-text-disabled-on-light);
+  cursor: not-allowed;
+}
+
+.text:focus {
+  box-shadow: var(--toolkit-button-color-shadow-text-focus-on-light);
+  border: var(--toolkit-button-border-text-focus-on-light);
+}
+
+/* DARK MODE */
+.primary[data-mode="dark"] {
+  background: var(--toolkit-button-color-background-primary-default-on-dark);
+  border: var(--toolkit-button-border-primary-default-on-dark);
+  border-radius: var(--toolkit-button-radius);
+  color: var(--toolkit-button-color-text-primary-default-on-dark);
+  font: var(--typography-button-normal-bold);
+}
+
+.primary[data-mode="dark"]:hover {
+  background: var(--toolkit-button-color-background-primary-hover-on-dark);
+}
+
+.primary[data-mode="dark"]:disabled {
+  background: var(--toolkit-button-color-background-primary-disabled-on-dark);
+  color: var(--toolkit-button-color-text-primary-disabled-on-dark);
+  border: var(--toolkit-button-border-primary-disabled-on-dark);
+  cursor: not-allowed;
+}
+
+.primary[data-mode="dark"]:focus {
+  box-shadow: var(--toolkit-button-color-shadow-primary-focus-on-dark);
+  border: var(--toolkit-button-border-primary-focus-on-dark);
+}
+
+/* Add styles for secondary and text buttons similarly */
+.secondary[data-mode="dark"] {
+  background: var(--toolkit-button-color-background-secondary-default-on-dark);
+  border: var(--toolkit-button-border-secondary-default-on-dark);
+  border-radius: var(--toolkit-button-radius);
+  color: var(--toolkit-button-color-text-secondary-default-on-dark);
+  font: var(--typography-button-normal-bold);
+}
+
+.secondary[data-mode="dark"]:hover {
+  background: var(--toolkit-button-color-background-secondary-hover-on-dark);
+}
+
+.secondary[data-mode="dark"]:disabled {
+  background: var(--toolkit-button-color-background-secondary-disabled-on-dark);
+  color: var(--toolkit-button-color-text-secondary-disabled-on-dark);
+  border: var(--toolkit-button-border-secondary-disabled-on-dark);
+  cursor: not-allowed;
+}
+
+.secondary[data-mode="dark"]:focus {
+  box-shadow: var(--toolkit-button-color-shadow-secondary-focus-on-dark);
+  border: var(--toolkit-button-border-secondary-focus-on-dark);
+}
+
+/***** TEXT *****/
+.text[data-mode="dark"] {
+  background: var(--toolkit-button-color-background-text-default-on-dark);
+  border: var(--toolkit-button-border-text-default-on-dark);
+  border-radius: var(--toolkit-button-radius);
+  color: var(--toolkit-button-color-text-text-default-on-dark);
+  font: var(--typography-button-normal-bold);
+}
+
+.text[data-mode="dark"]:hover {
+  background: var(--toolkit-button-color-background-text-hover-on-dark);
+}
+
+.text[data-mode="dark"]:disabled {
+  background: var(--toolkit-button-color-background-text-disabled-on-dark);
+  color: var(--toolkit-button-color-text-text-disabled-on-dark);
+  border: var(--toolkit-button-border-text-disabled-on-dark);
+  cursor: not-allowed;
+}
+
+.text[data-mode="dark"]:focus {
+  box-shadow: var(--toolkit-button-color-shadow-text-focus-on-dark);
+  border: var(--toolkit-button-border-text-focus-on-dark);
+}

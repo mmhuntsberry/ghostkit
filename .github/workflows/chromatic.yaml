@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 name: "Chromatic"
 
 on:
@@ -19,30 +18,4 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
 
     # Add a conditional statement to skip the job on 'main' and 'staging' branches
-    if: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/staging' }}
-=======
-# Workflow name
-name: "Chromatic"
-
-# Event for the workflow
-on: push
-
-# List of jobs
-jobs:
-  chromatic-deployment:
-    # Operating System
-    runs-on: ubuntu-latest
-    # Job steps
-    steps:
-      - uses: actions/checkout@v1
-      - name: Install dependencies
-        # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
-        run: npm install
-        # 👇 Adds Chromatic as a step in the workflow
-      - name: Publish to Chromatic
-        uses: chromaui/action@v1
-        # Chromatic GitHub Action options
-        with:
-          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
->>>>>>> eb33d97 (fix: conflict)
+    # if: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/staging' }}
