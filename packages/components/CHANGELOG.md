@@ -1,5 +1,12 @@
 
 
+## 0.0.2-alpha.2 (2023-08-10)
+
+
+### Bug Fixes
+
+* added wrong button. revert back to correct button comp ([752488c](https://github.com/mmhuntsberry/ghostkit/commit/752488c807de5297c3d739e4a7659328066a95b3))
+
 ## 0.0.2-alpha.1 (2023-08-10)
 
 
