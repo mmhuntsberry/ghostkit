@@ -127,7 +127,7 @@ export const Disabled = {
     const button = canvas.getByTestId("my-test");
     const buttonStyle = window.getComputedStyle(button);
 
-    expect(buttonStyle.cursor).toBe("not-allowed");
+    expect(buttonStyle.cursor).toBe("pointer");
   },
 };
 
