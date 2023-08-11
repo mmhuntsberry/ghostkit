@@ -23,5 +23,5 @@ jobs:
       - name: Serve Storybook and run tests
         run: |
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-            "npx http-server storybook-static --port 4400 --silent" \
+            "npx http-server dist/storybook/components --port 4400 --silent" \
             "npx wait-on tcp:4400 && npx nx run components:test-storybook --url http://localhost:4400"
