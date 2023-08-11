@@ -1,7 +1,8 @@
-import ColorBlocks from "../../storybook/ColorBlocks";
-import TokenTable from "../../storybook/TokenTable";
+import ColorBlocks from "../../components/ColorBlocks";
+import TokenTable from "../../components/TokenTable";
 
 export default {
+  // title: "Foundations/Colors",
   component: ColorBlocks,
   argTypes: {},
 };

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import "@mmhuntsberry/tokens";
 
-export interface ButtonProps {
+export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
   kind: "primary" | "secondary" | "text";
   size?: "sm" | "md" | "lg";
