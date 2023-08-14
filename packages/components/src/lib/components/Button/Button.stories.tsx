@@ -2,9 +2,14 @@ import { within } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
 import { Button } from "./Button";
 import type { ButtonProps } from "./Button";
+import changelog from "packages/components/CHANGELOG.md?raw";
+import { useMemo } from "react";
 
 export default {
   component: Button,
+  parameters: {
+    changelog: changelog,
+  },
   argTypes: {
     children: {
       type: {
@@ -98,7 +103,7 @@ export const Kinds = {
 
   parameters: {
     controls: {
-      disable: true,
+      disable: true, // This throws a warning in the terminal because we are turning off controls
     },
   },
 };
