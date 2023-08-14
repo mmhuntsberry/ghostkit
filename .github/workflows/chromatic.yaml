@@ -16,6 +16,7 @@ jobs:
         uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBuildDir: "dist/storybook/components"
 
     # Add a conditional statement to skip the job on 'main' and 'staging' branches
     # if: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/staging' }}
