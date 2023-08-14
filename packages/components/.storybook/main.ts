@@ -33,10 +33,6 @@ const config: StorybookConfig = {
       builder: {
         viteConfigPath: "packages/components/vite.config.ts",
       },
-
-      builder: {
-        viteConfigPath: "packages/components/vite.config.ts",
-      },
     },
   },
 
