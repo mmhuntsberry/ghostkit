@@ -25,8 +25,8 @@ jobs:
           ACTOR_EMAIL="${GITHUB_ACTOR}@users.noreply.github.com"
 
           # configure Git username and email
-          git config user.name "$ACTOR_USERNAME"
-          git config user.email "$ACTOR_EMAIL"
+          git config user.name "mmhuntsberry"
+          git config user.email "mmhuntsberry@gmail.com"
 
 
           # Display the configured user name and email for verification
@@ -36,7 +36,6 @@ jobs:
       - name: Build packages
         run: |
           npm config set //npm.pkg.github.com/:_authToken $NODE_AUTH_TOKEN
-          npx nx release tokens --ci --no-npm
           npx nx release tokens --no-npm --ci
           npx nx publish tokens
         env:
