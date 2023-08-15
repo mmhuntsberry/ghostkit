@@ -1,5 +1,5 @@
-import TokenTable from "../../components/TokenTable";
-import SizeBlocks from "../../components/SizeBlocks";
+import TokenTable from "../../../components/TokenTable";
+import SizeBlocks from "../../../components/SizeBlocks";
 
 export default {
   component: SizeBlocks,

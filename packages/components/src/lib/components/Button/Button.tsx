@@ -3,12 +3,13 @@ import styled from "@emotion/styled";
 import "@mmhuntsberry/tokens";
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+  children?: React.ReactNode;
   disabled?: boolean;
   kind: "primary" | "secondary" | "text";
-  size?: "sm" | "md" | "lg";
-  theme?: string;
   mode?: string;
-  children?: React.ReactNode;
+  size?: "sm" | "md" | "lg";
+
+  theme?: string;
 }
 
 const StyledButton = styled.button<ButtonProps>`

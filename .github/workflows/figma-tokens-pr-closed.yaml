@@ -1,87 +1,27 @@
-# trigger change
-name: Figma Tokens Publish
+name: Figma Tokens Sync
 
 on:
   push:
     branches:
-      - main
+      - "*release*"
 
 jobs:
-  check-package-version:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Get latest published version from NPM
-        id: npm_version
-        run: |
-          latest_version=$(npm show @mmhuntsberry/tokens version)
-          echo "latest_version=$latest_version" >> $GITHUB_ENV
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
-
-      - name: Get local package.json version
-        id: local_version
-        run: |
-          local_version=$(cat packages/tokens/package.json | jq -r '.version')
-          echo "local_version=$local_version" >> $GITHUB_ENV
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
-
-      - name: Compare versions and create file
-        run: |
-          if [ "$latest_version" != "$local_version" ]; then
-            echo "run_publish_job=true" > run_publish.txt
-          else
-            echo "run_publish_job=false" > run_publish.txt
-          fi
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
-
-      - name: Upload result
-        uses: actions/upload-artifact@v2
-        with:
-          name: result
-          path: run_publish.txt
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
-
-  publish-tokens-gpr:
-    needs: check-package-version
+  publish-tokens:
     runs-on: ubuntu-latest
     permissions:
       packages: write
       contents: read
     steps:
-      - name: Download result
-        uses: actions/download-artifact@v2
-        with:
-          name: result
-
-      - id: set-publish-flag
-        run: echo "RUN_PUBLISH_JOB=$(cat run_publish.txt)" >> $GITHUB_ENV
-
-      - name: Checkout code
-        if: env.RUN_PUBLISH_JOB == 'run_publish_job=true'
-        uses: actions/checkout@v3
-
-      - name: Setup node
-        if: env.RUN_PUBLISH_JOB == 'run_publish_job=true'
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
-
-      - name: Install dependencies
-        if: env.RUN_PUBLISH_JOB == 'run_publish_job=true'
-        run: npm ci
-
-      - name: Build and publish packages
-        if: env.RUN_PUBLISH_JOB == 'run_publish_job=true'
+      - run: npm ci
+      - name: Build packages
         run: |
-          npx nx run @mmhuntsberry/tokens:pack
-          cd packages/tokens/dist
-          npm publish
+          npx nx pack tokens
+          npx nx publish tokens
+          npx nx release tokens
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
