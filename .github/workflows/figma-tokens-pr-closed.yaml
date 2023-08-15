@@ -21,7 +21,7 @@ jobs:
       - name: Build packages
         run: |
           npx nx pack tokens
-          npx nx publish tokens
           npx nx release tokens
+          npx nx publish tokens
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
