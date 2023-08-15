@@ -41,3 +41,4 @@ jobs:
           npx nx publish tokens
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
