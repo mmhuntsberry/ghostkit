@@ -1,9 +1,9 @@
-# name: "Chromatic"
+name: "Chromatic"
 
-# on:
-#   push:
-#     branches:
-#       - "*"
+on:
+  push:
+    branches:
+      - "*"
 
 jobs:
   chromatic-deployment:
