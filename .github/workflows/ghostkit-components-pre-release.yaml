@@ -1,12 +1,14 @@
-name: Pre Release Publish
+name: Pre Release Components
 
 on:
   push:
     branches:
-      - staging
+      - "*rc*"
+    paths:
+      - "packages/components/**"
 
 jobs:
-  publish-components-gpr:
+  publish-components-pre-release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
