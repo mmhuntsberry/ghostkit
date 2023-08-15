@@ -2,6 +2,55 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.24 (2023-08-07)
+
+
+### Bug Fixes
+
+* remove test token ([0128b17](https://github.com/mmhuntsberry/ghostkit/commit/0128b17c4f84cbc22b7ef4ccbf338f47bb2d6084))
+
+### 0.0.22 (2023-08-07)
+
+
+### Bug Fixes
+
+* add test token ([20dbd9f](https://github.com/mmhuntsberry/ghostkit/commit/20dbd9fbd7049148d3bcbd87a892e8ea2f6d287b))
+
+### 0.0.20 (2023-08-07)
+
+
+### Bug Fixes
+
+* remove test token ([c41a67e](https://github.com/mmhuntsberry/ghostkit/commit/c41a67e2c05731d0362d64c2fb44a96556887ffa))
+
+### 0.0.18 (2023-08-07)
+
+
+### Bug Fixes
+
+* add test token ([642d13d](https://github.com/mmhuntsberry/ghostkit/commit/642d13d93a7fe6d26e1fcaaf542a5b1eea1205f4))
+
+### 0.0.16 (2023-08-07)
+
+
+### Bug Fixes
+
+* rename xxs token to match naming convention ([db6bd07](https://github.com/mmhuntsberry/ghostkit/commit/db6bd07f7f1443daf0a6313cb728e721aceb626d))
+
+### 0.0.14 (2023-08-07)
+
+
+### Bug Fixes
+
+* rename xxs token to match naming style ([fdbde75](https://github.com/mmhuntsberry/ghostkit/commit/fdbde7553fd3ae003415368260a720db9b56d0be))
+
+### 0.0.12 (2023-08-06)
+
+
+### Bug Fixes
+
+* bump version and add component level tokens ([27a05d9](https://github.com/mmhuntsberry/ghostkit/commit/27a05d9f765f7f301d0c6245aee1adc89d104db0))
+
 ### 0.0.15 (2023-08-06)
 
 
