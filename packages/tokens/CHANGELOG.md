@@ -1,5 +1,12 @@
 
 
+## 0.2.2 (2023-08-15)
+
+
+### Cleanup
+
+* aaah its the permission, how could i miss it ([226b718](https://github.com/mmhuntsberry/ghostkit/commit/226b7181de6bbe18d8ab54d3657714a4fad6eb90))
+
 ## [0.2.1](https://github.com/mmhuntsberry/ghostkit/compare/tokens-v0.2.0...tokens-v0.2.1) (2023-08-15)
 
 
