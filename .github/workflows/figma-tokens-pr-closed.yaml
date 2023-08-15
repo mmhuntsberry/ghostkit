@@ -37,7 +37,7 @@ jobs:
         run: |
           npm config set //npm.pkg.github.com/:_authToken $NODE_AUTH_TOKEN
           npx nx release tokens --ci --no-npm
-          npx nx pack tokens
+          # npx nx pack tokens
           npx nx publish tokens
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
