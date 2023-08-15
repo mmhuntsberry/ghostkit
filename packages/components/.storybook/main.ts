@@ -10,20 +10,9 @@ const config: StorybookConfig = {
   ],
 
   addons: [
-    getAbsolutePath("storybook-addon-changelog-viewer"),
     getAbsolutePath("@storybook/addon-essentials"),
     getAbsolutePath("@storybook/addon-interactions"),
-    {
-      name: "@storybook/addon-coverage",
-      options: {
-        istanbul: {
-          onCover: (fileName, fileCoverage) => {
-            console.log({ fileName });
-            console.log({ fileCoverage });
-          },
-        },
-      },
-    },
+    getAbsolutePath("@storybook/addon-coverage"),
     getAbsolutePath("@storybook/addon-mdx-gfm"),
   ],
 

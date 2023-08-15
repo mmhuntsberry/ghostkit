@@ -12,7 +12,6 @@ export default {
         code: null,
       },
     },
-    changelog: changelog,
   },
   argTypes: {
     children: {
