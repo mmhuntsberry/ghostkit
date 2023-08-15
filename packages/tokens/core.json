@@ -521,6 +521,10 @@
       "base": {
         "value": "16",
         "type": "sizing"
+      },
+      "huge": {
+        "value": "128px",
+        "type": "sizing"
       }
     },
     "spacing": {
