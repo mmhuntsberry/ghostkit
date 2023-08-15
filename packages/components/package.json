@@ -4,9 +4,7 @@
   "main": "./index.js",
   "module": "./index.mjs",
   "types": "./index.d.ts",
-  "scripts": {
-    "test-storybook": "test-storybook"
-  },
+  "scripts": {},
   "exports": {
     ".": {
       "import": "./index.mjs",
@@ -15,8 +13,5 @@
   },
   "dependencies": {
     "@mmhuntsberry/tokens": "*"
-  },
-  "devDependencies": {
-    "@storybook/test-runner": "^0.13.0"
   }
 }

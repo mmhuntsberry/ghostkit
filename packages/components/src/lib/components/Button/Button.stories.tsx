@@ -3,11 +3,15 @@ import { expect } from "@storybook/jest";
 import { Button } from "./Button";
 import type { ButtonProps } from "./Button";
 import changelog from "packages/components/CHANGELOG.md?raw";
-import { useMemo } from "react";
 
 export default {
   component: Button,
   parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
     changelog: changelog,
   },
   argTypes: {
