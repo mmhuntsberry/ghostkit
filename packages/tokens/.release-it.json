@@ -29,7 +29,7 @@
     },
     "@release-it/bumper": {
       "in": "packages/tokens/version.json",
-      "out": ["packages/tokens/version.json", "dist/package.json"]
+      "out": ["packages/tokens/version.json", "packages/tokens/package.json"]
     }
   },
   "git": {
