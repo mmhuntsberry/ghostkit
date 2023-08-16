@@ -521,6 +521,11 @@
       "base": {
         "value": "16",
         "type": "sizing"
+      },
+      "huge": {
+        "value": "144px",
+        "type": "sizing",
+        "description": "Delete me - TEST"
       }
     },
     "spacing": {
