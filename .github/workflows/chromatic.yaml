@@ -4,10 +4,7 @@ on:
   push:
     branches:
       - "*"
-<<<<<<< HEAD
       - "!main"
-=======
->>>>>>> 4b0e842 (cleanup: release probably needs to be above pack too)
       - "!release"
       - "!figma-tokens"
 
