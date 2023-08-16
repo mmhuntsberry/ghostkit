@@ -47,7 +47,10 @@
     "releaseName": "Release: tokens ${version}"
   },
   "hooks": {
+<<<<<<< HEAD
     "before:bump": "npx nx pack tokens",
+=======
+>>>>>>> 22d4e7e (cleanup: changelog)
     "after:bump": ["git checkout -- package.json"]
   }
 }
