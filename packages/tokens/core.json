@@ -526,6 +526,11 @@
         "value": "144px",
         "type": "sizing",
         "description": "Delete me - TEST"
+      },
+      "test": {
+        "value": "256px",
+        "type": "sizing",
+        "description": "I am a test token - DELETE ME!!!!"
       }
     },
     "spacing": {
