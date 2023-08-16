@@ -1,0 +1,27 @@
+name: Figma Tokens Sync
+
+on:
+  push:
+    branches:
+      - "*release*"
+
+jobs:
+  publish-tokens:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - run: npm ci
+      - name: Build packages
+        run: |
+          npx nx release tokens
+          npx nx pack tokens
+          npx nx publish tokens
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
