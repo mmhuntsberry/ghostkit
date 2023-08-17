@@ -18,8 +18,9 @@ const StyledButton = styled.button<ButtonProps>`
   }
 
   align-items: center;
-  background: ${(props) =>
-    `var(--${props.theme}-button-color-background-${props.kind}-default-on-${props.mode})`};
+  /* background: ${(props) =>
+    `var(--${props.theme}-button-color-background-${props.kind}-default-on-${props.mode})`}; */
+  background: rebeccapurple;
   border: ${(props) =>
     `var(--${props.theme}-button-border-${props.kind}-default-on-${props.mode})`};
   border-radius: ${(props) => `var(--${props.theme}-button-radius)`};
