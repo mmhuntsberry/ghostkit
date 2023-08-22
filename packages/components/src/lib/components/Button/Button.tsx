@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 import "@mmhuntsberry/tokens";
-import "../../../index.css";
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
