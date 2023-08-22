@@ -3,6 +3,7 @@ import SizeBlocks from "../../../components/SizeBlocks";
 
 export default {
   component: SizeBlocks,
+  title: "Design Tokens/Sizes/Sizes",
 };
 
 export const Sizes = {
