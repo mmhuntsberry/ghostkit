@@ -17,6 +17,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
+        "postcssConfig": "packages/components/postcss.config.js",
         "outputPath": "dist"
       },
       "configurations": {
