@@ -7,7 +7,8 @@ interface SectionTitle {
 }
 
 export const StyledSectionTitle = styled.h2<SectionTitle>`
-  font: var(--typography-headline-4-regular);
+  font: var(--typography-headline-5-bold);
+  padding-top: var(--sizing-xs);
 `;
 
 export const SectionTitle: FC<SectionTitle> = ({ id, children }) => {

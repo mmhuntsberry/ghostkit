@@ -80,13 +80,12 @@ export const Primary = {
     children: "Button Text",
     "data-testid": "my-test",
   },
-  // @ts-expect-error idk canvas element type
-  play: async ({ canvasElement }) => {
+
+  play: async ({ canvasElement }: any) => {
     const canvas = within(canvasElement);
 
     const button = canvas.getByTestId("my-test");
     expect(button instanceof HTMLButtonElement).toBe(true);
-    // await userEvent.click(button);
   },
 };
 
@@ -129,7 +128,7 @@ export const Disabled = {
       disable: true,
     },
   },
-  play: async ({ canvasElement }) => {
+  play: async ({ canvasElement }: any) => {
     const canvas = within(canvasElement);
 
     const button = canvas.getByTestId("my-test");

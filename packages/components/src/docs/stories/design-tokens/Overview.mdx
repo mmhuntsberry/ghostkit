@@ -6,12 +6,12 @@ import {
   ColorItem,
   Unstyled,
 } from "@storybook/blocks";
-import * as ColorStories from "./Colors.stories.tsx";
-import { PageTitle } from "../../../components/PageTitle.tsx";
-import { SectionTitle } from "../../../components/SectionTitle.tsx";
-import { SubTitle } from "../../../components/SubTitle.tsx";
+import * as ColorStories from "../colors/Colors.stories.tsx";
+import { PageTitle } from "../../components/PageTitle.tsx";
+import { SectionTitle } from "../../components/SectionTitle.tsx";
+import { SubTitle } from "../../components/SubTitle.tsx";
 
-<Meta of={ColorStories} title="foundations/colors" />
+{/* <Meta of={ColorStories} title="foundations/colors" /> */}
 
 <Unstyled>
 
@@ -19,16 +19,6 @@ import { SubTitle } from "../../../components/SubTitle.tsx";
 
 - [Overview](#overview)
 - [Color Primitives](#color-primitives)
-  - [Red](#red)
-  - [Blue](#blue)
-  - [Grey](#grey)
-  - [Green](#green)
-  - [Indigo](#indigo)
-  - [Yellow](#yellow)
-  - [Emerald](#emerald)
-  - [Fushia](#fushia)
-  - [White](#white)
-  - [Black](#black)
 - [Semantic Colors](#semantic-colors)
 - [Gradients](#gradients)
 
@@ -42,18 +32,13 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 <SectionTitle id="color-primitives">Color Primitives</SectionTitle>
 
+---
+
 Color primitives are a fundamental unit of color representation used in
 digital systems, forming the basis of all color in our design system. They are
 used to create color tokens
 
----
-
-<SubTitle id="red">Red</SubTitle>
-
-<Story of={ColorStories.Red} />
-
-<SubTitle id="blue">Blue</SubTitle>
-
-<Story of={ColorStories.Blue} />
+<Canvas of={ColorStories.Red} />
+<Canvas of={ColorStories.Blue} />
 
 </Unstyled>

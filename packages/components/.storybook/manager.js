@@ -10,6 +10,7 @@ const theme = create({
   base: "light",
   brandImage: logo,
   brandUrl: "",
+  // colorPrimary: "blue",
   barSelectedColor: "#3d53f5",
   brandTitle: "Resin Design",
   background: {
