@@ -1,5 +1,5 @@
-import ColorBlocks from "../../components/ColorBlocks";
-import TokenTable from "../../components/TokenTable";
+import ColorBlocks from "../../../components/ColorBlocks";
+import TokenTable from "../../../components/TokenTable";
 
 export default {
   title: "Design Tokens/Colors/Primitive",
