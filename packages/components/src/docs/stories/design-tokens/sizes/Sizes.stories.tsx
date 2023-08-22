@@ -6,7 +6,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "../../../../lib/components/Table/table";
+} from "../../../../lib/components/Table/Table";
 
 export default {
   title: "Design Tokens/Sizes",
