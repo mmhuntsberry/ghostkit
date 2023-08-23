@@ -7,7 +7,7 @@ import {
   Unstyled,
 } from "@storybook/blocks";
 import * as ColorStories from "./colors/colors.stories.tsx";
-// import * as SizeStories from "./sizes/sizes.stories.tsx";
+import * as SizeStories from "./sizing/sizing.stories.tsx";
 import { PageTitle } from "../../components/PageTitle.tsx";
 import { SectionTitle } from "../../components/SectionTitle.tsx";
 import { SubTitle } from "../../components/SubTitle.tsx";
@@ -35,15 +35,14 @@ digital systems, forming the basis of all color in our design system. They are
 used to create color tokens
 
 <Canvas of={ColorStories.Grey} />
-{/* <Canvas of={ColorStories.Red} /> */}
-
-{/* <Canvas of={ColorStories.Blue} /> */}
+<Canvas of={ColorStories.Red} />
+<Canvas of={ColorStories.Blue} />
 
 <SectionTitle id="sizes">Sizes</SectionTitle>
 
 ---
 
-{/* <Canvas of={SizeStories.Sizing} /> */}
-{/* <Canvas of={SizeStories.Spacing} /> */}
+<Canvas of={SizeStories.Sizing} />
+<Canvas of={SizeStories.Spacing} />
 
 </Unstyled>
