@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@mmhuntsberry/components": ["packages/components/src/index.ts"],
-      "@mmhuntsberry/tokens": ["packages/tokens/build/css/index.css"]
+      "@mmhuntsberry/tokens": ["packages/tokens/build/css/index.css"],
+      "@mmhuntsberry/ui-mantine": ["packages/ui-mantine/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

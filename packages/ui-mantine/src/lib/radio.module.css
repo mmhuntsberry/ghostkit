@@ -1,0 +1,15 @@
+@import "packages/tokens/themes/global.css";
+/*
+ * Replace this with your own classes
+ *
+ * e.g.
+ * .container {
+ * }
+*/
+.root {
+  --radio-color: var(--color-primary-600, purple);
+}
+
+.label {
+  font: var(--font-size-md-regular);
+}
