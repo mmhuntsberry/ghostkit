@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 24 Sep 2023 15:42:42 GMT
+ * Generated on Mon, 25 Sep 2023 11:01:51 GMT
  */
 
 :root {
@@ -45,7 +45,7 @@
   --primitive-1280: 80rem; /* 1280px */
   --primitive-1600: 100rem; /* 1600px */
   --primitive-1920: 120rem; /* 1920px */
-  --primitive-gray-100: #F9F9F9;
+  --primitive-gray-100: #f9f9f9;
   --primitive-gray-200: #edeeef;
   --primitive-gray-300: #d5d7db;
   --primitive-gray-400: #b7bcc3;
@@ -65,7 +65,7 @@
   --primitive-blue-600: #0c57cd;
   --primitive-blue-700: #063b99;
   --primitive-blue-800: #052b74;
-  --primitive-blue-900: #041C4F;
+  --primitive-blue-900: #041c4f;
   --primitive-blue-1000: #03122f;
   --primitive-red-100: #fee5e5;
   --primitive-red-200: #fecbcb;
@@ -192,8 +192,8 @@
   --border-width-sm: 0.063rem; /* 1px */
   --border-width-md: 0.125rem; /* 2px */
   --border-width-lg: 0.25rem; /* 4px */
-  --font-families-default: Source Sans 3;
-  --font-families-mono: Fira Code;
+  --font-families-default: "Source Sans 3";
+  --font-families-mono: "Fira Code";
   --font-weights-regular: 400;
   --font-weights-semibold: 600;
   --font-weights-bold: 700;
@@ -209,40 +209,40 @@
   --letter-spacing-3xl: -0.175em;
   --letter-spacing-4xl: -0.025em;
   --paragraph-spacing-0: 0;
-  --font-size-3xs-regular: 400 0.75rem/1rem Source Sans 3;
-  --font-size-3xs-semibold: 600 0.75rem/1rem Source Sans 3;
-  --font-size-3xs-bold: 700 0.75rem/1rem Source Sans 3;
-  --font-size-2xs-regular: 400 0.813rem/1.25rem Source Sans 3;
-  --font-size-2xs-semibold: 600 0.813rem/1.25rem Source Sans 3;
-  --font-size-2xs-bold: 700 0.813rem/1.25rem Source Sans 3;
-  --font-size-xs-regular: 400 0.875rem/1.25rem Source Sans 3;
-  --font-size-xs-semibold: 600 0.875rem/1.25rem Source Sans 3;
-  --font-size-xs-bold: 700 0.875rem/1.25rem Source Sans 3;
-  --font-size-sm-regular: 400 0.938rem/1.25rem Source Sans 3;
-  --font-size-sm-semibold: 600 0.938rem/1.25rem Source Sans 3;
-  --font-size-sm-bold: 700 0.938rem/1.25rem Source Sans 3;
-  --font-size-md-regular: 400 1rem/1.5rem Source Sans 3;
-  --font-size-md-semibold: 600 1rem/1.5rem Source Sans 3;
-  --font-size-md-bold: 700 1rem/1.5rem Source Sans 3;
-  --font-size-lg-regular: 400 1.125rem/1.5rem Source Sans 3;
-  --font-size-lg-semibold: 600 1.125rem/1.5rem Source Sans 3;
-  --font-size-lg-bold: 700 1.125rem/1.5rem Source Sans 3;
-  --font-size-xl-regular: 400 1.25rem/1.75rem Source Sans 3;
-  --font-size-xl-semibold: 600 1.25rem/1.75rem Source Sans 3;
-  --font-size-xl-bold: 700 1.25rem/1.75rem Source Sans 3;
-  --font-size-2xl-regular: 400 1.5rem/2.25rem Source Sans 3;
-  --font-size-2xl-semibold: 600 1.5rem/2.25rem Source Sans 3;
-  --font-size-2xl-bold: 700 1.5rem/2.25rem Source Sans 3;
-  --font-size-3xl-regular: 400 2.25rem/3rem Source Sans 3;
-  --font-size-3xl-semibold: 600 2.25rem/3rem Source Sans 3;
-  --font-size-3xl-bold: 700 2.25rem/3rem Source Sans 3;
-  --font-size-4xl-regular: 400 2.75rem/4rem Source Sans 3;
-  --font-size-4xl-semibold: 600 2.75rem/4rem Source Sans 3;
-  --font-size-4xl-bold: 700 2.75rem/4rem Source Sans 3;
+  --font-size-3xs-regular: 400 0.75rem/1rem "Source Sans 3";
+  --font-size-3xs-semibold: 600 0.75rem/1rem "Source Sans 3";
+  --font-size-3xs-bold: 700 0.75rem/1rem "Source Sans 3";
+  --font-size-2xs-regular: 400 0.813rem/1.25rem "Source Sans 3";
+  --font-size-2xs-semibold: 600 0.813rem/1.25rem "Source Sans 3";
+  --font-size-2xs-bold: 700 0.813rem/1.25rem "Source Sans 3";
+  --font-size-xs-regular: 400 0.875rem/1.25rem "Source Sans 3";
+  --font-size-xs-semibold: 600 0.875rem/1.25rem "Source Sans 3";
+  --font-size-xs-bold: 700 0.875rem/1.25rem "Source Sans 3";
+  --font-size-sm-regular: 400 0.938rem/1.25rem "Source Sans 3";
+  --font-size-sm-semibold: 600 0.938rem/1.25rem "Source Sans 3";
+  --font-size-sm-bold: 700 0.938rem/1.25rem "Source Sans 3";
+  --font-size-md-regular: 400 1rem/1.5rem "Source Sans 3";
+  --font-size-md-semibold: 600 1rem/1.5rem "Source Sans 3";
+  --font-size-md-bold: 700 1rem/1.5rem "Source Sans 3";
+  --font-size-lg-regular: 400 1.125rem/1.5rem "Source Sans 3";
+  --font-size-lg-semibold: 600 1.125rem/1.5rem "Source Sans 3";
+  --font-size-lg-bold: 700 1.125rem/1.5rem "Source Sans 3";
+  --font-size-xl-regular: 400 1.25rem/1.75rem "Source Sans 3";
+  --font-size-xl-semibold: 600 1.25rem/1.75rem "Source Sans 3";
+  --font-size-xl-bold: 700 1.25rem/1.75rem "Source Sans 3";
+  --font-size-2xl-regular: 400 1.5rem/2.25rem "Source Sans 3";
+  --font-size-2xl-semibold: 600 1.5rem/2.25rem "Source Sans 3";
+  --font-size-2xl-bold: 700 1.5rem/2.25rem "Source Sans 3";
+  --font-size-3xl-regular: 400 2.25rem/3rem "Source Sans 3";
+  --font-size-3xl-semibold: 600 2.25rem/3rem "Source Sans 3";
+  --font-size-3xl-bold: 700 2.25rem/3rem "Source Sans 3";
+  --font-size-4xl-regular: 400 2.75rem/4rem "Source Sans 3";
+  --font-size-4xl-semibold: 600 2.75rem/4rem "Source Sans 3";
+  --font-size-4xl-bold: 700 2.75rem/4rem "Source Sans 3";
   --text-case-none: none;
   --text-decoration-none: none;
   --paragraph-indent-0: 0px;
-  --color-neutral-100: #F9F9F9;
+  --color-neutral-100: #f9f9f9;
   --color-neutral-200: #edeeef;
   --color-neutral-300: #d5d7db;
   --color-neutral-400: #b7bcc3;
@@ -264,7 +264,7 @@
   --color-primary-600: #0c57cd;
   --color-primary-700: #063b99;
   --color-primary-800: #052b74;
-  --color-primary-900: #041C4F;
+  --color-primary-900: #041c4f;
   --color-primary-1000: #03122f;
   --color-danger-100: #fee5e5;
   --color-danger-200: #fecbcb;

@@ -38,6 +38,23 @@ StyleDictionary.registerTransform({
   },
 });
 
+StyleDictionary.registerTransform({
+  name: "toolkit/typography/css/shorthand",
+  type: "value",
+  matcher: function (token) {
+    if (token.attributes.category === "fontFamilies") {
+      console.log(token);
+    }
+
+    return token.attributes.category === "fontFamilies";
+  },
+  transformer: function (token) {
+    const fontFamilies = token.original.value;
+
+    return `"${fontFamilies}"`;
+  },
+});
+
 const sd = StyleDictionary.extend({
   source: ["theme-b.json"],
   platforms: {
@@ -51,7 +68,7 @@ const sd = StyleDictionary.extend({
         "ts/type/fontWeight",
         "ts/resolveMath",
         "ts/size/css/letterspacing",
-        "ts/typography/css/shorthand",
+        "ts/typography/css/shorthand", // Apply the modified transform here
         "ts/border/css/shorthand",
         "ts/shadow/css/shorthand",
         "ts/color/css/hexrgba",
@@ -60,6 +77,7 @@ const sd = StyleDictionary.extend({
         "toolkit/radii/px",
         "toolkit/spacing/px",
         "toolkit/fontSize/px",
+        "toolkit/typography/css/shorthand",
       ],
       buildPath: "themes/",
       files: [

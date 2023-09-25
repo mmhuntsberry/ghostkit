@@ -1,7 +1,7 @@
 // src/theme.ts
+import "@mmhuntsberry/fonts/theme-g";
 import { createTheme } from "@mantine/core";
 
 export const theme = createTheme({
-  // fontFamily: "serif",
-  // ... other theme override properties
+  // fontFamily: "Source Sans 3",
 });
