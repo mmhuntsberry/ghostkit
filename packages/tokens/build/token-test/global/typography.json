@@ -1,0 +1,224 @@
+{
+  "fontSize": {
+    "xs": {
+      "value": "0.694rem",
+      "type": "fontSizes"
+    },
+    "sm": {
+      "value": "0.833rem",
+      "type": "fontSizes"
+    },
+    "md": {
+      "value": "1rem",
+      "type": "fontSizes"
+    },
+    "lg": {
+      "value": "1.2rem",
+      "type": "fontSizes"
+    },
+    "xl": {
+      "value": "1.44rem",
+      "type": "fontSizes"
+    },
+    "2xl": {
+      "value": "1.728rem",
+      "type": "fontSizes"
+    },
+    "3xl": {
+      "value": "2.074rem",
+      "type": "fontSizes"
+    },
+    "4xl": {
+      "value": "2.489rem",
+      "type": "fontSizes"
+    },
+    "5xl": {
+      "value": "2.987rem",
+      "type": "fontSizes"
+    },
+    "6xl": {
+      "value": "3.584rem",
+      "type": "fontSizes"
+    },
+    "7xl": {
+      "value": "4.301rem",
+      "type": "fontSizes"
+    },
+    "8xl": {
+      "value": "5.161rem",
+      "type": "fontSizes"
+    }
+  },
+  "fontWeights": {
+    "body": {
+      "bold": {
+        "value": "Bold",
+        "type": "fontWeights"
+      },
+      "semiBold": {
+        "value": "Semi Bold",
+        "type": "fontWeights"
+      },
+      "regular": {
+        "value": "Regular",
+        "type": "fontWeights"
+      }
+    },
+    "headlines": {
+      "bold": {
+        "value": "Bold",
+        "type": "fontWeights"
+      },
+      "regular": {
+        "value": "Regular",
+        "type": "fontWeights"
+      }
+    }
+  },
+  "lineHeights": {
+    "body": {
+      "default": {
+        "value": "150%",
+        "type": "lineHeights"
+      },
+      "relaxed": {
+        "value": "175%",
+        "type": "lineHeights"
+      }
+    },
+    "headlines": {
+      "default": {
+        "value": "110%",
+        "type": "lineHeights"
+      },
+      "sm": {
+        "value": "130%",
+        "type": "lineHeights"
+      },
+      "lg": {
+        "value": "120%",
+        "type": "lineHeights"
+      },
+      "xl": {
+        "value": "110%",
+        "type": "lineHeights"
+      }
+    }
+  },
+  "fontFamilies": {
+    "body": {
+      "value": "Inter",
+      "type": "fontFamilies"
+    },
+    "headlines": {
+      "value": "Tiempos Headline",
+      "type": "fontFamilies"
+    }
+  },
+  "letterSpacing": {
+    "body": {
+      "value": "0%",
+      "type": "letterSpacing"
+    },
+    "buttons": {
+      "value": "-1%",
+      "type": "letterSpacing"
+    },
+    "captions": {
+      "value": "0%",
+      "type": "letterSpacing"
+    },
+    "headlines": {
+      "value": "-1%",
+      "type": "letterSpacing"
+    }
+  },
+  "paragraphSpacing": {
+    "default": {
+      "value": "0",
+      "type": "paragraphSpacing"
+    }
+  },
+  "textCase": {
+    "none": {
+      "value": "none",
+      "type": "textCase"
+    },
+    "button": {
+      "value": "uppercase",
+      "type": "textCase"
+    },
+    "captions": {
+      "value": "uppercase",
+      "type": "textCase"
+    },
+    "headlines": {
+      "value": "none",
+      "type": "textCase"
+    }
+  },
+  "textDecoration": {
+    "none": {
+      "value": "none",
+      "type": "textDecoration"
+    },
+    "buttons": {
+      "value": "none",
+      "type": "textDecoration"
+    },
+    "captions": {
+      "value": "none",
+      "type": "textDecoration"
+    }
+  },
+  "fontSizeAlt": {
+    "12": {
+      "value": "12",
+      "type": "fontSizes"
+    },
+    "14": {
+      "value": "14",
+      "type": "fontSizes"
+    },
+    "16": {
+      "value": "16",
+      "type": "fontSizes"
+    },
+    "18": {
+      "value": "18",
+      "type": "fontSizes"
+    },
+    "20": {
+      "value": "20",
+      "type": "fontSizes"
+    },
+    "22": {
+      "value": "22",
+      "type": "fontSizes"
+    },
+    "24": {
+      "value": "24",
+      "type": "fontSizes"
+    },
+    "28": {
+      "value": "28",
+      "type": "fontSizes"
+    },
+    "36": {
+      "value": "36",
+      "type": "fontSizes"
+    },
+    "48": {
+      "value": "48",
+      "type": "fontSizes"
+    },
+    "60": {
+      "value": "60",
+      "type": "fontSizes"
+    },
+    "112": {
+      "value": "112",
+      "type": "fontSizes"
+    }
+  }
+}
