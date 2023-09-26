@@ -1,3 +1,5 @@
+@import "@mmhuntsberry/tokens/themes/global.css";
+
 .root {
   --radio-color: var(--color-primary-600, purple);
 }

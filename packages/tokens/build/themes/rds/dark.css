@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 25 Sep 2023 20:38:31 GMT
+ * Generated on Mon, 25 Sep 2023 21:00:24 GMT
  */
 
 :root {
@@ -270,6 +270,15 @@
   --theme-primary-subtle: #160207;
   --theme-primary-disabled: #757575;
   --theme-primary-icons: #fcfcfc;
+  --theme-status-primary: #e879f9;
+  --theme-status-primary-hover: #f0abfc;
+  --theme-status-primary-outline: #701a75;
+  --theme-status-warning: #e95c7b;
+  --theme-status-warning-hover: #f2a2b3;
+  --theme-status-textbutton: #4f46e5;
+  --theme-status-success: #10b981;
+  --theme-status-success-hover: #a7f3d0;
+  --theme-status-success-outline: #064e3b;
   --theme-info-default: #3142c4;
   --theme-info-on-info: #ffffff;
   --theme-info-emphasis: #3d53f5;
@@ -290,15 +299,6 @@
   --theme-error-emphasis: #df1642;
   --theme-error-muted: #9c0f2e;
   --theme-error-subtle: #2d040d;
-  --theme-status-primary: #e879f9;
-  --theme-status-primary-hover: #f0abfc;
-  --theme-status-primary-outline: #701a75;
-  --theme-status-warning: #e95c7b;
-  --theme-status-warning-hover: #f2a2b3;
-  --theme-status-textbutton: #4f46e5;
-  --theme-status-success: #10b981;
-  --theme-status-success-hover: #a7f3d0;
-  --theme-status-success-outline: #064e3b;
   --theme-input-fg-disabled: #e0e0e0;
   --theme-input-text: #424242;
   --theme-input-border-default: #e0e0e0;
@@ -310,8 +310,8 @@
   --theme-shadow-color: #171717;
   --buttons: -0.01em;
   --border-focus-sm: 2px  #6366f1;
-  --border-width-sm: 2;
-  --border-width-xs: 1;
-  --border-width-base: 2;
-  --border-width-icon: 1.5;
+  --border-width-sm: 2px;
+  --border-width-xs: 1px;
+  --border-width-base: 2px;
+  --border-width-icon: 1.5px;
 }

@@ -2,7 +2,7 @@ const { registerTransforms } = require("@tokens-studio/sd-transforms");
 const StyleDictionary = require("style-dictionary");
 
 registerTransforms(StyleDictionary, {
-  excludeParentKeys: true,
+  // excludeParentKeys: true,
 });
 
 StyleDictionary.registerTransform({
@@ -56,7 +56,7 @@ StyleDictionary.registerTransform({
 });
 
 const sd = StyleDictionary.extend({
-  source: ["theme-b.json"],
+  source: ["./gds.json"],
   platforms: {
     css: {
       transforms: [
@@ -79,10 +79,10 @@ const sd = StyleDictionary.extend({
         "toolkit/fontSize/px",
         "toolkit/typography/css/shorthand",
       ],
-      buildPath: "themes/",
+      buildPath: "build/themes/gds/",
       files: [
         {
-          destination: "global.css",
+          destination: "gds.css",
           format: "css/variables",
         },
       ],
