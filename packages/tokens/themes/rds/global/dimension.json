@@ -33,6 +33,11 @@
       "value": "{sizing.base} * 4",
       "type": "sizing",
       "description": "64px"
+    },
+    "test": {
+      "value": "1px",
+      "type": "sizing",
+      "description": "I am a test"
     }
   },
   "spacing": {
