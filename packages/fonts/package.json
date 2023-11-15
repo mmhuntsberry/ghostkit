@@ -2,18 +2,18 @@
   "name": "@mmhuntsberry/fonts",
   "version": "0.0.0-replace",
   "description": "",
-"exports": {
-  ".": {
-    "SourceSans3-VariableFont_wght.ttf": "./theme-g/SourceSans3-VariableFont_wght.ttf",
-    "FiraCode-VariableFont_wght.ttf": "./theme-g/FiraCode-VariableFont_wght.ttf",
-    "Inter.otf": "./theme-h/Inter.otf",
-    "tiempos-headline-web-medium.eot": "./theme-h/tiempos-headline-web-medium.eot",
-    "tiempos-headline-web-medium.woff2": "./theme-h/tiempos-headline-web-medium.woff2",
-    "tiempos-headline-web-medium.woff": "./theme-h/tiempos-headline-web-medium.woff"
+  "exports": {
+    ".": {
+      "SourceSans3-VariableFont_wght.ttf": "./theme-g/SourceSans3-VariableFont_wght.ttf",
+      "FiraCode-VariableFont_wght.ttf": "./theme-g/FiraCode-VariableFont_wght.ttf",
+      "Inter.otf": "./theme-h/Inter.otf",
+      "tiempos-headline-web-medium.eot": "./theme-h/tiempos-headline-web-medium.eot",
+      "tiempos-headline-web-medium.woff2": "./theme-h/tiempos-headline-web-medium.woff2",
+      "tiempos-headline-web-medium.woff": "./theme-h/tiempos-headline-web-medium.woff"
+    },
+    "./theme-g": "./theme-g/index.css",
+    "./theme-h": "./theme-h/index.css"
   },
-  "./theme-g": "./theme-g/index.css",
-  "./theme-h": "./theme-h/index.css"
-},
   "type": "commonjs",
   "scripts": {
     "pack": "mkdir -p dist && cp -r build package.json dist/"

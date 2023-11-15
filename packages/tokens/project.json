@@ -36,7 +36,6 @@
         "cwd": "packages/tokens/dist"
       }
     },
-
     "release": {
       "executor": "nx:run-commands",
       "options": {

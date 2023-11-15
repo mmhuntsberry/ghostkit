@@ -33,7 +33,6 @@
         "cwd": "packages/fonts/dist"
       }
     },
-
     "release": {
       "executor": "nx:run-commands",
       "options": {

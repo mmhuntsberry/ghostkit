@@ -1,18 +1,4 @@
 {
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "nx/tasks-runners/default",
-      "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e",
-          "build-storybook"
-        ]
-      }
-    }
-  },
   "projects": {
     "tokens": {
       "root": "packages/tokens",
@@ -29,6 +15,13 @@
       "library": {
         "unitTestRunner": "jest"
       }
+    },
+    "@nx/next": {
+      "application": {
+        "projectNameAndRootFormat": "derived",
+        "style": "css",
+        "linter": "eslint"
+      }
     }
   },
   "targetDefaults": {
@@ -37,10 +30,27 @@
         "default",
         "{workspaceRoot}/.eslintrc.json",
         "{workspaceRoot}/.eslintignore"
-      ]
+      ],
+      "cache": true
     },
-    "test": {
-      "inputs": ["default", "^default", "{workspaceRoot}/jest.preset.js"]
+    "build": {
+      "cache": true
+    },
+    "build-storybook": {
+      "cache": true
+    },
+    "@nx/jest:jest": {
+      "inputs": ["default", "^default", "{workspaceRoot}/jest.preset.js"],
+      "cache": true,
+      "options": {
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
     }
   }
 }
