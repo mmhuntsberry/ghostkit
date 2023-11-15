@@ -1,46 +1,30 @@
 {
-  "projects": {
-    "tokens": {
-      "root": "packages/tokens",
-      "projectType": "library"
-    }
-  },
-  "extends": "nx/presets/npm.json",
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "generators": {
-    "@nx/react": {
-      "application": {
-        "babel": true
-      },
-      "library": {
-        "unitTestRunner": "jest"
-      }
-    },
-    "@nx/next": {
-      "application": {
-        "projectNameAndRootFormat": "derived",
-        "style": "css",
-        "linter": "eslint"
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
   "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
+    "e2e": {
+      "inputs": ["default", "^production"]
+    },
     "lint": {
       "inputs": [
         "default",
         "{workspaceRoot}/.eslintrc.json",
         "{workspaceRoot}/.eslintignore"
-      ],
-      "cache": true
-    },
-    "build": {
-      "cache": true
-    },
-    "build-storybook": {
-      "cache": true
+      ]
     },
     "@nx/jest:jest": {
-      "inputs": ["default", "^default", "{workspaceRoot}/jest.preset.js"],
+      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
       "cache": true,
       "options": {
         "passWithNoTests": true
@@ -50,6 +34,30 @@
           "ci": true,
           "codeCoverage": true
         }
+      }
+    }
+  },
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "production": [
+      "default",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/jest.config.[jt]s",
+      "!{projectRoot}/.eslintrc.json"
+    ],
+    "sharedGlobals": []
+  },
+  "generators": {
+    "@nx/react": {
+      "application": {
+        "babel": true
+      }
+    },
+    "@nx/next": {
+      "application": {
+        "style": "css",
+        "linter": "eslint"
       }
     }
   }

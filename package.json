@@ -1,13 +1,13 @@
 {
-  "name": "phantom-ui",
+  "name": "ghostkit",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "docs:dev:mantine": "npx nx run ui-mantine:storybook",
     "storybook": "npx nx run components:storybook",
     "build-storybook": "npx nx run components:build-storybook",
     "test-storybook": "npx test-storybook --url http://localhost:4400/ --coverage --config-dir packages/components/.storybook",
-    "chromatic": "npx chromatic"
+    "chromatic": "npx chromatic",
+    "dev:portfolio": "npx nx serve portfolio --dev"
   },
   "private": true,
   "devDependencies": {
