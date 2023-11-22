@@ -1,0 +1,38 @@
+.root {
+  --link-wrapper-background-color: none;
+  /* border */
+  --link-wrapper-border-radius: 32px;
+  /* font family */
+  --link-wrapper-font-family: var(--font-family-primary);
+  --link-wrapper-font-size: 16px;
+  /* padding */
+  --link-wrapper-padding-inline-start: 12px;
+  --link-wrapper-padding-inline-end: 12px;
+  --link-wrapper-padding-block-start: 8px;
+  --link-wrapper-padding-block-end: 8px;
+
+  /* text */
+  --link-wrapper-text-color: var(--text-color-secondary);
+
+  /* text decoration */
+  --link-wrapper-text-decoration: none;
+}
+
+.link-wrapper {
+  background-color: var(--link-wrapper-background-color);
+  border-radius: var(--link-wrapper-border-radius);
+  color: var(--link-wrapper-text-color);
+  font-family: var(--link-wrapper-font-family);
+  font-size: var(--link-wrapper-font-size);
+  padding-inline-start: var(--link-wrapper-padding-inline-start);
+  padding-inline-end: var(--link-wrapper-padding-inline-end);
+  padding-block-start: var(--link-wrapper-padding-block-start);
+  padding-block-end: var(--link-wrapper-padding-block-end);
+  text-decoration: var(--link-wrapper-text-decoration);
+
+  transition: background-color 0.25s ease-in-out;
+}
+
+.link-wrapper[data-active="true"] {
+  --link-wrapper-text-color: var(--text-color-secondary);
+}

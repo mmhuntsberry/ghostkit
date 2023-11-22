@@ -1,5 +1,10 @@
 @import "./fonts.css";
 @import "./global.css";
+@import "./utilites/color.css";
+@import "./utilites/grid.css";
+@import "./utilites/flex.css";
+@import "./utilites/spacing.css";
+@import "./utilites/typography.css";
 
 @import "./components/resin/button/light.css";
 @import "./components/resin/button/dark.css";

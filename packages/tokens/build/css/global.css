@@ -6,7 +6,7 @@
 :root {
   --colors-black: #171717;
   --colors-white: #ffffff;
-  --colors-red-50: #FDF1F4;
+  --colors-red-50: #fdf1f4;
   --colors-red-100: #fce8ec;
   --colors-red-200: #f9d0d9;
   --colors-red-300: #f2a2b3;
@@ -28,6 +28,18 @@
   --colors-blue-800: #182162;
   --colors-blue-900: #0c1131;
   --colors-blue-950: #060818;
+  --colors-cyan-50: #e8f9fa;
+  --colors-cyan-100: #c2f0f4;
+  --colors-cyan-200: #9ce8ef;
+  --colors-cyan-300: #76e0ea;
+  --colors-cyan-400: #5ee6eb; /* Your specified color */
+  --colors-cyan-500: #46d2dc;
+  --colors-cyan-600: #2ebece;
+  --colors-cyan-700: #16aab0;
+  --colors-cyan-800: #008692;
+  --colors-cyan-900: #005f6a;
+  --colors-cyan-950: #003b42;
+
   --colors-grey-50: #fcfcfc;
   --colors-grey-100: #f5f5f5;
   --colors-grey-200: #eeeeee;
@@ -38,8 +50,8 @@
   --colors-grey-700: #616161;
   --colors-grey-800: #424242;
   --colors-grey-900: #323232;
-  --colors-grey-950: #1F1F1F;
-  --colors-green-50: #F4FBF7;
+  --colors-grey-950: #1f1f1f;
+  --colors-green-50: #f4fbf7;
   --colors-green-100: #e8f6ee;
   --colors-green-200: #d1eedd;
   --colors-green-300: #a3ddbc;
@@ -61,7 +73,7 @@
   --colors-indigo-800: #3730a3;
   --colors-indigo-900: #312e81;
   --colors-indigo-950: #1e1b4b;
-  --colors-yellow-50: #FFFBF5;
+  --colors-yellow-50: #fffbf5;
   --colors-yellow-100: #fff8eb;
   --colors-yellow-200: #fff1d7;
   --colors-yellow-300: #ffe4af;
@@ -71,7 +83,7 @@
   --colors-yellow-700: #664b16;
   --colors-yellow-800: #33250b;
   --colors-yellow-900: #191306;
-  --colors-yellow-950: #0C0903;
+  --colors-yellow-950: #0c0903;
   --colors-emerald-50: #ecfdf5;
   --colors-emerald-100: #d1fae5;
   --colors-emerald-200: #a7f3d0;
@@ -94,10 +106,49 @@
   --colors-fuchsia-800: #86198f;
   --colors-fuchsia-900: #701a75;
   --colors-fuchsia-950: #4a044e;
-  --gradient-overlay-darkop-shade: linear-gradient(90deg, #303030d9 0%, #30303000 100%);
-  --gradient-overlay-lightop-shade: linear-gradient(90deg, #ffffffd9 0%, #ffffff00 100%);
-  --gradient-overlay-dark-bottom-shade: linear-gradient(90deg, #30303000 0%, #303030d9 100%);
-  --gradient-overlay-light-bottom-shade: linear-gradient(90deg, #ffffff00 0%, #ffffffd9 100%);
+  --colors-purple-50: #f5f0fd;
+  --colors-purple-100: #eadbf9;
+  --colors-purple-200: #d4b7f3;
+  --colors-purple-300: #be92ec;
+  --colors-purple-400: #a76de6;
+  --colors-purple-500: #8f48e0;
+  --colors-purple-600: #7133b2;
+  --colors-purple-700: #532380;
+  --colors-purple-800: #361650;
+  --colors-purple-900: #1b0a28;
+  --colors-purple-950: #0e0514;
+  --colors-midnight-violet-50: #eaeaf4;
+  --colors-midnight-violet-100: #d4d5e9;
+  --colors-midnight-violet-200: #bdbedd;
+  --colors-midnight-violet-300: #a6a7d2;
+  --colors-midnight-violet-400: #8f90c6;
+  --colors-midnight-violet-500: #7879bb;
+  --colors-midnight-violet-600: #6263af;
+  --colors-midnight-violet-700: #4c4d9f;
+  --colors-midnight-violet-800: #38377b;
+  --colors-midnight-violet-900: #32304a; /* Your specified color */
+  --colors-midnight-violet-950: #1c1b35;
+
+  --gradient-overlay-darkop-shade: linear-gradient(
+    90deg,
+    #303030d9 0%,
+    #30303000 100%
+  );
+  --gradient-overlay-lightop-shade: linear-gradient(
+    90deg,
+    #ffffffd9 0%,
+    #ffffff00 100%
+  );
+  --gradient-overlay-dark-bottom-shade: linear-gradient(
+    90deg,
+    #30303000 0%,
+    #303030d9 100%
+  );
+  --gradient-overlay-light-bottom-shade: linear-gradient(
+    90deg,
+    #ffffff00 0%,
+    #ffffffd9 100%
+  );
   --opacity-1: rgba(66, 66, 66, 0.01);
   --opacity-5: rgba(66, 66, 66, 0.05);
   --opacity-10: rgba(66, 66, 66, 0.1);
@@ -114,14 +165,14 @@
   --shadow-blur: rgba(23, 23, 23, 0.9);
   --shadow-opacity-base: 1;
   --shadow-opacity-blur: 0.9;
-  --sizing-base: 1.0000rem;
+  --sizing-base: 1rem;
   --sizing-xxs: 1rem; /* 16px */
   --sizing-xs: 1.5rem; /* 24px */
   --sizing-sm: 2rem; /* 32px */
   --sizing-md: 2.5rem; /* 40px */
   --sizing-lg: 3rem; /* 48px */
   --sizing-xl: 4rem; /* 64px */
-  --spacing-base: 0.2500rem;
+  --spacing-base: 0.25rem;
   --spacing-xxs: 0.125rem; /* 2px */
   --spacing-xs: 0.25rem; /* The base token for spacing */
   --spacing-sm: 0.5rem; /* 8px */
@@ -131,14 +182,14 @@
   --spacing-2xl: 1.5rem; /* 24px */
   --spacing-3xl: 2rem; /* 32px */
   --spacing-4xl: 4rem; /* 64px */
-  --radii-base: 0.2500rem; /* the base for our radii tokens */
+  --radii-base: 0.25rem; /* the base for our radii tokens */
   --radii-xs: 0.125rem; /* 2px */
   --radii-sm: 0.25rem; /* 4px */
   --radii-md: 0.5rem; /* 8px */
   --radii-lg: 0.75rem; /* 12px */
   --radii-xl: 1rem; /* 16px */
   --radii-2xl: 1.25rem; /* 20px */
-  --radii-rounded: 6.2500rem; /* 100px */
+  --radii-rounded: 6.25rem; /* 100px */
   --shadows-20: 0 1px 1.5px 0 rgba(23, 23, 23, 0.9), 0 0 0.5px 0 #171717;
   --shadows-40: 0 2px 2px 0 rgba(23, 23, 23, 0.9), 0 0 0.5px 0 #171717;
   --shadows-60: 0 4px 4px 0 rgba(23, 23, 23, 0.9), 0 0 0.5px 0 #171717;
@@ -180,7 +231,7 @@
   --line-heights-headlines-lg: 1.2;
   --line-heights-headlines-xl: 1.1;
   --font-families-body: Oxygen;
-  --font-families-headlines: PT Serif;
+  --font-family-primary: Roboto, sans-serif;
   --letter-spacing-body: 0em;
   --letter-spacing-buttons: -0.01em;
   --letter-spacing-captions: 0em;
@@ -194,18 +245,6 @@
   --text-decoration-none: none;
   --text-decoration-buttons: none;
   --text-decoration-captions: none;
-  --font-size-alt-12: 12;
-  --font-size-alt-14: 14;
-  --font-size-alt-16: 16;
-  --font-size-alt-18: 18;
-  --font-size-alt-20: 20;
-  --font-size-alt-22: 22;
-  --font-size-alt-24: 24;
-  --font-size-alt-28: 28;
-  --font-size-alt-36: 36;
-  --font-size-alt-48: 48;
-  --font-size-alt-60: 60;
-  --font-size-alt-112: 112;
   --body-bold: 700 1.2rem/1.5 Oxygen;
   --body-regular: 400 1.2rem/1.5 Oxygen;
   --button-normal-bold: 700 0.833rem/1.5 Oxygen;
@@ -309,9 +348,9 @@
   --theme-border-white: #ffffff;
   --theme-shadow-color: #171717;
   --buttons: -0.01em;
-  --border-focus-sm: 2px  #6366f1;
-  --border-width-sm: 2;
-  --border-width-xs: 1;
+  --border-focus-sm: 2px #6366f1;
+  --border-width-sm: 2px;
+  --border-width-xs: 1px;
   --border-width-base: 2;
   --border-width-icon: 1.5;
 }
