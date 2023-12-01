@@ -47,49 +47,49 @@
 }
 
 .gap-sm {
-  gap: var(--spacing-sm);
+  gap: var(--sizing-sm);
 }
 
 .gap-md {
-  gap: var(--spacing-md);
+  gap: var(--sizing-md);
 }
 
 .gap-lg {
-  gap: var(--spacing-lg);
+  gap: var(--sizing-lg);
 }
 
 .gap-xl {
-  gap: var(--spacing-xl);
+  gap: var(--sizing-xl);
 }
 
 .gap-2xl {
-  gap: var(--spacing-2xl);
+  gap: var(--sizing-2xl);
 }
 
 .gap-3xl {
-  gap: var(--spacing-3xl);
+  gap: var(--sizing-3xl);
 }
 
 .row-gap-sm {
-  row-gap: var(--spacing-sm);
+  row-gap: var(--sizing-sm);
 }
 
 .row-gap-md {
-  row-gap: var(--spacing-md);
+  row-gap: var(--sizing-md);
 }
 
 .row-gap-lg {
-  row-gap: var(--spacing-lg);
+  row-gap: var(--sizing-lg);
 }
 
 .row-gap-xl {
-  row-gap: var(--spacing-xl);
+  row-gap: var(--sizing-xl);
 }
 
 .row-gap-2xl {
-  row-gap: var(--spacing-2xl);
+  row-gap: var(--sizing-2xl);
 }
 
 .row-gap-3xl {
-  row-gap: var(--spacing-3xl);
+  row-gap: var(--sizing-3xl);
 }

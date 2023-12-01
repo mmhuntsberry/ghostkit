@@ -5,7 +5,3 @@
 @import "./utilites/flex.css";
 @import "./utilites/spacing.css";
 @import "./utilites/typography.css";
-
-@import "./components/resin/button/light.css";
-@import "./components/resin/button/dark.css";
-@import "./components//resin/button/index.css";

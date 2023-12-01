@@ -26,8 +26,8 @@
 }
 
 .surface[data-compact="true"] {
-  --surface-padding-inline-start: var(--spacing-lg);
-  --surface-padding-inline-end: var(--spacing-lg);
-  --surface-padding-block-start: var(--spacing-lg);
-  --surface-padding-block-end: var(--spacing-lg);
+  --surface-padding-inline-start: var(--sizing-lg);
+  --surface-padding-inline-end: var(--sizing-lg);
+  --surface-padding-block-start: var(--sizing-lg);
+  --surface-padding-block-end: var(--sizing-lg);
 }
