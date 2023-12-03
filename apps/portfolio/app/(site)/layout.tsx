@@ -32,7 +32,6 @@ export default function RootLayout({
 }) {
   const pathname = usePathname();
 
-  console.log(pathname);
   return (
     <html lang="en">
       <body
@@ -57,7 +56,7 @@ export default function RootLayout({
             ))}
           </Navbar>
         </header>
-        <main className="grid-span-all md:grid-span-2-to-neg2 lg:grid-span-3-to-neg3">
+        <main className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 grid-span-all md:grid-span-2-to-neg2 lg:grid-span-3-to-neg3">
           {children}
         </main>
         <footer className="md:grid-span-2-to-neg2 lg:grid-span-3-to-neg3">

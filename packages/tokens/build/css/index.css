@@ -1,5 +1,6 @@
 @import "./fonts.css";
 @import "./global.css";
+@import "./utilites/display.css";
 @import "./utilites/color.css";
 @import "./utilites/grid.css";
 @import "./utilites/flex.css";

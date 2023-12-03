@@ -9,3 +9,7 @@
 .text-color-secondary {
   color: var(--colors-cyan-500);
 }
+
+.red {
+  color: var(--colors-red-500);
+}
