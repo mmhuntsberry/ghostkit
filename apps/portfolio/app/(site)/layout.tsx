@@ -15,7 +15,8 @@ import Surface from "packages/components/src/lib/components/surface/surface";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about-me", label: "About" },
-  { href: "/work", label: "Work" },
+  { href: "/projects", label: "Projects" },
+  { href: "/journal", label: "Journal" },
 ];
 
 // const socialLinks = [

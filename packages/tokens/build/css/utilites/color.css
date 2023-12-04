@@ -1,6 +1,9 @@
 .bg-color-primary {
   background-color: var(--background-primary);
 }
+.bg-color-secondary {
+  background-color: var(--background-secondary);
+}
 
 .text-color-primary {
   color: var(--text-color-primary);
@@ -8,8 +11,4 @@
 
 .text-color-secondary {
   color: var(--colors-cyan-500);
-}
-
-.red {
-  color: var(--colors-red-500);
 }

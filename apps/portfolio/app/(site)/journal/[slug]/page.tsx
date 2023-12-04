@@ -40,6 +40,11 @@ const customPortableTextComponents = {
       </p>
     ),
   },
+  marks: {
+    code: ({ children }) => (
+      <code className="d-inline p-xxs bg-color-secondary">{children}</code>
+    ),
+  },
 };
 
 export default async function Post({ params }) {

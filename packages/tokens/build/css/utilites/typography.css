@@ -6,6 +6,14 @@
   text-align: center;
 }
 
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
 .text-size-xs {
   font-size: var(--font-size-xs);
 }

@@ -169,12 +169,28 @@
   --colors-midnight-violet-600: #6263af;
   --colors-midnight-violet-700: #4c4d9f;
   --colors-midnight-violet-800: #38377b;
-  --colors-midnight-violet-900: #32304a;
+  --colors-midnight-violet-900: #33304a;
   --colors-midnight-violet-950: #1c1b35;
-  --gradient-overlay-darkop-shade: linear-gradient(90deg, #303030d9 0%, #30303000 100%);
-  --gradient-overlay-lightop-shade: linear-gradient(90deg, #ffffffd9 0%, #ffffff00 100%);
-  --gradient-overlay-dark-bottom-shade: linear-gradient(90deg, #30303000 0%, #303030d9 100%);
-  --gradient-overlay-light-bottom-shade: linear-gradient(90deg, #ffffff00 0%, #ffffffd9 100%);
+  --gradient-overlay-darkop-shade: linear-gradient(
+    90deg,
+    #303030d9 0%,
+    #30303000 100%
+  );
+  --gradient-overlay-lightop-shade: linear-gradient(
+    90deg,
+    #ffffffd9 0%,
+    #ffffff00 100%
+  );
+  --gradient-overlay-dark-bottom-shade: linear-gradient(
+    90deg,
+    #30303000 0%,
+    #303030d9 100%
+  );
+  --gradient-overlay-light-bottom-shade: linear-gradient(
+    90deg,
+    #ffffff00 0%,
+    #ffffffd9 100%
+  );
   --radii-xs: 0.125rem; /* 2px */
   --radii-sm: 0.25rem; /* 4px */
   --radii-md: 0.5rem; /* 8px */

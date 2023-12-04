@@ -42,12 +42,13 @@ export async function getPosts(): Promise<Post[]> {
 
   return client.fetch(
     groq`*[_type == "post"]{
-      _id,
+     _id,
       _createdAt,
       name,
       "slug": slug.current,
-      code,
-      content
+      "code": myCodeField.code,
+      content,
+      "excerpt": array::join(string::split((pt::text(body)), "")[0..255], "") + "..."
     }`
   );
 }

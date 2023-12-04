@@ -8,24 +8,26 @@ import {
   Envelope,
   RightArrow,
 } from "packages/components/src/lib/icons";
-import { getProjects } from "../../sanity/sanity-utils";
+import { getProjects, getPosts } from "../../sanity/sanity-utils";
 
 import NextLink from "next/link";
+import { toTitleCase } from "../../utils/index";
 
 export default async function Index() {
-  const projects = await getProjects();
+  // const projects = await getProjects();
+  const posts = await getPosts();
   return (
     <div className="grid  grid-cols-12 gap-lg">
       <div className="flex flex-column gap-sm grid-span-7 sm:grid-span-all">
         <h2>Who I am</h2>
         <Surface>
-          <h3>Hello, digital traveler!</h3>
+          <h3 className="text-size-xl mb-md">Hello, digital traveler!</h3>
           <p>
             I’m Matt, your guide to the intricate maze of building design
             systems and component libraries.
           </p>
           <LinkWrapper>
-            <NextLink href="/about-me">Learn more</NextLink>
+            <NextLink href="/about-me">About me</NextLink>
             <RightArrow fill="var(--text-color-secondary)" />
           </LinkWrapper>
         </Surface>
@@ -49,10 +51,10 @@ export default async function Index() {
           </div>
         </Surface>
       </div>
-      <div className="flex flex-column gap-sm grid-span-7">
+      <div className="flex flex-column gap-sm grid-span-7 sm:grid-span-all">
         <h2>On my desk</h2>
         <Surface>
-          <h3>Phantom Elements</h3>
+          <h3 className="text-size-xl mb-md">Phantom Elements</h3>
           <p>
             A project in which I delve into the creation of a multifaceted,
             multi-brand component library.
@@ -63,25 +65,41 @@ export default async function Index() {
           </LinkWrapper>
         </Surface>
       </div>
-      <div className="flex flex-column gap-sm grid-span-5">
+      <div className="flex flex-column gap-sm grid-span-5 sm:grid-span-all">
         <h2>Sharing the craft</h2>
-        <Surface>
-          <h3>The one about me</h3>
-          <p>
-            A little about what I've been doing for the past couple of years.
-          </p>
-          <LinkWrapper>
-            <NextLink href="/about-me">Learn more</NextLink>
-            <RightArrow fill="var(--text-color-secondary)" />
-          </LinkWrapper>
-        </Surface>
+        {posts.length > 0 && (
+          <>
+            <Surface key={posts[posts.length - 1]._id}>
+              <ul className="flex flex-column">
+                <li className="text-size-md">
+                  <LinkWrapper>
+                    <NextLink href={`posts/${posts[posts.length - 1].slug}`}>
+                      {toTitleCase(posts[posts.length - 1].name)}
+                    </NextLink>
+                  </LinkWrapper>
+                </li>
+                <li className="text-size-md">
+                  <LinkWrapper className="self-start">
+                    <NextLink href={`posts/${posts[posts.length - 2].slug}`}>
+                      {toTitleCase(posts[posts.length - 2].name)}
+                    </NextLink>
+                  </LinkWrapper>
+                </li>
+                <li className="text-size-md self-end">
+                  <LinkWrapper className="">
+                    <NextLink href={`#`}>See all {posts.length} posts</NextLink>
+                  </LinkWrapper>
+                </li>
+              </ul>
+            </Surface>
+          </>
+        )}
       </div>
-      <div className="flex flex-column gap-sm grid-span-all">
+      {/* <div className="flex flex-column gap-sm grid-span-all">
         <h2>Creation & Designs</h2>
         {projects.map((project) => (
           <Surface key={project._id}>
-            <h3>{project.name}</h3>
-            {/* <p>{project.content}</p> */}
+            <h3 className="text-size-xl mb-md">{project.name}</h3>
             <LinkWrapper>
               <NextLink href={`projects/${project.slug}`}>Learn more</NextLink>
               <RightArrow fill="var(--text-color-secondary)" />
@@ -133,7 +151,7 @@ export default async function Index() {
             <RightArrow fill="var(--text-color-secondary)" />
           </LinkWrapper>
         </Surface>
-      </div>
+      </div> */}
     </div>
   );
 }
