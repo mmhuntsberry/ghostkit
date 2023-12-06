@@ -17,7 +17,7 @@
     "paths": {
       "@mmhuntsberry/components": ["packages/components/src/index.ts"],
       "@mmhuntsberry/fonts": ["packages/fonts"],
-      "@mmhuntsberry/tokens": ["packages/tokens/build/css/index.css"],
+      "@mmhuntsberry/css": ["packages/css/src/index.css"],
       "@mmhuntsberry/ui-mantine": ["packages/ui-mantine/src/index.ts"]
     }
   },

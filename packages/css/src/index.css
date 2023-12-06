@@ -1,5 +1,4 @@
-@import "./fonts.css";
-@import "./global.css";
+@import "./tokens.css";
 @import "./utilites/display.css";
 @import "./utilites/color.css";
 @import "./utilites/grid.css";

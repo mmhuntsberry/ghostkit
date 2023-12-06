@@ -25,17 +25,17 @@ const customPortableTextComponents = {
   },
   block: {
     h1: ({ children }) => (
-      <h2 className="grid-span-all md:grid-span-2-to-neg2 lg:grid-span-3-to-neg3 mt-xl mb-lg text-size-4xl">
+      <h2 className="grid-span-all md:grid-span-2-to-neg2 lg:grid-span-3-to-neg3 mt-xl mb-lg text-size-3xl">
         {children}
       </h2>
     ),
     h2: ({ children }) => (
-      <h2 className="grid-span-all md:grid-span-2-to-neg2 lg:grid-span-3-to-neg3 mt-lg mb-lg text-size-2xl">
+      <h2 className="grid-span-all md:grid-span-2-to-neg2 lg:grid-span-3-to-neg3 mt-lg mb-lg text-size-xl">
         {children}
       </h2>
     ),
     normal: ({ children }) => (
-      <p className=" grid-span-all md:grid-span-2-to-neg2 lg:grid-span-3-to-neg3 mt-lg mb-lg text-size-md">
+      <p className=" grid-span-all md:grid-span-2-to-neg2 lg:grid-span-3-to-neg3 mt-lg mb-lg text-size-xs">
         {children}
       </p>
     ),

@@ -17,25 +17,25 @@ export default async function Index() {
   // const projects = await getProjects();
   const posts = await getPosts();
   return (
-    <div className="grid  grid-cols-12 gap-lg">
-      <div className="flex flex-column gap-sm grid-span-7 sm:grid-span-all">
-        <h2>Who I am</h2>
+    <section className="grid grid-cols-12 gap-lg">
+      <section className="flex flex-column gap-sm grid-span-7 sm:grid-span-all">
+        <h2 className="small-md-regular">Who I am</h2>
         <Surface>
-          <h3 className="text-size-xl mb-md">Hello, digital traveler!</h3>
-          <p>
+          <h3 className="title-md-regular mb-md">Hello, digital traveler!</h3>
+          <p className="paragraph-md-regular">
             I’m Matt, your guide to the intricate maze of building design
             systems and component libraries.
           </p>
-          <LinkWrapper>
+          <LinkWrapper size="lg">
             <NextLink href="/about-me">About me</NextLink>
             <RightArrow fill="var(--text-color-secondary)" />
           </LinkWrapper>
         </Surface>
-      </div>
-      <div className="flex flex-column gap-sm grid-span-5 sm:grid-span-all">
-        <h2>Find me here</h2>
+      </section>
+      <section className="flex flex-column gap-sm grid-span-5 sm:grid-span-all">
+        <h2 className="small-md-regular">Find me here</h2>
         <Surface>
-          <div className="flex align-center flex-wrap gap-sm justify-around">
+          <section className="flex align-center flex-wrap gap-sm justify-around">
             <NextLink href="/" aria-label="Matt's Github">
               <GithubLogo />
             </NextLink>
@@ -48,59 +48,61 @@ export default async function Index() {
             <NextLink href="/" aria-label="Matt's Email">
               <Envelope />
             </NextLink>
-          </div>
+          </section>
         </Surface>
-      </div>
-      <div className="flex flex-column gap-sm grid-span-7 sm:grid-span-all">
-        <h2>On my desk</h2>
+      </section>
+      <section className="flex flex-column gap-sm grid-span-7 sm:grid-span-all">
+        <h2 className="small-md-regular">On my desk</h2>
         <Surface>
-          <h3 className="text-size-xl mb-md">Phantom Elements</h3>
-          <p>
+          <h3 className="title-md-regular mb-md">Phantom Elements</h3>
+          <p className="paragraph-md-regular">
             A project in which I delve into the creation of a multifaceted,
             multi-brand component library.
           </p>
-          <LinkWrapper>
+          <LinkWrapper size="lg">
             <NextLink href="/about-me">Learn more</NextLink>
             <RightArrow fill="var(--text-color-secondary)" />
           </LinkWrapper>
         </Surface>
-      </div>
-      <div className="flex flex-column gap-sm grid-span-5 sm:grid-span-all">
-        <h2>Sharing the craft</h2>
+      </section>
+      <section className="flex flex-column gap-sm grid-span-5 sm:grid-span-all">
+        <h2 className="small-md-regular">Sharing the craft</h2>
         {posts.length > 0 && (
           <>
             <Surface key={posts[posts.length - 1]._id}>
               <ul className="flex flex-column">
-                <li className="text-size-md">
-                  <LinkWrapper>
-                    <NextLink href={`posts/${posts[posts.length - 1].slug}`}>
+                <li>
+                  <LinkWrapper size="lg">
+                    <NextLink href={`journal/${posts[posts.length - 1].slug}`}>
                       {toTitleCase(posts[posts.length - 1].name)}
                     </NextLink>
                   </LinkWrapper>
                 </li>
-                <li className="text-size-md">
-                  <LinkWrapper className="self-start">
-                    <NextLink href={`posts/${posts[posts.length - 2].slug}`}>
+                <li>
+                  <LinkWrapper size="lg">
+                    <NextLink href={`journal/${posts[posts.length - 2].slug}`}>
                       {toTitleCase(posts[posts.length - 2].name)}
                     </NextLink>
                   </LinkWrapper>
                 </li>
-                <li className="text-size-md self-end">
-                  <LinkWrapper className="">
-                    <NextLink href={`#`}>See all {posts.length} posts</NextLink>
+                <li className="self-end">
+                  <LinkWrapper size="md" className="text-size-xs">
+                    <NextLink href={`/journal`}>
+                      See all {posts.length} posts
+                    </NextLink>
                   </LinkWrapper>
                 </li>
               </ul>
             </Surface>
           </>
         )}
-      </div>
+      </section>
       {/* <div className="flex flex-column gap-sm grid-span-all">
         <h2>Creation & Designs</h2>
         {projects.map((project) => (
           <Surface key={project._id}>
             <h3 className="text-size-xl mb-md">{project.name}</h3>
-            <LinkWrapper>
+            <LinkWrapper size="lg">
               <NextLink href={`projects/${project.slug}`}>Learn more</NextLink>
               <RightArrow fill="var(--text-color-secondary)" />
             </LinkWrapper>
@@ -114,7 +116,7 @@ export default async function Index() {
             aperiam aliquid accusantium dolores soluta eos sapiente aspernatur
             nesciunt nihil quod natus.
           </p>
-          <LinkWrapper>
+          <LinkWrapper size="lg">
             <NextLink href="/about-me">Learn more</NextLink>
             <RightArrow fill="var(--text-color-secondary)" />
           </LinkWrapper>
@@ -130,7 +132,7 @@ export default async function Index() {
             eum, ratione laboriosam illum aperiam aliquid accusantium dolores
             soluta eos sapiente aspernatur nesciunt nihil quod natus.
           </p>
-          <LinkWrapper>
+          <LinkWrapper size="lg">
             <NextLink href="/about-me">Learn more</NextLink>
             <RightArrow fill="var(--text-color-secondary)" />
           </LinkWrapper>
@@ -146,12 +148,12 @@ export default async function Index() {
             eum, ratione laboriosam illum aperiam aliquid accusantium dolores
             soluta eos sapiente aspernatur nesciunt nihil quod natus.
           </p>
-          <LinkWrapper>
+          <LinkWrapper size="lg">
             <NextLink href="/about-me">Learn more</NextLink>
             <RightArrow fill="var(--text-color-secondary)" />
           </LinkWrapper>
         </Surface>
       </div> */}
-    </div>
+    </section>
   );
 }

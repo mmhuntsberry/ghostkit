@@ -198,31 +198,60 @@
   --radii-xl: 1rem; /* 16px */
   --radii-2xl: 1.25rem; /* 20px */
   --radii-rounded: 100px; /* 100px */
-  --font-size-xs: 0.694rem;
-  --font-size-sm: 0.833rem;
-  --font-size-md: 1rem;
-  --font-size-lg: 1.2rem;
-  --font-size-xl: 1.44rem;
-  --font-size-2xl: 1.728rem;
-  --font-size-3xl: 2.074rem;
-  --font-size-4xl: 2.489rem;
-  --font-size-5xl: 2.987rem;
-  --font-size-6xl: 3.584rem;
-  --font-size-7xl: 4.301rem;
-  --font-size-8xl: 5.161rem;
-  --font-weights-body-bold: 700;
-  --font-weights-body-semi-bold: Semi Bold;
-  --font-weights-body-regular: 400;
-  --font-weights-headlines-bold: 700;
-  --font-weights-headlines-regular: 400;
+  --font-size-2xs: 0.64rem;
+  --font-size-xs: 0.8rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.25rem;
+  --font-size-lg: 1.563rem;
+  --font-size-xl: 1.953rem;
+  --font-size-2xl: 2.441rem;
+  --font-size-3xl: 3.052rem;
+  --font-size-4xl: 3.052rem;
+  --font-weight-bold: 700;
+  --font-weight-semi-bold: 600;
+  --font-weight-regular: 400;
   --line-heights-body-default: 1.5;
   --line-heights-body-relaxed: 1.75;
   --line-heights-headlines-default: 1.1;
   --line-heights-headlines-sm: 1.3;
   --line-heights-headlines-lg: 1.2;
   --line-heights-headlines-xl: 1.1;
-  --font-families-body: Inter;
-  --font-families-headline: Tiempos Headline;
+  --font-family-body: Arial, Helvetica, sans-serif;
+  --font-family-title: "Roboto", sans-serif;
+
+  --title-xs-regular: 400 1.25rem/1.6 "Roboto";
+  --title-sm-regular: 400 1.563rem/1.6 "Roboto";
+  --title-md-regular: 400 1.953rem/1.6 "Roboto";
+  --title-lg-regular: 400 2.441rem/1.6 "Roboto";
+  --title-xl-regular: 400 3.052rem/1.6 "Roboto";
+  --title-2xl-regular: 400 3.815rem/1.6 "Roboto";
+  --title-xs-semi-bold: 600 1.25rem/1.6 "Roboto";
+  --title-sm-semi-bold: 600 1.563rem/1.6 "Roboto";
+  --title-md-semi-bold: 600 1.953rem/1.6 "Roboto";
+  --title-lg-semi-bold: 600 2.441rem/1.6 "Roboto";
+  --title-xl-semi-bold: 600 3.052rem/1.6 "Roboto";
+  --title-2xl-semi-bold: 600 3.815rem/1.6 "Roboto";
+  --title-xs-bold: 700 1.25rem/1.6 "Roboto";
+  --title-sm-bold: 700 1.563rem/1.6 "Roboto";
+  --title-md-bold: 700 1.953rem/1.6 "Roboto";
+  --title-lg-bold: 700 2.441rem/1.6 "Roboto";
+  --title-xl-bold: 700 3.052rem/1.6 "Roboto";
+  --title-2xl-bold: 700 3.815rem/1.6 "Roboto";
+
+  --paragraph-md-regular: 400 1rem/1.6 Arial, Helvetica, sans-serif;
+  --paragraph-md-semi-bold: 600 1rem/1.6 Arial, Helvetica, sans-serif;
+  --paragraph-md-bold: 700 1rem/1.6 Arial, Helvetica, sans-serif;
+
+  --small-sm-regular: 400 0.64rem/1.6 Arial, Helvetica, sans-serif;
+  --small-md-regular: 400 0.8rem/1.6 Arial, Helvetica, sans-serif;
+  --small-lg-regular: 400 1rem/1.6 Arial, Helvetica, sans-serif;
+  --small-sm-semi-bold: 600 0.64rem/1.6 Arial, Helvetica, sans-serif;
+  --small-md-semi-bold: 600 0.8rem/1.6 Arial, Helvetica, sans-serif;
+  --small-lg-semi-bold: 600 1rem/1.6 Arial, Helvetica, sans-serif;
+  --small-sm-bold: 700 0.64rem/1.6 Arial, Helvetica, sans-serif;
+  --small-md-bold: 700 0.8rem/1.6 Arial, Helvetica, sans-serif;
+  --small-lg-bold: 700 1rem/1.6 Arial, Helvetica, sans-serif;
+
   --letter-spacing-body: 0em;
   --letter-spacing-buttons: -0.01em;
   --letter-spacing-captions: 0em;

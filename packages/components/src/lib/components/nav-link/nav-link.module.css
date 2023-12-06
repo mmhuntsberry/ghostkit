@@ -3,8 +3,7 @@
   /* border */
   --link-border-radius: 32px;
   /* font family */
-  --link-font-family: var(--font-family-primary);
-  --link-font-size: 16px;
+  --link-font: var(--small-lg-regular);
   /* padding */
   --link-padding-inline-start: 12px;
   --link-padding-inline-end: 12px;
@@ -22,8 +21,7 @@
   background-color: var(--link-background-color);
   border-radius: var(--link-border-radius);
   color: var(--link-text-color);
-  font-family: var(--link-font-family);
-  font-size: var(--link-font-size);
+  font: var(--link-font);
   padding-inline-start: var(--link-padding-inline-start);
   padding-inline-end: var(--link-padding-inline-end);
   padding-block-start: var(--link-padding-block-start);

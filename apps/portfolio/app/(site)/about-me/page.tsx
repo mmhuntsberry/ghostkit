@@ -49,21 +49,18 @@ export default function About() {
           <div className="pt-2xl">
             <Trilby />
           </div>
-          <h2 className="mt-3xl mb-xl text-size-2xl">
+          <h2 className="mt-3xl mb-xl title-lg-regular">
             Hello, digital traveler!
           </h2>
-          <p>
+          <p className="paragraph-md-regular">
             I’m Matt, your guide to the intricate maze of building design
             systems and component libraries.
           </p>
         </Surface>
       </section>
       <section className="grid-span-all md:grid-span-6 lg:grid-span-9 flex flex-column gap-lg">
-        <h3>Skills</h3>
-        <Surface
-        // style={{ "--surface-flex-direction": "row" }}
-        // className="flex-wrap gap-sm justify-center"
-        >
+        <h3 className="small-md-regular">Skills</h3>
+        <Surface>
           <ul className="flex flex-wrap gap-lg row-gap-3xl justify-center">
             {skills.map((skill) => (
               <li key={skill}>
@@ -74,7 +71,7 @@ export default function About() {
         </Surface>
       </section>
       <section className="grid-span-all md:grid-span-2 lg:grid-span-3 flex flex-column gap-lg">
-        <h3>Find me here</h3>
+        <h3 className="small-md-regular">Find me here</h3>
         <Surface>
           <div className="flex align-center flex-wrap gap-sm justify-around">
             <NextLink href="/" aria-label="Matt's Github">

@@ -1,7 +1,7 @@
 {
   "name": "tokens",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/tokens/src",
+  "sourceRoot": "packages/css/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -11,7 +11,7 @@
       "defaultConfiguration": "production",
       "options": {
         "command": "node build-tokens.js",
-        "cwd": "packages/tokens"
+        "cwd": "packages/css"
       },
       "configurations": {
         "development": {
@@ -26,20 +26,20 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "npm run pack",
-        "cwd": "packages/tokens"
+        "cwd": "packages/css"
       }
     },
     "publish": {
       "executor": "nx:run-commands",
       "options": {
         "command": "npm publish",
-        "cwd": "packages/tokens/dist"
+        "cwd": "packages/css/dist"
       }
     },
     "release": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "dotenv release-it -- --config=./packages/tokens/.release-it.json"
+        "command": "dotenv release-it -- --config=./packages/css/.release-it.json"
       }
     }
   }

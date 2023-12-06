@@ -2,7 +2,7 @@
   "name": "@mmhuntsberry/tokens",
   "version": "0.0.0-replace",
   "description": "",
-  "main": "build/css/index.css",
+  "main": "src/index.css",
   "type": "commonjs",
   "scripts": {
     "build": "node build-tokens.js",
