@@ -35,13 +35,9 @@ li {
   --text-color-secondary: var(--colors-cyan-500);
   --link-text-color-primary: var(--text-color-secondary);
   --link-text-color-primary-hover: var(--colors-cyan-600);
+  --fill-primary: var(--text-color-secondary);
+  --fill-primary-hover: var(--colors-cyan-700);
 }
-
-/**
- * okaidia theme for JavaScript, CSS and HTML
- * Loosely based on Monokai textmate theme by http://www.monokai.nl/
- * @author ocodia
- */
 
 code[class*="language-"],
 pre[class*="language-"] {

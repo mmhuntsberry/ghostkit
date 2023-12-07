@@ -6,8 +6,8 @@
   --link-wrapper-font-family: var(--font-family-primary);
   --link-wrapper-font-size: var(--small-md-regular);
   /* padding */
-  --link-wrapper-padding-inline-start: 12px;
-  --link-wrapper-padding-inline-end: 12px;
+  --link-wrapper-padding-inline-start: 8px;
+  --link-wrapper-padding-inline-end: 0;
   --link-wrapper-padding-block-start: 8px;
   --link-wrapper-padding-block-end: 8px;
 

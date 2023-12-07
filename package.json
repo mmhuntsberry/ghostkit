@@ -79,7 +79,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@phosphor-icons/react": "^2.0.14",
+    "@phosphor-icons/react": "^2.0.15",
     "@portabletext/react": "^3.0.11",
     "@sanity/code-input": "^4.1.1",
     "@storybook/react": "7.5.3",

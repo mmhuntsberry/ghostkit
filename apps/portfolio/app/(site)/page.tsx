@@ -8,6 +8,7 @@ import {
   Envelope,
   RightArrow,
 } from "packages/components/src/lib/icons";
+import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { getProjects, getPosts } from "../../sanity/sanity-utils";
 
 import NextLink from "next/link";
@@ -18,7 +19,7 @@ export default async function Index() {
   const posts = await getPosts();
   return (
     <section className="grid grid-cols-12 gap-lg">
-      <section className="flex flex-column gap-sm grid-span-7 sm:grid-span-all">
+      <section className="gap-sm grid-span-7 sm:grid-span-all">
         <h2 className="small-md-regular">Who I am</h2>
         <Surface>
           <h3 className="title-md-regular mb-md">Hello, digital traveler!</h3>
@@ -26,13 +27,13 @@ export default async function Index() {
             I’m Matt, your guide to the intricate maze of building design
             systems and component libraries.
           </p>
-          <LinkWrapper size="lg">
+          <LinkWrapper size="lg" className="">
             <NextLink href="/about-me">About me</NextLink>
-            <RightArrow className="link-text-color-primary hover:link-text-color-primary" />
+            <ArrowRight size={20} className="fill-primary" />
           </LinkWrapper>
         </Surface>
       </section>
-      <section className="flex flex-column gap-sm grid-span-5 sm:grid-span-all">
+      <section className="gap-sm grid-span-5 sm:grid-span-all">
         <h2 className="small-md-regular">Find me here</h2>
         <Surface>
           <section className="flex align-center flex-wrap gap-sm justify-around">
@@ -51,7 +52,7 @@ export default async function Index() {
           </section>
         </Surface>
       </section>
-      <section className="flex flex-column gap-sm grid-span-7 sm:grid-span-all">
+      <section className="gap-sm grid-span-7 sm:grid-span-all">
         <h2 className="small-md-regular">On my desk</h2>
         <Surface>
           <h3 className="title-md-regular mb-md">Phantom Elements</h3>
@@ -61,16 +62,16 @@ export default async function Index() {
           </p>
           <LinkWrapper size="lg">
             <NextLink href="/about-me">Learn more</NextLink>
-            <RightArrow />
+            <RightArrow className="link-text-color-primary hover:link-text-color-primary" />
           </LinkWrapper>
         </Surface>
       </section>
-      <section className="flex flex-column gap-sm grid-span-5 sm:grid-span-all">
+      <section className="gap-sm grid-span-5 sm:grid-span-all">
         <h2 className="small-md-regular">Sharing the craft</h2>
         {posts.length > 0 && (
           <>
             <Surface key={posts[posts.length - 1]._id}>
-              <ul className="flex flex-column">
+              <ul>
                 <li>
                   <LinkWrapper size="lg">
                     <NextLink href={`journal/${posts[posts.length - 1].slug}`}>

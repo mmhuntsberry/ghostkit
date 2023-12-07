@@ -12,8 +12,9 @@ export const LinkWrapper: React.FC<LinkWrapperProps> = ({
   size = "md",
   ...rest
 }) => {
+  console.log(rest);
   return (
-    <div className={cn("flex align-center self-end")}>
+    <div className={cn("flex items-center self-end")}>
       {React.Children.map(children, (child, i) => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child as React.ReactElement, {
