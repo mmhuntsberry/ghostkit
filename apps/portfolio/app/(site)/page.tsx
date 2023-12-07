@@ -28,7 +28,7 @@ export default async function Index() {
           </p>
           <LinkWrapper size="lg">
             <NextLink href="/about-me">About me</NextLink>
-            <RightArrow fill="var(--text-color-secondary)" />
+            <RightArrow className="link-text-color-primary hover:link-text-color-primary" />
           </LinkWrapper>
         </Surface>
       </section>
@@ -61,7 +61,7 @@ export default async function Index() {
           </p>
           <LinkWrapper size="lg">
             <NextLink href="/about-me">Learn more</NextLink>
-            <RightArrow fill="var(--text-color-secondary)" />
+            <RightArrow />
           </LinkWrapper>
         </Surface>
       </section>
@@ -104,7 +104,7 @@ export default async function Index() {
             <h3 className="text-size-xl mb-md">{project.name}</h3>
             <LinkWrapper size="lg">
               <NextLink href={`projects/${project.slug}`}>Learn more</NextLink>
-              <RightArrow fill="var(--text-color-secondary)" />
+              <RightArrow  />
             </LinkWrapper>
           </Surface>
         ))}
@@ -118,7 +118,7 @@ export default async function Index() {
           </p>
           <LinkWrapper size="lg">
             <NextLink href="/about-me">Learn more</NextLink>
-            <RightArrow fill="var(--text-color-secondary)" />
+            <RightArrow  />
           </LinkWrapper>
         </Surface>
         <Surface>
@@ -134,7 +134,7 @@ export default async function Index() {
           </p>
           <LinkWrapper size="lg">
             <NextLink href="/about-me">Learn more</NextLink>
-            <RightArrow fill="var(--text-color-secondary)" />
+            <RightArrow  />
           </LinkWrapper>
         </Surface>
         <Surface>
@@ -150,7 +150,7 @@ export default async function Index() {
           </p>
           <LinkWrapper size="lg">
             <NextLink href="/about-me">Learn more</NextLink>
-            <RightArrow fill="var(--text-color-secondary)" />
+            <RightArrow  />
           </LinkWrapper>
         </Surface>
       </div> */}

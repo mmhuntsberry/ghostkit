@@ -7,18 +7,7 @@ interface BadgeProps {
 }
 
 export const Badge: React.FC<BadgeProps> = ({ children }) => {
-  return (
-    <span
-      className={cn(
-        styles.root,
-        styles.badge,
-        "text-color-secondary",
-        "font-family-primary"
-      )}
-    >
-      {children}
-    </span>
-  );
+  return <span className={cn(styles.root, styles.badge)}>{children}</span>;
 };
 
 export default Badge;

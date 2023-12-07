@@ -6,8 +6,7 @@
   --badge-border-style: solid;
   --badge-border-color: var(--colors-cyan-500);
   /* font family */
-  --badge-font-family: var(--font-family-primary);
-  --badge-font-size: 16px;
+  --badge-font: var(--small-md-regular);
   /* padding */
   --badge-padding-inline-start: 12px;
   --badge-padding-inline-end: 12px;
@@ -15,6 +14,7 @@
   --badge-padding-block-end: 8px;
 
   /* text */
+  --badge-color: var(--colors-white);
 
   /* text decoration */
   --badge-text-decoration: none;
@@ -26,9 +26,9 @@
   border-width: var(--badge-border-width);
   border-style: var(--badge-border-style);
   border-color: var(--badge-border-color);
+  color: var(--badge-color);
   width: fit-content;
-  font-family: var(--badge-font-family);
-  font-size: var(--badge-font-size);
+  font: var(--badge-font);
   padding-inline-start: var(--badge-padding-inline-start);
   padding-inline-end: var(--badge-padding-inline-end);
   padding-block-start: var(--badge-padding-block-start);

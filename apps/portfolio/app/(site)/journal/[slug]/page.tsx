@@ -2,26 +2,11 @@ import { Code } from "../../../../components/code";
 import { getPost } from "../../../../sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 
-// const CustomParagraph = ({ children }) => (
-//   <p style={{ fontSize: "18px" }}>{children}</p>
-// );
-// const CustomLink = ({ children, value }) => (
-//   <a href={value.href} style={{ textDecoration: "underline" }}>
-//     {children}
-//   </a>
-// );
-
 const customPortableTextComponents = {
   types: {
     snippet: (props) => {
-      // Assuming your `Code` component takes a `code` prop
       return <Code value={props.value.code.code} />;
     },
-
-    // Apply custom components based on style
-    // Add other styles if needed
-
-    // You can add renderers for other custom types here if needed
   },
   block: {
     h1: ({ children }) => (
@@ -50,8 +35,6 @@ const customPortableTextComponents = {
 export default async function Post({ params }) {
   const slug = params.slug;
   const post = await getPost(slug);
-
-  // Define a custom renderer for snippet blocks
 
   return (
     post && (

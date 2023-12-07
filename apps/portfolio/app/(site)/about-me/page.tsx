@@ -61,7 +61,7 @@ export default function About() {
       <section className="grid-span-all md:grid-span-6 lg:grid-span-9 flex flex-column gap-lg">
         <h3 className="small-md-regular">Skills</h3>
         <Surface>
-          <ul className="flex flex-wrap gap-lg row-gap-3xl justify-center">
+          <ul className="flex flex-wrap gap-lg row-gap-lg justify-center">
             {skills.map((skill) => (
               <li key={skill}>
                 <Badge>{skill}</Badge>

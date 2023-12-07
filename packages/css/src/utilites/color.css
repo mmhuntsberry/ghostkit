@@ -12,3 +12,11 @@
 .text-color-secondary {
   color: var(--colors-cyan-500);
 }
+
+.link-text-color-primary {
+  color: var(--link-color-primary);
+}
+
+.hover\:link-text-color-primary:hover {
+  color: var(--link-color-primary-hover);
+}

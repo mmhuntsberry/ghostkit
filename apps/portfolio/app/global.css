@@ -33,6 +33,8 @@ li {
   --font-family-primary: "Roboto", sans-serif;
   --text-color-primary: var(--colors-white);
   --text-color-secondary: var(--colors-cyan-500);
+  --link-text-color-primary: var(--text-color-secondary);
+  --link-text-color-primary-hover: var(--colors-cyan-600);
 }
 
 /**

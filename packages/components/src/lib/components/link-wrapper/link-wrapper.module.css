@@ -41,3 +41,7 @@
 .link-wrapper[data-active="true"] {
   --link-wrapper-text-color: var(--text-color-secondary);
 }
+
+.link-wrapper:hover {
+  --link-wrapper-text-color: var(--colors-cyan-600);
+}
