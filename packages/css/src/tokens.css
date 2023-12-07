@@ -265,8 +265,8 @@
   --text-decoration-buttons: none;
   --text-decoration-captions: none;
   --sizing-none: 0; /* 0px */
-  --sizing-2xs: 0.125rem; /* 2px */
-  --sizing-xxs: 0.25rem; /* 4px */
+  --sizing-3xs: 0.125rem; /* 2px */
+  --sizing-2xs: 0.25rem; /* 4px */
   --sizing-xs: 0.5rem; /* 8px */
   --sizing-sm: 0.75rem; /* 12px */
   --sizing-md: 1rem; /* 16px */

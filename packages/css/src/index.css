@@ -2,6 +2,8 @@
 @import "./utilites/display.css";
 @import "./utilites/color.css";
 @import "./utilites/grid.css";
+@import "./utilites/gap.css";
 @import "./utilites/flex.css";
-@import "./utilites/spacing.css";
+@import "./utilites/margin.css";
+@import "./utilites/padding.css";
 @import "./utilites/typography.css";

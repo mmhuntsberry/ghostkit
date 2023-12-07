@@ -6,7 +6,7 @@
 }
 
 .text-color-primary {
-  color: var(--text-color-primary);
+  color: var(--text-color-primary) !important;
 }
 
 .text-color-secondary {
@@ -14,9 +14,9 @@
 }
 
 .link-text-color-primary {
-  color: var(--link-color-primary);
+  color: var(--link-text-color-primary) !important;
 }
 
 .hover\:link-text-color-primary:hover {
-  color: var(--link-color-primary-hover);
+  color: var(--link-text-color-primary-hover) !important;
 }
