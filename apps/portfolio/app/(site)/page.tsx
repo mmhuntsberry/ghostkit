@@ -6,7 +6,6 @@ import {
   LinkedinLogo,
   InstagramLogo,
   Envelope,
-  RightArrow,
 } from "packages/components/src/lib/icons";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { getProjects, getPosts } from "../../sanity/sanity-utils";
@@ -62,7 +61,7 @@ export default async function Index() {
           </p>
           <LinkWrapper size="lg">
             <NextLink href="/about-me">Learn more</NextLink>
-            <RightArrow className="link-text-color-primary hover:link-text-color-primary" />
+            <ArrowRight className="link-text-color-primary hover:link-text-color-primary" />
           </LinkWrapper>
         </Surface>
       </section>
@@ -105,7 +104,7 @@ export default async function Index() {
             <h3 className="text-size-xl mb-md">{project.name}</h3>
             <LinkWrapper size="lg">
               <NextLink href={`projects/${project.slug}`}>Learn more</NextLink>
-              <RightArrow  />
+              <ArrowRight  />
             </LinkWrapper>
           </Surface>
         ))}
@@ -119,7 +118,7 @@ export default async function Index() {
           </p>
           <LinkWrapper size="lg">
             <NextLink href="/about-me">Learn more</NextLink>
-            <RightArrow  />
+            <ArrowRight  />
           </LinkWrapper>
         </Surface>
         <Surface>
@@ -135,7 +134,7 @@ export default async function Index() {
           </p>
           <LinkWrapper size="lg">
             <NextLink href="/about-me">Learn more</NextLink>
-            <RightArrow  />
+            <ArrowRight  />
           </LinkWrapper>
         </Surface>
         <Surface>
@@ -151,7 +150,7 @@ export default async function Index() {
           </p>
           <LinkWrapper size="lg">
             <NextLink href="/about-me">Learn more</NextLink>
-            <RightArrow  />
+            <ArrowRight  />
           </LinkWrapper>
         </Surface>
       </div> */}

@@ -16,10 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@mmhuntsberry/components": ["packages/components/src/index.ts"],
-      "@mmhuntsberry/fonts": ["packages/fonts"],
       "@mmhuntsberry/css": ["packages/css/src/index.css"],
-      "@mmhuntsberry/ui-mantine": ["packages/ui-mantine/src/index.ts"]
+      "@mmhuntsberry/fonts": ["packages/fonts"]
     }
   },
+  "include": ["types/*.d.ts"],
   "exclude": ["node_modules", "tmp"]
 }
