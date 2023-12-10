@@ -11,8 +11,8 @@ export async function getProjects(): Promise<Project[]> {
       _id,
       _createdAt,
       name,
+      "headings": body[length(style) == 2 && string::startsWith(style, "h")],
       "slug": slug.current,
-      
       "image": image.asset->url,
       url,
       content

@@ -13,7 +13,6 @@
 
 .nav-items {
   list-style: none;
-
   background-color: var(--navbar-background-color);
   display: var(--navbar-display);
   border-radius: var(--navbar-border-radius);

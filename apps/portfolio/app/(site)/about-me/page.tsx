@@ -1,13 +1,14 @@
 import { Badge, Surface } from "@mmhuntsberry/components";
 
 import NextLink from "next/link";
+import { Trilby } from "packages/components/src/lib/icons";
+
 import {
   GithubLogo,
-  LinkedinLogo,
   InstagramLogo,
+  LinkedinLogo,
   Envelope,
-  Trilby,
-} from "packages/components/src/lib/icons";
+} from "@phosphor-icons/react/dist/ssr";
 
 const skills = [
   "HTML/CSS",
@@ -45,7 +46,7 @@ export default function About() {
   return (
     <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-lg">
       <section className="grid-span-all">
-        <Surface className="align-center">
+        <Surface className="items-center">
           <div className="pt-2xl">
             <Trilby />
           </div>
@@ -58,10 +59,10 @@ export default function About() {
           </p>
         </Surface>
       </section>
-      <section className="grid-span-all md:grid-span-6 lg:grid-span-9 flex flex-column gap-lg">
+      <section className="grid-span-all md:grid-span-6 lg:grid-span-9">
         <h3 className="small-md-regular">Skills</h3>
-        <Surface>
-          <ul className="flex flex-wrap gap-lg row-gap-lg justify-center">
+        <Surface className="mt-sm">
+          <ul className="list-none flex flex-wrap gap-sm row-gap-lg justify-center items-center">
             {skills.map((skill) => (
               <li key={skill}>
                 <Badge>{skill}</Badge>
@@ -70,23 +71,35 @@ export default function About() {
           </ul>
         </Surface>
       </section>
-      <section className="grid-span-all md:grid-span-2 lg:grid-span-3 flex flex-column gap-lg">
+      <section className="grid-span-all md:grid-span-2 lg:grid-span-3">
         <h3 className="small-md-regular">Find me here</h3>
-        <Surface>
-          <div className="flex align-center flex-wrap gap-sm justify-around">
+        <Surface className="mt-sm">
+          <section className="flex items-center flex-wrap gap-sm justify-around">
             <NextLink href="/" aria-label="Matt's Github">
-              <GithubLogo />
+              <GithubLogo
+                size={64}
+                className="link-text-color-primary hover:link-text-color-primary"
+              />
             </NextLink>
             <NextLink href="/" aria-label="Matt's Linkedin">
-              <LinkedinLogo />
+              <LinkedinLogo
+                size={64}
+                className="link-text-color-primary hover:link-text-color-primary"
+              />
             </NextLink>
             <NextLink href="/" aria-label="Matt's Instagram">
-              <InstagramLogo />
+              <InstagramLogo
+                size={64}
+                className="link-text-color-primary hover:link-text-color-primary"
+              />
             </NextLink>
             <NextLink href="/" aria-label="Matt's Email">
-              <Envelope />
+              <Envelope
+                size={64}
+                className="link-text-color-primary hover:link-text-color-primary"
+              />
             </NextLink>
-          </div>
+          </section>
         </Surface>
       </section>
     </div>

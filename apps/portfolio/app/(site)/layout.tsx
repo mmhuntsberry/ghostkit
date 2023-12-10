@@ -49,7 +49,7 @@ export default function RootLayout({
         <header className="grid-span-all md:grid-span-2-to-neg2 lg:grid-span-3-to-neg3">
           <Navbar>
             {navLinks.map(({ href, label }) => (
-              <li key={href}>
+              <li key={href} className="cursor-pointer">
                 <NavLink active={pathname === href}>
                   <NextLink href={href}>{label}</NextLink>
                 </NavLink>

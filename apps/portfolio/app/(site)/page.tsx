@@ -1,13 +1,14 @@
 import { Surface } from "packages/components/src/lib/components/surface/surface";
 
 import { LinkWrapper } from "packages/components/src/lib/components/link-wrapper/link-wrapper";
+
 import {
+  ArrowRight,
   GithubLogo,
-  LinkedinLogo,
   InstagramLogo,
+  LinkedinLogo,
   Envelope,
-} from "packages/components/src/lib/icons";
-import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
+} from "@phosphor-icons/react/dist/ssr";
 import { getProjects, getPosts } from "../../sanity/sanity-utils";
 
 import NextLink from "next/link";
@@ -20,57 +21,72 @@ export default async function Index() {
     <section className="grid grid-cols-12 gap-lg">
       <section className="gap-sm grid-span-7 sm:grid-span-all">
         <h2 className="small-md-regular">Who I am</h2>
-        <Surface>
+        <Surface className="mt-sm">
           <h3 className="title-md-regular mb-md">Hello, digital traveler!</h3>
           <p className="paragraph-md-regular">
             I’m Matt, your guide to the intricate maze of building design
             systems and component libraries.
           </p>
-          <LinkWrapper size="lg" className="">
-            <NextLink href="/about-me">About me</NextLink>
-            <ArrowRight size={20} className="fill-primary" />
+          <LinkWrapper size="lg" className="flex items-center gap-xs">
+            <NextLink href="/about-me">
+              About me <ArrowRight size={20} />
+            </NextLink>
           </LinkWrapper>
         </Surface>
       </section>
       <section className="gap-sm grid-span-5 sm:grid-span-all">
         <h2 className="small-md-regular">Find me here</h2>
-        <Surface>
-          <section className="flex align-center flex-wrap gap-sm justify-around">
+        <Surface className="mt-sm">
+          <section className="flex items-center flex-wrap gap-sm justify-around">
             <NextLink href="/" aria-label="Matt's Github">
-              <GithubLogo />
+              <GithubLogo
+                size={64}
+                className="link-text-color-primary hover:link-text-color-primary"
+              />
             </NextLink>
             <NextLink href="/" aria-label="Matt's Linkedin">
-              <LinkedinLogo />
+              <LinkedinLogo
+                size={64}
+                className="link-text-color-primary hover:link-text-color-primary"
+              />
             </NextLink>
             <NextLink href="/" aria-label="Matt's Instagram">
-              <InstagramLogo />
+              <InstagramLogo
+                size={64}
+                className="link-text-color-primary hover:link-text-color-primary"
+              />
             </NextLink>
             <NextLink href="/" aria-label="Matt's Email">
-              <Envelope />
+              <Envelope
+                size={64}
+                className="link-text-color-primary hover:link-text-color-primary"
+              />
             </NextLink>
           </section>
         </Surface>
       </section>
       <section className="gap-sm grid-span-7 sm:grid-span-all">
         <h2 className="small-md-regular">On my desk</h2>
-        <Surface>
+        <Surface className="mt-sm">
           <h3 className="title-md-regular mb-md">Phantom Elements</h3>
           <p className="paragraph-md-regular">
             A project in which I delve into the creation of a multifaceted,
             multi-brand component library.
           </p>
-          <LinkWrapper size="lg">
-            <NextLink href="/about-me">Learn more</NextLink>
-            <ArrowRight className="link-text-color-primary hover:link-text-color-primary" />
+          <LinkWrapper size="lg" className="flex items-center gap-xs">
+            <NextLink href="/about-me" className="align-middle">
+              <span>Learn more</span>
+              <ArrowRight size={20} />
+            </NextLink>
           </LinkWrapper>
         </Surface>
       </section>
       <section className="gap-sm grid-span-5 sm:grid-span-all">
-        <h2 className="small-md-regular">Sharing the craft</h2>
+        <h2 className="small-md-regular">Things I've written</h2>
         {posts.length > 0 && (
           <>
-            <Surface key={posts[posts.length - 1]._id}>
-              <ul>
+            <Surface className="mt-sm" key={posts[posts.length - 1]._id}>
+              <ul className="list-none">
                 <li>
                   <LinkWrapper size="lg">
                     <NextLink href={`journal/${posts[posts.length - 1].slug}`}>
@@ -86,7 +102,7 @@ export default async function Index() {
                   </LinkWrapper>
                 </li>
                 <li className="self-end">
-                  <LinkWrapper size="md" className="text-size-xs">
+                  <LinkWrapper size="md">
                     <NextLink href={`/journal`}>
                       See all {posts.length} posts
                     </NextLink>
@@ -100,7 +116,7 @@ export default async function Index() {
       {/* <div className="flex flex-column gap-sm grid-span-all">
         <h2>Creation & Designs</h2>
         {projects.map((project) => (
-          <Surface key={project._id}>
+          <Surface className="mt-sm" key={project._id}>
             <h3 className="text-size-xl mb-md">{project.name}</h3>
             <LinkWrapper size="lg">
               <NextLink href={`projects/${project.slug}`}>Learn more</NextLink>
@@ -108,7 +124,7 @@ export default async function Index() {
             </LinkWrapper>
           </Surface>
         ))}
-        <Surface>
+        <Surface className="mt-sm">
           <h3>Resin Design System</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
@@ -121,7 +137,7 @@ export default async function Index() {
             <ArrowRight  />
           </LinkWrapper>
         </Surface>
-        <Surface>
+        <Surface className="mt-sm">
           <h3>GDS</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
@@ -137,7 +153,7 @@ export default async function Index() {
             <ArrowRight  />
           </LinkWrapper>
         </Surface>
-        <Surface>
+        <Surface className="mt-sm">
           <h3>Nielsen Design System</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
