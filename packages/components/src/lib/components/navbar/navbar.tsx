@@ -1,7 +1,11 @@
 import React from "react";
 import styles from "./navbar.module.css";
 
-export const Navbar = ({ children }) => {
+interface NavbarProps {
+  children: React.ReactNode;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ children }) => {
   return (
     <nav>
       <ul className={`${styles.root} ${styles["nav-items"]}`}>{children}</ul>

@@ -1,5 +1,3 @@
-import { H2 } from "../../components/headings";
-
 const post = {
   name: "post",
   title: "Posts",

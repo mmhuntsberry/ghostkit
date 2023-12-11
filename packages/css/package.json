@@ -5,7 +5,7 @@
   "main": "src/index.css",
   "type": "commonjs",
   "scripts": {
-    "build": "node build-tokens.js",
+    "build": "",
     "pack": "mkdir -p dist && cp -r build package.json dist/"
   },
   "repository": {

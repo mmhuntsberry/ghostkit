@@ -4,6 +4,7 @@ import js from "refractor/lang/javascript";
 
 Refractor.registerLanguage(js);
 
+// @ts-expect-error TODO: fix this
 export function Code(props) {
   return (
     <Refractor

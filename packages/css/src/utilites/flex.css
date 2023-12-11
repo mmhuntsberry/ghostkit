@@ -22,7 +22,7 @@
   flex-wrap: wrap-reverse !important;
 }
 /* justify-content*/
-.justify-normal: {
+.justify-normal {
   justify-content: normal !important;
 }
 .justify-start {

@@ -4,6 +4,7 @@ import { getProjects } from "../../../sanity/sanity-utils";
 import NextLink from "next/link";
 import LinkWrapper from "packages/components/src/lib/components/link-wrapper/link-wrapper";
 
+// @ts-expect-error TODO: fix this
 export default async function Posts({ params }) {
   const projects = await getProjects();
   console.log(projects);

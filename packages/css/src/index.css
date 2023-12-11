@@ -1,12 +1,2 @@
 @import "./tokens.css";
-@import "./utilites/display.css";
-@import "./utilites/color.css";
-@import "./utilites/cursor.css";
-@import "./utilites/grid.css";
-@import "./utilites/gap.css";
-@import "./utilites/flex.css";
-@import "./utilites/list-style.css";
-@import "./utilites/margin.css";
-@import "./utilites/padding.css";
-@import "./utilites/typography.css";
-@import "./utilites/vertical-align.css";
+@import "./utilites";

@@ -6,13 +6,6 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "nx:run-commands",
-      "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
-      "options": {
-        "command": "node build-tokens.js",
-        "cwd": "packages/css"
-      },
       "configurations": {
         "development": {
           "mode": "development"

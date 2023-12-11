@@ -19,13 +19,6 @@ const navLinks = [
   { href: "/journal", label: "Journal" },
 ];
 
-// const socialLinks = [
-//   { href: "/", label: "Github logo" },
-//   { href: "/", label: "Linkedin logo" },
-//   { href: "/", label: "Instagram logo" },
-//   { href: "/", label: "Envelope" },
-// ];
-
 export default function RootLayout({
   children,
 }: {
