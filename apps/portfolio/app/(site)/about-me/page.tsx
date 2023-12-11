@@ -75,25 +75,37 @@ export default function About() {
         <h3 className="small-md-regular">Find me here</h3>
         <Surface className="mt-sm">
           <section className="flex items-center flex-wrap gap-sm justify-around">
-            <NextLink href="/" aria-label="Matt's Github">
+            <NextLink
+              href="https://github.com/mmhuntsberry"
+              aria-label="Matt's Github"
+            >
               <GithubLogo
                 size={64}
                 className="link-text-color-primary hover:link-text-color-primary"
               />
             </NextLink>
-            <NextLink href="/" aria-label="Matt's Linkedin">
+            <NextLink
+              href="https://www.linkedin.com/in/mmhuntsberry/"
+              aria-label="Matt's Linkedin"
+            >
               <LinkedinLogo
                 size={64}
                 className="link-text-color-primary hover:link-text-color-primary"
               />
             </NextLink>
-            <NextLink href="/" aria-label="Matt's Instagram">
+            <NextLink
+              href="https://www.instagram.com/matt_huntsberry/"
+              aria-label="Matt's Instagram"
+            >
               <InstagramLogo
                 size={64}
                 className="link-text-color-primary hover:link-text-color-primary"
               />
             </NextLink>
-            <NextLink href="/" aria-label="Matt's Email">
+            <NextLink
+              href="mailto:mmhuntsberry@gmail.com"
+              aria-label="Matt's Email"
+            >
               <Envelope
                 size={64}
                 className="link-text-color-primary hover:link-text-color-primary"
