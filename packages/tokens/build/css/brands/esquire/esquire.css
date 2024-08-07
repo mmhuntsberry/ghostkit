@@ -1,0 +1,13 @@
+
+:root, 
+:host {
+--esquire-font-families-primary: Lausanne;
+--esquire-font-families-secondary: Glanz;
+--esquire-font-families-tertiary: Flecha M;
+--esquire-font-weights-regular: 550;
+--esquire-font-weights-bold: 550;
+--esquire-brand-color-primary: #ff3a30;
+--esquire-brand-color-secondary: #F5F6F8;
+--esquire-brand-color-tertiary: #515150;
+--esquire-theme-bg-accent-default: #ff3a30;
+}

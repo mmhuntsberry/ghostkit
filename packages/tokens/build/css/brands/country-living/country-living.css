@@ -1,0 +1,11 @@
+
+:root, 
+:host {
+--country-living-font-families-primary: Kepler Std;
+--country-living-font-families-secondary: Gotham;
+--country-living-font-weights-bold: 500;
+--country-living-brand-color-primary: #0a5c80;
+--country-living-brand-color-secondary: #3E93C3;
+--country-living-brand-color-tertiary: #FFF9ED;
+--country-living-theme-bg-accent-default: #0a5c80;
+}

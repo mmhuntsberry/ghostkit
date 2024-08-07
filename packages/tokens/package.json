@@ -2,11 +2,21 @@
   "name": "@mmhuntsberry/tokens",
   "version": "0.0.0-replace",
   "description": "",
-  "main": "build/css/index.css",
+  "main": "./build/css/index.css",
+  "exports": {
+    ".": {
+      "import": "./build/css/index.css",
+      "require": "./build/css/index.css"
+    },
+    "./normalize": "./normalize.css",
+    "./primitives": "./build/css/primitives.css",
+    "./alias": "./build/css/alias.css",
+    "./themes/all": "./build/css/index.css"
+  },
   "type": "commonjs",
   "scripts": {
     "build": "node build-tokens.js",
-    "pack": "mkdir -p dist && cp -r build package.json dist/"
+    "pack": "mkdir -p dist && cp -r src/themes package.json normalize.css dist/"
   },
   "repository": {
     "type": "git",

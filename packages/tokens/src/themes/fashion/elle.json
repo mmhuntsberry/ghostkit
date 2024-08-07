@@ -1,0 +1,45 @@
+{
+  "brand-color-primary": {
+    "value": "{primitive.brand-color-primary.elle}",
+    "type": "color"
+  },
+  "brand-color-secondary": {
+    "value": "#CCCCCC",
+    "type": "color"
+  },
+  "brand-color-tertiary": {
+    "value": "#808080",
+    "type": "color"
+  },
+  "theme": {
+    "bg": {
+      "accent": {
+        "accent": {
+          "value": "{brand-color-primary}",
+          "type": "color"
+        }
+      }
+    }
+  },
+  "font-families": {
+    "primary": {
+      "value": "Neue Haas Unica Pro",
+      "type": "fontFamilies"
+    },
+    "secondary": {
+      "value": "Saol Text",
+      "type": "fontFamilies"
+    },
+    "tertiary": {
+      "value": "Saol Display",
+      "type": "fontFamilies"
+    }
+  },
+  "font-weights": {
+    "bold": {
+      "value": "Medium",
+      "type": "fontWeights",
+      "description": "Remapped ‘Bold’ to ‘Medium’ to accommodate NeueHaasUnicaPro \"medium\" only font weight."
+    }
+  }
+}

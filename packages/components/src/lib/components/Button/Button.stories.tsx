@@ -1,6 +1,6 @@
 import { within } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
-import { Button } from "./Button";
+import { Demo as Button } from "./demos/button";
 import type { ButtonProps } from "./Button";
 import changelog from "packages/components/CHANGELOG.md?raw";
 

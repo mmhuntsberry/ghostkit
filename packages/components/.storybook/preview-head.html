@@ -1,26 +1,57 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap"
+  rel="stylesheet"
+/>
+
 <style>
+  h1 {
+    font: var(--headline48-bold);
+    margin: var(--spacing-3xl) 0 var(--spacing-3xl);
+  }
+
+  h2 {
+    font: var(--headline36-bold);
+    margin-top: var(--spacing-3xl);
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font: var(--headline28-bold);
+    margin-top: var(--spacing-3xl);
+    margin-bottom: 0;
+  }
+
+  .sbdocs.sbdocs-wrapper {
+    background: var(--colors-grey-50);
+    padding: var(--sizing-lg) var(--sizing-xl) 0;
+    margin: 0;
+  }
+
   .sbdocs ul li a {
-    font: var(--typography-small-regular);
+    font: var(--label16-regular);
     color: var(--colors-blue-500);
   }
 
   .sbdocs ul li {
-    font: var(--typography-small-regular);
+    font: var(--label14-regular);
   }
 
   p {
-    font: var(--typography-body-regular);
+    font: var(--label14-regular);
   }
 
-  .storyblock {
-    border: 1px solid var(--colors-grey-400);
-    border-radius: var(--radii-md);
-    padding: var(--spacing-lg);
-  }
-
-  .sb-button-container {
+  .flex {
     display: flex;
+  }
+
+  .gap-xl {
     gap: var(--spacing-xl);
+  }
+
+  .wrap {
+    flex-wrap: wrap;
   }
 
   .docblock-code-toggle.docblock-code-toggle--disabled {

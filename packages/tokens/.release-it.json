@@ -17,6 +17,10 @@
             "section": "Cleanup"
           },
           {
+            "type": "chore",
+            "section": "Chore"
+          },
+          {
             "type": "docs",
             "section": "Documentations"
           }
@@ -36,9 +40,9 @@
     }
   },
   "git": {
-    "commitMessage": "chore(repo): release tokens ${version}",
-    "tagName": "tokens-v${version}"
+    "commitMessage": "chore(release): cut the v${version} release"
   },
+
   "npm": {
     "publish": false
   },
@@ -47,7 +51,7 @@
     "releaseName": "Release: tokens ${version}"
   },
   "hooks": {
-    "before:bump": "npx nx pack tokens",
+    "before:bump": "npx nx pack @media-platforms/tokens",
     "after:bump": ["git checkout -- package.json"]
   }
 }

@@ -20,4 +20,8 @@ const theme = create({
 
 addons.setConfig({
   theme,
+  sidebar: {
+    renderLabel: ({ name, type }) =>
+      type === "story" ? name : name.at(0).toUpperCase() + name.slice(1),
+  },
 });

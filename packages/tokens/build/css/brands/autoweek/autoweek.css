@@ -1,0 +1,18 @@
+
+:root, 
+:host {
+--autoweek-font-families-primary: Paralucent;
+--autoweek-font-families-secondary: Zilla Slab;
+--autoweek-button-autoweek-size-md-border-radius: 2rem;
+--autoweek-button-autoweek-size-md-border-width: 0.063rem;
+--autoweek-button-autoweek-size-md-padding-horizontal: 1.5rem;
+--autoweek-button-autoweek-size-md-padding-vertical: 0.75rem;
+--autoweek-button-autoweek-color-background-primary-default: #ffc84e;
+--autoweek-button-autoweek-color-background-primary-hover: #EB3135;
+--autoweek-button-autoweek-color-border-primary-default: #ffc84e;
+--autoweek-button-autoweek-color-border-primary-hover: #EB3135;
+--autoweek-brand-color-primary: #ffc84e;
+--autoweek-brand-color-secondary: #EB3135;
+--autoweek-brand-color-tertiary: #2C6F74;
+--autoweek-theme-bg-accent-default: #ffc84e;
+}
