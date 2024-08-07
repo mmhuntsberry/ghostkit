@@ -1,0 +1,34 @@
+{
+  "brand-color-primary": {
+    "value": "{primitive.brand-color-primary.prevention}",
+    "type": "color"
+  },
+  "brand-color-secondary": {
+    "value": "#EAF4F5",
+    "type": "color"
+  },
+  "brand-color-tertiary": {
+    "value": "#FCD029",
+    "type": "color"
+  },
+  "theme": {
+    "bg": {
+      "accent": {
+        "default": {
+          "value": "{brand-color-primary}",
+          "type": "color"
+        }
+      }
+    }
+  },
+  "font-families": {
+    "primary": {
+      "value": "ITC Avant Garde Gothic Pro",
+      "type": "fontFamilies"
+    },
+    "secondary": {
+      "value": "Avenir Next LT Pro",
+      "type": "fontFamilies"
+    }
+  }
+}
