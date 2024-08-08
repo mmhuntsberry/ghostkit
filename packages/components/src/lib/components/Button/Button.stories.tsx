@@ -89,7 +89,11 @@ export const Primary = {
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> a74080c (update core)
+=======
+>>>>>>> 8224f25 (fix conflicts)
+>>>>>>> 19d22ce (update core)
 
   play: async ({ canvasElement }: any) => {
     const canvas = within(canvasElement);
@@ -119,11 +123,19 @@ export const Kinds = {
     },
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b8deeba (chore: adjust documentation styles)
 =======
 =======
 >>>>>>> d92c5db (cleanup: stories)
 >>>>>>> a74080c (update core)
+=======
+=======
+>>>>>>> d92c5db (cleanup: stories)
+=======
+>>>>>>> b8deeba (chore: adjust documentation styles)
+>>>>>>> 8224f25 (fix conflicts)
+>>>>>>> 19d22ce (update core)
 };
 
 export const Disabled = {
@@ -137,10 +149,44 @@ export const Disabled = {
     disabled: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     kind: "primary",
 =======
 >>>>>>> 3578155 (update core)
+=======
+=======
+    kind: "primary",
+  },
+  parameters: {
+    controls: {
+      disable: true,
+    },
+  },
+  play: async ({ canvasElement }: any) => {
+    const canvas = within(canvasElement);
+
+    const button = canvas.getByTestId("my-test");
+    const buttonStyle = window.getComputedStyle(button);
+
+    expect(buttonStyle.cursor).toBe("not-allowed");
+  },
+};
+
+export const LightMode = {
+  render: (args: ButtonProps) => (
+    <div className="sb-button-container">
+      <Button {...args} />
+      <Button {...args} kind="secondary" />
+      <Button {...args} kind="text" />
+    </div>
+  ),
+  args: {
+    children: "Button Text",
+    kind: "primary",
+    mode: "light",
+>>>>>>> b8deeba (chore: adjust documentation styles)
+>>>>>>> 19d22ce (update core)
   },
   parameters: {
     controls: {
