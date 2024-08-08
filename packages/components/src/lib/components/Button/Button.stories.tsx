@@ -136,8 +136,11 @@ export const Disabled = {
     children: "Button Text",
     disabled: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     kind: "primary",
+=======
+>>>>>>> 3578155 (update core)
   },
   parameters: {
     controls: {
