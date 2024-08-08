@@ -145,15 +145,11 @@
       },
       {
         "file": ".github/workflows/figma-tokens-release.yaml",
-        "hash": "12310252627061560669"
+        "hash": "17503277274681579493"
       },
       {
         "file": ".github/workflows/ghostkit-components-pre-release.yaml",
         "hash": "17584259081717992912"
-      },
-      {
-        "file": ".github/workflows/ui-tests.yaml",
-        "hash": "10278632835567640646"
       },
       {
         "file": ".gitignore",

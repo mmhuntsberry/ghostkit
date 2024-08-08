@@ -447,3 +447,39 @@ Error: write EPIPE
 [NX Daemon Server] - 2024-08-08T19:28:12.757Z - Done responding to the client handleHashTasks
 [NX Daemon Server] - 2024-08-08T19:28:12.757Z - Handled HASH_TASKS. Handling time: 31. Response time: 1.
 [NX Daemon Server] - 2024-08-08T19:28:40.542Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-08-08T19:29:41.104Z - [WATCHER]: .github/workflows/ui-tests.yaml was deleted
+[NX Daemon Server] - 2024-08-08T19:29:41.104Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-08T19:29:41.220Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-08T19:29:41.220Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-08T19:29:41.220Z - [REQUEST]: .github/workflows/ui-tests.yaml
+[NX Daemon Server] - 2024-08-08T19:29:41.260Z - Time taken for 'hash changed files from watcher' 0.10820800065994263ms
+[NX Daemon Server] - 2024-08-08T19:29:42.110Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-08T19:29:42.110Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-08-08T19:29:42.110Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-08T19:29:42.111Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-08T19:29:42.111Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-08T19:29:42.113Z - Time taken for 'total for creating and serializing project graph' 0.07862499356269836ms
+[NX Daemon Server] - 2024-08-08T19:29:42.115Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-08T19:29:42.115Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX Daemon Server] - 2024-08-08T19:29:42.120Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2024-08-08T19:29:42.120Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2024-08-08T19:29:42.120Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-08-08T19:29:42.120Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-08-08T19:29:53.642Z - [WATCHER]: .github/workflows/figma-tokens-release.yaml was modified
+[NX Daemon Server] - 2024-08-08T19:29:53.642Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-08-08T19:29:53.756Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-08-08T19:29:53.756Z - [REQUEST]: .github/workflows/figma-tokens-release.yaml
+[NX Daemon Server] - 2024-08-08T19:29:53.756Z - [REQUEST]: 
+[NX Daemon Server] - 2024-08-08T19:29:53.794Z - Time taken for 'hash changed files from watcher' 0.15583300590515137ms
+[NX Daemon Server] - 2024-08-08T19:29:54.649Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-08T19:29:54.649Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-08-08T19:29:54.649Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-08-08T19:29:54.650Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-08-08T19:29:54.650Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-08-08T19:29:54.652Z - Time taken for 'total for creating and serializing project graph' 0.07662501931190491ms
+[NX Daemon Server] - 2024-08-08T19:29:54.653Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-08-08T19:29:54.654Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX Daemon Server] - 2024-08-08T19:29:54.657Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2024-08-08T19:29:54.657Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2024-08-08T19:29:54.658Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-08-08T19:29:54.658Z - Closed a connection. Number of open connections: 0

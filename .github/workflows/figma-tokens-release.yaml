@@ -3,7 +3,7 @@ name: Figma Tokens Sync
 on:
   push:
     branches:
-      - "*release*"
+      - "release-tokens"
     paths:
       # - "packages/tokens/**"
 
