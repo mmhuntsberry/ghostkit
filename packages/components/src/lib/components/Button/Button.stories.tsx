@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { within } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
 >>>>>>> 059c679 (update core)
+=======
+>>>>>>> a74080c (update core)
 import { Demo as Button } from "./demos/button";
 import type { ButtonProps } from "./Button";
 
@@ -83,7 +86,10 @@ export const Primary = {
     "data-testid": "my-test",
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a74080c (update core)
 
   play: async ({ canvasElement }: any) => {
     const canvas = within(canvasElement);
@@ -112,7 +118,12 @@ export const Kinds = {
       disable: true, // This throws a warning in the terminal because we are turning off controls
     },
   },
+<<<<<<< HEAD
 >>>>>>> b8deeba (chore: adjust documentation styles)
+=======
+=======
+>>>>>>> d92c5db (cleanup: stories)
+>>>>>>> a74080c (update core)
 };
 
 export const Disabled = {
@@ -133,6 +144,7 @@ export const Disabled = {
       disable: true,
     },
   },
+<<<<<<< HEAD
   play: async ({ canvasElement }: any) => {
     const canvas = within(canvasElement);
 
@@ -163,3 +175,31 @@ export const LightMode = {
     },
   },
 };
+<<<<<<< HEAD
+=======
+
+export const DarkMode = {
+  render: (args: ButtonProps) => (
+    <div className="sb-button-container">
+      <Button {...args} />
+      <Button {...args} kind="secondary" />
+      <Button {...args} kind="text" />
+    </div>
+  ),
+  args: {
+    children: "Button Text",
+    kind: "primary",
+    mode: "dark",
+  },
+  parameters: {
+    backgrounds: {
+      default: "dark",
+    },
+    controls: {
+      disable: true,
+    },
+  },
+=======
+>>>>>>> d92c5db (cleanup: stories)
+};
+>>>>>>> a74080c (update core)
