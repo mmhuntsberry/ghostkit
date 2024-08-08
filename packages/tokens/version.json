@@ -1,35 +1,3 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "version": "0.0.14"
-=======
-  "version": "0.0.3"
->>>>>>> 059c679 (update core)
-=======
-  "version": "0.0.4"
->>>>>>> 16a32cd (chore(repo): release tokens 0.0.4)
-=======
-  "version": "0.0.10"
->>>>>>> 8a9cb7b (bump version to avoid conflict)
-=======
-  "version": "0.0.11"
->>>>>>> 2bcf336 (chore(release): cut the v0.0.11 release)
-=======
-  "version": "0.0.12"
->>>>>>> a7842bd (chore(release): cut the v0.0.12 release)
-=======
-  "version": "0.0.13"
->>>>>>> 167349b (chore(release): cut the v0.0.13 release)
-=======
-  "version": "0.0.14"
->>>>>>> 1fd4ba4 (chore(release): cut the v0.0.14 release)
-=======
-  "version": "0.0.15"
->>>>>>> 7210eff (chore(release): cut the v0.0.15 release)
+  "version": "0.0.12-0"
 }
