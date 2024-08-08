@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx run components:storybook",
+    "startTime": "2024-08-08T19:18:21.648Z",
+    "endTime": "2024-08-08T19:18:33.039Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "components:storybook",
+      "target": "storybook",
+      "projectName": "components",
+      "hash": "14121769251107408435",
+      "startTime": "2024-08-08T19:18:21.653Z",
+      "endTime": "2024-08-08T19:18:33.039Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

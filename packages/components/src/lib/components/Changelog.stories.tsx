@@ -1,4 +1,3 @@
-import { expect } from "@storybook/jest";
 import Markdown from "markdown-to-jsx";
 import changelog from "packages/components/CHANGELOG.md?raw";
 

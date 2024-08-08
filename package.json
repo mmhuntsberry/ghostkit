@@ -87,6 +87,8 @@
     "packages/*"
   ],
   "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
     "@graphql-tools/schema": "^10.0.2",
     "@nx-tools/nx-prisma": "^5.1.0",
     "@phosphor-icons/react": "^2.0.15",
