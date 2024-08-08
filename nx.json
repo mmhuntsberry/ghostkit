@@ -1,10 +1,4 @@
 {
-  "projects": {
-    "tokens": {
-      "root": "packages/tokens",
-      "projectType": "library"
-    }
-  },
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx/tasks-runners/default",
@@ -17,6 +11,12 @@
           "build-storybook"
         ]
       }
+    }
+  },
+  "projects": {
+    "tokens": {
+      "root": "packages/tokens",
+      "projectType": "library"
     }
   },
   "extends": "nx/presets/npm.json",

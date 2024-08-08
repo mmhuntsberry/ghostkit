@@ -7,12 +7,13 @@ interface PageTitle {
 }
 
 export const StyledPageTitle = styled.h1<PageTitle>`
-  font: var(--typography-headline-1-regular);
-  background-color: var(--colors-indigo-50);
+  font: var(--typography-headline-3-regular);
+<<<<<<< HEAD
+=======
   color: var(--colors-blue-900);
-  padding: calc(var(--spacing-4xl) + var(--spacing-3xl)) var(--spacing-lg)
-    var(--spacing-lg);
+>>>>>>> 8224f25 (fix conflicts)
   border-radius: var(--radii-md);
+  margin: var(--spacing-xl) 0;
 `;
 
 export const PageTitle: FC<PageTitle> = ({ id, children }) => {

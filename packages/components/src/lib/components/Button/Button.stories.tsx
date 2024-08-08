@@ -77,6 +77,48 @@ export const Primary = {
     children: "Button Text",
     "data-testid": "my-test",
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8224f25 (fix conflicts)
+
+  play: async ({ canvasElement }: any) => {
+    const canvas = within(canvasElement);
+
+    const button = canvas.getByTestId("my-test");
+    expect(button instanceof HTMLButtonElement).toBe(true);
+  },
+};
+
+export const Kinds = {
+  render: (args: ButtonProps) => (
+    <div className="sb-button-container">
+      <Button {...args} onClick={args.onClick} />
+      <Button {...args} kind="secondary" />
+      <Button {...args} kind="text" />
+    </div>
+  ),
+  args: {
+    children: "Button Text",
+    kind: "primary",
+    onClick: () => console.log("Hello"),
+  },
+
+  parameters: {
+    controls: {
+      disable: true, // This throws a warning in the terminal because we are turning off controls
+    },
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> d92c5db (cleanup: stories)
+=======
+>>>>>>> b8deeba (chore: adjust documentation styles)
+>>>>>>> 8224f25 (fix conflicts)
+>>>>>>> main
 };
 
 export const Disabled = {
@@ -88,6 +130,70 @@ export const Disabled = {
   args: {
     children: "Button Text",
     disabled: true,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    kind: "primary",
+  },
+  parameters: {
+    controls: {
+      disable: true,
+    },
+  },
+  play: async ({ canvasElement }: any) => {
+    const canvas = within(canvasElement);
+
+    const button = canvas.getByTestId("my-test");
+    const buttonStyle = window.getComputedStyle(button);
+
+    expect(buttonStyle.cursor).toBe("not-allowed");
+  },
+};
+
+export const LightMode = {
+  render: (args: ButtonProps) => (
+    <div className="sb-button-container">
+      <Button {...args} />
+      <Button {...args} kind="secondary" />
+      <Button {...args} kind="text" />
+    </div>
+  ),
+  args: {
+    children: "Button Text",
+    kind: "primary",
+    mode: "light",
+>>>>>>> b8deeba (chore: adjust documentation styles)
+  },
+  parameters: {
+    controls: {
+      disable: true,
+    },
+  },
+<<<<<<< HEAD
+  play: async ({ canvasElement }: any) => {
+    const canvas = within(canvasElement);
+
+    const button = canvas.getByTestId("my-test");
+    const buttonStyle = window.getComputedStyle(button);
+
+    expect(buttonStyle.cursor).toBe("not-allowed");
+  },
+};
+
+export const LightMode = {
+  render: (args: ButtonProps) => (
+    <div className="sb-button-container">
+      <Button {...args} />
+      <Button {...args} kind="secondary" />
+      <Button {...args} kind="text" />
+    </div>
+  ),
+  args: {
+    children: "Button Text",
+    kind: "primary",
+    mode: "light",
+>>>>>>> main
   },
   parameters: {
     controls: {
@@ -95,3 +201,31 @@ export const Disabled = {
     },
   },
 };
+<<<<<<< HEAD
+=======
+
+export const DarkMode = {
+  render: (args: ButtonProps) => (
+    <div className="sb-button-container">
+      <Button {...args} />
+      <Button {...args} kind="secondary" />
+      <Button {...args} kind="text" />
+    </div>
+  ),
+  args: {
+    children: "Button Text",
+    kind: "primary",
+    mode: "dark",
+  },
+  parameters: {
+    backgrounds: {
+      default: "dark",
+    },
+    controls: {
+      disable: true,
+    },
+  },
+=======
+>>>>>>> d92c5db (cleanup: stories)
+};
+>>>>>>> main
