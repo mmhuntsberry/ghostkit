@@ -11,6 +11,13 @@
 =======
 
 
+## 0.0.13 (2024-08-08)
+
+
+### Bug Fixes
+
+* build script and clean out files ([0a3ceb3](https://github.com/mmhuntsberry/ghostkit/commit/0a3ceb345435458bbde1e1303ba0e229235a24de))
+
 ## 0.0.12 (2024-08-07)
 
 
