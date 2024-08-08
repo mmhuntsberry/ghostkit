@@ -1,0 +1,49 @@
+{
+  "brand-color-primary": {
+    "value": "{primitive.brand-color-primary.road-and-track}",
+    "type": "color"
+  },
+  "brand-color-secondary": {
+    "value": "#1B1A1A",
+    "type": "color"
+  },
+  "brand-color-tertiary": {
+    "value": "#B4B3B3",
+    "type": "color"
+  },
+  "theme": {
+    "bg": {
+      "accent": {
+        "default": {
+          "value": "{brand-color-primary}",
+          "type": "color"
+        }
+      }
+    }
+  },
+  "font-families": {
+    "primary": {
+      "value": "Fixture",
+      "type": "fontFamilies"
+    },
+    "secondary": {
+      "value": "Fixture",
+      "type": "fontFamilies"
+    },
+    "tertiary": {
+      "value": "Fixture",
+      "type": "fontFamilies"
+    },
+    "quarternary": {
+      "value": "GT Super Display",
+      "type": "fontFamilies"
+    }
+  },
+  "font-weights": {
+    "bold": {
+      "value": "SemiBold",
+      "type": "fontWeights",
+      "description": "Remapped ‘Bold’ to ‘SemiBold’ to address the font weight rendering incompatibility within Figma."
+    }
+  }
+}

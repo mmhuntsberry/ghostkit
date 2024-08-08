@@ -1,0 +1,13 @@
+
+:root, 
+:host {
+--good-housekeeping-font-families-primary: Archer;
+--good-housekeeping-font-families-secondary: Neutraface 2 Text;
+--good-housekeeping-font-families-tertiary: Neutraface 2 Display;
+--good-housekeeping-font-families-quaternary: Majesti Banner;
+--good-housekeeping-font-weights-regular: Book;
+--good-housekeeping-brand-color-primary: #9e3326;
+--good-housekeeping-brand-color-secondary: #198294;
+--good-housekeeping-brand-color-tertiary: #F8F3F4;
+--good-housekeeping-theme-bg-accent-default: #9e3326;
+}

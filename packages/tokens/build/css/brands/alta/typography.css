@@ -1,0 +1,17 @@
+
+:root, 
+:host {
+--font-families-primary: Interstate;
+--font-families-secondary: Miller Display;
+--button-alta-size-md-border-radius: 0rem;
+--button-alta-size-md-border-width: 0.063rem;
+--button-alta-size-md-padding-horizontal: 0.75rem;
+--button-alta-size-md-padding-vertical: 0.25rem;
+--button-alta-color-background-primary-default: #e13608;
+--button-alta-color-background-primary-hover: #FF6C45;
+--button-alta-color-border-primary-default: #e13608;
+--button-alta-color-border-primary-hover: #FF6C45;
+--brand-color-primary: #e13608;
+--brand-color-secondary: #FF6C45;
+--theme-bg-primary-default: #e13608;
+}

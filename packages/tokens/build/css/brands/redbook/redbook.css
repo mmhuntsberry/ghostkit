@@ -1,0 +1,9 @@
+
+:root, 
+:host {
+--redbook-font-families-primary: Century Gothic;
+--redbook-brand-color-primary: #d30c4f;
+--redbook-brand-color-secondary: #69DCBF;
+--redbook-brand-color-tertiary: #B2003C;
+--redbook-theme-bg-accent-default: #d30c4f;
+}

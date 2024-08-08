@@ -80,8 +80,14 @@
     "@emotion/styled": ">=11.11.0 <12.0.0",
     "@storybook/react": "^7.4.4",
     "@storybook/test-runner": "^0.13.0",
+<<<<<<< HEAD
     "react": "18.2.0",
     "react-dom": "18.2.0",
+=======
+    "react": ">=16.0.0 <19.0.0",
+    "react-dom": ">=16.0.0 <19.0.0",
+    "style-dictionary-utils": "^2.0.7",
+>>>>>>> 14f44b8 (resolve merge conflict)
     "tslib": "^2.3.0"
   }
 }

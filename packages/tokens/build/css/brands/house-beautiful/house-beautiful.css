@@ -1,0 +1,12 @@
+
+:root, 
+:host {
+--house-beautiful-font-families-primary: Apparel Display;
+--house-beautiful-font-families-secondary: Visuelt Pro;
+--house-beautiful-font-families-tertiary: SangBleu Sunrise;
+--house-beautiful-font-weights-bold: 400;
+--house-beautiful-brand-color-primary: #242d39;
+--house-beautiful-brand-color-secondary: #FBFAFA;
+--house-beautiful-brand-color-tertiary: #F5F2EE;
+--house-beautiful-theme-bg-accent-default: #242d39;
+}

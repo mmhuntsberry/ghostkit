@@ -1,0 +1,12 @@
+
+:root, 
+:host {
+--car-and-driver-font-families-primary: Gliko Modern Condensed L;
+--car-and-driver-font-families-secondary: Gliko Modern S;
+--car-and-driver-font-families-tertiary: Interstate;
+--car-and-driver-font-weights-bold: 500;
+--car-and-driver-brand-color-primary: #00a4Db;
+--car-and-driver-brand-color-secondary: #1C5F8B;
+--car-and-driver-brand-color-tertiary: #F1F7F7;
+--car-and-driver-theme-bg-accent-default: #00a4Db;
+}

@@ -4,12 +4,14 @@ import styled from "@emotion/styled";
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
   disabled?: boolean;
-  kind: "primary" | "secondary" | "text";
+  kind?: "primary" | "secondary" | "text";
   mode?: string;
   size?: "sm" | "md" | "lg";
-
-  theme?: string;
+  brand?: string;
 }
+
+const customProp = (props) =>
+  props.brand !== "primitive" ? `${props.brand}-` : "";
 
 const StyledButton = styled.button<ButtonProps>`
   * {
@@ -17,43 +19,53 @@ const StyledButton = styled.button<ButtonProps>`
   }
 
   align-items: center;
-  background: ${(props) =>
-    `var(--${props.theme}-button-color-background-${props.kind}-default-on-${props.mode})`};
+  background-color: ${(props) =>
+    `var(--${customProp(props)}button-theme-bg-primary-default-fill)`};
   border: ${(props) =>
-    `var(--${props.theme}-button-border-${props.kind}-default-on-${props.mode})`};
-  border-radius: ${(props) => `var(--${props.theme}-button-radius)`};
+    `var(--${customProp(
+      props
+    )}button-theme-border-primary-default-border-color)`};
+  border-radius: ${(props) =>
+    `var(--${customProp(props)}button-size-border-default-border-radius)`};
   color: ${(props) =>
-    `var(--${props.theme}-button-color-text-${props.kind}-default-on-${props.mode})`};
+    `var(--${customProp(props)}button-theme-text-default-fill)`};
   cursor: pointer;
   display: flex;
-  font: var(--typography-button-normal-bold);
+  font-family: ${(props) =>
+    `var(--${customProp(props)}button-size-text-default-font-families)`};
   justify-content: center;
   outline: none;
-  padding: ${(props) =>
-    `var(--${props.theme}-button-size-${props.kind}-${props.size})`};
-  text-transform: uppercase;
+  padding-block: ${(props) =>
+    `var(--${customProp(props)}button-size-bg-default-vertical-padding)`};
+  padding-inline: ${(props) =>
+    `var(--${customProp(props)}button-size-bg-default-horizontal-padding)`};
+  text-transform: ${(props) =>
+    `var(--${customProp(props)}button-size-text-default-text-case)`};
+
   transition: background 0.2s ease-in-out;
 
   &:hover {
-    background: ${(props) =>
-      `var(--${props.theme}-button-color-background-${props.kind}-hover-on-${props.mode})`};
+    background-color: ${(props) =>
+      `var(--${customProp(props)}button-theme-bg-primary-hover-fill)`};
   }
 
   &:disabled {
-    background: ${(props) =>
-      `var(--${props.theme}-button-color-background-${props.kind}-disabled-on-${props.mode})`};
+    background-color: ${(props) =>
+      `var(--${customProp(props)}button-theme-bg-primary-disabled-fill)`};
     color: ${(props) =>
-      `var(--${props.theme}-button-color-text-${props.kind}-disabled-on-${props.mode})`};
+      `var(--${customProp(props)}button-theme-text-disabled-fill)`};
     border: ${(props) =>
-      `var(--${props.theme}-button-border-${props.kind}-disabled-on-${props.mode})`};
+      `var(--${customProp(
+        props
+      )}button-theme-border-primary-disabled-border-color)`};
     cursor: not-allowed;
   }
 
   &:focus {
     box-shadow: ${(props) =>
-      `var(--${props.theme}-button-color-shadow-${props.kind}-focus-on-${props.mode});`};
+      `var(--${customProp(props)}button-color-shadow-focus-on-${props.mode});`};
     border: ${(props) =>
-      `var(--${props.theme}-button-border-${props.kind}-focus-on-${props.mode})`};
+      `var(--${customProp(props)}button-border-focus-on-${props.mode})`};
   }
 `;
 
@@ -63,16 +75,17 @@ export const Button: React.FC<ButtonProps> = ({
   kind = "primary",
   mode = "light",
   size = "md",
-  theme = "toolkit",
+  brand = "",
   ...props
 }) => {
+  console.log(brand);
   return (
     <StyledButton
       disabled={disabled}
       kind={kind}
       mode={mode}
       size={size}
-      theme={theme}
+      brand={brand}
       {...props}
     >
       {children}

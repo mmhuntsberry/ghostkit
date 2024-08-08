@@ -1,5 +1,5 @@
 {
-  "name": "tokens",
+  "name": "@mmhuntsberry/tokens",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/tokens/src",
   "projectType": "library",
@@ -10,8 +10,8 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "command": "node build-tokens.js",
-        "cwd": "packages/tokens"
+        "command": "node build-themes.js",
+        "cwd": "packages/tokens/src"
       },
       "configurations": {
         "development": {
@@ -22,6 +22,7 @@
         }
       }
     },
+
     "pack": {
       "executor": "nx:run-commands",
       "options": {
@@ -37,6 +38,12 @@
       }
     },
 
+    "prerelease": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "dotenv release-it prepatch --preRelease=alpha -- --config=./packages/tokens/.release-it.json"
+      }
+    },
     "release": {
       "executor": "nx:run-commands",
       "options": {

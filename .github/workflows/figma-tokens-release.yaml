@@ -5,7 +5,7 @@ on:
     branches:
       - "*release*"
     paths:
-      - "packages/tokens/**"
+      # - "packages/tokens/**"
 
 jobs:
   publish-tokens:
