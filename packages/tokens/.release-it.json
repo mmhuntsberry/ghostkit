@@ -51,7 +51,11 @@
     "releaseName": "Release: tokens ${version}"
   },
   "hooks": {
+<<<<<<< HEAD
     "before:bump": "npx nx pack @mmhuntsberry/tokens",
+=======
+    "before:bump": "npx nx pack @media-platforms/tokens",
+>>>>>>> 059c679 (update core)
     "after:bump": ["git checkout -- package.json"]
   }
 }

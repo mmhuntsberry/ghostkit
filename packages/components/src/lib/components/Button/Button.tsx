@@ -61,6 +61,7 @@ const StyledButton = styled.button<ButtonProps>`
     cursor: not-allowed;
   }
 
+<<<<<<< HEAD
   &:active {
     background-color: ${(props) =>
       `var(--${customProp(props)}button-theme-bg-primary-active-fill)`};
@@ -68,6 +69,13 @@ const StyledButton = styled.button<ButtonProps>`
       `var(--${customProp(
         props
       )}button-theme-border-primary-active-border-color)`};
+=======
+  &:focus {
+    box-shadow: ${(props) =>
+      `var(--${customProp(props)}button-color-shadow-focus-on-${props.mode});`};
+    border: ${(props) =>
+      `var(--${customProp(props)}button-border-focus-on-${props.mode})`};
+>>>>>>> 059c679 (update core)
   }
 `;
 

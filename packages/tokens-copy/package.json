@@ -5,7 +5,11 @@
   "main": "build/css/index.css",
   "type": "commonjs",
   "scripts": {
+<<<<<<< HEAD
     "build": "node build-themes.js",
+=======
+    "build": "node build-tokens.js",
+>>>>>>> 059c679 (update core)
     "pack": "mkdir -p dist && cp -r build package.json dist/"
   },
   "repository": {

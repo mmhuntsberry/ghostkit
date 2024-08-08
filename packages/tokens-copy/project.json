@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "tokens-copy",
+=======
+  "name": "tokens",
+>>>>>>> 059c679 (update core)
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/tokens/src",
   "projectType": "library",
@@ -10,7 +14,11 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
+<<<<<<< HEAD
         "command": "node build-themes.js",
+=======
+        "command": "node build-tokens.js",
+>>>>>>> 059c679 (update core)
         "cwd": "packages/tokens"
       },
       "configurations": {
