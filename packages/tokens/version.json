@@ -1,6 +1,7 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "0.0.14"
 =======
   "version": "0.0.3"
@@ -8,4 +9,7 @@
 =======
   "version": "0.0.4"
 >>>>>>> 16a32cd (chore(repo): release tokens 0.0.4)
+=======
+  "version": "0.0.10"
+>>>>>>> 8a9cb7b (bump version to avoid conflict)
 }
