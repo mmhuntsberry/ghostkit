@@ -5,6 +5,7 @@
   "scripts": {
     "storybook": "npx nx run components:storybook",
     "build-storybook": "npx nx run components:build-storybook",
+    "test-storybook": "npx test-storybook --url http://localhost:4400/ --coverage --config-dir packages/components/.storybook",
     "chromatic": "npx chromatic"
   },
   "private": true,
