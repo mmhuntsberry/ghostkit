@@ -20,11 +20,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:mmhuntsberry/ghostkit.git",
-    "directory": "packages/tokens"
+    "url": "git@github.com:mmhuntsberry/rds.git"
   },
   "publishConfig": {
-    "@mmhuntsberry:registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/mmhuntsberry"
   },
   "keywords": [],
   "author": "",
