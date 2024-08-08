@@ -1,24 +1,7 @@
-// import "@media-platforms/rds-fonts";
 // import "../../tokens/build/css/index.css";
 import "../../../node_modules/@mmhuntsberry/tokens/build/css/index.css";
 import React, { useEffect, useContext } from "react";
 import { Meta, StoryContext } from "@storybook/react";
-
-// Dynamically apply brand-specific CSS
-// const withBrand = (Story: React.ComponentType, context: StoryContext) => {
-//   useEffect(() => {
-//     const brand = context.globals.brand;
-//     if (brand) {
-//       import(`@media-platforms/rds-tokens/${brand}`)
-//         .then(() => console.log(`Loaded styles for ${brand}`))
-//         .catch((err) =>
-//           console.error(`Failed to load styles for ${brand}:`, err)
-//         );
-//     }
-//   }, [context.globals.brand]);
-
-//   return <Story />;
-// };
 
 export const BrandContext = React.createContext("white-label");
 
