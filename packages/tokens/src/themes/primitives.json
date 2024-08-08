@@ -1406,6 +1406,7 @@
         "type": "color",
         "description": "Woman's Health Primary Brand Color"
       }
+<<<<<<< HEAD
     }
   },
   "button": {
@@ -1512,6 +1513,13 @@
           },
           "type": "composition"
         }
+=======
+    },
+    "shadow": {
+      "900": {
+        "value": "#303133",
+        "type": "color"
+>>>>>>> 4ca78a8 (chore: initial tokens push to ghostkit)
       }
     }
   },
@@ -1652,6 +1660,116 @@
       "type": "other"
     }
   },
+<<<<<<< HEAD
+=======
+  "button": {
+    "theme": {
+      "bg": {
+        "primary": {
+          "default": {
+            "value": {
+              "fill": "{primitive.black}"
+            },
+            "type": "composition"
+          },
+          "hover": {
+            "value": {
+              "fill": "{primitive.gray.800}"
+            },
+            "type": "composition"
+          },
+          "active": {
+            "value": {
+              "fill": "{primitive.gray.900}"
+            },
+            "type": "composition"
+          },
+          "disabled": {
+            "value": {
+              "fill": "{primitive.gray.300}"
+            },
+            "type": "composition"
+          }
+        }
+      },
+      "border": {
+        "primary": {
+          "default": {
+            "value": {
+              "borderColor": "{primitive.gray.800}"
+            },
+            "type": "composition"
+          },
+          "hover": {
+            "value": {
+              "borderColor": "{primitive.gray.700}"
+            },
+            "type": "composition"
+          },
+          "active": {
+            "value": {
+              "borderColor": "{primitive.gray.800}"
+            },
+            "type": "composition"
+          },
+          "disabled": {
+            "value": {
+              "borderColor": "{primitive.gray.300}"
+            },
+            "type": "composition"
+          }
+        }
+      },
+      "text": {
+        "default": {
+          "value": {
+            "fill": "{primitive.pink.400}",
+            "fontWeights": "{font-weights.bold}",
+            "fontFamilies": "Times New Roman"
+          },
+          "type": "composition"
+        },
+        "disabled": {
+          "value": {
+            "fill": "{primitive.neutral.400}"
+          },
+          "type": "composition"
+        }
+      }
+    },
+    "size": {
+      "border": {
+        "default": {
+          "value": {
+            "borderWidth": "{primitive.1}",
+            "borderRadius": "{primitive.32}"
+          },
+          "type": "composition"
+        }
+      },
+      "bg": {
+        "default": {
+          "value": {
+            "verticalPadding": "{primitive.10}",
+            "horizontalPadding": "{primitive.16}"
+          },
+          "type": "composition"
+        }
+      },
+      "text": {
+        "default": {
+          "value": {
+            "textCase": "{text-case.uppercase}",
+            "fontFamilies": "{font-families.primary}",
+            "fontSizes": "{primitive.12}",
+            "fontWeights": "Bold"
+          },
+          "type": "composition"
+        }
+      }
+    }
+  },
+>>>>>>> 4ca78a8 (chore: initial tokens push to ghostkit)
   "opacities": {
     "0": {
       "value": "0.0",
