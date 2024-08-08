@@ -1,6 +1,7 @@
 // Import styles of packages that you've installed.
 // All packages except `@mantine/hooks` require styles imports
-import "@mmhuntsberry/fonts";
+import "@mmhuntsberry/tokens";
+import "@mmhuntsberry/fonts/theme-g";
 
 // import "@mmhuntsberry/fonts/theme-g";
 import "@mantine/core/styles.css";

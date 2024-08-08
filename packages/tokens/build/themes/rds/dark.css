@@ -1,10 +1,6 @@
 /**
  * Do not edit directly
-<<<<<<< HEAD:packages/tokens-copy/build/css/global.css
- * Generated on Wed, 07 Aug 2024 16:31:39 GMT
-=======
- * Generated on Mon, 25 Sep 2023 20:38:31 GMT
->>>>>>> 0ee894b (chore: fix conflict):packages/tokens/build/css/global.css
+ * Generated on Mon, 25 Sep 2023 21:00:24 GMT
  */
 
 :root {
@@ -160,41 +156,6 @@
   --shadows-blur-80: 8;
   --shadows-blur-100: 50;
   --shadows-blur-base: 0.5;
-<<<<<<< HEAD:packages/tokens-copy/build/css/global.css
-  --sizing-2xs: 16px;
-  --sizing-xs: 24px;
-  --sizing-sm: 32px;
-  --sizing-md: 40px;
-  --sizing-lg: 48px;
-  --sizing-xl: 64px;
-  --sizing-base: 16px;
-  --sizing-huge: 144px; /* Delete me - TEST */
-  --sizing-test: 256px; /* I am a test token - DELETE ME!!!! */
-  --spacing-2xs: 2px;
-  --spacing-xs: 4px; /* The base token for spacing */
-  --spacing-sm: 8px;
-  --spacing-md: 12px;
-  --spacing-lg: 16px;
-  --spacing-xl: 20px;
-  --spacing-2xl: 24px;
-  --spacing-3xl: 32px;
-  --spacing-4xl: 64px;
-  --spacing-base: 4px;
-  --font-size-base: 16px;
-  --font-size-scale: 1.2px;
-  --font-size-xs: 11px;
-  --font-size-sm: 13px;
-  --font-size-md: 16px;
-  --font-size-lg: 19px;
-  --font-size-xl: 23px;
-  --font-size-2xl: 28px;
-  --font-size-3xl: 34px;
-  --font-size-4xl: 41px;
-  --font-size-5xl: 49px;
-  --font-size-6xl: 59px;
-  --font-size-7xl: 71px;
-  --font-size-8xl: 85px;
-=======
   --font-size-xs: 0.694rem;
   --font-size-sm: 0.833rem;
   --font-size-md: 1rem;
@@ -207,7 +168,6 @@
   --font-size-6xl: 3.584rem;
   --font-size-7xl: 4.301rem;
   --font-size-8xl: 5.161rem;
->>>>>>> 0ee894b (chore: fix conflict):packages/tokens/build/css/global.css
   --font-weights-body-bold: 700;
   --font-weights-body-semi-bold: Semi Bold;
   --font-weights-body-regular: 400;
@@ -310,6 +270,15 @@
   --theme-primary-subtle: #160207;
   --theme-primary-disabled: #757575;
   --theme-primary-icons: #fcfcfc;
+  --theme-status-primary: #e879f9;
+  --theme-status-primary-hover: #f0abfc;
+  --theme-status-primary-outline: #701a75;
+  --theme-status-warning: #e95c7b;
+  --theme-status-warning-hover: #f2a2b3;
+  --theme-status-textbutton: #4f46e5;
+  --theme-status-success: #10b981;
+  --theme-status-success-hover: #a7f3d0;
+  --theme-status-success-outline: #064e3b;
   --theme-info-default: #3142c4;
   --theme-info-on-info: #ffffff;
   --theme-info-emphasis: #3d53f5;
@@ -330,15 +299,6 @@
   --theme-error-emphasis: #df1642;
   --theme-error-muted: #9c0f2e;
   --theme-error-subtle: #2d040d;
-  --theme-status-primary: #e879f9;
-  --theme-status-primary-hover: #f0abfc;
-  --theme-status-primary-outline: #701a75;
-  --theme-status-warning: #e95c7b;
-  --theme-status-warning-hover: #f2a2b3;
-  --theme-status-textbutton: #4f46e5;
-  --theme-status-success: #10b981;
-  --theme-status-success-hover: #a7f3d0;
-  --theme-status-success-outline: #064e3b;
   --theme-input-fg-disabled: #e0e0e0;
   --theme-input-text: #424242;
   --theme-input-border-default: #e0e0e0;
@@ -350,8 +310,8 @@
   --theme-shadow-color: #171717;
   --buttons: -0.01em;
   --border-focus-sm: 2px  #6366f1;
-  --border-width-sm: 2;
-  --border-width-xs: 1;
-  --border-width-base: 2;
-  --border-width-icon: 1.5;
+  --border-width-sm: 2px;
+  --border-width-xs: 1px;
+  --border-width-base: 2px;
+  --border-width-icon: 1.5px;
 }

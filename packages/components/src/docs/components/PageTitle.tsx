@@ -8,7 +8,6 @@ interface PageTitle {
 
 export const StyledPageTitle = styled.h1<PageTitle>`
   font: var(--typography-headline-3-regular);
-  color: var(--colors-blue-900);
   border-radius: var(--radii-md);
   margin: var(--spacing-xl) 0;
 `;
