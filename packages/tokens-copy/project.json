@@ -1,5 +1,5 @@
 {
-  "name": "tokens",
+  "name": "tokens-copy",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/tokens/src",
   "projectType": "library",
@@ -10,7 +10,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "command": "node build-tokens.js",
+        "command": "node build-themes.js",
         "cwd": "packages/tokens"
       },
       "configurations": {
