@@ -6,10 +6,14 @@
   "type": "commonjs",
   "scripts": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "build": "node build-themes.js",
 =======
     "build": "node build-tokens.js",
 >>>>>>> 059c679 (update core)
+=======
+    "build": "node build-themes.js",
+>>>>>>> 4763e7c (update build scripts)
     "pack": "mkdir -p dist && cp -r build package.json dist/"
   },
   "repository": {

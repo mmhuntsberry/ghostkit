@@ -1,9 +1,13 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "tokens-copy",
 =======
   "name": "tokens",
 >>>>>>> 059c679 (update core)
+=======
+  "name": "tokens-copy",
+>>>>>>> 4763e7c (update build scripts)
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/tokens/src",
   "projectType": "library",
@@ -15,10 +19,14 @@
       "defaultConfiguration": "production",
       "options": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "command": "node build-themes.js",
 =======
         "command": "node build-tokens.js",
 >>>>>>> 059c679 (update core)
+=======
+        "command": "node build-themes.js",
+>>>>>>> 4763e7c (update build scripts)
         "cwd": "packages/tokens"
       },
       "configurations": {
