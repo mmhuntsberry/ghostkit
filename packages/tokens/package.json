@@ -15,7 +15,7 @@
   },
   "type": "commonjs",
   "scripts": {
-    "build": "node build-tokens.js",
+    "build": "node build-themes.js",
     "pack": "mkdir -p dist && cp -r src/themes package.json normalize.css dist/"
   },
   "repository": {

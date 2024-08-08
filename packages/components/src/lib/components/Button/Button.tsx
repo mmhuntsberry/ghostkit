@@ -61,11 +61,13 @@ const StyledButton = styled.button<ButtonProps>`
     cursor: not-allowed;
   }
 
-  &:focus {
-    box-shadow: ${(props) =>
-      `var(--${customProp(props)}button-color-shadow-focus-on-${props.mode});`};
+  &:active {
+    background-color: ${(props) =>
+      `var(--${customProp(props)}button-theme-bg-primary-active-fill)`};
     border: ${(props) =>
-      `var(--${customProp(props)}button-border-focus-on-${props.mode})`};
+      `var(--${customProp(
+        props
+      )}button-theme-border-primary-active-border-color)`};
   }
 `;
 

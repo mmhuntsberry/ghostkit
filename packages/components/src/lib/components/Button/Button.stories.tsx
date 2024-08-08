@@ -119,7 +119,6 @@ export const Disabled = {
   args: {
     children: "Button Text",
     disabled: true,
-    kind: "primary",
   },
   parameters: {
     controls: {
