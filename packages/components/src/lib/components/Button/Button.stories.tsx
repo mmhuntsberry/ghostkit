@@ -1,8 +1,5 @@
-import { within } from "@storybook/testing-library";
-import { expect } from "@storybook/jest";
 import { Demo as Button } from "./demos/button";
 import type { ButtonProps } from "./Button";
-import changelog from "packages/components/CHANGELOG.md?raw";
 
 export default {
   component: Button,
@@ -80,6 +77,7 @@ export const Primary = {
     children: "Button Text",
     "data-testid": "my-test",
   },
+<<<<<<< HEAD
 
   play: async ({ canvasElement }: any) => {
     const canvas = within(canvasElement);
@@ -108,14 +106,14 @@ export const Kinds = {
       disable: true, // This throws a warning in the terminal because we are turning off controls
     },
   },
+=======
+>>>>>>> d92c5db (cleanup: stories)
 };
 
 export const Disabled = {
   render: (args: ButtonProps) => (
     <div className="sb-button-container">
       <Button {...args} data-testid="my-test" />
-      <Button {...args} kind="secondary" />
-      <Button {...args} kind="text" />
     </div>
   ),
   args: {
@@ -128,6 +126,7 @@ export const Disabled = {
       disable: true,
     },
   },
+<<<<<<< HEAD
   play: async ({ canvasElement }: any) => {
     const canvas = within(canvasElement);
 
@@ -179,4 +178,6 @@ export const DarkMode = {
       disable: true,
     },
   },
+=======
+>>>>>>> d92c5db (cleanup: stories)
 };
