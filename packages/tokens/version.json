@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "0.0.14"
 =======
   "version": "0.0.3"
@@ -16,4 +17,7 @@
 =======
   "version": "0.0.11"
 >>>>>>> 2bcf336 (chore(release): cut the v0.0.11 release)
+=======
+  "version": "0.0.12"
+>>>>>>> a7842bd (chore(release): cut the v0.0.12 release)
 }
