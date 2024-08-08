@@ -1,7 +1,11 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "0.0.14"
 =======
   "version": "0.0.3"
 >>>>>>> 059c679 (update core)
+=======
+  "version": "0.0.4"
+>>>>>>> 16a32cd (chore(repo): release tokens 0.0.4)
 }
