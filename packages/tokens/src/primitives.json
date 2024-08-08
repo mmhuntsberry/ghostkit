@@ -1631,7 +1631,7 @@
         "default": {
           "value": {
             "borderWidth": "{primitive.1}",
-            "borderRadius": "{primitive.32}"
+            "borderRadius": "{primitive.0}"
           },
           "type": "composition"
         }
