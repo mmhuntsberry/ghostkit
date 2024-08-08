@@ -712,53 +712,59 @@
           "value": "#8f90c6",
           "type": "color"
         },
-        "500": {
-          "value": "#7879bb",
-          "type": "color"
-        },
-        "600": {
-          "value": "#6263af",
-          "type": "color"
-        },
-        "700": {
-          "value": "#4c4d9f",
-          "type": "color"
-        },
-        "800": {
-          "value": "#38377b",
-          "type": "color"
-        },
-        "900": {
-          "value": "#32304a",
-          "type": "color"
-        },
-        "950": {
-          "value": "#1c1b35",
-          "type": "color"
+        "base": {
+          "value": "1",
+          "type": "dimension"
         }
       }
-    },
-    "gradient": {
-      "overlay": {
-        "Darkop Shade": {
-          "value": "linear-gradient(90deg, #303030d9 0%, #30303000 100%)",
-          "type": "color"
-        },
-        "Lightop Shade": {
-          "value": "linear-gradient(90deg, #ffffffd9 0%, #ffffff00 100%)",
-          "type": "color"
-        },
-        "Dark Bottom Shade": {
-          "value": "linear-gradient(90deg, #30303000 0%, #303030d9 100%)",
-          "type": "color"
-        },
-        "Light Bottom Shade": {
-          "value": "linear-gradient(90deg, #ffffff00 0%, #ffffffd9 100%)",
-          "type": "color"
-        }
+    }
+  },
+  "base/dimension": {
+    "sizing": {
+      "2xs": {
+        "value": "{sizing.base}",
+        "type": "sizing"
+      },
+      "xs": {
+        "value": "{sizing.base} * 1.5",
+        "type": "sizing"
+      },
+      "sm": {
+        "value": "{sizing.base} * 2",
+        "type": "sizing"
+      },
+      "md": {
+        "value": "{sizing.base} * 2.5",
+        "type": "sizing"
+      },
+      "lg": {
+        "value": "{sizing.base} * 3",
+        "type": "sizing"
+      },
+      "xl": {
+        "value": "{sizing.base} * 4",
+        "type": "sizing"
+      },
+      "base": {
+        "value": "16",
+        "type": "sizing"
+      },
+      "huge": {
+        "value": "144px",
+        "type": "sizing",
+        "description": "Delete me - TEST"
+      },
+      "test": {
+        "value": "256px",
+        "type": "sizing",
+        "description": "I am a test token - DELETE ME!!!!"
       }
     },
-    "radii": {
+    "spacing": {
+      "2xs": {
+        "value": "{spacing.base} / 2",
+        "type": "spacing"
+      },
       "xs": {
         "value": "{size.2}",
         "type": "borderRadius",
