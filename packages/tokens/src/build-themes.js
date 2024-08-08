@@ -22,7 +22,7 @@ StyleDictionary.registerFormat({
 :host {
 ${dictionary.allProperties
   .map((prop) => {
-    let customProp = brand ? `${brand}-${prop.name}` : `${prop.name}`;
+    let customProp = brand ? `${brand}-${prop.name}` : prop.name;
     return `--${customProp}: ${prop.value};`;
   })
   .join("\n")}
