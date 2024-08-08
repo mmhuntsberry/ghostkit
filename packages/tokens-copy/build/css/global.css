@@ -2,6 +2,7 @@
  * Do not edit directly
 <<<<<<< HEAD:packages/tokens-copy/build/css/global.css
 <<<<<<< HEAD:packages/tokens-copy/build/css/global.css
+<<<<<<< HEAD:packages/tokens-copy/build/css/global.css
  * Generated on Wed, 07 Aug 2024 16:31:39 GMT
 =======
  * Generated on Mon, 25 Sep 2023 20:38:31 GMT
@@ -9,6 +10,9 @@
 =======
  * Generated on Wed, 16 Aug 2023 16:54:03 GMT
 >>>>>>> 8491bb9 (update globals):packages/tokens/build/css/global.css
+=======
+ * Generated on Wed, 16 Aug 2023 16:59:15 GMT
+>>>>>>> 3298519 (chore: style-dictionary output (version )):packages/tokens/build/css/global.css
  */
 
 :root {
@@ -193,9 +197,13 @@
   --sizing-base: 16px;
   --sizing-huge: 144px; /* Delete me - TEST */
 <<<<<<< HEAD:packages/tokens-copy/build/css/global.css
+<<<<<<< HEAD:packages/tokens-copy/build/css/global.css
   --sizing-test: 256px; /* I am a test token - DELETE ME!!!! */
 =======
 >>>>>>> 8491bb9 (update globals):packages/tokens/build/css/global.css
+=======
+  --sizing-test: 256px; /* I am a test token - DELETE ME!!!! */
+>>>>>>> 3298519 (chore: style-dictionary output (version )):packages/tokens/build/css/global.css
   --spacing-2xs: 2px;
   --spacing-xs: 4px; /* The base token for spacing */
   --spacing-sm: 8px;
