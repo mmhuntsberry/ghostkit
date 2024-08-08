@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 ## 0.0.14 (2024-08-08)
@@ -28,6 +29,14 @@
 
 =======
 >>>>>>> 3f4ecdf (chore: create pkg to test mantine and created a dummy theme.)
+=======
+=======
+
+
+## 0.0.3 (2023-08-16)
+
+>>>>>>> bfe3806 (chore(repo): release tokens 0.0.3)
+>>>>>>> 6c762e3 (update core)
 ## 0.0.2 (2023-08-15)
 
 ### Cleanup
