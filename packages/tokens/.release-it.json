@@ -51,7 +51,7 @@
     "releaseName": "Release: tokens ${version}"
   },
   "hooks": {
-    "before:bump": "npx nx pack @media-platforms/tokens",
+    "before:bump": "npx nx pack @mmhuntsberry/tokens",
     "after:bump": ["git checkout -- package.json"]
   }
 }
