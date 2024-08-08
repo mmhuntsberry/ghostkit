@@ -35,8 +35,8 @@ jobs:
       - name: Build packages
         run: |
           npm config set //npm.pkg.github.com/:_authToken $NODE_AUTH_TOKEN
-          npx nx release tokens --no-npm --ci
-          npx nx publish tokens
+          npx nx release @mmhuntsberry/tokens --no-npm --ci
+          npx nx publish @mmhuntsberry/tokens
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
