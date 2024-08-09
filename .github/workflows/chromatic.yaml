@@ -3,10 +3,9 @@ name: "Chromatic"
 on:
   push:
     branches:
-      - "*"
-      - "!main"
-      - "!release"
-      - "!figma-tokens"
+      - "main"
+      - "release-tokens"
+      - "figma-tokens"
 
 jobs:
   chromatic-deployment:
