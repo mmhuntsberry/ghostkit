@@ -1612,9 +1612,7 @@
       "text": {
         "default": {
           "value": {
-            "fill": "{primitive.white}",
-            "fontWeights": "{font-weights.bold}",
-            "fontFamilies": "Times New Roman"
+            "fill": "{primitive.white}"
           },
           "type": "composition"
         },
