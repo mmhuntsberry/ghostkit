@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
   disabled?: boolean;
-  kind?: "primary" | "secondary" | "text";
+
   mode?: string;
   size?: "sm" | "md" | "lg";
   brand?: string;
@@ -74,7 +74,7 @@ const StyledButton = styled.button<ButtonProps>`
 export const Button: React.FC<ButtonProps> = ({
   children,
   disabled = false,
-  kind = "primary",
+
   mode = "light",
   size = "md",
   brand = "",
@@ -84,7 +84,6 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <StyledButton
       disabled={disabled}
-      kind={kind}
       mode={mode}
       size={size}
       brand={brand}

@@ -22,7 +22,6 @@
         }
       }
     },
-
     "pack": {
       "executor": "nx:run-commands",
       "options": {
@@ -37,7 +36,6 @@
         "cwd": "packages/tokens/dist"
       }
     },
-
     "prerelease": {
       "executor": "nx:run-commands",
       "options": {
