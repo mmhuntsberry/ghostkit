@@ -10,7 +10,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   brand?: string;
 }
 
-const customProp = (props) =>
+const customProp = (props: ButtonProps) =>
   props.brand !== "primitive" ? `${props.brand}-` : "";
 
 const StyledButton = styled.button<ButtonProps>`
