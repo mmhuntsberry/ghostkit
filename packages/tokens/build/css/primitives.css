@@ -364,7 +364,7 @@
 --button-theme-text-default-fill: #ffffff;
 --button-theme-text-disabled-fill: #A3A3A3;
 --button-size-border-default-border-width: 0.063rem;
---button-size-border-default-border-radius: 0rem;
+--button-size-border-default-border-radius: 2rem;
 --button-size-bg-default-vertical-padding: 0.625rem;
 --button-size-bg-default-horizontal-padding: 1rem;
 --button-size-text-default-text-case: uppercase;
