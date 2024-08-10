@@ -443,9 +443,10 @@
         "default": {
           "value": {
             "textCase": "{text-case.uppercase}",
-            "fontSizes": "{primitive.12}",
-            "letterSpacing": "10%",
-            "fontFamilies": "{font-families.buttons}"
+            "fontSizes": "{primitive.16}",
+            "letterSpacing": "15%",
+            "fontFamilies": "Teko",
+            "fontWeights": "400"
           },
           "type": "composition"
         }
