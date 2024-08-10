@@ -1,7 +1,7 @@
 {
-  "name": "@mmhuntsberry/tokens",
+  "name": "@mmhuntsberry/fonts",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/tokens/src",
+  "sourceRoot": "packages/fonts/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -11,7 +11,7 @@
       "defaultConfiguration": "production",
       "options": {
         "command": "node build-themes.js",
-        "cwd": "packages/tokens/src"
+        "cwd": "packages/fonts/src"
       },
       "configurations": {
         "development": {
@@ -26,26 +26,26 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "npm run pack",
-        "cwd": "packages/tokens"
+        "cwd": "packages/fonts"
       }
     },
     "publish": {
       "executor": "nx:run-commands",
       "options": {
         "command": "npm publish",
-        "cwd": "packages/tokens/dist"
+        "cwd": "packages/fonts/dist"
       }
     },
     "prerelease": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "dotenv release-it prepatch --preRelease=alpha -- --config=./packages/tokens/.release-it.json"
+        "command": "dotenv release-it prepatch --preRelease=alpha -- --config=./packages/fonts/.release-it.json"
       }
     },
     "release": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "dotenv release-it -- --config=./packages/tokens/.release-it.json"
+        "command": "dotenv release-it -- --config=./packages/fonts/.release-it.json"
       }
     }
   }
