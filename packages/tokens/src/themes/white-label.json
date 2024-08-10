@@ -425,9 +425,9 @@
         "default": {
           "value": {
             "textCase": "{text-case.uppercase}",
-            "fontFamilies": "{font-families.primary}",
+            "fontFamilies": "Roboto Slab",
             "fontSizes": "{primitive.12}",
-            "fontWeights": "{font-weights.semi-bold}",
+            "fontWeights": "300",
             "letterSpacing": "{letter-spacing.0}"
           },
           "type": "composition"

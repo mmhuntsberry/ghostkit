@@ -33,6 +33,12 @@ const StyledButton = styled.button<ButtonProps>`
   display: flex;
   font-family: ${(props) =>
     `var(--${customProp(props)}button-size-text-default-font-families)`};
+  font-size: ${(props) =>
+    `var(--${customProp(props)}button-size-text-default-font-sizes)`};
+  font-weight: ${(props) =>
+    `var(--${customProp(props)}button-size-text-default-font-weights)`};
+  letter-spacing: ${(props) =>
+    `var(--${customProp(props)}button-size-text-default-letter-spacing)`};
   justify-content: center;
   outline: none;
   padding-block: ${(props) =>

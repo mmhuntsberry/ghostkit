@@ -368,9 +368,10 @@
 --button-size-bg-default-vertical-padding: 0.625rem;
 --button-size-bg-default-horizontal-padding: 1rem;
 --button-size-text-default-text-case: uppercase;
---button-size-text-default-font-families: Inter;
+--button-size-text-default-font-families: Alegreya;
 --button-size-text-default-font-sizes: 0.75rem;
---button-size-text-default-font-weights: 700;
+--button-size-text-default-font-weights: 900;
+--button-size-text-default-letter-spacing: 0.06em;
 --opacities-0: 0;
 --opacities-5: 0.05;
 --opacities-8: 0.08;

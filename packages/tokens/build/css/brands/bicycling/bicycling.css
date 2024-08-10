@@ -32,8 +32,9 @@
 --bicycling-button-size-bg-default-horizontal-padding: 1rem;
 --bicycling-button-size-text-default-text-case: uppercase;
 --bicycling-button-size-text-default-font-families: Teko;
---bicycling-button-size-text-default-font-sizes: 0.75rem;
---bicycling-button-size-text-default-letter-spacing: 0.1em;
+--bicycling-button-size-text-default-font-sizes: 1rem;
+--bicycling-button-size-text-default-font-weights: 400;
+--bicycling-button-size-text-default-letter-spacing: 0.15em;
 --bicycling-brand-color-primary: #067EA7;
 --bicycling-brand-color-secondary: #F8D811;
 --bicycling-brand-color-tertiary: #CBCE0C;

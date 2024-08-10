@@ -1,0 +1,13 @@
+{
+  "name": "@mmhuntsberry/fonts",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/fonts/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {},
+    "pack": {},
+    "publish": {},
+    "release": {}
+  }
+}

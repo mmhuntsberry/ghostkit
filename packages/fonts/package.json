@@ -1,0 +1,25 @@
+{
+  "name": "@mmhuntsberry/fonts",
+  "version": "0.0.0-replace",
+  "description": "",
+  "main": "./src/index.css",
+  "exports": {
+    ".": {
+      "import": "./src/index.css",
+      "require": "./src/index.css"
+    }
+  },
+  "type": "commonjs",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mmhuntsberry/ghostkit.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/mmhuntsberry"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
