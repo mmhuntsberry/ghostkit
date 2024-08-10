@@ -10,10 +10,7 @@
     }
   },
   "type": "commonjs",
-  "scripts": {
-    "build": "node build-themes.js",
-    "pack": "mkdir -p dist && cp -r src/themes package.json normalize.css dist/"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git@github.com:mmhuntsberry/ghostkit.git"
@@ -24,8 +21,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "style-dictionary": "^3.8.0",
-    "@tokens-studio/sd-transforms": "0.9.1"
-  }
+  "dependencies": {}
 }
