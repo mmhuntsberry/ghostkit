@@ -1,5 +1,5 @@
 {
-  "name": "@mmhuntsberry/fonts",
+  "name": "@mmhuntsberry/tokens",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/fonts/src",
   "projectType": "library",
@@ -26,26 +26,26 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "npm run pack",
-        "cwd": "packages/fonts"
+        "cwd": "packages/tokens"
       }
     },
     "publish": {
       "executor": "nx:run-commands",
       "options": {
         "command": "npm publish",
-        "cwd": "packages/fonts/dist"
+        "cwd": "packages/tokens/dist"
       }
     },
     "prerelease": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "dotenv release-it prepatch --preRelease=alpha -- --config=./packages/fonts/.release-it.json"
+        "command": "dotenv release-it prepatch --preRelease=alpha -- --config=./packages/tokens/.release-it.json"
       }
     },
     "release": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "dotenv release-it -- --config=./packages/fonts/.release-it.json"
+        "command": "dotenv release-it -- --config=./packages/tokens/.release-it.json"
       }
     }
   }
