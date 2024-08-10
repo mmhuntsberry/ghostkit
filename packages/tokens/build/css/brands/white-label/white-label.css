@@ -21,9 +21,9 @@
 --white-label-button-size-bg-default-vertical-padding: 0.625rem;
 --white-label-button-size-bg-default-horizontal-padding: 1rem;
 --white-label-button-size-text-default-text-case: uppercase;
---white-label-button-size-text-default-font-families: Inter;
+--white-label-button-size-text-default-font-families: Roboto Slab;
 --white-label-button-size-text-default-font-sizes: 0.75rem;
---white-label-button-size-text-default-font-weights: Semi Bold;
+--white-label-button-size-text-default-font-weights: 300;
 --white-label-button-size-text-default-letter-spacing: 0em;
 --white-label-brand-extensions-name: white-label;
 --white-label-brand-color-primary: #000;
