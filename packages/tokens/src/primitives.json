@@ -1647,9 +1647,10 @@
         "default": {
           "value": {
             "textCase": "{text-case.uppercase}",
-            "fontFamilies": "{font-families.primary}",
+            "fontFamilies": "Alegreya",
             "fontSizes": "{primitive.12}",
-            "fontWeights": "Bold"
+            "fontWeights": "Black",
+            "letterSpacing": "6%"
           },
           "type": "composition"
         }
