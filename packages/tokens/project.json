@@ -1,7 +1,7 @@
 {
   "name": "@mmhuntsberry/tokens",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/fonts/src",
+  "sourceRoot": "packages/tokens/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -11,7 +11,7 @@
       "defaultConfiguration": "production",
       "options": {
         "command": "node build-themes.js",
-        "cwd": "packages/fonts/src"
+        "cwd": "packages/tokens/src"
       },
       "configurations": {
         "development": {
