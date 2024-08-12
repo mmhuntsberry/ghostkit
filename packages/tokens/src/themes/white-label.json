@@ -337,25 +337,29 @@
         "primary": {
           "default": {
             "value": {
-              "fill": "{theme.bg.accent.default}"
+              "fill": "{theme.bg.accent.default}",
+              "borderColor": "{primitive.indigo.500}"
             },
             "type": "composition"
           },
           "hover": {
             "value": {
-              "fill": "{primitive.indigo.600}"
+              "fill": "{primitive.indigo.600}",
+              "borderColor": "{primitive.indigo.600}"
             },
             "type": "composition"
           },
           "active": {
             "value": {
-              "fill": "{primitive.indigo.700}"
+              "fill": "{primitive.indigo.700}",
+              "borderColor": "{primitive.indigo.700}"
             },
             "type": "composition"
           },
           "disabled": {
             "value": {
-              "fill": "{theme.bg.accent.disabled}"
+              "fill": "{theme.bg.accent.disabled}",
+              "borderColor": "{primitive.gray.300}"
             },
             "type": "composition"
           }
@@ -374,40 +378,14 @@
           },
           "type": "composition"
         }
-      },
-      "border": {
-        "default": {
-          "value": {
-            "borderColor": "{primitive.indigo.500}"
-          },
-          "type": "composition"
-        },
-        "hover": {
-          "value": {
-            "borderColor": "{primitive.indigo.600}"
-          },
-          "type": "composition"
-        },
-        "active": {
-          "value": {
-            "borderColor": "{primitive.indigo.700}"
-          },
-          "type": "composition"
-        },
-        "disabled": {
-          "value": {
-            "borderColor": "{primitive.gray.300}"
-          },
-          "type": "composition"
-        }
       }
     },
     "size": {
       "border": {
         "default": {
           "value": {
-            "borderWidth": "{primitive.1}",
-            "borderRadius": "{primitive.0}"
+            "borderRadius": "{primitive.0}",
+            "border": "{primitive.1} solid"
           },
           "type": "composition"
         }
