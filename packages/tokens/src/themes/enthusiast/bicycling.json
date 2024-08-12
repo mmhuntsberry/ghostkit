@@ -334,45 +334,31 @@
           "default": {
             "value": {
               "fill": "{brand-color-primary}",
-              "borderRadius": "{radii.sm}",
-              "verticalPadding": "{primitive.14}",
-              "horizontalPadding": "{primitive.12}",
-              "height": "{primitive.40}"
+              "borderColor": "{brand-color-primary}"
             },
             "type": "composition"
           },
           "hover": {
             "value": {
-              "fill": "{brand-color-primary}"
+              "fill": "{brand-color-primary}",
+              "borderColor": "{brand-color-primary}"
             },
             "type": "composition"
           },
           "active": {
             "value": {
-              "fill": "{brand-color-primary}"
+              "fill": "{brand-color-primary}",
+              "borderColor": "{brand-color-primary}"
             },
             "type": "composition"
           },
           "disabled": {
             "value": {
-              "fill": "{theme.bg.accent.disabled}"
+              "fill": "{theme.bg.accent.disabled}",
+              "borderColor": "{theme.bg.accent.disabled}"
             },
             "type": "composition"
           }
-        }
-      },
-      "icon": {
-        "default": {
-          "value": {
-            "fill": "{theme.icon.on-accent}"
-          },
-          "type": "composition"
-        },
-        "disabled": {
-          "value": {
-            "fill": "{theme.icon.accent.disabled}"
-          },
-          "type": "composition"
         }
       },
       "text": {
@@ -392,39 +378,13 @@
           },
           "type": "composition"
         }
-      },
-      "border": {
-        "default": {
-          "value": {
-            "borderColor": "{brand-color-primary}"
-          },
-          "type": "composition"
-        },
-        "hover": {
-          "value": {
-            "borderColor": "{brand-color-primary}"
-          },
-          "type": "composition"
-        },
-        "active": {
-          "value": {
-            "borderColor": "{brand-color-primary}"
-          },
-          "type": "composition"
-        },
-        "disabled": {
-          "value": {
-            "borderColor": "{primitive.gray.300}"
-          },
-          "type": "composition"
-        }
       }
     },
     "size": {
       "border": {
         "default": {
           "value": {
-            "borderWidth": "{primitive.1}",
+            "border": "{primitive.1} solid",
             "borderRadius": "{primitive.0}"
           },
           "type": "composition"

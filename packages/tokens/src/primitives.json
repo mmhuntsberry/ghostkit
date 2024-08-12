@@ -1557,52 +1557,28 @@
         "primary": {
           "default": {
             "value": {
-              "fill": "{primitive.black}"
+              "fill": "{primitive.black}",
+              "borderColor": "{primitive.black}"
             },
             "type": "composition"
           },
           "hover": {
             "value": {
-              "fill": "{primitive.gray.800}"
+              "fill": "{primitive.gray.800}",
+              "borderColor": "{primitive.gray.800}"
             },
             "type": "composition"
           },
           "active": {
             "value": {
-              "fill": "{primitive.gray.900}"
+              "fill": "{primitive.gray.900}",
+              "borderColor": "{primitive.gray.900}"
             },
             "type": "composition"
           },
           "disabled": {
             "value": {
-              "fill": "{primitive.gray.300}"
-            },
-            "type": "composition"
-          }
-        }
-      },
-      "border": {
-        "primary": {
-          "default": {
-            "value": {
-              "borderColor": "{primitive.gray.800}"
-            },
-            "type": "composition"
-          },
-          "hover": {
-            "value": {
-              "borderColor": "{primitive.gray.700}"
-            },
-            "type": "composition"
-          },
-          "active": {
-            "value": {
-              "borderColor": "{primitive.gray.800}"
-            },
-            "type": "composition"
-          },
-          "disabled": {
-            "value": {
+              "fill": "{primitive.gray.300}",
               "borderColor": "{primitive.gray.300}"
             },
             "type": "composition"
@@ -1628,7 +1604,7 @@
       "border": {
         "default": {
           "value": {
-            "borderWidth": "{primitive.1}",
+            "borderTop": "{primitive.1} solid",
             "borderRadius": "{primitive.32}"
           },
           "type": "composition"
