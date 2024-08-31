@@ -1,14 +1,35 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Button } from "@mmhuntsberry/components";
 
-export default async function Dashboard() {
+const Dashboard = () => {
+  // const [isCssLoaded, setIsCssLoaded] = useState(false);
+
+  // useEffect(() => {
+  //   if (brand) {
+  //     console.log("Loading brand CSS:", brand);
+  //     import(`@mmhuntsberry/tokens/theme/${brand}`)
+  //       .then((module) => {
+  //         setIsCssLoaded(true);
+  //         console.log("Brand CSS loaded:", brand);
+  //       })
+  //       .catch((err) => {
+  //         console.error("Failed to load brand CSS:", err);
+  //       });
+  //   }
+  // }, [brand]);
+
+  // if (!isCssLoaded) {
+  //   return <div>Loading...</div>;
+  // }
+
   return (
     <div>
       <h1>Dashboard</h1>
-      <Button brand="primitive">Click me</Button>
-      <Button brand="white-label">Click me</Button>
-      <Button brand="bicycling">Click me</Button>
+      <Button>Click me</Button>
     </div>
   );
-}
+};
+
+export default Dashboard;

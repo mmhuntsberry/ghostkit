@@ -19,47 +19,35 @@ const StyledButton = styled.button<ButtonProps>`
   }
 
   align-items: center;
-  background-color: ${(props) =>
-    `var(--${customProp(props)}button-theme-bg-primary-default-fill)`};
-  border: ${(props) =>
-    `var(--${customProp(
-      props
-    )}button-theme-border-primary-default-border-color)`};
+  background-color: ${(props) => `var(--button-theme-bg-primary-default-fill)`};
+  border: ${(props) => `--button-theme-border-primary-default-border-color)`};
   border-radius: ${(props) =>
-    `var(--${customProp(props)}button-size-border-default-border-radius)`};
-  color: ${(props) =>
-    `var(--${customProp(props)}button-theme-text-default-fill)`};
+    `var(--button-size-border-default-border-radius)`};
+  color: ${(props) => `var(--button-theme-text-default-fill)`};
   cursor: pointer;
   display: flex;
-  font-family: ${(props) =>
-    `var(--${customProp(props)}button-size-text-default-font-families)`};
-  font-size: ${(props) =>
-    `var(--${customProp(props)}button-size-text-default-font-sizes)`};
-  font-weight: ${(props) =>
-    `var(--${customProp(props)}button-size-text-default-font-weights)`};
+  font-family: ${(props) => `var(--button-size-text-default-font-families)`};
+  font-size: ${(props) => `var(--button-size-text-default-font-sizes)`};
+  font-weight: ${(props) => `var(--button-size-text-default-font-weights)`};
   letter-spacing: ${(props) =>
-    `var(--${customProp(props)}button-size-text-default-letter-spacing)`};
+    `var(--button-size-text-default-letter-spacing)`};
   justify-content: center;
   outline: none;
-  padding-block: ${(props) =>
-    `var(--${customProp(props)}button-size-bg-default-vertical-padding)`};
+  padding-block: ${(props) => `var(--button-size-bg-default-vertical-padding)`};
   padding-inline: ${(props) =>
-    `var(--${customProp(props)}button-size-bg-default-horizontal-padding)`};
-  text-transform: ${(props) =>
-    `var(--${customProp(props)}button-size-text-default-text-case)`};
+    `var(--button-size-bg-default-horizontal-padding)`};
+  text-transform: ${(props) => `var(--button-size-text-default-text-case)`};
 
   transition: background 0.2s ease-in-out;
 
   &:hover {
-    background-color: ${(props) =>
-      `var(--${customProp(props)}button-theme-bg-primary-hover-fill)`};
+    background-color: ${(props) => `var(--button-theme-bg-primary-hover-fill)`};
   }
 
   &:disabled {
     background-color: ${(props) =>
-      `var(--${customProp(props)}button-theme-bg-primary-disabled-fill)`};
-    color: ${(props) =>
-      `var(--${customProp(props)}button-theme-text-disabled-fill)`};
+      `var(--button-theme-bg-primary-disabled-fill)`};
+    color: ${(props) => `var(--button-theme-text-disabled-fill)`};
     border: ${(props) =>
       `var(--${customProp(
         props
@@ -69,7 +57,7 @@ const StyledButton = styled.button<ButtonProps>`
 
   &:active {
     background-color: ${(props) =>
-      `var(--${customProp(props)}button-theme-bg-primary-active-fill)`};
+      `var(--button-theme-bg-primary-active-fill)`};
     border: ${(props) =>
       `var(--${customProp(
         props

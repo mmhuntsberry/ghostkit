@@ -11,7 +11,9 @@
     "./normalize": "./normalize.css",
     "./primitives": "./build/css/primitives.css",
     "./alias": "./build/css/alias.css",
-    "./themes/all": "./build/css/index.css"
+    "./themes/all": "./build/css/index.css",
+    "./bicycling": "./build/css/brands/bicycling/bicycling.css",
+    "./white-label": "./build/css/brands/white-label/white-label.css"
   },
   "type": "commonjs",
   "scripts": {
