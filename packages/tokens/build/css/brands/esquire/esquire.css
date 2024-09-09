@@ -1,0 +1,10 @@
+
+:root, 
+:host {
+--palette-brand-primary: #ff3a30;
+--font-families-primary: Lausanne;
+--font-families-secondary: Glanz;
+--font-families-tertiary: Flecha M;
+--font-weights-regular: 550;
+--font-weights-bold: 550;
+}

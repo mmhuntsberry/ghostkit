@@ -1,0 +1,12 @@
+
+:root, 
+:host {
+--palette-brand-primary: #d2232e;
+--font-weight-regular: 55 Roman;
+--font-families-labels: Neue Haas Grotesk Display Std;
+--font-families-body: Charter ITC Std;
+--font-families-titles: Gravitica Mono;
+--font-families-headlines: Knockout;
+--font-families-buttons: Neue Haas Grotesk Display Std;
+--typography-headline-xl: 69 3.583rem/auto Knockout;
+}

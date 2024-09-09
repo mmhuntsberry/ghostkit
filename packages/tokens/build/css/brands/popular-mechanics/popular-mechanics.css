@@ -1,0 +1,10 @@
+
+:root, 
+:host {
+--palette-brand-primary: #1c6a65;
+--font-families-labels: FreightSans Pro;
+--font-families-body: Charter ITC Std;
+--font-families-titles: Simplon Mono;
+--font-families-headlines: United Sans Cond;
+--font-families-buttons: FreightSans Pro;
+}

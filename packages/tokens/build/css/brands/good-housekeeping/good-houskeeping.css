@@ -1,0 +1,10 @@
+
+:root, 
+:host {
+--palette-brand-primary: #9e3326;
+--font-families-primary: Archer;
+--font-families-secondary: Neutraface 2 Text;
+--font-families-tertiary: Neutraface 2 Display;
+--font-families-quaternary: Majesti Banner;
+--font-weights-regular: Book;
+}

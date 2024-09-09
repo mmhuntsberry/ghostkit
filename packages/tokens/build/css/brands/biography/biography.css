@@ -1,0 +1,10 @@
+
+:root, 
+:host {
+--palette-brand-primary: #a00000;
+--font-families-labels: Gilroy;
+--font-families-body: Charter ITC Std;
+--font-families-titles: TT Ramillas;
+--font-families-headlines: TT Ramillas;
+--font-families-buttons: Gilroy;
+}

@@ -1,0 +1,9 @@
+
+:root, 
+:host {
+--color-brand-primary: #00a4Db;
+--font-families-primary: Gliko Modern Condensed L;
+--font-families-secondary: Gliko Modern S;
+--font-families-tertiary: Interstate;
+--font-weights-bold: 500;
+}
