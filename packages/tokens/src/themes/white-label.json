@@ -8,35 +8,5 @@
       "value": "Charter ITC Std",
       "type": "fontFamilies"
     }
-  },
-  "component": {
-    "label": {
-      "md": {
-        "value": "1rem",
-        "type": "sizing"
-      }
-    },
-    "link": {
-      "md": {
-        "value": "1rem",
-        "type": "sizing"
-      }
-    }
-  },
-  "border-radius": {
-    "rounded": {
-      "value": "12px",
-      "type": "borderRadius"
-    },
-    "component": {
-      "link": {
-        "shape": {
-          "rounded": {
-            "value": "{border-radius.rounded}",
-            "type": "borderRadius"
-          }
-        }
-      }
-    }
   }
 }
