@@ -754,5 +754,31 @@
       "style": "solid"
     },
     "type": "border"
+  },
+  "components": {
+    "button": {
+      "font-size": {
+        "default": {
+          "value": "{font-size.4xs}",
+          "type": "fontSizes"
+        }
+      }
+    }
+  },
+  "uppercase": {
+    "value": "uppercase",
+    "type": "textCase"
+  },
+  "lowercase": {
+    "value": "lowercase",
+    "type": "textCase"
+  },
+  "none": {
+    "value": "none",
+    "type": "textCase"
+  },
+  "capitalize": {
+    "value": "capitalize",
+    "type": "textCase"
   }
 }
