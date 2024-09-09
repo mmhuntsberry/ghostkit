@@ -1,26 +1,4 @@
 {
-  "brand-color-primary": {
-    "value": "{primitive.brand-color-primary.delish}",
-    "type": "color"
-  },
-  "brand-color-secondary": {
-    "value": "#004685",
-    "type": "color"
-  },
-  "brand-color-tertiary": {
-    "value": "#FF553E",
-    "type": "color"
-  },
-  "theme": {
-    "bg": {
-      "accent": {
-        "default": {
-          "value": "{brand-color-primary}",
-          "type": "color"
-        }
-      }
-    }
-  },
   "font-families": {
     "primary": {
       "value": "GT Haptik",
@@ -33,6 +11,14 @@
     "tertiary": {
       "value": "Avenir Next LT Pro",
       "type": "fontFamilies"
+    }
+  },
+  "palette": {
+    "brand": {
+      "primary": {
+        "value": "#ebf7fc",
+        "type": "color"
+      }
     }
   }
 }

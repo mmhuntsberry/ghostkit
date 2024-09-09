@@ -1,26 +1,4 @@
 {
-  "brand-color-primary": {
-    "value": "{primitive.brand-color-primary.good-housekeeping}",
-    "type": "color"
-  },
-  "brand-color-secondary": {
-    "value": "#198294",
-    "type": "color"
-  },
-  "brand-color-tertiary": {
-    "value": "#F8F3F4",
-    "type": "color"
-  },
-  "theme": {
-    "bg": {
-      "accent": {
-        "default": {
-          "value": "{brand-color-primary}",
-          "type": "color"
-        }
-      }
-    }
-  },
   "font-families": {
     "primary": {
       "value": "Archer",
@@ -44,6 +22,14 @@
       "value": "Book",
       "type": "fontWeights",
       "description": "Remapped ‘Regular’ to ‘Book’ to address the font weight rendering incompatibility within Figma."
+    }
+  },
+  "palette": {
+    "brand": {
+      "primary": {
+        "value": "#9e3326",
+        "type": "color"
+      }
     }
   }
 }

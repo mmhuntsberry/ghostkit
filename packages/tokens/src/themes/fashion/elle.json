@@ -1,26 +1,4 @@
 {
-  "brand-color-primary": {
-    "value": "{primitive.brand-color-primary.elle}",
-    "type": "color"
-  },
-  "brand-color-secondary": {
-    "value": "#CCCCCC",
-    "type": "color"
-  },
-  "brand-color-tertiary": {
-    "value": "#808080",
-    "type": "color"
-  },
-  "theme": {
-    "bg": {
-      "accent": {
-        "accent": {
-          "value": "{brand-color-primary}",
-          "type": "color"
-        }
-      }
-    }
-  },
   "font-families": {
     "primary": {
       "value": "Neue Haas Unica Pro",
@@ -40,6 +18,14 @@
       "value": "Medium",
       "type": "fontWeights",
       "description": "Remapped ‘Bold’ to ‘Medium’ to accommodate NeueHaasUnicaPro \"medium\" only font weight."
+    }
+  },
+  "palette": {
+    "brand": {
+      "primary": {
+        "value": "#000",
+        "type": "color"
+      }
     }
   }
 }

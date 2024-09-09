@@ -1,26 +1,4 @@
 {
-  "brand-color-primary": {
-    "value": "{primitive.brand-color-primary.house-beautiful}",
-    "type": "color"
-  },
-  "brand-color-secondary": {
-    "value": "#FBFAFA",
-    "type": "color"
-  },
-  "brand-color-tertiary": {
-    "value": "#F5F2EE",
-    "type": "color"
-  },
-  "theme": {
-    "bg": {
-      "accent": {
-        "default": {
-          "value": "{brand-color-primary}",
-          "type": "color"
-        }
-      }
-    }
-  },
   "font-families": {
     "primary": {
       "value": "Apparel Display",
@@ -40,6 +18,14 @@
       "value": "Regular",
       "type": "fontWeights",
       "description": "Remapped ‘Bold’ to ‘Regular’ to address the font weight rendering incompatibility within Figma."
+    }
+  },
+  "palette": {
+    "brand": {
+      "primary": {
+        "value": "#242d39",
+        "type": "color"
+      }
     }
   }
 }

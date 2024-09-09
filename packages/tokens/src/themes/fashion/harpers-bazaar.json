@@ -1,26 +1,4 @@
 {
-  "brand-color-primary": {
-    "value": "{primitive.black}",
-    "type": "color"
-  },
-  "brand-color-secondary": {
-    "value": "#AA0703",
-    "type": "color"
-  },
-  "brand-color-tertiary": {
-    "value": "#FF0000",
-    "type": "color"
-  },
-  "theme": {
-    "bg": {
-      "accent": {
-        "default": {
-          "value": "{brand-color-primary}",
-          "type": "color"
-        }
-      }
-    }
-  },
   "font-families": {
     "primary": {
       "value": "NewParis Text",
@@ -33,6 +11,14 @@
     "tertiary": {
       "value": "SangBleu Sunrise",
       "type": "fontFamilies"
+    }
+  },
+  "palette": {
+    "brand": {
+      "primary": {
+        "value": "#000",
+        "type": "color"
+      }
     }
   }
 }

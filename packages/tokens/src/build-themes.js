@@ -1,11 +1,30 @@
 const StyleDictionary = require("style-dictionary-utils");
 const { registerTransforms } = require("@tokens-studio/sd-transforms");
 const { promises } = require("fs");
+const _ = require("lodash");
 
 // Register additional transforms as needed
 registerTransforms(StyleDictionary, {
   expand: {
     // composition: true,
+  },
+});
+
+// Register a custom name transform to preserve underscores where explicitly placed
+StyleDictionary.registerTransform({
+  name: "name/cti/custom",
+  type: "name",
+  transformer: (prop, options) => {
+    return prop.path
+      .map((segment) => {
+        // Preserve underscores in segment names
+        if (segment.includes("_")) {
+          return segment;
+        } else {
+          return _.kebabCase(segment);
+        }
+      })
+      .join("-");
   },
 });
 
@@ -15,15 +34,13 @@ StyleDictionary.registerFormat({
   formatter: function (dictionary, config) {
     const brand = dictionary.options.brand;
 
-    console.log();
-
     return `
 :root, 
 :host {
 ${dictionary.allProperties
   .map((prop) => {
-    let customProp = brand ? `${brand}-${prop.name}` : prop.name;
-    return `--${customProp}: ${prop.value};`;
+    // let customProp = brand ? `${brand}-${prop.name}` : prop.name;
+    return `--${prop.name}: ${prop.value};`;
   })
   .join("\n")}
 }`;
@@ -50,7 +67,6 @@ function registerGlobalFiles(config, themeName) {
 // Function to register CSS files for themes and components
 function registerBrandFiles(config, themeName, brands, tokenSet) {
   brands.forEach((brand) => {
-    console.log({ brand });
     config.platforms.css.files.push({
       destination: `brands/${brand}/${themeName.toLowerCase()}.css`,
       format: "custom/cssVariables",
@@ -61,6 +77,7 @@ function registerBrandFiles(config, themeName, brands, tokenSet) {
     });
   });
 }
+
 // function registerThemeFiles(config, themeName, components, tokenSet) {
 //   const themeType = themeName.toLowerCase().includes("light")
 //     ? "Light"
@@ -88,7 +105,7 @@ async function run() {
       platforms: {
         css: {
           transforms: [
-            "name/cti/kebab",
+            "name/cti/custom", // Use custom transform
             "ts/descriptionToComment",
             "ts/size/px",
             "ts/opacity",
@@ -101,7 +118,6 @@ async function run() {
             "ts/shadow/css/shorthand",
             "ts/color/css/hexrgba",
             "ts/color/modifiers",
-            "name/cti/kebab",
           ],
           buildPath: "../build/css/",
           files: [],
@@ -114,25 +130,25 @@ async function run() {
 
     const brands = [
       "alta",
-      // "autoweek",
-      // "best-products",
+      "autoweek",
+      "best-products",
       "bicycling",
-      // "biography",
-      // "car-and-driver",
-      // "cosmopolitan",
-      // "country-living",
-      // "delish",
+      "biography",
+      "car-and-driver",
+      "cosmopolitan",
+      "country-living",
+      "delish",
       "elle",
-      // "elle-decor",
-      // "esquire",
-      // "good-housekeeping",
-      // "harpers-bazaar",
-      // "house-beautiful",
-      // "mens-health",
-      // "oprah-daily",
-      // "popular-mechanics",
-      // "redbook",
-      // "road-and-track",
+      "elle-decor",
+      "esquire",
+      "good-housekeeping",
+      "harpers-bazaar",
+      "house-beautiful",
+      "mens-health",
+      "oprah-daily",
+      "popular-mechanics",
+      "redbook",
+      "road-and-track",
       "white-label",
     ];
     registerBrandFiles(config, theme.name, brands, theme.selectedTokenSets);
