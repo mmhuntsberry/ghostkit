@@ -163,4 +163,9 @@
 --theme-hds-color-text-error-on_light: hsla(1, 88%, 63%, 1);
 --theme-hds-color-text-error-on_dark: hsla(0, 68%, 49%, 1);
 --solid: solid;
+--components-button-font-size-default: 1rem;
+--uppercase: uppercase;
+--lowercase: lowercase;
+--none: none;
+--capitalize: capitalize;
 }
