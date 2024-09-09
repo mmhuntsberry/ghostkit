@@ -1,10 +1,6 @@
 
 :root, 
 :host {
---white-label-border-radius-rounded: 12px;
---white-label-border-radius-component-link-shape-rounded: 12px;
 --white-label-font-families-sans_serif: Inter;
 --white-label-font-families-serif: Charter ITC Std;
---white-label-component-label-md: 1rem;
---white-label-component-link-md: 1rem;
 }
