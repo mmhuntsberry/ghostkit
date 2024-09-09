@@ -8,5 +8,43 @@
       "value": "Charter ITC Std",
       "type": "fontFamilies"
     }
+  },
+  "button": {
+    "color": {
+      "background": {
+        "primary": {
+          "solid": {
+            "default": {
+              "on_light": {
+                "value": "{palette.neutral.9}",
+                "type": "color"
+              }
+            },
+            "hover": {
+              "on_light": {
+                "value": "{palette.neutral.15}",
+                "type": "color"
+              }
+            },
+            "active": {
+              "on_light": {
+                "value": "{palette.neutral.5}",
+                "type": "color"
+              }
+            }
+          }
+        }
+      },
+      "text": {
+        "on_dark": {
+          "value": "{palette.neutral.96}",
+          "type": "color"
+        }
+      }
+    }
+  },
+  "disabled": {
+    "value": "{opacity.0_32}",
+    "type": "opacity"
   }
 }
