@@ -722,5 +722,37 @@
         }
       }
     }
+  },
+  "size": {
+    "xs": {
+      "value": "{space.4}",
+      "type": "dimension"
+    },
+    "sm": {
+      "value": "{space.8}",
+      "type": "dimension"
+    },
+    "md": {
+      "value": "{space.16}",
+      "type": "dimension"
+    },
+    "lg": {
+      "value": "{space.20}",
+      "type": "dimension"
+    },
+    "xl": {
+      "value": "{space.32}",
+      "type": "dimension"
+    },
+    "2xl": {
+      "value": "{space.48}",
+      "type": "dimension"
+    }
+  },
+  "solid": {
+    "value": {
+      "style": "solid"
+    },
+    "type": "border"
   }
 }
