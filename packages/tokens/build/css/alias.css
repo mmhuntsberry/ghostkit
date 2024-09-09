@@ -128,6 +128,12 @@
 --serif-article: Charter ITC Std;
 --sans_serif-primary: Source Sans 3;
 --sans_serif-ads: Inter;
+--size-xs: 4px;
+--size-sm: 8px;
+--size-md: 16px;
+--size-lg: 20px;
+--size-xl: 32px;
+--size-2-xl: 48px;
 --font-size-copy-6-xs: 0.694rem;
 --font-size-copy-5-xs: 0.833rem;
 --font-size-copy-4-xs: 1rem;
@@ -156,4 +162,5 @@
 --theme-hds-color-text-brand-primary-on_dark: hsla(0, 0%, 96%, 1);
 --theme-hds-color-text-error-on_light: hsla(1, 88%, 63%, 1);
 --theme-hds-color-text-error-on_dark: hsla(0, 68%, 49%, 1);
+--solid: solid;
 }
