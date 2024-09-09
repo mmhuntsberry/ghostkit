@@ -1,22 +1,4 @@
 {
-  "brand-color-primary": {
-    "value": "{primitive.brand-color-primary.elle-decor}",
-    "type": "color"
-  },
-  "brand-color-secondary": {
-    "value": "{primitive.zinc.100}",
-    "type": "color"
-  },
-  "theme": {
-    "bg": {
-      "accent": {
-        "default": {
-          "value": "{brand-color-primary}",
-          "type": "color"
-        }
-      }
-    }
-  },
   "font-families": {
     "primary": {
       "value": "Georgia",
@@ -25,6 +7,14 @@
     "secondary": {
       "value": "Helvetica Neue LT Std",
       "type": "fontFamilies"
+    }
+  },
+  "palette": {
+    "brand": {
+      "primary": {
+        "value": "#3777bc",
+        "type": "color"
+      }
     }
   }
 }

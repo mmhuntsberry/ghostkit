@@ -1,30 +1,16 @@
 {
-  "brand-color-primary": {
-    "value": "{primitive.brand-color-primary.redbook}",
-    "type": "color"
-  },
-  "brand-color-secondary": {
-    "value": "#69DCBF",
-    "type": "color"
-  },
-  "brand-color-tertiary": {
-    "value": "#B2003C",
-    "type": "color"
-  },
-  "theme": {
-    "bg": {
-      "accent": {
-        "default": {
-          "value": "{brand-color-primary}",
-          "type": "color"
-        }
-      }
-    }
-  },
   "font-families": {
     "primary": {
       "value": "Century Gothic",
       "type": "fontFamilies"
+    }
+  },
+  "palette": {
+    "brand": {
+      "primary": {
+        "value": "#d30c4f",
+        "type": "color"
+      }
     }
   }
 }

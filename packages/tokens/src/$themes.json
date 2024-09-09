@@ -142,13 +142,13 @@
   {
     "id": "73d5b0603b71496112be89fbb39a60188d859120",
     "name": "elle",
-    "group": "global",
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
       "themes/fashion/elle": "source"
     },
-    "$figmaStyleReferences": {}
+    "$figmaStyleReferences": {},
+    "group": "global"
   },
   {
     "id": "3b4a1d369f12cdbf83478423764f7b0f7130c6a6",

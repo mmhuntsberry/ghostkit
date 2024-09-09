@@ -1,26 +1,4 @@
 {
-  "brand-color-primary": {
-    "value": "{primitive.brand-color-primary.car-and-driver}",
-    "type": "color"
-  },
-  "brand-color-secondary": {
-    "value": "#1C5F8B",
-    "type": "color"
-  },
-  "brand-color-tertiary": {
-    "value": "#F1F7F7",
-    "type": "color"
-  },
-  "theme": {
-    "bg": {
-      "accent": {
-        "default": {
-          "value": "{brand-color-primary}",
-          "type": "color"
-        }
-      }
-    }
-  },
   "font-families": {
     "primary": {
       "value": "Gliko Modern Condensed L",
@@ -40,6 +18,15 @@
       "value": "Medium",
       "type": "fontWeights",
       "description": "Remapped ‘Bold’ to ‘Medium’ to address the font weight rendering incompatibility within Figma."
+    }
+  },
+  "palette": {
+    "brand": {
+      "primary": {
+        "value": "#00a4Db",
+        "type": "color",
+        "description": "Car And Driver Primary Brand Color"
+      }
     }
   }
 }

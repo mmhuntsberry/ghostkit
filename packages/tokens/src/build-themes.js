@@ -1,6 +1,7 @@
 const StyleDictionary = require("style-dictionary-utils");
 const { registerTransforms } = require("@tokens-studio/sd-transforms");
 const { promises } = require("fs");
+const _ = require("lodash");
 
 // Register additional transforms as needed
 registerTransforms(StyleDictionary, {
@@ -9,13 +10,29 @@ registerTransforms(StyleDictionary, {
   },
 });
 
+// Register a custom name transform to preserve underscores where explicitly placed
+StyleDictionary.registerTransform({
+  name: "name/cti/custom",
+  type: "name",
+  transformer: (prop, options) => {
+    return prop.path
+      .map((segment) => {
+        // Preserve underscores in segment names
+        if (segment.includes("_")) {
+          return segment;
+        } else {
+          return _.kebabCase(segment);
+        }
+      })
+      .join("-");
+  },
+});
+
 // Common format registration for CSS variables
 StyleDictionary.registerFormat({
   name: "custom/cssVariables",
   formatter: function (dictionary, config) {
     const brand = dictionary.options.brand;
-
-    console.log();
 
     return `
 :root, 
@@ -50,7 +67,6 @@ function registerGlobalFiles(config, themeName) {
 // Function to register CSS files for themes and components
 function registerBrandFiles(config, themeName, brands, tokenSet) {
   brands.forEach((brand) => {
-    console.log({ brand });
     config.platforms.css.files.push({
       destination: `brands/${brand}/${themeName.toLowerCase()}.css`,
       format: "custom/cssVariables",
@@ -61,6 +77,7 @@ function registerBrandFiles(config, themeName, brands, tokenSet) {
     });
   });
 }
+
 // function registerThemeFiles(config, themeName, components, tokenSet) {
 //   const themeType = themeName.toLowerCase().includes("light")
 //     ? "Light"
@@ -88,7 +105,7 @@ async function run() {
       platforms: {
         css: {
           transforms: [
-            "name/cti/kebab",
+            "name/cti/custom", // Use custom transform
             "ts/descriptionToComment",
             "ts/size/px",
             "ts/opacity",
@@ -101,7 +118,6 @@ async function run() {
             "ts/shadow/css/shorthand",
             "ts/color/css/hexrgba",
             "ts/color/modifiers",
-            "name/cti/kebab",
           ],
           buildPath: "../build/css/",
           files: [],
@@ -113,16 +129,16 @@ async function run() {
     registerGlobalFiles(config, theme.name);
 
     const brands = [
-      "alta",
+      // "alta",
       // "autoweek",
       // "best-products",
-      "bicycling",
+      // "bicycling",
       // "biography",
       // "car-and-driver",
       // "cosmopolitan",
       // "country-living",
       // "delish",
-      "elle",
+      // "elle",
       // "elle-decor",
       // "esquire",
       // "good-housekeeping",
