@@ -1,8 +1,10 @@
 {
   "font-families": {
     "sans_serif": {
-      "value": "Inter",
-      "type": "fontFamilies"
+      "primary": {
+        "value": "Inter",
+        "type": "fontFamilies"
+      }
     },
     "serif": {
       "value": "Charter ITC Std",
@@ -41,10 +43,60 @@
           "type": "color"
         }
       }
+    },
+    "typography": {
+      "default": {
+        "value": {
+          "fontFamily": "{font-families.sans_serif.primary}",
+          "fontWeight": "600",
+          "fontSize": "{font-size.1_00}",
+          "lineHeight": "{line-height.1_00}",
+          "letterSpacing": "{letter-spacing.extra-loose}"
+        },
+        "type": "typography"
+      }
     }
   },
   "disabled": {
     "value": "{opacity.0_32}",
     "type": "opacity"
+  },
+  "font-weight": {
+    "thin": {
+      "value": "{font-weight.100}",
+      "type": "fontWeights"
+    },
+    "extra-light": {
+      "value": "{font-weight.200}",
+      "type": "fontWeights"
+    },
+    "light": {
+      "value": "{font-weight.300}",
+      "type": "fontWeights"
+    },
+    "regular": {
+      "value": "{font-weight.400}",
+      "type": "fontWeights"
+    },
+    "medium": {
+      "value": "{font-weight.500}",
+      "type": "fontWeights"
+    },
+    "semi-bold": {
+      "value": "{font-weight.600}",
+      "type": "fontWeights"
+    },
+    "bold": {
+      "value": "{font-weight.700}",
+      "type": "fontWeights"
+    },
+    "extra-bold": {
+      "value": "{font-weight.800}",
+      "type": "fontWeights"
+    },
+    "black": {
+      "value": "{font-weight.900}",
+      "type": "fontWeights"
+    }
   }
 }

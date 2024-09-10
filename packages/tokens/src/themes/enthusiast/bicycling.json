@@ -19,6 +19,12 @@
     "buttons": {
       "value": "Teko",
       "type": "fontFamilies"
+    },
+    "sans_serif": {
+      "primary": {
+        "value": "Teko",
+        "type": "fontFamilies"
+      }
     }
   },
   "palette": {
@@ -27,7 +33,96 @@
         "value": "#067EA7",
         "type": "color",
         "description": "Bicycling Primary Brand Color"
+      },
+      "secondary": {
+        "value": "#525252",
+        "type": "color",
+        "description": "Bicycling Primary Brand Color"
       }
+    }
+  },
+  "button": {
+    "color": {
+      "background": {
+        "primary": {
+          "solid": {
+            "default": {
+              "on_light": {
+                "value": "{palette.brand.primary}",
+                "type": "color"
+              }
+            },
+            "hover": {
+              "on_light": {
+                "value": "{palette.brand.secondary}",
+                "type": "color"
+              }
+            },
+            "active": {
+              "on_light": {
+                "value": "{palette.brand.secondary}",
+                "type": "color"
+              }
+            }
+          }
+        }
+      },
+      "text": {
+        "on_dark": {
+          "value": "{palette.neutral.96}",
+          "type": "color"
+        }
+      }
+    },
+    "typography": {
+      "default": {
+        "value": {
+          "fontFamily": "{font-families.sans_serif.primary}",
+          "fontWeight": "400",
+          "fontSize": "{font-size.1_00}",
+          "lineHeight": "{line-height.1_00}",
+          "letterSpacing": "{letter-spacing.extra-loose}"
+        },
+        "type": "typography"
+      }
+    }
+  },
+  "font-weight": {
+    "thin": {
+      "value": "{font-weight.100}",
+      "type": "fontWeights"
+    },
+    "extra-light": {
+      "value": "{font-weight.200}",
+      "type": "fontWeights"
+    },
+    "light": {
+      "value": "{font-weight.300}",
+      "type": "fontWeights"
+    },
+    "regular": {
+      "value": "400",
+      "type": "fontWeights"
+    },
+    "medium": {
+      "value": "{font-weight.500}",
+      "type": "fontWeights"
+    },
+    "semi-bold": {
+      "value": "600",
+      "type": "fontWeights"
+    },
+    "bold": {
+      "value": "{font-weight.700}",
+      "type": "fontWeights"
+    },
+    "extra-bold": {
+      "value": "{font-weight.800}",
+      "type": "fontWeights"
+    },
+    "black": {
+      "value": "{font-weight.900}",
+      "type": "fontWeights"
     }
   }
 }

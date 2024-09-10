@@ -76,13 +76,13 @@
   {
     "id": "dbd2e349398fc9bf50aa9130ab36e6eda8dd6d39",
     "name": "bicycling",
-    "group": "global",
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/enthusiast/bicycling": "source"
+      "themes/enthusiast/bicycling": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "$figmaStyleReferences": {},
+    "group": "global"
   },
   {
     "id": "26fdd80c67998b0065aed3757bf6dcc486f7fe20",
