@@ -14,66 +14,49 @@ const customProp = (props: ButtonProps) =>
   props.brand !== "primitive" ? `${props.brand}-` : "";
 
 const StyledButton = styled.button<ButtonProps>`
-  * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
 
   align-items: center;
-  background-color: ${(props) =>
-    `var(--${customProp(props)}button-theme-bg-primary-default-fill)`};
-  border: ${(props) =>
-    `var(--${customProp(
-      props
-    )}button-theme-border-primary-default-border-color)`};
-  border-radius: ${(props) =>
-    `var(--${customProp(props)}button-size-border-default-border-radius)`};
-  color: ${(props) =>
-    `var(--${customProp(props)}button-theme-text-default-fill)`};
+  background-color: var(
+    --button-color-background-primary-solid-default-on_light
+  );
+  border-color: var(--button-color-border-primary-default-on_light);
+  border-style: var(--solid); // TODO: Make this dynamic based on mode
+  border-width: var(--border-width-thin);
+  border-radius: var(--border-radius-rounded);
+  color: var(--button-color-text-on_dark);
   cursor: pointer;
   display: flex;
-  font-family: ${(props) =>
-    `var(--${customProp(props)}button-size-text-default-font-families)`};
-  font-size: ${(props) =>
-    `var(--${customProp(props)}button-size-text-default-font-sizes)`};
-  font-weight: ${(props) =>
-    `var(--${customProp(props)}button-size-text-default-font-weights)`};
-  letter-spacing: ${(props) =>
-    `var(--${customProp(props)}button-size-text-default-letter-spacing)`};
+  font-family: var(--font-families-sans_serif);
+  font-size: var(--components-button-font-size-default);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-comfortable);
+  letter-spacing: var(--letter-spacing-spacious);
   justify-content: center;
   outline: none;
-  padding-block: ${(props) =>
-    `var(--${customProp(props)}button-size-bg-default-vertical-padding)`};
-  padding-inline: ${(props) =>
-    `var(--${customProp(props)}button-size-bg-default-horizontal-padding)`};
-  text-transform: ${(props) =>
-    `var(--${customProp(props)}button-size-text-default-text-case)`};
+  padding-block: var(--size-md);
+  padding-inline: var(--space-md);
+  text-transform: var(--uppercase);
 
   transition: background 0.2s ease-in-out;
 
-  &:hover {
-    background-color: ${(props) =>
-      `var(--${customProp(props)}button-theme-bg-primary-hover-fill)`};
+  &:not(:disabled):hover {
+    background-color: var(
+      --button-color-background-primary-solid-hover-on_light
+    );
+    border-color: var(--button-color-border-primary-hover-on_light);
   }
 
   &:disabled {
-    background-color: ${(props) =>
-      `var(--${customProp(props)}button-theme-bg-primary-disabled-fill)`};
-    color: ${(props) =>
-      `var(--${customProp(props)}button-theme-text-disabled-fill)`};
-    border: ${(props) =>
-      `var(--${customProp(
-        props
-      )}button-theme-border-primary-disabled-border-color)`};
+    opacity: var(--disabled);
     cursor: not-allowed;
   }
 
-  &:active {
-    background-color: ${(props) =>
-      `var(--${customProp(props)}button-theme-bg-primary-active-fill)`};
-    border: ${(props) =>
-      `var(--${customProp(
-        props
-      )}button-theme-border-primary-active-border-color)`};
+  &:not(:disabled):active {
+    background-color: var(
+      --button-color-background-primary-solid-active-on_light
+    );
+    border-color: var(--button-color-border-primary-active-on_light);
   }
 `;
 

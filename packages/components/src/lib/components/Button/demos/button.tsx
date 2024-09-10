@@ -10,7 +10,7 @@ export const Demo = (props) => {
       <h1>This is a {brand} branded story</h1>
 
       <Button {...props} brand={brand || "white-label"}>
-        Button Text
+        {props.children}
       </Button>
     </div>
   );

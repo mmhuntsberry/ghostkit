@@ -32,15 +32,15 @@ StyleDictionary.registerTransform({
 StyleDictionary.registerFormat({
   name: "custom/cssVariables",
   formatter: function (dictionary, config) {
-    const brand = dictionary.options.brand;
+    // const brand = dictionary.options.brand;
 
     return `
 :root, 
 :host {
 ${dictionary.allProperties
   .map((prop) => {
-    let customProp = brand ? `${brand}-${prop.name}` : prop.name;
-    return `--${customProp}: ${prop.value};`;
+    // let customProp = brand ? `${brand}-${prop.name}` : prop.name;
+    return `--${prop.name}: ${prop.value};`;
   })
   .join("\n")}
 }`;
