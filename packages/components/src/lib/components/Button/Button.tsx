@@ -19,7 +19,8 @@ const StyledButton = styled.button<ButtonProps>`
     `var(--${brand}-button-color-border-primary-default-on_light)`};
   border-style: var(--solid); // TODO: Make this dynamic based on mode
   border-width: var(--border-width-thin);
-  border-radius: var(--border-radius-rounded);
+  border-radius: ${({ brand }) =>
+    `var(--${brand}-button-size-md-border-radius)`};
   color: ${({ brand }) => `var(--${brand}-button-color-text-on_dark)`};
   cursor: pointer;
   display: flex;
