@@ -3,94 +3,13 @@ import type { ButtonProps } from "./Button";
 
 export default {
   component: Button,
-  parameters: {
-    docs: {
-      source: {
-        code: null,
-      },
-    },
-  },
-  argTypes: {
-    children: {
-      type: {
-        required: true,
-      },
-      control: {
-        type: "text",
-      },
-      description:
-        "The 'Children' prop allows for dynamic content customization, supporting text, icons, or a combination of both to create versatile and visually engaging buttons.",
-      table: {
-        type: { summary: "string | ReactNode" },
-      },
-    },
-    disabled: {
-      control: {
-        type: "boolean",
-      },
-      table: {
-        type: { summary: "boolean" },
-        defaultValue: { summary: false },
-      },
-      defaultValue: false,
-    },
-    mode: {
-      options: ["light", "dark"],
-      control: {
-        type: "radio",
-      },
-      defaultValue: "light",
-    },
-    size: {
-      options: ["sm", "md", "lg"],
-      control: {
-        type: "radio",
-      },
-      table: {
-        type: { summary: "sm | md | lg" },
-        defaultValue: { summary: "md" },
-      },
-      defaultValue: "md",
-    },
-    theme: {
-      options: ["toolkit", "resin"],
-      control: {
-        type: "radio",
-      },
-      defaultValue: "toolkit",
-    },
-    kind: {
-      options: ["primary", "secondary", "text"],
-      control: { type: "radio" },
-      defaultValue: "primary",
-      table: {
-        type: { summary: "primary | secondary | text" },
-        defaultValue: { summary: "primary" },
-      },
-    },
-  },
+  parameters: {},
 };
 
 export const Primary = {
-  args: {
-    children: "Label",
-    "data-testid": "my-test",
-  },
+  render: (args: ButtonProps) => <Button>Label</Button>,
 };
 
 export const Disabled = {
-  render: (args: ButtonProps) => (
-    <div className="sb-button-container">
-      <Button {...args} data-testid="my-test" />
-    </div>
-  ),
-  args: {
-    children: "Label",
-    disabled: true,
-  },
-  parameters: {
-    controls: {
-      disable: true,
-    },
-  },
+  render: (args: ButtonProps) => <Button disabled>Label</Button>,
 };

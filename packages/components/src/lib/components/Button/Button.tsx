@@ -1,37 +1,36 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "@emotion/styled";
+import { BrandContext } from "../../../../.storybook/preview";
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
   disabled?: boolean;
-
-  mode?: string;
   size?: "sm" | "md" | "lg";
   brand?: string;
 }
-
-const customProp = (props: ButtonProps) =>
-  props.brand !== "primitive" ? `${props.brand}-` : "";
 
 const StyledButton = styled.button<ButtonProps>`
   box-sizing: border-box;
 
   align-items: center;
-  background-color: var(
-    --button-color-background-primary-solid-default-on_light
-  );
-  border-color: var(--button-color-border-primary-default-on_light);
+  background-color: ${({ brand }) =>
+    `var(--${brand}-button-color-background-primary-solid-default-on_light)`};
+  border-color: ${({ brand }) =>
+    `var(--${brand}-button-color-border-primary-default-on_light)`};
   border-style: var(--solid); // TODO: Make this dynamic based on mode
   border-width: var(--border-width-thin);
   border-radius: var(--border-radius-rounded);
-  color: var(--button-color-text-on_dark);
+  color: ${({ brand }) => `var(--${brand}-button-color-text-on_dark)`};
   cursor: pointer;
   display: flex;
-  font-family: var(--font-families-sans_serif);
-  font-size: var(--components-button-font-size-default);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-comfortable);
-  letter-spacing: var(--letter-spacing-spacious);
+  font: ${({ brand }) => `var(--${brand}-button-typography-default)`};
+  /* font-family: ${({ brand }) =>
+    `var(--${brand}-font-families-sans_serif-primary)`};
+  font-size: ${({ brand }) =>
+    `var(--${brand}-components-button-font-size-default)`};
+  font-weight: ${({ brand }) => `var(--${brand}-font-weight-semibold)`};
+  line-height: ${({ brand }) => `var(--${brand}-line-height-comfortable)`}; */
+  letter-spacing: ${({ brand }) => `var(--${brand}-letter-spacing-spacious)`};
   justify-content: center;
   outline: none;
   padding-block: var(--size-md);
@@ -41,10 +40,10 @@ const StyledButton = styled.button<ButtonProps>`
   transition: background 0.2s ease-in-out;
 
   &:not(:disabled):hover {
-    background-color: var(
-      --button-color-background-primary-solid-hover-on_light
-    );
-    border-color: var(--button-color-border-primary-hover-on_light);
+    background-color: ${({ brand }) =>
+      `var(--${brand}-button-color-background-primary-solid-hover-on_light)`};
+    border-color: ${({ brand }) =>
+      `var(--${brand}-button-color-border-primary-hover-on_light)`};
   }
 
   &:disabled {
@@ -53,31 +52,22 @@ const StyledButton = styled.button<ButtonProps>`
   }
 
   &:not(:disabled):active {
-    background-color: var(
-      --button-color-background-primary-solid-active-on_light
-    );
-    border-color: var(--button-color-border-primary-active-on_light);
+    background-color: ${({ brand }) =>
+      `var(--${brand}-button-color-background-primary-solid-active-on_light)`};
+    border-color: ${({ brand }) =>
+      `var(--${brand}-button-color-border-primary-active-on_light)`};
   }
 `;
 
 export const Button: React.FC<ButtonProps> = ({
   children,
   disabled = false,
-
-  mode = "light",
   size = "md",
-  brand = "",
   ...props
 }) => {
-  console.log(brand);
+  const brand = useContext(BrandContext);
   return (
-    <StyledButton
-      disabled={disabled}
-      mode={mode}
-      size={size}
-      brand={brand}
-      {...props}
-    >
+    <StyledButton brand={brand} disabled={disabled} size={size} {...props}>
       {children}
     </StyledButton>
   );

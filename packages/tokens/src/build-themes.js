@@ -32,15 +32,15 @@ StyleDictionary.registerTransform({
 StyleDictionary.registerFormat({
   name: "custom/cssVariables",
   formatter: function (dictionary, config) {
-    // const brand = dictionary.options.brand;
+    const brand = dictionary.options.brand;
 
     return `
 :root, 
 :host {
 ${dictionary.allProperties
   .map((prop) => {
-    // let customProp = brand ? `${brand}-${prop.name}` : prop.name;
-    return `--${prop.name}: ${prop.value};`;
+    let customProp = brand ? `${brand}-${prop.name}` : prop.name;
+    return `--${customProp}: ${prop.value};`;
   })
   .join("\n")}
 }`;
@@ -68,7 +68,7 @@ function registerGlobalFiles(config, themeName) {
 function registerBrandFiles(config, themeName, brands, tokenSet) {
   brands.forEach((brand) => {
     config.platforms.css.files.push({
-      destination: `brands/${brand}/${themeName.toLowerCase()}.css`,
+      destination: `brands/${themeName.toLowerCase()}.css`,
       format: "custom/cssVariables",
       filter: (token) => {
         return token.filePath.includes(`${brand.toLowerCase()}.json`);
@@ -132,7 +132,7 @@ async function run() {
       // "alta",
       // "autoweek",
       // "best-products",
-      // "bicycling",
+      "bicycling",
       // "biography",
       // "car-and-driver",
       // "cosmopolitan",
