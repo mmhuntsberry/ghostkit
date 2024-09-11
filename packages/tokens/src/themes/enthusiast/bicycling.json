@@ -89,7 +89,7 @@
     "size": {
       "md": {
         "value": {
-          "borderRadius": "{border-radius.square}"
+          "borderRadius": "{border-radius.soft}"
         },
         "type": "composition"
       }
