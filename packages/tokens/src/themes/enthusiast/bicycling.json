@@ -85,6 +85,14 @@
         },
         "type": "typography"
       }
+    },
+    "size": {
+      "md": {
+        "value": {
+          "borderRadius": "{border-radius.square}"
+        },
+        "type": "composition"
+      }
     }
   },
   "font-weight": {
@@ -123,6 +131,28 @@
     "black": {
       "value": "{font-weight.900}",
       "type": "fontWeights"
+    }
+  },
+  "border-radius": {
+    "square": {
+      "value": "{border-radius.0}",
+      "type": "borderRadius"
+    },
+    "soft": {
+      "value": "{border-radius.4}",
+      "type": "borderRadius"
+    },
+    "rounded": {
+      "value": "{border-radius.8}",
+      "type": "borderRadius"
+    },
+    "pill": {
+      "value": "{border-radius.16}",
+      "type": "borderRadius"
+    },
+    "circle": {
+      "value": "50%",
+      "type": "borderRadius"
     }
   }
 }
