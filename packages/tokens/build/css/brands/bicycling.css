@@ -1,6 +1,11 @@
 
 :root, 
 :host {
+--bicycling-border-radius-square: 0px;
+--bicycling-border-radius-soft: 4px;
+--bicycling-border-radius-rounded: 8px;
+--bicycling-border-radius-pill: 16px;
+--bicycling-border-radius-circle: 50%;
 --bicycling-palette-brand-primary: #067EA7;
 --bicycling-palette-brand-secondary: #525252;
 --bicycling-font-weight-thin: 100;
@@ -17,6 +22,7 @@
 --bicycling-button-color-background-primary-solid-active-on_light: #525252;
 --bicycling-button-color-text-on_dark: hsla(0, 0%, 96%, 1);
 --bicycling-button-typography-default: 400 1rem/1 Teko;
+--bicycling-button-size-md-border-radius: 0px;
 --bicycling-font-families-labels: Domine;
 --bicycling-font-families-body: Charter ITC Std;
 --bicycling-font-families-titles: Velo Serif Display;
