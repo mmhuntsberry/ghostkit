@@ -15,7 +15,8 @@
 --white-label-button-color-background-primary-solid-active-on_light: hsla(0, 0%, 5%, 1);
 --white-label-button-color-text-on_dark: hsla(0, 0%, 96%, 1);
 --white-label-button-typography-default: 600 1rem/1 Inter;
---white-label-button-size-md-border-radius: 4px;
+--white-label-button-shape-border-radius: 4px;
+--white-label-button-size-default: 16px;
 --white-label-font-families-sans_serif-primary: Inter;
 --white-label-font-families-serif: Charter ITC Std;
 --white-label-disabled: 0.32;
