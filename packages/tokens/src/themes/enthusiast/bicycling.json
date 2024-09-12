@@ -87,10 +87,12 @@
       }
     },
     "shape": {
-      "value": {
-        "borderRadius": "{shape.square}"
-      },
-      "type": "composition"
+      "default": {
+        "value": {
+          "borderRadius": "{shape.square}"
+        },
+        "type": "composition"
+      }
     },
     "size": {
       "default": {

@@ -57,10 +57,12 @@
       }
     },
     "shape": {
-      "value": {
-        "borderRadius": "{shape.soft}"
-      },
-      "type": "composition"
+      "default": {
+        "value": {
+          "borderRadius": "{shape.soft}"
+        },
+        "type": "composition"
+      }
     },
     "size": {
       "default": {
