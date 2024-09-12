@@ -1,27 +1,28 @@
-:root,
+
+:root, 
 :host {
-  --bicycling-palette-brand-primary: #067ea7;
-  --bicycling-palette-brand-secondary: #525252;
-  --bicycling-font-weight-thin: 100;
-  --bicycling-font-weight-extra-light: 200;
-  --bicycling-font-weight-light: 300;
-  --bicycling-font-weight-regular: 400;
-  --bicycling-font-weight-medium: 500;
-  --bicycling-font-weight-semi-bold: 600;
-  --bicycling-font-weight-bold: 700;
-  --bicycling-font-weight-extra-bold: 800;
-  --bicycling-font-weight-black: 900;
-  --bicycling-button-color-background-primary-solid-default-on_light: #067ea7;
-  --bicycling-button-color-background-primary-solid-hover-on_light: #525252;
-  --bicycling-button-color-background-primary-solid-active-on_light: #525252;
-  --bicycling-button-color-text-on_dark: hsla(0, 0%, 96%, 1);
-  --bicycling-button-typography-default: 400 1rem/1 Teko;
-  --bicycling-button-shape-default-border-radius: 0px;
-  --bicycling-button-size-default: 16px;
-  --bicycling-font-families-labels: Domine;
-  --bicycling-font-families-body: Charter ITC Std;
-  --bicycling-font-families-titles: Velo Serif Display;
-  --bicycling-font-families-headlines: Teko;
-  --bicycling-font-families-buttons: Teko;
-  --bicycling-font-families-sans_serif-primary: Teko;
+--bicycling-palette-brand-primary: #067EA7;
+--bicycling-palette-brand-secondary: #525252;
+--bicycling-font-weight-thin: 100;
+--bicycling-font-weight-extra-light: 200;
+--bicycling-font-weight-light: 300;
+--bicycling-font-weight-regular: 400;
+--bicycling-font-weight-medium: 500;
+--bicycling-font-weight-semi-bold: 600;
+--bicycling-font-weight-bold: 700;
+--bicycling-font-weight-extra-bold: 800;
+--bicycling-font-weight-black: 900;
+--bicycling-button-color-background-primary-solid-default-on_light: #067EA7;
+--bicycling-button-color-background-primary-solid-hover-on_light: #525252;
+--bicycling-button-color-background-primary-solid-active-on_light: #525252;
+--bicycling-button-color-text-on_dark: hsla(0, 0%, 96%, 1);
+--bicycling-button-typography-default: 400 1rem/1 Teko;
+--bicycling-button-shape-default: 0px;
+--bicycling-button-size-default: 16px;
+--bicycling-font-families-labels: Domine;
+--bicycling-font-families-body: Charter ITC Std;
+--bicycling-font-families-titles: Velo Serif Display;
+--bicycling-font-families-headlines: Teko;
+--bicycling-font-families-buttons: Teko;
+--bicycling-font-families-sans_serif-primary: Teko;
 }

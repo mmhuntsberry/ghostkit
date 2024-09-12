@@ -19,8 +19,7 @@ const StyledButton = styled.button<ButtonProps>`
     `var(--${brand}-button-color-border-primary-default-on_light)`};
   border-style: var(--solid); // TODO: Make this dynamic based on mode
   border-width: var(--border-width-thin);
-  border-radius: ${({ brand }) =>
-    `var(--${brand}-button-size-md-border-radius)`};
+  border-radius: ${({ brand }) => `var(--${brand}-button-shape-default)`};
   color: ${({ brand }) => `var(--${brand}-button-color-text-on_dark)`};
   cursor: pointer;
   display: flex;
@@ -34,7 +33,7 @@ const StyledButton = styled.button<ButtonProps>`
   letter-spacing: ${({ brand }) => `var(--${brand}-letter-spacing-spacious)`};
   justify-content: center;
   outline: none;
-  padding-block: var(--size-md);
+  padding-block: var(--bicycling-button-size-default);
   padding-inline: var(--space-md);
   text-transform: var(--uppercase);
 
@@ -48,7 +47,7 @@ const StyledButton = styled.button<ButtonProps>`
   }
 
   &:disabled {
-    opacity: var(--disabled);
+    opacity: var(--opacity-disabled);
     cursor: not-allowed;
   }
 

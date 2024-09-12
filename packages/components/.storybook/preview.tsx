@@ -40,9 +40,8 @@ export const globalTypes = {
       // icon: "globe",
       title: "Brand",
       items: [
-        "primitive",
+        // "primitive",
         "white-label",
-
         // "alta",
         // "autoweek",
         // "best-products",
@@ -52,7 +51,7 @@ export const globalTypes = {
         // "cosmopolitan",
         // "country-living",
         // "delish",
-        "elle",
+        // "elle",
         // "elle-decor",
         // "esquire",
         // "good-housekeeping",
