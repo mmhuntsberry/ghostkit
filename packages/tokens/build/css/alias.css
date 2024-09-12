@@ -1,11 +1,6 @@
 
 :root, 
 :host {
---border-radius-square: 0px;
---border-radius-soft: 4px;
---border-radius-rounded: 8px;
---border-radius-pill: 16px;
---border-radius-circle: 50%;
 --palette-neutral-2: hsla(0, 0%, 2%, 1);
 --palette-neutral-5: hsla(0, 0%, 5%, 1);
 --palette-neutral-9: hsla(0, 0%, 9%, 1);
@@ -134,6 +129,11 @@
 --size-lg: 20px;
 --size-xl: 32px;
 --size-2-xl: 48px;
+--shape-square: 0px;
+--shape-soft: 4px;
+--shape-rounded: 8px;
+--shape-pill: 16px;
+--shape-circle: 50%;
 --breakpoints-mobile: 320px;
 --breakpoints-tablet: 768px;
 --breakpoints-desktop: 1600px;

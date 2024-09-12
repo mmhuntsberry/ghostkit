@@ -1,11 +1,6 @@
 
 :root, 
 :host {
---white-label-border-radius-square: 0px;
---white-label-border-radius-soft: 4px;
---white-label-border-radius-rounded: 8px;
---white-label-border-radius-pill: 16px;
---white-label-border-radius-circle: 50%;
 --white-label-font-weight-thin: 100;
 --white-label-font-weight-extra-light: 200;
 --white-label-font-weight-light: 300;
