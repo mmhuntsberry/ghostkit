@@ -17,7 +17,7 @@
 --bicycling-button-color-background-primary-solid-active-on_light: #525252;
 --bicycling-button-color-text-on_dark: hsla(0, 0%, 96%, 1);
 --bicycling-button-typography-default: 400 1rem/1 Teko;
---bicycling-button-shape-border-radius: 0px;
+--bicycling-button-shape-default-border-radius: 0px;
 --bicycling-button-size-default: 16px;
 --bicycling-font-families-labels: Domine;
 --bicycling-font-families-body: Charter ITC Std;
