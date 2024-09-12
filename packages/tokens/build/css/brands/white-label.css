@@ -16,17 +16,17 @@
 --white-label-button-color-text-on-dark: hsla(0, 0%, 96%, 1);
 --white-label-button-typography-default: 600 1rem/1 Inter;
 <<<<<<< HEAD
+<<<<<<< HEAD
 --white-label-button-shape-default-border-radius: 4px;
 =======
 <<<<<<< HEAD
 --white-label-button-shape-border-radius: 4px;
 >>>>>>> cfa7985 (chore: fix merge conflicts)
---white-label-button-size-default: 16px;
---white-label-font-families-sans_serif-primary: Inter;
 =======
---white-label-button-size-md-shape: 4px;
+--white-label-button-shape-shape: 4px;
+>>>>>>> ea5878a (chore: merge conflicts)
+--white-label-button-size-default: 16px;
 --white-label-font-families-sans-serif-primary: Inter;
->>>>>>> 8bfcaf1 (update transforms)
 --white-label-font-families-serif: Charter ITC Std;
 --white-label-disabled: 0.32;
 }
