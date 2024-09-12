@@ -86,12 +86,16 @@
         "type": "typography"
       }
     },
+    "shape": {
+      "value": {
+        "borderRadius": "{shape.square}"
+      },
+      "type": "composition"
+    },
     "size": {
-      "md": {
-        "value": {
-          "borderRadius": "{shape.square}"
-        },
-        "type": "composition"
+      "default": {
+        "value": "{size.md}",
+        "type": "dimension"
       }
     }
   },

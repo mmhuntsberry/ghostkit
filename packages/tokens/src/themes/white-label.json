@@ -56,12 +56,16 @@
         "type": "typography"
       }
     },
+    "shape": {
+      "value": {
+        "borderRadius": "{shape.soft}"
+      },
+      "type": "composition"
+    },
     "size": {
-      "md": {
-        "value": {
-          "borderRadius": "{shape.soft}"
-        },
-        "type": "composition"
+      "default": {
+        "value": "{size.md}",
+        "type": "dimension"
       }
     }
   },
