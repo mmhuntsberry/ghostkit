@@ -33,7 +33,7 @@ const StyledButton = styled.button<ButtonProps>`
   letter-spacing: ${({ brand }) => `var(--${brand}-letter-spacing-spacious)`};
   justify-content: center;
   outline: none;
-  padding-block: var(--bicycling-button-size-default);
+  padding-block: ${({ brand }) => `var(--${brand}-button-size-default)`};
   padding-inline: var(--space-md);
   text-transform: var(--uppercase);
 
