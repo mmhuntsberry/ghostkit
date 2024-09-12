@@ -10,14 +10,23 @@
 --white-label-font-weight-bold: 700;
 --white-label-font-weight-extra-bold: 800;
 --white-label-font-weight-black: 900;
---white-label-button-color-background-primary-solid-default-on_light: hsla(0, 0%, 9%, 1);
---white-label-button-color-background-primary-solid-hover-on_light: hsla(0, 0%, 15%, 1);
---white-label-button-color-background-primary-solid-active-on_light: hsla(0, 0%, 5%, 1);
---white-label-button-color-text-on_dark: hsla(0, 0%, 96%, 1);
+--white-label-button-color-background-primary-solid-default-on-light: hsla(0, 0%, 9%, 1);
+--white-label-button-color-background-primary-solid-hover-on-light: hsla(0, 0%, 15%, 1);
+--white-label-button-color-background-primary-solid-active-on-light: hsla(0, 0%, 5%, 1);
+--white-label-button-color-text-on-dark: hsla(0, 0%, 96%, 1);
 --white-label-button-typography-default: 600 1rem/1 Inter;
+<<<<<<< HEAD
 --white-label-button-shape-default-border-radius: 4px;
+=======
+<<<<<<< HEAD
+--white-label-button-shape-border-radius: 4px;
+>>>>>>> cfa7985 (chore: fix merge conflicts)
 --white-label-button-size-default: 16px;
 --white-label-font-families-sans_serif-primary: Inter;
+=======
+--white-label-button-size-md-shape: 4px;
+--white-label-font-families-sans-serif-primary: Inter;
+>>>>>>> 8bfcaf1 (update transforms)
 --white-label-font-families-serif: Charter ITC Std;
 --white-label-disabled: 0.32;
 }

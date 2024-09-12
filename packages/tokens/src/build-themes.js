@@ -28,6 +28,23 @@ StyleDictionary.registerTransform({
   },
 });
 
+StyleDictionary.registerTransform({
+  name: "name/cti/shape",
+  type: "name",
+  transformer: (prop, options) => {
+    return prop.path
+      .map((segment) => {
+        // Replace 'border-radius' with 'shape'
+        if (segment.includes("border-radius")) {
+          return segment.replace("border-radius", "shape");
+        } else {
+          return _.kebabCase(segment); // Continue using kebab-case for other names
+        }
+      })
+      .join("-");
+  },
+});
+
 // Common format registration for CSS variables
 StyleDictionary.registerFormat({
   name: "custom/cssVariables",
@@ -40,6 +57,8 @@ StyleDictionary.registerFormat({
 ${dictionary.allProperties
   .map((prop) => {
     let customProp = brand ? `${brand}-${prop.name}` : prop.name;
+    customProp = customProp.replace("border-radius", "shape");
+
     return `--${customProp}: ${prop.value};`;
   })
   .join("\n")}
@@ -106,6 +125,7 @@ async function run() {
         css: {
           transforms: [
             "name/cti/custom", // Use custom transform
+            "name/cti/shape",
             "ts/descriptionToComment",
             "ts/size/px",
             "ts/opacity",
