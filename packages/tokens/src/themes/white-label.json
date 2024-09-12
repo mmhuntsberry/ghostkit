@@ -66,7 +66,7 @@
     },
     "size": {
       "default": {
-        "value": "{size.md}",
+        "value": "{size.sm}",
         "type": "dimension"
       }
     }
