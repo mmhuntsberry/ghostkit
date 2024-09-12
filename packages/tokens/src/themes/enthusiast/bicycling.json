@@ -89,7 +89,7 @@
     "shape": {
       "default": {
         "value": {
-          "borderRadius": "{shape.soft}"
+          "borderRadius": "{shape.square}"
         },
         "type": "composition"
       }
