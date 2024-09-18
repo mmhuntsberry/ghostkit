@@ -682,14 +682,6 @@
       }
     }
   },
-  "button": {
-    "font-size": {
-      "default": {
-        "value": "{font-size.4xs}",
-        "type": "fontSizes"
-      }
-    }
-  },
   "text-case": {
     "uppercase": {
       "value": "uppercase",
