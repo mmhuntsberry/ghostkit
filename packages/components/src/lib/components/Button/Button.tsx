@@ -23,6 +23,7 @@ const StyledButton = styled.button<ButtonProps>`
   color: ${({ brand }) => `var(--${brand}-button-color-text-on_dark)`};
   cursor: pointer;
   display: flex;
+  gap: ${({ brand }) => `var(--${brand}-button-gap-default)`};
   font: ${({ brand }) => `var(--${brand}-button-typography-default)`};
   /* font-family: ${({ brand }) =>
     `var(--${brand}-font-families-sans_serif-primary)`};

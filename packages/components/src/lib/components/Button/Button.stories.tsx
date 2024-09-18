@@ -1,5 +1,6 @@
-import { Demo as Button } from "./demos/button";
+import { Demo as Button } from "./demos/Button";
 import type { ButtonProps } from "./Button";
+import { ArrowRight } from "@phosphor-icons/react";
 
 export default {
   component: Button,
@@ -8,6 +9,14 @@ export default {
 
 export const Primary = {
   render: (args: ButtonProps) => <Button>Label</Button>,
+};
+
+export const IconRight = {
+  render: (args: ButtonProps) => (
+    <Button>
+      Label <ArrowRight size={24} />
+    </Button>
+  ),
 };
 
 export const Disabled = {

@@ -170,6 +170,14 @@
       "comfortable": {
         "value": "{space.md}",
         "type": "dimension"
+      },
+      "sm": {
+        "value": "{size.sm}",
+        "type": "dimension"
+      },
+      "xs": {
+        "value": "{size.xs}",
+        "type": "dimension"
       }
     }
   },
