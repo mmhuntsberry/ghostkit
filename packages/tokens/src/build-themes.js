@@ -6,7 +6,7 @@ const _ = require("lodash");
 // Register additional transforms as needed
 registerTransforms(StyleDictionary, {
   expand: {
-    // composition: true,
+    composition: true,
   },
 });
 

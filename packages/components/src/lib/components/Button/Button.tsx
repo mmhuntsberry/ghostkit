@@ -23,19 +23,23 @@ const StyledButton = styled.button<ButtonProps>`
   color: ${({ brand }) => `var(--${brand}-button-color-text-on_dark)`};
   cursor: pointer;
   display: flex;
-  gap: ${({ brand }) => `var(--${brand}-button-gap-default)`};
+  gap: ${({ brand }) => `var(--${brand}-button-gap-comfortable)`};
   font: ${({ brand }) => `var(--${brand}-button-typography-default)`};
+  /* TODO!: Make this dynamic based on brand */
+  /* NEED TO SEPARATE LETTER SPACING */
+
+  /* font-weight: 400; */
   /* font-family: ${({ brand }) =>
     `var(--${brand}-font-families-sans_serif-primary)`};
   font-size: ${({ brand }) =>
     `var(--${brand}-components-button-font-size-default)`};
   font-weight: ${({ brand }) => `var(--${brand}-font-weight-semibold)`};
   line-height: ${({ brand }) => `var(--${brand}-line-height-comfortable)`}; */
-  letter-spacing: ${({ brand }) => `var(--${brand}-letter-spacing-spacious)`};
+  letter-spacing: ${({ brand }) => `var(--letter-spacing-extra-loose)`};
   justify-content: center;
   outline: none;
   padding-block: ${({ brand }) => `var(--${brand}-button-size-default)`};
-  padding-inline: var(--space-md);
+  padding-inline: var(--bicycling-button-space-comfortable);
   text-transform: var(--uppercase);
 
   transition: background 0.2s ease-in-out;
