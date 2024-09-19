@@ -145,7 +145,7 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/fashion/elle": "source"
+      "themes/fashion/elle": "enabled"
     },
     "$figmaStyleReferences": {},
     "group": "global"
