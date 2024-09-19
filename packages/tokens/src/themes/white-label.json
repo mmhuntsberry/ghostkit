@@ -80,7 +80,7 @@
           "fontFamily": "{font-families.sans_serif.primary}",
           "fontWeight": "600",
           "fontSize": "{font-size.3xs}",
-          "lineHeight": "{line-height.1_00}",
+          "lineHeight": "{line-height.comfortable}",
           "letterSpacing": "{letter-spacing.comfortable}"
         },
         "type": "typography"
@@ -90,7 +90,7 @@
           "fontFamily": "{font-families.sans_serif.primary}",
           "fontWeight": "600",
           "fontSize": "{font-size.4xs}",
-          "lineHeight": "{line-height.1_00}",
+          "lineHeight": "{line-height.comfortable}",
           "letterSpacing": "{letter-spacing.comfortable}"
         },
         "type": "typography"
