@@ -12,8 +12,9 @@
 --white-label-button-color-text-on_light: hsla(0, 0%, 9%, 1);
 --white-label-button-color-icon-on_dark: hsla(0, 0%, 96%, 1);
 --white-label-button-color-icon-on_light: hsla(0, 0%, 9%, 1);
---white-label-button-typography-default: 600 1.2rem/1 Inter;
+--white-label-button-typography-xs: 600 1rem/1 Inter;
 --white-label-button-typography-sm: 600 1rem/1 Inter;
+--white-label-button-typography-default: 600 1.2rem/1 Inter;
 --white-label-button-shape-default: 4px;
 --white-label-button-size-xs: 4px;
 --white-label-button-size-sm: 8px;
