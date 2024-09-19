@@ -24,7 +24,6 @@ const StyledButton = styled.button<ButtonProps>`
   cursor: pointer;
   display: flex;
   gap: ${({ brand }) => `var(--${brand}-button-gap-comfortable)`};
-
   font-weight: ${({ brand, size }) =>
     `var(--${brand}-button-${size}-font-weight)`};
   font-size: ${({ brand, size }) => `var(--${brand}-button-${size}-font-size)`};
