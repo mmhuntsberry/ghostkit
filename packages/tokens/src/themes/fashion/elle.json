@@ -137,7 +137,7 @@
             "on_light": {
               "value": {
                 "border": "solid",
-                "borderColor": "{button.background.primary.solid.default.on_light}",
+                "borderColor": "{button.color.background.primary.transparent.default.on_light}",
                 "borderWidth": "{border-width.thin}"
               },
               "type": "composition"
@@ -147,7 +147,7 @@
             "on_light": {
               "value": {
                 "border": "solid",
-                "borderColor": "{button.background.primary.solid.hover.on_light}",
+                "borderColor": "{button.color.background.primary.transparent.hover.on_light}",
                 "borderWidth": "{border-width.thin}"
               },
               "type": "composition"
