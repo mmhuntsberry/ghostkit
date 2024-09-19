@@ -36,10 +36,10 @@
 --white-label-button-border-primary-solid-disabled-on_light-border-color: hsla(0, 0%, 9%, 1);
 --white-label-button-border-primary-solid-disabled-on_light-border-width: 1px;
 --white-label-button-border-primary-transparent-default-on_light-border: solid;
---white-label-button-border-primary-transparent-default-on_light-border-color: button.background.primary.solid.default.on_light;
+--white-label-button-border-primary-transparent-default-on_light-border-color: transparent;
 --white-label-button-border-primary-transparent-default-on_light-border-width: 1px;
 --white-label-button-border-primary-transparent-hover-on_light-border: solid;
---white-label-button-border-primary-transparent-hover-on_light-border-color: button.background.primary.solid.hover.on_light;
+--white-label-button-border-primary-transparent-hover-on_light-border-color: hsla(0, 0%, 96%, 1);
 --white-label-button-border-primary-transparent-hover-on_light-border-width: 1px;
 --white-label-button-border-primary-transparent-active-on_light-border: solid;
 --white-label-button-border-primary-transparent-active-on_light-border-color: hsla(0, 0%, 90%, 1);
