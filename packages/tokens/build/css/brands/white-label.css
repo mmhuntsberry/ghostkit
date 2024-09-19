@@ -1,6 +1,7 @@
 
 :root, 
 :host {
+--white-label-palette-brand-primary: hsla(0, 0%, 9%, 1);
 --white-label-font-families-sans_serif-primary: Inter;
 --white-label-button-color-background-primary-solid-default-on_light: hsla(0, 0%, 9%, 1);
 --white-label-button-color-background-primary-solid-hover-on_light: hsla(0, 0%, 15%, 1);
@@ -15,7 +16,6 @@
 --white-label-button-typography-xs: 600 1rem/1 Inter;
 --white-label-button-typography-sm: 600 1rem/1 Inter;
 --white-label-button-typography-default: 600 1.2rem/1 Inter;
---white-label-button-shape-default: 4px;
 --white-label-button-size-xs: 4px;
 --white-label-button-size-sm: 8px;
 --white-label-button-size-default: 0.75rem;
@@ -23,5 +23,30 @@
 --white-label-button-space-xs: 4px;
 --white-label-button-space-sm: 8px;
 --white-label-button-space-default: 16px;
+--white-label-button-border-primary-solid-default-on_light-border: solid;
+--white-label-button-border-primary-solid-default-on_light-border-color: hsla(0, 0%, 9%, 1);
+--white-label-button-border-primary-solid-default-on_light-border-width: 1px;
+--white-label-button-border-primary-solid-hover-on_light-border: solid;
+--white-label-button-border-primary-solid-hover-on_light-border-color: hsla(0, 0%, 15%, 1);
+--white-label-button-border-primary-solid-hover-on_light-border-width: 1px;
+--white-label-button-border-primary-solid-active-on_light-border: solid;
+--white-label-button-border-primary-solid-active-on_light-border-color: hsla(0, 0%, 5%, 1);
+--white-label-button-border-primary-solid-active-on_light-border-width: 1px;
+--white-label-button-border-primary-solid-disabled-on_light-border: solid;
+--white-label-button-border-primary-solid-disabled-on_light-border-color: hsla(0, 0%, 9%, 1);
+--white-label-button-border-primary-solid-disabled-on_light-border-width: 1px;
+--white-label-button-border-primary-transparent-default-on_light-border: solid;
+--white-label-button-border-primary-transparent-default-on_light-border-color: button.background.primary.solid.default.on_light;
+--white-label-button-border-primary-transparent-default-on_light-border-width: 1px;
+--white-label-button-border-primary-transparent-hover-on_light-border: solid;
+--white-label-button-border-primary-transparent-hover-on_light-border-color: button.background.primary.solid.hover.on_light;
+--white-label-button-border-primary-transparent-hover-on_light-border-width: 1px;
+--white-label-button-border-primary-transparent-active-on_light-border: solid;
+--white-label-button-border-primary-transparent-active-on_light-border-color: hsla(0, 0%, 90%, 1);
+--white-label-button-border-primary-transparent-active-on_light-border-width: 1px;
+--white-label-button-border-primary-transparent-disabled-on_light-border: solid;
+--white-label-button-border-primary-transparent-disabled-on_light-border-color: transparent;
+--white-label-button-border-primary-transparent-disabled-on_light-border-width: 1px;
+--white-label-button-shape-default: 4px;
 --white-label-disabled: 0.32;
 }
