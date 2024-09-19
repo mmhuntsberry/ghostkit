@@ -1,32 +1,4 @@
 {
-  "font-families": {
-    "labels": {
-      "value": "Domine",
-      "type": "fontFamilies"
-    },
-    "body": {
-      "value": "Charter ITC Std",
-      "type": "fontFamilies"
-    },
-    "titles": {
-      "value": "Velo Serif Display",
-      "type": "fontFamilies"
-    },
-    "headlines": {
-      "value": "Teko",
-      "type": "fontFamilies"
-    },
-    "buttons": {
-      "value": "Teko",
-      "type": "fontFamilies"
-    },
-    "sans_serif": {
-      "primary": {
-        "value": "Teko",
-        "type": "fontFamilies"
-      }
-    }
-  },
   "palette": {
     "brand": {
       "primary": {
@@ -114,7 +86,17 @@
           "fontFamily": "{font-families.sans_serif.primary}",
           "fontWeight": "400",
           "fontSize": "{font-size.4xs}",
-          "lineHeight": "{line-height.1_00}",
+          "lineHeight": "{line-height.comfortable}",
+          "letterSpacing": "{letter-spacing.extra-loose}"
+        },
+        "type": "typography"
+      },
+      "xs": {
+        "value": {
+          "fontFamily": "{font-families.sans_serif.primary}",
+          "fontWeight": "400",
+          "fontSize": "{font-size.4xs}",
+          "lineHeight": "{line-height.comfortable}",
           "letterSpacing": "{letter-spacing.extra-loose}"
         },
         "type": "typography"
@@ -124,7 +106,7 @@
           "fontFamily": "{font-families.sans_serif.primary}",
           "fontWeight": "400",
           "fontSize": "{font-size.3xs}",
-          "lineHeight": "{line-height.1_00}",
+          "lineHeight": "{line-height.comfortable}",
           "letterSpacing": "{letter-spacing.extra-loose}"
         },
         "type": "typography"
@@ -160,63 +142,17 @@
     },
     "space": {
       "compact": {
-        "value": "{size.xs}",
+        "value": "{space.xs}",
         "type": "dimension"
       },
       "cozy": {
-        "value": "{size.sm}",
+        "value": "{space.sm}",
         "type": "dimension"
       },
       "comfortable": {
         "value": "{space.md}",
         "type": "dimension"
-      },
-      "sm": {
-        "value": "{size.sm}",
-        "type": "dimension"
-      },
-      "xs": {
-        "value": "{size.xs}",
-        "type": "dimension"
       }
-    }
-  },
-  "font-weight": {
-    "thin": {
-      "value": "{font-weight.100}",
-      "type": "fontWeights"
-    },
-    "extra-light": {
-      "value": "{font-weight.200}",
-      "type": "fontWeights"
-    },
-    "light": {
-      "value": "{font-weight.300}",
-      "type": "fontWeights"
-    },
-    "regular": {
-      "value": "400",
-      "type": "fontWeights"
-    },
-    "medium": {
-      "value": "{font-weight.500}",
-      "type": "fontWeights"
-    },
-    "semi-bold": {
-      "value": "600",
-      "type": "fontWeights"
-    },
-    "bold": {
-      "value": "{font-weight.700}",
-      "type": "fontWeights"
-    },
-    "extra-bold": {
-      "value": "{font-weight.800}",
-      "type": "fontWeights"
-    },
-    "black": {
-      "value": "{font-weight.900}",
-      "type": "fontWeights"
     }
   }
 }
