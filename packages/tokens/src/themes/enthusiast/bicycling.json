@@ -81,7 +81,7 @@
       }
     },
     "typography": {
-      "sm": {
+      "xs": {
         "value": {
           "fontFamily": "{font-families.sans_serif.primary}",
           "fontWeight": "400",
@@ -91,7 +91,7 @@
         },
         "type": "typography"
       },
-      "xs": {
+      "sm": {
         "value": {
           "fontFamily": "{font-families.sans_serif.primary}",
           "fontWeight": "400",
@@ -152,6 +152,14 @@
       "comfortable": {
         "value": "{space.md}",
         "type": "dimension"
+      }
+    }
+  },
+  "font-families": {
+    "sans_serif": {
+      "primary": {
+        "value": "Teko",
+        "type": "fontFamilies"
       }
     }
   }
