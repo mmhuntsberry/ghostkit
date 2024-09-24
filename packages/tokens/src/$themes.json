@@ -4,7 +4,8 @@
     "name": "primitives",
     "group": "global",
     "selectedTokenSets": {
-      "primitives": "enabled"
+      "primitives": "enabled",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -14,20 +15,22 @@
     "group": "global",
     "selectedTokenSets": {
       "primitives": "enabled",
-      "alias": "enabled"
+      "alias": "enabled",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
   {
     "id": "a8395904ecd54c828855b55fc60d5914daeb19d0",
-    "name": "white-label",
-    "group": "global",
+    "name": "light",
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/white-label": "enabled"
+      "themes/white-label/light": "enabled",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
-    "$figmaStyleReferences": {}
+    "$figmaStyleReferences": {},
+    "group": "white-label"
   },
   {
     "id": "3451c340ea9857acaad5af28411e0f81f680d099",
@@ -36,7 +39,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/alta": "enabled"
+      "themes/alta": "enabled",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -47,7 +51,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/autos/autoweek": "source"
+      "themes/autos/autoweek": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -58,7 +63,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/enthusiast/best-products": "source"
+      "themes/enthusiast/best-products": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -69,7 +75,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/enthusiast/biography": "source"
+      "themes/enthusiast/biography": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -79,7 +86,7 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/enthusiast/bicycling": "enabled"
+      "themes/enthusiast/bicycling/light": "enabled"
     },
     "$figmaStyleReferences": {},
     "group": "global"
@@ -91,7 +98,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/autos/car-and-driver": "source"
+      "themes/autos/car-and-driver": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -102,7 +110,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/fashion/cosmopolitan": "source"
+      "themes/fashion/cosmopolitan": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -113,7 +122,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/lifestyle/country-living": "source"
+      "themes/lifestyle/country-living": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -124,7 +134,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/lifestyle/delish": "source"
+      "themes/lifestyle/delish": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -135,20 +146,22 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/fashion/esquire": "source"
+      "themes/fashion/esquire": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
   {
     "id": "73d5b0603b71496112be89fbb39a60188d859120",
-    "name": "elle",
+    "name": "light",
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/fashion/elle": "enabled"
+      "themes/fashion/elle/light": "enabled",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {},
-    "group": "global"
+    "group": "elle"
   },
   {
     "id": "3b4a1d369f12cdbf83478423764f7b0f7130c6a6",
@@ -157,7 +170,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/fashion/elle-decor": "source"
+      "themes/fashion/elle-decor": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -168,7 +182,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/lifestyle/good-housekeeping": "source"
+      "themes/lifestyle/good-housekeeping": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -179,7 +194,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/fashion/harpers-bazaar": "source"
+      "themes/fashion/harpers-bazaar": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -190,7 +206,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/lifestyle/house-beautiful": "source"
+      "themes/lifestyle/house-beautiful": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -201,7 +218,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/enthusiast/mens-health": "source"
+      "themes/enthusiast/mens-health": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -212,7 +230,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/enthusiast/oprah-daily": "source"
+      "themes/enthusiast/oprah-daily": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -223,7 +242,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/enthusiast/popular-mechanics": "source"
+      "themes/enthusiast/popular-mechanics": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -234,7 +254,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/lifestyle/prevention": "source"
+      "themes/lifestyle/prevention": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -245,7 +266,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/lifestyle/redbook": "source"
+      "themes/lifestyle/redbook": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   },
@@ -256,7 +278,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/autos/road-and-track": "source"
+      "themes/autos/road-and-track": "source",
+      "themes/enthusiast/bicycling/light": "disabled"
     },
     "$figmaStyleReferences": {}
   }
