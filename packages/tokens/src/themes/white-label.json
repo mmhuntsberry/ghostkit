@@ -141,7 +141,7 @@
         "value": {
           "fontFamily": "{font-families.sans_serif.primary}",
           "fontWeight": "600",
-          "fontSize": "{font-size.4xs}",
+          "fontSize": "{font-size.5xs}",
           "lineHeight": "{line-height.comfortable}",
           "letterSpacing": "{letter-spacing.comfortable}"
         },
@@ -232,11 +232,11 @@
                 "type": "color"
               },
               "hover": {
-                "value": "{palette.neutral.96}",
+                "value": "{palette.neutral.15}",
                 "type": "color"
               },
               "active": {
-                "value": "{palette.neutral.90}",
+                "value": "{palette.neutral.5}",
                 "type": "color"
               }
             }
@@ -257,6 +257,20 @@
                 "value": "{palette.neutral.9}",
                 "type": "color"
               }
+            },
+            "transparent": {
+              "default": {
+                "value": "{palette.neutral.96}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{palette.neutral.9}",
+                "type": "color"
+              },
+              "active": {
+                "value": "{palette.neutral.9}",
+                "type": "color"
+              }
             }
           }
         },
@@ -265,6 +279,20 @@
             "solid": {
               "default": {
                 "value": "{palette.neutral.9}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{palette.neutral.9}",
+                "type": "color"
+              },
+              "active": {
+                "value": "{palette.neutral.9}",
+                "type": "color"
+              }
+            },
+            "transparent": {
+              "default": {
+                "value": "{palette.neutral.96}",
                 "type": "color"
               },
               "hover": {

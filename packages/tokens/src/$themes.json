@@ -2,27 +2,21 @@
   {
     "id": "3e82fcd4e5aef9ac095ce65814c158753190d5aa",
     "name": "primitives",
-    "group": "global",
     "selectedTokenSets": {
-      "primitives": "enabled",
-      "themes/white-label": "disabled",
-      "themes/enthusiast/bicycling": "disabled",
-      "themes/fashion/elle": "disabled"
+      "primitives": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "$figmaStyleReferences": {},
+    "group": "global"
   },
   {
     "id": "ef7ff7a13e5bd1a1deb05e4d23cead3ef35263ae",
     "name": "alias",
-    "group": "global",
     "selectedTokenSets": {
       "primitives": "enabled",
-      "alias": "enabled",
-      "themes/white-label": "disabled",
-      "themes/enthusiast/bicycling": "disabled",
-      "themes/fashion/elle": "disabled"
+      "alias": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "$figmaStyleReferences": {},
+    "group": "global"
   },
   {
     "id": "a8395904ecd54c828855b55fc60d5914daeb19d0",
@@ -30,22 +24,7 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/white-label": "enabled",
-      "themes/enthusiast/bicycling": "disabled",
-      "themes/fashion/elle": "disabled"
-    },
-    "$figmaStyleReferences": {},
-    "group": "global"
-  },
-  {
-    "id": "73d5b0603b71496112be89fbb39a60188d859120",
-    "name": "elle",
-    "selectedTokenSets": {
-      "primitives": "enabled",
-      "alias": "enabled",
-      "themes/white-label": "disabled",
-      "themes/enthusiast/bicycling": "disabled",
-      "themes/fashion/elle": "enabled"
+      "themes/white-label": "enabled"
     },
     "$figmaStyleReferences": {},
     "group": "global"
@@ -59,6 +38,17 @@
       "alias": "enabled",
       "themes/enthusiast/bicycling": "enabled"
     },
+    "group": "global"
+  },
+  {
+    "id": "73d5b0603b71496112be89fbb39a60188d859120",
+    "name": "elle",
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/fashion/elle": "enabled"
+    },
+    "$figmaStyleReferences": {},
     "group": "global"
   }
 ]

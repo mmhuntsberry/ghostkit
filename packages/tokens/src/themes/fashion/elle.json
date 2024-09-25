@@ -242,26 +242,6 @@
                 "value": "#fff",
                 "type": "color"
               }
-            },
-            "transparent": {
-              "default": {
-                "on_light": {
-                  "value": "transparent",
-                  "type": "color"
-                }
-              },
-              "hover": {
-                "on_light": {
-                  "value": "{palette.neutral.96}",
-                  "type": "color"
-                }
-              },
-              "active": {
-                "on_light": {
-                  "value": "{palette.neutral.90}",
-                  "type": "color"
-                }
-              }
             }
           }
         },

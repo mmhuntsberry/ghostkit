@@ -224,32 +224,12 @@
                 "type": "color"
               },
               "hover": {
-                "value": "{palette.neutral.15}",
+                "value": "#525252",
                 "type": "color"
               },
               "active": {
-                "value": "{palette.neutral.5}",
+                "value": "#525252",
                 "type": "color"
-              }
-            },
-            "transparent": {
-              "default": {
-                "on_light": {
-                  "value": "transparent",
-                  "type": "color"
-                }
-              },
-              "hover": {
-                "on_light": {
-                  "value": "{palette.neutral.96}",
-                  "type": "color"
-                }
-              },
-              "active": {
-                "on_light": {
-                  "value": "{palette.neutral.90}",
-                  "type": "color"
-                }
               }
             }
           }
