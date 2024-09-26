@@ -5,7 +5,7 @@ import { BrandContext } from "../../../../.storybook/preview";
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
   disabled?: boolean;
-  size?: "sm" | "md" | "lg";
+  size?: "xs" | "sm" | "default";
   brand?: string;
 }
 
@@ -24,21 +24,27 @@ const StyledButton = styled.button<ButtonProps>`
   cursor: pointer;
   display: flex;
   gap: ${({ brand }) => `var(--${brand}-button-gap-comfortable)`};
-  font-weight: ${({ brand, size }) =>
-    `var(--${brand}-button-${size}-font-weight)`};
-  font-size: ${({ brand, size }) => `var(--${brand}-button-${size}-font-size)`};
-  line-height: ${({ brand, size }) =>
-    `var(--${brand}-button-${size}-line-height)`};
-  letter-spacing: ${({ brand, size }) =>
-    `var(--${brand}-button-${size}-letter-spacing)`};
+  font-weight: ${({ brand, size = "default" }) =>
+    `var(--${brand}-button-typography-${size}-font-weight)`};
+  font-size: ${({ brand, size = "default" }) =>
+    `var(--${brand}-button-typography-${size}-font-size)`};
+  line-height: ${({ brand, size = "default" }) =>
+    `var(--${brand}-button-typography-${size}-line-height)`};
+  letter-spacing: ${({ brand, size = "default" }) =>
+    `var(--${brand}-button-typography-${size}-letter-spacing)`};
   font-family: ${({ brand }) =>
     `var(--${brand}-button-typography-default-font-family)`};
-  letter-spacing: ${({ brand }) => `var(--letter-spacing-extra-loose)`};
+
   justify-content: center;
   outline: none;
   padding-block: ${({ brand }) => `var(--${brand}-button-size-default)`};
   padding-inline: var(--bicycling-button-space-comfortable);
   text-transform: var(--uppercase);
+
+  span {
+    transform: ${({ brand }) =>
+      brand === "bicycling" ? `translateY(2px)` : "none"};
+  }
 
   transition: background 0.2s ease-in-out;
 
@@ -65,7 +71,7 @@ const StyledButton = styled.button<ButtonProps>`
 export const Button: React.FC<ButtonProps> = ({
   children,
   disabled = false,
-  size = "md",
+  size = "default",
   ...props
 }) => {
   const brand = useContext(BrandContext);

@@ -14,7 +14,8 @@ export const Primary = {
 export const IconRight = {
   render: (args: ButtonProps) => (
     <Button>
-      Label <ArrowRight size={24} />
+      <span>Label</span>
+      <ArrowRight size={24} />
     </Button>
   ),
 };
