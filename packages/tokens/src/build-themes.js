@@ -117,7 +117,7 @@ async function run() {
     // Register global files if applicable
     registerGlobalFiles(config, theme.name);
 
-    const brands = ["bicycling", "white-label"];
+    const brands = ["bicycling", "white-label", "elle"];
     registerBrandFiles(config, theme.name, brands, theme.selectedTokenSets);
 
     // Extend, clean, and build with the generated configuration

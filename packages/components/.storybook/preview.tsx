@@ -2,6 +2,7 @@
 import "../../../node_modules/@mmhuntsberry/tokens/build/css/index.css";
 import "@mmhuntsberry/tokens/themes/white-label";
 import "@mmhuntsberry/tokens/themes/bicycling";
+import "@mmhuntsberry/tokens/themes/elle";
 // import "@mmhuntsberry/fonts";
 import React, { useEffect } from "react";
 import { StoryContext } from "@storybook/react";
@@ -51,7 +52,7 @@ export const globalTypes = {
         // "cosmopolitan",
         // "country-living",
         // "delish",
-        // "elle",
+        "elle",
         // "elle-decor",
         // "esquire",
         // "good-housekeeping",
