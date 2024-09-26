@@ -24,17 +24,16 @@ const StyledButton = styled.button<ButtonProps>`
   cursor: pointer;
   display: flex;
   gap: ${({ brand }) => `var(--${brand}-button-gap-comfortable)`};
-  font: ${({ brand }) => `var(--${brand}-button-typography-default)`};
-  /* TODO!: Make this dynamic based on brand */
-  /* NEED TO SEPARATE LETTER SPACING */
 
-  /* font-weight: 400; */
-  /* font-family: ${({ brand }) =>
-    `var(--${brand}-font-families-sans_serif-primary)`};
-  font-size: ${({ brand }) =>
-    `var(--${brand}-components-button-font-size-default)`};
-  font-weight: ${({ brand }) => `var(--${brand}-font-weight-semibold)`};
-  line-height: ${({ brand }) => `var(--${brand}-line-height-comfortable)`}; */
+  font-weight: ${({ brand, size }) =>
+    `var(--${brand}-button-${size}-font-weight)`};
+  font-size: ${({ brand, size }) => `var(--${brand}-button-${size}-font-size)`};
+  line-height: ${({ brand, size }) =>
+    `var(--${brand}-button-${size}-line-height)`};
+  letter-spacing: ${({ brand, size }) =>
+    `var(--${brand}-button-${size}-letter-spacing)`};
+  font-family: ${({ brand }) =>
+    `var(--${brand}-button-typography-default-font-family)`};
   letter-spacing: ${({ brand }) => `var(--letter-spacing-extra-loose)`};
   justify-content: center;
   outline: none;

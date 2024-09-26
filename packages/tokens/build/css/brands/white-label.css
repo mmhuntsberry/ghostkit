@@ -36,6 +36,19 @@
 --white-label-button-typography-xs: 600 0.833rem/1 Inter;
 --white-label-button-typography-sm: 600 1rem/1 Inter;
 --white-label-button-typography-default: 600 1.2rem/1 Inter;
+=======
+--white-label-button-typography-default-font-family: Inter;
+--white-label-button-typography-default-font-weight: 600;
+--white-label-button-typography-default-font-size: 1.2rem;
+--white-label-button-typography-default-line-height: 1;
+--white-label-button-typography-default-letter-spacing: -0.02em;
+--white-label-button-typography-sm-font-family: Inter;
+--white-label-button-typography-sm-font-weight: 600;
+--white-label-button-typography-sm-font-size: 1rem;
+--white-label-button-typography-sm-line-height: 1;
+--white-label-button-typography-sm-letter-spacing: -0.02em;
+--white-label-button-shape-default: 4px;
+>>>>>>> 7943a5f (feat: update transform and expand type properties)
 --white-label-button-size-xs: 4px;
 --white-label-button-size-sm: 8px;
 --white-label-button-size-default: 0.75rem;

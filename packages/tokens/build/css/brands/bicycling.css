@@ -1,81 +1,110 @@
-
-:root, 
+:root,
 :host {
---bicycling-palette-brand-primary: #067EA7;
---bicycling-palette-brand-secondary: #525252;
---bicycling-button-typography-xs: 400 1rem/1 Teko;
---bicycling-button-typography-sm: 400 1rem/1 Teko;
---bicycling-button-typography-default: 400 1.2rem/1 Teko;
---bicycling-button-size-xs: 4px;
---bicycling-button-size-sm: 8px;
---bicycling-button-size-default: 0.75rem;
---bicycling-button-gap-comfortable: 8px;
---bicycling-button-space-compact: 4px;
---bicycling-button-space-cozy: 8px;
---bicycling-button-space-comfortable: 16px;
---bicycling-button-shape-default: 0px;
---bicycling-button-light-color-background-primary-solid-default: #067EA7;
---bicycling-button-light-color-background-primary-solid-hover: #525252;
---bicycling-button-light-color-background-primary-solid-active: #525252;
---bicycling-button-light-color-background-primary-transparent-default: transparent;
---bicycling-button-light-color-background-primary-transparent-hover: hsla(0, 0%, 96%, 1);
---bicycling-button-light-color-background-primary-transparent-active: hsla(0, 0%, 90%, 1);
---bicycling-button-light-color-text-primary-solid-default: hsla(0, 0%, 96%, 1);
---bicycling-button-light-color-text-primary-solid-hover: hsla(0, 0%, 96%, 1);
---bicycling-button-light-color-text-primary-solid-active: hsla(0, 0%, 96%, 1);
---bicycling-button-light-color-icon-primary-solid-default: hsla(0, 0%, 96%, 1);
---bicycling-button-light-color-icon-primary-solid-hover: hsla(0, 0%, 96%, 1);
---bicycling-button-light-color-icon-primary-solid-active: hsla(0, 0%, 96%, 1);
---bicycling-button-light-border-primary-solid-default-border: solid;
---bicycling-button-light-border-primary-solid-default-border-color: #067EA7;
---bicycling-button-light-border-primary-solid-default-border-width: 1px;
---bicycling-button-light-border-primary-solid-hover-border: solid;
---bicycling-button-light-border-primary-solid-hover-border-color: #525252;
---bicycling-button-light-border-primary-solid-hover-border-width: 1px;
---bicycling-button-light-border-primary-solid-active-border: solid;
---bicycling-button-light-border-primary-solid-active-border-color: #525252;
---bicycling-button-light-border-primary-solid-active-border-width: 1px;
---bicycling-button-light-border-primary-transparent-default-border: solid;
---bicycling-button-light-border-primary-transparent-default-border-color: transparent;
---bicycling-button-light-border-primary-transparent-default-border-width: 1px;
---bicycling-button-light-border-primary-transparent-hover-border: solid;
---bicycling-button-light-border-primary-transparent-hover-border-color: hsla(0, 0%, 96%, 1);
---bicycling-button-light-border-primary-transparent-hover-border-width: 1px;
---bicycling-button-light-border-primary-transparent-active-border: solid;
---bicycling-button-light-border-primary-transparent-active-border-color: hsla(0, 0%, 90%, 1);
---bicycling-button-light-border-primary-transparent-active-border-width: 1px;
---bicycling-button-dark-color-background-primary-solid-default: #067EA7;
---bicycling-button-dark-color-background-primary-solid-hover: #525252;
---bicycling-button-dark-color-background-primary-solid-active: #525252;
---bicycling-button-dark-color-text-primary-solid-default: hsla(0, 0%, 96%, 1);
---bicycling-button-dark-color-text-primary-solid-hover: hsla(0, 0%, 96%, 1);
---bicycling-button-dark-color-text-primary-solid-active: hsla(0, 0%, 96%, 1);
---bicycling-button-dark-color-icon-primary-solid-default: hsla(0, 0%, 96%, 1);
---bicycling-button-dark-color-icon-primary-solid-hover: hsla(0, 0%, 96%, 1);
---bicycling-button-dark-color-icon-primary-solid-active: hsla(0, 0%, 96%, 1);
---bicycling-button-dark-border-primary-solid-default-border: solid;
---bicycling-button-dark-border-primary-solid-default-border-color: #067EA7;
---bicycling-button-dark-border-primary-solid-default-border-width: 1px;
---bicycling-button-dark-border-primary-solid-hover-border: solid;
---bicycling-button-dark-border-primary-solid-hover-border-color: #525252;
---bicycling-button-dark-border-primary-solid-hover-border-width: 1px;
---bicycling-button-dark-border-primary-solid-active-border: solid;
---bicycling-button-dark-border-primary-solid-active-border-color: #525252;
---bicycling-button-dark-border-primary-solid-active-border-width: 1px;
---bicycling-button-dark-border-primary-solid-disabled-border: solid;
---bicycling-button-dark-border-primary-solid-disabled-border-color: #067EA7;
---bicycling-button-dark-border-primary-solid-disabled-border-width: 1px;
---bicycling-button-dark-border-primary-transparent-default-border: solid;
---bicycling-button-dark-border-primary-transparent-default-border-color: #067EA7;
---bicycling-button-dark-border-primary-transparent-default-border-width: 1px;
---bicycling-button-dark-border-primary-transparent-hover-border: solid;
---bicycling-button-dark-border-primary-transparent-hover-border-color: #525252;
---bicycling-button-dark-border-primary-transparent-hover-border-width: 1px;
---bicycling-button-dark-border-primary-transparent-active-border: solid;
---bicycling-button-dark-border-primary-transparent-active-border-color: #525252;
---bicycling-button-dark-border-primary-transparent-active-border-width: 1px;
---bicycling-button-dark-border-primary-transparent-disabled-border: solid;
---bicycling-button-dark-border-primary-transparent-disabled-border-color: #067EA7;
---bicycling-button-dark-border-primary-transparent-disabled-border-width: 1px;
---bicycling-font-families-sans_serif-primary: Teko;
+  --bicycling-palette-brand-primary: #067ea7;
+  --bicycling-palette-brand-secondary: #525252;
+  --bicycling-button-typography-xs: 400 1rem/1 Teko;
+  --bicycling-button-typography-sm: 400 1rem/1 Teko;
+  --bicycling-button-typography-default: 400 1.2rem/1 Teko;
+  --bicycling-button-size-xs: 4px;
+  --bicycling-button-size-sm: 8px;
+  --bicycling-button-size-default: 0.75rem;
+  --bicycling-button-gap-comfortable: 8px;
+  --bicycling-button-space-compact: 4px;
+  --bicycling-button-space-cozy: 8px;
+  --bicycling-button-space-comfortable: 16px;
+  --bicycling-button-shape-default: 0px;
+  --bicycling-button-light-color-background-primary-solid-default: #067ea7;
+  --bicycling-button-light-color-background-primary-solid-hover: #525252;
+  --bicycling-button-light-color-background-primary-solid-active: #525252;
+  --bicycling-button-light-color-background-primary-transparent-default: transparent;
+  --bicycling-button-light-color-background-primary-transparent-hover: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --bicycling-button-light-color-background-primary-transparent-active: hsla(
+    0,
+    0%,
+    90%,
+    1
+  );
+  --bicycling-button-light-color-text-primary-solid-default: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --bicycling-button-light-color-text-primary-solid-hover: hsla(0, 0%, 96%, 1);
+  --bicycling-button-light-color-text-primary-solid-active: hsla(0, 0%, 96%, 1);
+  --bicycling-button-light-color-icon-primary-solid-default: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --bicycling-button-light-color-icon-primary-solid-hover: hsla(0, 0%, 96%, 1);
+  --bicycling-button-light-color-icon-primary-solid-active: hsla(0, 0%, 96%, 1);
+  --bicycling-button-light-border-primary-solid-default-border: solid;
+  --bicycling-button-light-border-primary-solid-default-border-color: #067ea7;
+  --bicycling-button-light-border-primary-solid-default-border-width: 1px;
+  --bicycling-button-light-border-primary-solid-hover-border: solid;
+  --bicycling-button-light-border-primary-solid-hover-border-color: #525252;
+  --bicycling-button-light-border-primary-solid-hover-border-width: 1px;
+  --bicycling-button-light-border-primary-solid-active-border: solid;
+  --bicycling-button-light-border-primary-solid-active-border-color: #525252;
+  --bicycling-button-light-border-primary-solid-active-border-width: 1px;
+  --bicycling-button-light-border-primary-transparent-default-border: solid;
+  --bicycling-button-light-border-primary-transparent-default-border-color: transparent;
+  --bicycling-button-light-border-primary-transparent-default-border-width: 1px;
+  --bicycling-button-light-border-primary-transparent-hover-border: solid;
+  --bicycling-button-light-border-primary-transparent-hover-border-color: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --bicycling-button-light-border-primary-transparent-hover-border-width: 1px;
+  --bicycling-button-light-border-primary-transparent-active-border: solid;
+  --bicycling-button-light-border-primary-transparent-active-border-color: hsla(
+    0,
+    0%,
+    90%,
+    1
+  );
+  --bicycling-button-light-border-primary-transparent-active-border-width: 1px;
+  --bicycling-button-dark-color-background-primary-solid-default: #067ea7;
+  --bicycling-button-dark-color-background-primary-solid-hover: #525252;
+  --bicycling-button-dark-color-background-primary-solid-active: #525252;
+  --bicycling-button-dark-color-text-primary-solid-default: hsla(0, 0%, 96%, 1);
+  --bicycling-button-dark-color-text-primary-solid-hover: hsla(0, 0%, 96%, 1);
+  --bicycling-button-dark-color-text-primary-solid-active: hsla(0, 0%, 96%, 1);
+  --bicycling-button-dark-color-icon-primary-solid-default: hsla(0, 0%, 96%, 1);
+  --bicycling-button-dark-color-icon-primary-solid-hover: hsla(0, 0%, 96%, 1);
+  --bicycling-button-dark-color-icon-primary-solid-active: hsla(0, 0%, 96%, 1);
+  --bicycling-button-dark-border-primary-solid-default-border: solid;
+  --bicycling-button-dark-border-primary-solid-default-border-color: #067ea7;
+  --bicycling-button-dark-border-primary-solid-default-border-width: 1px;
+  --bicycling-button-dark-border-primary-solid-hover-border: solid;
+  --bicycling-button-dark-border-primary-solid-hover-border-color: #525252;
+  --bicycling-button-dark-border-primary-solid-hover-border-width: 1px;
+  --bicycling-button-dark-border-primary-solid-active-border: solid;
+  --bicycling-button-dark-border-primary-solid-active-border-color: #525252;
+  --bicycling-button-dark-border-primary-solid-active-border-width: 1px;
+  --bicycling-button-dark-border-primary-solid-disabled-border: solid;
+  --bicycling-button-dark-border-primary-solid-disabled-border-color: #067ea7;
+  --bicycling-button-dark-border-primary-solid-disabled-border-width: 1px;
+  --bicycling-button-dark-border-primary-transparent-default-border: solid;
+  --bicycling-button-dark-border-primary-transparent-default-border-color: #067ea7;
+  --bicycling-button-dark-border-primary-transparent-default-border-width: 1px;
+  --bicycling-button-dark-border-primary-transparent-hover-border: solid;
+  --bicycling-button-dark-border-primary-transparent-hover-border-color: #525252;
+  --bicycling-button-dark-border-primary-transparent-hover-border-width: 1px;
+  --bicycling-button-dark-border-primary-transparent-active-border: solid;
+  --bicycling-button-dark-border-primary-transparent-active-border-color: #525252;
+  --bicycling-button-dark-border-primary-transparent-active-border-width: 1px;
+  --bicycling-button-dark-border-primary-transparent-disabled-border: solid;
+  --bicycling-button-dark-border-primary-transparent-disabled-border-color: #067ea7;
+  --bicycling-button-dark-border-primary-transparent-disabled-border-width: 1px;
+  --bicycling-font-families-sans_serif-primary: Teko;
 }
