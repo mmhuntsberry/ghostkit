@@ -1,0 +1,118 @@
+{
+  "primitive": {
+    "brand": {
+      "sky_blue": {
+        "value": "#3777BC",
+        "type": "color"
+      },
+      "soft_white": {
+        "value": "#FFFFFFD9",
+        "type": "color"
+      }
+    }
+  },
+  "component": {
+    "search": {
+      "on_light": {
+        "background": {
+          "color": {
+            "primary": {
+              "solid": {
+                "default": {
+                  "value": "{palette.neutral.98}",
+                  "type": "color"
+                }
+              }
+            }
+          }
+        },
+        "border": {
+          "primary": {
+            "solid": {
+              "default": {
+                "value": {
+                  "borderColor": "{palette.neutral.2}"
+                },
+                "type": "composition"
+              }
+            }
+          }
+        },
+        "text": {
+          "color": {
+            "primary": {
+              "solid": {
+                "default": {
+                  "value": "{palette.neutral.25}",
+                  "type": "color"
+                }
+              }
+            }
+          }
+        },
+        "icon": {
+          "color": {
+            "primary": {
+              "solid": {
+                "default": {
+                  "value": "{palette.neutral.2}",
+                  "type": "color"
+                }
+              }
+            }
+          }
+        }
+      },
+      "on_dark": {
+        "background": {
+          "color": {
+            "primary": {
+              "solid": {
+                "default": {
+                  "value": "{palette.neutral.2}",
+                  "type": "color"
+                }
+              }
+            }
+          }
+        },
+        "border": {
+          "primary": {
+            "solid": {
+              "default": {
+                "value": {
+                  "borderColor": "{primitive.brand.soft_white}"
+                },
+                "type": "composition"
+              }
+            }
+          }
+        },
+        "text": {
+          "color": {
+            "primary": {
+              "solid": {
+                "default": {
+                  "value": "{palette.neutral.64}",
+                  "type": "color"
+                }
+              }
+            }
+          }
+        },
+        "icon": {
+          "color": {
+            "primary": {
+              "solid": {
+                "default": {
+                  "value": "{palette.neutral.98}",
+                  "type": "color"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

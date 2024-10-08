@@ -1,8 +1,12 @@
 {
   "palette": {
     "neutral": {
+      "0": {
+        "value": "#000",
+        "type": "color"
+      },
       "2": {
-        "value": "hsla(0, 0%, 2%, 1)",
+        "value": "{primitive.palette.gray.2}",
         "type": "color"
       },
       "5": {
@@ -47,6 +51,10 @@
       },
       "98": {
         "value": "hsla(0, 0%, 98%, 1)",
+        "type": "color"
+      },
+      "100": {
+        "value": "hsla(0, 0%, 100%, 1)",
         "type": "color"
       }
     },

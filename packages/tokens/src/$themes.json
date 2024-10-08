@@ -42,13 +42,39 @@
   },
   {
     "id": "73d5b0603b71496112be89fbb39a60188d859120",
-    "name": "elle",
+    "name": "esquire",
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/fashion/elle": "enabled"
+      "themes/fashion/esquire": "enabled",
+      "themes/white-label": "enabled"
     },
     "$figmaStyleReferences": {},
+    "group": "fashion"
+  },
+  {
+    "id": "a61935ab8b3090c176327f316513acb84f092dda",
+    "name": "elle",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/white-label": "enabled",
+      "themes/fashion/elle": "enabled"
+    },
     "group": "global"
+  },
+  {
+    "id": "55888248163dd255cb1cf38ac2348990c0be8e94",
+    "name": "elle_decor",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/white-label": "enabled",
+      "themes/enthusiast/bicycling": "enabled",
+      "themes/fashion/elle_decor": "enabled"
+    },
+    "group": "fashion"
   }
 ]

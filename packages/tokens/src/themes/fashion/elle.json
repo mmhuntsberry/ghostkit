@@ -1,99 +1,25 @@
 {
-  "component": {
-    "button": {
-      "on_light": {
-        "color": {
-          "background": {
-            "primary": {
-              "solid": {
-                "default": {
-                  "value": "{palette.brand.primary}",
-                  "type": "color"
-                },
-                "hover": {
-                  "value": "#fff",
-                  "type": "color"
-                },
-                "active": {
-                  "value": "#fff",
-                  "type": "color"
-                }
-              }
-            }
-          },
-          "text": {
-            "primary": {
-              "solid": {
-                "default": {
-                  "value": "#fff",
-                  "type": "color"
-                },
-                "hover": {
-                  "value": "#000",
-                  "type": "color"
-                },
-                "active": {
-                  "value": "#000",
-                  "type": "color"
-                }
-              }
-            }
-          }
-        },
-        "border": {
-          "primary": {
-            "solid": {
-              "default": {
-                "value": {
-                  "border": "style",
-                  "borderColor": "{component.button.on_light.color.background.primary.solid.default}",
-                  "borderWidth": "{border-width.thin}"
-                },
-                "type": "composition"
-              },
-              "hover": {
-                "value": {
-                  "border": "style",
-                  "borderColor": "{component.button.on_light.color.background.primary.solid.default}",
-                  "borderWidth": "{border-width.thin}"
-                },
-                "type": "composition"
-              },
-              "active": {
-                "value": {
-                  "border": "style",
-                  "borderColor": "{component.button.on_light.color.background.primary.solid.default}",
-                  "borderWidth": "{border-width.thin}"
-                },
-                "type": "composition"
-              }
-            }
-          }
-        }
-      },
-      "shape": {
-        "default": {
-          "value": "{shape.square}",
-          "type": "dimension"
-        }
-      },
-      "space": {
-        "comfortable": {
-          "value": "{size.sm}",
-          "type": "dimension"
-        },
-        "default": {
-          "value": "{size.md}",
-          "type": "dimension"
-        }
-      }
+  "brand": {
+    "primary": {
+      "value": "#000",
+      "type": "color"
     }
   },
-  "palette": {
-    "brand": {
-      "primary": {
-        "value": "#000",
-        "type": "color"
+  "component": {
+    "search": {
+      "on_light": {
+        "background": {
+          "color": {
+            "primary": {
+              "solid": {
+                "default": {
+                  "value": "{primitive.brand.soft_white}",
+                  "type": "color"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
