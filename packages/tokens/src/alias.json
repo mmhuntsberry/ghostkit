@@ -457,28 +457,32 @@
     }
   },
   "line-height": {
-    "compact": {
+    "xs": {
       "value": "{line-height.0_60}",
       "type": "lineHeights"
     },
-    "cozy": {
+    "sm": {
       "value": "{line-height.0_80}",
       "type": "lineHeights"
     },
-    "comfortable": {
-      "value": "{line-height.1_00}",
+    "md": {
+      "value": "{line-height.default}",
       "type": "lineHeights"
     },
-    "spacious": {
+    "lg": {
       "value": "{line-height.1_20}",
       "type": "lineHeights"
     },
-    "loose": {
+    "2xl": {
       "value": "{line-height.1_40}",
       "type": "lineHeights"
     },
-    "extra-loose": {
+    "3xl": {
       "value": "{line-height.1_60}",
+      "type": "lineHeights"
+    },
+    "default": {
+      "value": "{line-height.1_00}",
       "type": "lineHeights"
     }
   },
@@ -487,28 +491,32 @@
       "value": "{letter-spacing.0}",
       "type": "letterSpacing"
     },
-    "compact": {
+    "2xs": {
       "value": "{letter-spacing.neg0_08}",
       "type": "letterSpacing"
     },
-    "cozy": {
+    "xs": {
       "value": "{letter-spacing.neg0_04}",
       "type": "letterSpacing"
     },
-    "comfortable": {
+    "sm": {
       "value": "{letter-spacing.neg0_02}",
       "type": "letterSpacing"
     },
-    "spacious": {
+    "lg": {
       "value": "{letter-spacing.0_02}",
       "type": "letterSpacing"
     },
-    "loose": {
+    "2xl": {
       "value": "{letter-spacing.0_04}",
       "type": "letterSpacing"
     },
-    "extra-loose": {
+    "3xl": {
       "value": "{letter-spacing.0_08}",
+      "type": "letterSpacing"
+    },
+    "default": {
+      "value": "{letter-spacing.none}",
       "type": "letterSpacing"
     }
   },
@@ -570,80 +578,6 @@
     "desktop": {
       "value": "{layout.1600}",
       "type": "dimension"
-    }
-  },
-  "theme": {
-    "hds": {
-      "color": {
-        "surface": {
-          "primary": {
-            "light": {
-              "value": "{palette.neutral.96}",
-              "type": "color",
-              "description": "The primary background-color for a surface. "
-            },
-            "dark": {
-              "value": "{palette.neutral.9}",
-              "type": "color",
-              "description": "The primary background-color for a surface. "
-            }
-          },
-          "brand": {
-            "primary": {
-              "light": {
-                "value": "{palette.neutral.96}",
-                "type": "color",
-                "description": "The primary background-color for a surface. "
-              },
-              "dark": {
-                "value": "{palette.neutral.9}",
-                "type": "color",
-                "description": "The primary background-color for a surface. "
-              }
-            }
-          }
-        },
-        "text": {
-          "primary": {
-            "on_light": {
-              "value": "{palette.neutral.9}",
-              "type": "color",
-              "description": "The primary text color on the primary light background surface."
-            },
-            "on_dark": {
-              "value": "{palette.neutral.96}",
-              "type": "color",
-              "description": "The primary text color on the primary light background surface."
-            }
-          },
-          "brand": {
-            "primary": {
-              "on_light": {
-                "value": "{palette.neutral.9}",
-                "type": "color",
-                "description": "The primary text color on the primary light background surface."
-              },
-              "on_dark": {
-                "value": "{palette.neutral.96}",
-                "type": "color",
-                "description": "The primary text color on the primary light background surface."
-              }
-            }
-          },
-          "error": {
-            "on_light": {
-              "value": "{palette.danger.63}",
-              "type": "color",
-              "description": "The primary text color on the primary light background surface."
-            },
-            "on_dark": {
-              "value": "{palette.danger.49}",
-              "type": "color",
-              "description": "The primary text color on the primary light background surface."
-            }
-          }
-        }
-      }
     }
   },
   "size": {

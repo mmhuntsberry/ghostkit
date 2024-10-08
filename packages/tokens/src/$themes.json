@@ -3,7 +3,8 @@
     "id": "3e82fcd4e5aef9ac095ce65814c158753190d5aa",
     "name": "primitives",
     "selectedTokenSets": {
-      "primitives": "enabled"
+      "primitives": "enabled",
+      "themes/enthusiast/biography": "disabled"
     },
     "$figmaStyleReferences": {},
     "group": "global"
@@ -13,7 +14,8 @@
     "name": "alias",
     "selectedTokenSets": {
       "primitives": "enabled",
-      "alias": "enabled"
+      "alias": "enabled",
+      "themes/enthusiast/biography": "disabled"
     },
     "$figmaStyleReferences": {},
     "group": "global"
@@ -24,7 +26,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/white-label": "enabled"
+      "themes/white-label": "enabled",
+      "themes/enthusiast/biography": "disabled"
     },
     "$figmaStyleReferences": {},
     "group": "global"
@@ -36,7 +39,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/enthusiast/bicycling": "enabled"
+      "themes/enthusiast/bicycling": "enabled",
+      "themes/enthusiast/biography": "disabled"
     },
     "group": "global"
   },
@@ -46,7 +50,8 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/fashion/elle": "enabled"
+      "themes/fashion/elle": "enabled",
+      "themes/enthusiast/biography": "disabled"
     },
     "$figmaStyleReferences": {},
     "group": "global"
