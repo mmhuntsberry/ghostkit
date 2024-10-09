@@ -1,0 +1,22 @@
+{
+  "primitive": {
+    "brand": {
+      "crimson_red": {
+        "value": "#B20B16",
+        "type": "color"
+      },
+      "soft_gray": {
+        "value": "#F3F3F3",
+        "type": "color"
+      },
+      "golden_yellow": {
+        "value": "#F2BD33",
+        "type": "color"
+      },
+      "translucent_white": {
+        "value": "#FFFFFFD9",
+        "type": "color"
+      }
+    }
+  }
+}

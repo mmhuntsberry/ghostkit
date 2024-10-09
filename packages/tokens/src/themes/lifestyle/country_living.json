@@ -1,0 +1,38 @@
+{
+  "primitive": {
+    "brand": {
+      "deep_teal": {
+        "value": "#0A5C80",
+        "type": "color"
+      },
+      "sky_blue": {
+        "value": "#3E93C3",
+        "type": "color"
+      },
+      "ivory_white": {
+        "value": "#FFF9ED",
+        "type": "color"
+      },
+      "light_mist": {
+        "value": "#E4EFF1",
+        "type": "color"
+      },
+      "warm_gray": {
+        "value": "#78756B",
+        "type": "color"
+      },
+      "pale_aqua_blue": {
+        "value": "#9ECDE1",
+        "type": "color"
+      },
+      "soft_sky": {
+        "value": "#CDE5F0",
+        "type": "color"
+      },
+      "aqua_teal": {
+        "value": "#009DA8",
+        "type": "color"
+      }
+    }
+  }
+}

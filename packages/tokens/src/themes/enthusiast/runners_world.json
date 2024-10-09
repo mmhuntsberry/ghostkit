@@ -1,60 +1,32 @@
 {
   "primitive": {
     "brand": {
-      "cherry_red": {
-        "value": "#E61957",
+      "aqua_blue": {
+        "value": "#59E7ED",
         "type": "color"
       },
-      "forest_green": {
-        "value": "#166534",
+      "bright_cyan": {
+        "value": "#17D0D8",
         "type": "color"
       },
-      "lime_green": {
-        "value": "#BEF264",
+      "medium_gray": {
+        "value": "#757575",
         "type": "color"
       },
-      "sunshine_yellow": {
-        "value": "#FDE047",
+      "translucent_aqua_blue": {
+        "value": "#59E7ED66",
         "type": "color"
       },
-      "royal_purple": {
-        "value": "#4A044E",
+      "slate_gray": {
+        "value": "#5B5B5B",
         "type": "color"
       },
-      "sky_blue": {
-        "value": "#BAE6FD",
+      "burnt_orange": {
+        "value": "#FF7D46",
         "type": "color"
       },
-      "soft_lavender": {
-        "value": "#F6F3F6",
-        "type": "color"
-      },
-      "burgundy_red": {
-        "value": "#881337",
-        "type": "color"
-      },
-      "sand_beige": {
-        "value": "#F0E2CE",
-        "type": "color"
-      },
-      "peach_orange": {
-        "value": "#FDBA74",
-        "type": "color"
-      },
-      "pale_blue": {
-        "value": "#BFDBFE",
-        "type": "color"
-      },
-      "caramel_brown": {
-        "value": "#C09175",
-        "type": "color"
-      },
-      "deep_rose": {
-        "value": "#9D174D",
-        "type": "color"
-      },
-      "ocean_teal": {
-        "value": "#0C4A6E",
+      "pale_aqua": {
+        "value": "#E4F8F8",
         "type": "color"
       }
     }

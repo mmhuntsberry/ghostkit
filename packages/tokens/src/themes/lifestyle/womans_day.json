@@ -1,0 +1,22 @@
+{
+  "primitive": {
+    "brand": {
+      "fire_red": {
+        "value": "#D80900",
+        "type": "color"
+      },
+      "royal_purple": {
+        "value": "#683D85",
+        "type": "color"
+      },
+      "lavender_mist": {
+        "value": "#EEE7F3",
+        "type": "color"
+      },
+      "tomato_red": {
+        "value": "#EE4741",
+        "type": "color"
+      }
+    }
+  }
+}

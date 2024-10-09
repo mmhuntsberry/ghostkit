@@ -465,58 +465,66 @@
     }
   },
   "line-height": {
-    "compact": {
+    "xs": {
       "value": "{line-height.0_60}",
       "type": "lineHeights"
     },
-    "cozy": {
+    "sm": {
       "value": "{line-height.0_80}",
       "type": "lineHeights"
     },
-    "comfortable": {
+    "md": {
       "value": "{line-height.1_00}",
       "type": "lineHeights"
     },
-    "spacious": {
+    "lg": {
       "value": "{line-height.1_20}",
       "type": "lineHeights"
     },
-    "loose": {
+    "xl": {
       "value": "{line-height.1_40}",
       "type": "lineHeights"
     },
-    "extra-loose": {
+    "2xl": {
       "value": "{line-height.1_60}",
+      "type": "lineHeights"
+    },
+    "default": {
+      "value": "{line-height.md}",
       "type": "lineHeights"
     }
   },
   "letter-spacing": {
-    "none": {
-      "value": "{letter-spacing.0}",
-      "type": "letterSpacing"
-    },
-    "compact": {
+    "3xs": {
       "value": "{letter-spacing.neg0_08}",
       "type": "letterSpacing"
     },
-    "cozy": {
+    "2xs": {
       "value": "{letter-spacing.neg0_04}",
       "type": "letterSpacing"
     },
-    "comfortable": {
+    "xs": {
       "value": "{letter-spacing.neg0_02}",
       "type": "letterSpacing"
     },
-    "spacious": {
+    "sm": {
       "value": "{letter-spacing.0_02}",
       "type": "letterSpacing"
     },
-    "loose": {
+    "md": {
+      "value": "{letter-spacing.0}",
+      "type": "letterSpacing"
+    },
+    "lg": {
       "value": "{letter-spacing.0_04}",
       "type": "letterSpacing"
     },
-    "extra-loose": {
+    "xl": {
       "value": "{letter-spacing.0_08}",
+      "type": "letterSpacing"
+    },
+    "default": {
+      "value": "{letter-spacing.md}",
       "type": "letterSpacing"
     }
   },
@@ -551,6 +559,10 @@
     },
     "md": {
       "value": "{space.16}",
+      "type": "dimension"
+    },
+    "default": {
+      "value": "{space.md}",
       "type": "dimension"
     },
     "lg": {
@@ -603,6 +615,10 @@
     },
     "2xl": {
       "value": "{space.48}",
+      "type": "dimension"
+    },
+    "default": {
+      "value": "{space.md}",
       "type": "dimension"
     }
   },

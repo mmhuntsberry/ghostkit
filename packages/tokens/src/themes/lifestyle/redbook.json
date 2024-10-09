@@ -1,0 +1,22 @@
+{
+  "primitive": {
+    "brand": {
+      "crimson_pink": {
+        "value": "#D30C4F",
+        "type": "color"
+      },
+      "mint_green": {
+        "value": "#69DCBF",
+        "type": "color"
+      },
+      "deep_magenta": {
+        "value": "#B2003C",
+        "type": "color"
+      },
+      "blush_pink": {
+        "value": "#F8BBD0",
+        "type": "color"
+      }
+    }
+  }
+}

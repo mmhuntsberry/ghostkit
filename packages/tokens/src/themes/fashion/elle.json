@@ -1,8 +1,18 @@
 {
-  "brand": {
-    "primary": {
-      "value": "#000",
-      "type": "color"
+  "primitive": {
+    "brand": {
+      "pure_black": {
+        "value": "#000000",
+        "type": "color"
+      },
+      "light_ivory": {
+        "value": "#F5F5F4",
+        "type": "color"
+      },
+      "pale_cream": {
+        "value": "#F0EDE6",
+        "type": "color"
+      }
     }
   },
   "component": {

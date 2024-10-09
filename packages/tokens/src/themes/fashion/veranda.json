@@ -1,0 +1,82 @@
+{
+  "primitive": {
+    "brand": {
+      "midnight_blue": {
+        "value": "#0A0736",
+        "type": "color"
+      },
+      "coral_red": {
+        "value": "#CD5858",
+        "type": "color"
+      },
+      "warm_beige": {
+        "value": "#B3ADA1",
+        "type": "color"
+      },
+      "soft_stone": {
+        "value": "#E1DED9",
+        "type": "color"
+      },
+      "sand_beige": {
+        "value": "#E7D6B3",
+        "type": "color"
+      },
+      "charcoal_brown": {
+        "value": "#4B463D",
+        "type": "color"
+      },
+      "deep_indigo": {
+        "value": "#312F45",
+        "type": "color"
+      },
+      "pale_cream": {
+        "value": "#F3EDB9",
+        "type": "color"
+      },
+      "ivory_white": {
+        "value": "#F9F5EC",
+        "type": "color"
+      },
+      "deep_slate": {
+        "value": "#262626",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{primitive.brand.crimson_red}",
+      "type": "color"
+    }
+  },
+  "component": {
+    "search": {
+      "on_light": {
+        "border": {
+          "primary": {
+            "solid": {
+              "default": {
+                "value": {
+                  "borderColor": "{brand.primary}"
+                },
+                "type": "composition"
+              }
+            }
+          }
+        },
+        "background": {
+          "color": {
+            "primary": {
+              "solid": {
+                "default": {
+                  "value": "{primitive.brand.soft_white}",
+                  "type": "color"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
