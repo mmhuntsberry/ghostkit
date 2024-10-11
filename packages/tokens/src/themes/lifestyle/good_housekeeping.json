@@ -26,5 +26,133 @@
         "type": "color"
       }
     }
+  },
+  "component": {
+    "search": {
+      "on_light": {
+        "border": {
+          "primary": {
+            "solid": {
+              "default": {
+                "value": {
+                  "borderColor": "{primitive.brand.deep_teal}"
+                },
+                "type": "composition"
+              }
+            }
+          }
+        },
+        "color": {
+          "background": {
+            "primary": {
+              "solid": {
+                "default": {
+                  "value": "{palette.neutral.98}",
+                  "type": "color"
+                }
+              }
+            }
+          },
+          "text": {
+            "primary": {
+              "default": {
+                "value": "{palette.neutral.45}",
+                "type": "color"
+              }
+            },
+            "brand": {
+              "default": {
+                "value": "{brand.primary}",
+                "type": "color"
+              }
+            }
+          },
+          "icon": {
+            "primary": {
+              "default": {
+                "value": "{primitive.brand.deep_teal}",
+                "type": "color"
+              }
+            }
+          }
+        }
+      },
+      "on_dark": {
+        "border": {
+          "primary": {
+            "solid": {
+              "default": {
+                "value": {
+                  "borderColor": "{primitive.brand.soft_white}"
+                },
+                "type": "composition"
+              }
+            }
+          }
+        },
+        "color": {
+          "background": {
+            "primary": {
+              "solid": {
+                "default": {
+                  "value": "{palette.neutral.9}",
+                  "type": "color"
+                }
+              }
+            }
+          },
+          "text": {
+            "primary": {
+              "default": {
+                "value": "{palette.neutral.64}",
+                "type": "color"
+              }
+            }
+          },
+          "icon": {
+            "primary": {
+              "default": {
+                "value": "{primitive.brand.deep_teal}",
+                "type": "color"
+              }
+            }
+          }
+        }
+      },
+      "typography": {
+        "sm": {
+          "value": {
+            "fontFamily": "Domine",
+            "fontSize": "{font-size.5xs}",
+            "lineHeight": "{line-height.default}",
+            "letterSpacing": "{letter-spacing.2xs}",
+            "textCase": "{text-case.uppercase}"
+          },
+          "type": "typography"
+        }
+      },
+      "size": {
+        "sm": {
+          "value": "{size.sm}",
+          "type": "dimension"
+        }
+      },
+      "space": {
+        "sm": {
+          "sm": {
+            "value": "{size.sm}",
+            "type": "dimension"
+          }
+        }
+      },
+      "gap": {
+        "sm": {
+          "sm": {
+            "value": "{size.sm}",
+            "type": "dimension"
+          }
+        }
+      }
+    }
   }
 }

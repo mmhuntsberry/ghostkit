@@ -1,25 +1,143 @@
 {
   "primitive": {
     "brand": {
-      "soft_grey": {
-        "value": "#F1F2F4",
+      "fuchsia_pink": {
+        "value": "#CE0D5A",
         "type": "color"
       },
-      "midnight_navy": {
-        "value": "#030929",
+      "teal_green": {
+        "value": "#066963",
         "type": "color"
       },
-      "crimson_red": {
-        "value": "#9A0500",
+      "soft_mint": {
+        "value": "#F4FAF9",
         "type": "color"
       },
-      "deep_navy": {
-        "value": "#092958",
+      "translucent_fuchsia": {
+        "value": "#CE0D5A0D",
         "type": "color"
       },
-      "translucent_midnight_navy": {
-        "value": "#030929D9",
+      "pale_fuchsia": {
+        "value": "#CE0D5A1A",
         "type": "color"
+      }
+    }
+  },
+  "component": {
+    "search": {
+      "on_light": {
+        "border": {
+          "primary": {
+            "solid": {
+              "default": {
+                "value": {
+                  "borderColor": "{primitive.brand.teal_green}"
+                },
+                "type": "composition"
+              }
+            }
+          }
+        },
+        "color": {
+          "background": {
+            "primary": {
+              "solid": {
+                "default": {
+                  "value": "{palette.neutral.98}",
+                  "type": "color"
+                }
+              }
+            }
+          },
+          "text": {
+            "primary": {
+              "default": {
+                "value": "{palette.neutral.45}",
+                "type": "color"
+              }
+            }
+          },
+          "icon": {
+            "primary": {
+              "default": {
+                "value": "{primitive.brand.fuchsia_pink}",
+                "type": "color"
+              }
+            }
+          }
+        }
+      },
+      "on_dark": {
+        "border": {
+          "primary": {
+            "solid": {
+              "default": {
+                "value": {
+                  "borderColor": "{primitive.brand.teal_green}"
+                },
+                "type": "composition"
+              }
+            }
+          }
+        },
+        "color": {
+          "background": {
+            "primary": {
+              "solid": {
+                "default": {
+                  "value": "{palette.neutral.9}",
+                  "type": "color"
+                }
+              }
+            }
+          },
+          "text": {
+            "primary": {
+              "default": {
+                "value": "{palette.neutral.64}",
+                "type": "color"
+              }
+            }
+          },
+          "icon": {
+            "primary": {
+              "default": {
+                "value": "{primitive.brand.fuchsia_pink}",
+                "type": "color"
+              }
+            }
+          }
+        }
+      },
+      "typography": {
+        "sm": {
+          "value": {
+            "fontFamily": "Domine",
+            "fontSize": "{font-size.5xs}",
+            "lineHeight": "{line-height.default}",
+            "letterSpacing": "{letter-spacing.2xs}",
+            "textCase": "{text-case.uppercase}"
+          },
+          "type": "typography"
+        }
+      },
+      "size": {
+        "sm": {
+          "value": "{size.sm}",
+          "type": "dimension"
+        }
+      },
+      "space": {
+        "sm": {
+          "value": "{size.sm}",
+          "type": "dimension"
+        }
+      },
+      "gap": {
+        "sm": {
+          "value": "{size.sm}",
+          "type": "dimension"
+        }
       }
     }
   }

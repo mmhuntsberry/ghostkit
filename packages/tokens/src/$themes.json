@@ -3,29 +3,7 @@
     "id": "3e82fcd4e5aef9ac095ce65814c158753190d5aa",
     "name": "primitives",
     "selectedTokenSets": {
-      "primitives": "enabled",
-      "themes/enthusiast/mens_health": "disabled",
-      "themes/alta": "disabled",
-      "auto/autoweek": "disabled",
-      "themes/enthusiast/best_products": "disabled",
-      "themes/enthusiast/biography": "disabled",
-      "themes/lifestyle/cosmopolitan": "disabled",
-      "themes/lifestyle/country_living": "disabled",
-      "themes/lifestyle/delish": "disabled",
-      "themes/lifestyle/good_housekeeping": "disabled",
-      "themes/lifestyle/harpers_bazaar": "disabled",
-      "themes/lifestyle/house_beautiful": "disabled",
-      "themes/enthusiast/prevention": "disabled",
-      "themes/enthusiast/popular_mechanics": "disabled",
-      "themes/lifestyle/redbook": "disabled",
-      "themes/enthusiast/runners_world": "disabled",
-      "themes/lifestyle/seventeen": "disabled",
-      "themes/shondaland": "disabled",
-      "themes/lifestyle/pioneer_woman": "disabled",
-      "themes/fashion/town_and_country": "disabled",
-      "themes/fashion/veranda": "disabled",
-      "themes/lifestyle/womans_day": "disabled",
-      "themes/enthusiast/womens_health": "disabled"
+      "primitives": "enabled"
     },
     "$figmaStyleReferences": {},
     "group": "global"
@@ -35,29 +13,7 @@
     "name": "alias",
     "selectedTokenSets": {
       "primitives": "enabled",
-      "alias": "enabled",
-      "themes/enthusiast/mens_health": "disabled",
-      "themes/alta": "disabled",
-      "auto/autoweek": "disabled",
-      "themes/enthusiast/best_products": "disabled",
-      "themes/enthusiast/biography": "disabled",
-      "themes/lifestyle/cosmopolitan": "disabled",
-      "themes/lifestyle/country_living": "disabled",
-      "themes/lifestyle/delish": "disabled",
-      "themes/lifestyle/good_housekeeping": "disabled",
-      "themes/lifestyle/harpers_bazaar": "disabled",
-      "themes/lifestyle/house_beautiful": "disabled",
-      "themes/enthusiast/prevention": "disabled",
-      "themes/enthusiast/popular_mechanics": "disabled",
-      "themes/lifestyle/redbook": "disabled",
-      "themes/enthusiast/runners_world": "disabled",
-      "themes/lifestyle/seventeen": "disabled",
-      "themes/shondaland": "disabled",
-      "themes/lifestyle/pioneer_woman": "disabled",
-      "themes/fashion/town_and_country": "disabled",
-      "themes/fashion/veranda": "disabled",
-      "themes/lifestyle/womans_day": "disabled",
-      "themes/enthusiast/womens_health": "disabled"
+      "alias": "enabled"
     },
     "$figmaStyleReferences": {},
     "group": "global"
@@ -68,31 +24,21 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/white-label": "enabled",
-      "themes/enthusiast/mens_health": "disabled",
-      "themes/alta": "disabled",
-      "auto/autoweek": "disabled",
-      "themes/enthusiast/best_products": "disabled",
-      "themes/enthusiast/biography": "disabled",
-      "themes/lifestyle/cosmopolitan": "disabled",
-      "themes/lifestyle/country_living": "disabled",
-      "themes/lifestyle/delish": "disabled",
-      "themes/lifestyle/good_housekeeping": "disabled",
-      "themes/lifestyle/harpers_bazaar": "disabled",
-      "themes/lifestyle/house_beautiful": "disabled",
-      "themes/enthusiast/prevention": "disabled",
-      "themes/enthusiast/popular_mechanics": "disabled",
-      "themes/lifestyle/redbook": "disabled",
-      "themes/enthusiast/runners_world": "disabled",
-      "themes/lifestyle/seventeen": "disabled",
-      "themes/shondaland": "disabled",
-      "themes/lifestyle/pioneer_woman": "disabled",
-      "themes/fashion/town_and_country": "disabled",
-      "themes/fashion/veranda": "disabled",
-      "themes/lifestyle/womans_day": "disabled",
-      "themes/enthusiast/womens_health": "disabled"
+      "themes/white-label": "enabled"
     },
     "$figmaStyleReferences": {},
+    "group": "global"
+  },
+  {
+    "id": "c478a3be3ef06c3133f76c60730955a6a5db6dba",
+    "name": "alta",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/white-label": "enabled",
+      "themes/alta": "enabled"
+    },
     "group": "global"
   },
   {
@@ -102,65 +48,9 @@
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/enthusiast/bicycling": "enabled",
-      "themes/enthusiast/mens_health": "disabled",
-      "themes/alta": "disabled",
-      "auto/autoweek": "disabled",
-      "themes/enthusiast/best_products": "disabled",
-      "themes/enthusiast/biography": "disabled",
-      "themes/lifestyle/cosmopolitan": "disabled",
-      "themes/lifestyle/country_living": "disabled",
-      "themes/lifestyle/delish": "disabled",
-      "themes/lifestyle/good_housekeeping": "disabled",
-      "themes/lifestyle/harpers_bazaar": "disabled",
-      "themes/lifestyle/house_beautiful": "disabled",
-      "themes/enthusiast/prevention": "disabled",
-      "themes/enthusiast/popular_mechanics": "disabled",
-      "themes/lifestyle/redbook": "disabled",
-      "themes/enthusiast/runners_world": "disabled",
-      "themes/lifestyle/seventeen": "disabled",
-      "themes/shondaland": "disabled",
-      "themes/lifestyle/pioneer_woman": "disabled",
-      "themes/fashion/town_and_country": "disabled",
-      "themes/fashion/veranda": "disabled",
-      "themes/lifestyle/womans_day": "disabled",
-      "themes/enthusiast/womens_health": "disabled"
+      "themes/enthusiast/bicycling": "enabled"
     },
     "group": "global"
-  },
-  {
-    "id": "73d5b0603b71496112be89fbb39a60188d859120",
-    "name": "esquire",
-    "selectedTokenSets": {
-      "primitives": "enabled",
-      "alias": "enabled",
-      "themes/fashion/esquire": "enabled",
-      "themes/white-label": "enabled",
-      "themes/enthusiast/mens_health": "disabled",
-      "themes/alta": "disabled",
-      "auto/autoweek": "disabled",
-      "themes/enthusiast/best_products": "disabled",
-      "themes/enthusiast/biography": "disabled",
-      "themes/lifestyle/cosmopolitan": "disabled",
-      "themes/lifestyle/country_living": "disabled",
-      "themes/lifestyle/delish": "disabled",
-      "themes/lifestyle/good_housekeeping": "disabled",
-      "themes/lifestyle/harpers_bazaar": "disabled",
-      "themes/lifestyle/house_beautiful": "disabled",
-      "themes/enthusiast/prevention": "disabled",
-      "themes/enthusiast/popular_mechanics": "disabled",
-      "themes/lifestyle/redbook": "disabled",
-      "themes/enthusiast/runners_world": "disabled",
-      "themes/lifestyle/seventeen": "disabled",
-      "themes/shondaland": "disabled",
-      "themes/lifestyle/pioneer_woman": "disabled",
-      "themes/fashion/town_and_country": "disabled",
-      "themes/fashion/veranda": "disabled",
-      "themes/lifestyle/womans_day": "disabled",
-      "themes/enthusiast/womens_health": "disabled"
-    },
-    "$figmaStyleReferences": {},
-    "group": "fashion"
   },
   {
     "id": "a61935ab8b3090c176327f316513acb84f092dda",
@@ -170,97 +60,19 @@
       "primitives": "enabled",
       "alias": "enabled",
       "themes/white-label": "enabled",
-      "themes/fashion/elle": "enabled",
-      "themes/enthusiast/mens_health": "disabled",
-      "themes/alta": "disabled",
-      "auto/autoweek": "disabled",
-      "themes/enthusiast/best_products": "disabled",
-      "themes/enthusiast/biography": "disabled",
-      "themes/lifestyle/cosmopolitan": "disabled",
-      "themes/lifestyle/country_living": "disabled",
-      "themes/lifestyle/delish": "disabled",
-      "themes/lifestyle/good_housekeeping": "disabled",
-      "themes/lifestyle/harpers_bazaar": "disabled",
-      "themes/lifestyle/house_beautiful": "disabled",
-      "themes/enthusiast/prevention": "disabled",
-      "themes/enthusiast/popular_mechanics": "disabled",
-      "themes/lifestyle/redbook": "disabled",
-      "themes/enthusiast/runners_world": "disabled",
-      "themes/lifestyle/seventeen": "disabled",
-      "themes/shondaland": "disabled",
-      "themes/lifestyle/pioneer_woman": "disabled",
-      "themes/fashion/town_and_country": "disabled",
-      "themes/fashion/veranda": "disabled",
-      "themes/lifestyle/womans_day": "disabled",
-      "themes/enthusiast/womens_health": "disabled"
+      "themes/fashion/elle": "enabled"
     },
     "group": "global"
   },
   {
-    "id": "55888248163dd255cb1cf38ac2348990c0be8e94",
-    "name": "elle_decor",
+    "id": "ae2dbe83d82cefe3ad4d12aba7d37b02a60bc0c1",
+    "name": "best_products",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
       "themes/white-label": "enabled",
-      "themes/enthusiast/bicycling": "enabled",
-      "themes/fashion/elle_decor": "enabled",
-      "themes/enthusiast/mens_health": "disabled",
-      "themes/alta": "disabled",
-      "auto/autoweek": "disabled",
-      "themes/enthusiast/best_products": "disabled",
-      "themes/enthusiast/biography": "disabled",
-      "themes/lifestyle/cosmopolitan": "disabled",
-      "themes/lifestyle/country_living": "disabled",
-      "themes/lifestyle/delish": "disabled",
-      "themes/lifestyle/good_housekeeping": "disabled",
-      "themes/lifestyle/harpers_bazaar": "disabled",
-      "themes/lifestyle/house_beautiful": "disabled",
-      "themes/enthusiast/prevention": "disabled",
-      "themes/enthusiast/popular_mechanics": "disabled",
-      "themes/lifestyle/redbook": "disabled",
-      "themes/enthusiast/runners_world": "disabled",
-      "themes/lifestyle/seventeen": "disabled",
-      "themes/shondaland": "disabled",
-      "themes/lifestyle/pioneer_woman": "disabled",
-      "themes/fashion/town_and_country": "disabled",
-      "themes/fashion/veranda": "disabled",
-      "themes/lifestyle/womans_day": "disabled",
-      "themes/enthusiast/womens_health": "disabled"
-    },
-    "group": "fashion"
-  },
-  {
-    "id": "03385ae67a9ee01378d771654d0b84c53002885a",
-    "name": "oprah_daily",
-    "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "primitives": "enabled",
-      "alias": "enabled",
-      "themes/white-label": "enabled",
-      "themes/enthusiast/oprah daily": "enabled",
-      "themes/alta": "disabled",
-      "auto/autoweek": "disabled",
-      "themes/enthusiast/best_products": "disabled",
-      "themes/enthusiast/biography": "disabled",
-      "themes/lifestyle/cosmopolitan": "disabled",
-      "themes/lifestyle/country_living": "disabled",
-      "themes/lifestyle/delish": "disabled",
-      "themes/lifestyle/good_housekeeping": "disabled",
-      "themes/lifestyle/harpers_bazaar": "disabled",
-      "themes/lifestyle/house_beautiful": "disabled",
-      "themes/enthusiast/prevention": "disabled",
-      "themes/enthusiast/popular_mechanics": "disabled",
-      "themes/lifestyle/redbook": "disabled",
-      "themes/enthusiast/runners_world": "disabled",
-      "themes/lifestyle/seventeen": "disabled",
-      "themes/shondaland": "disabled",
-      "themes/lifestyle/pioneer_woman": "disabled",
-      "themes/fashion/town_and_country": "disabled",
-      "themes/fashion/veranda": "disabled",
-      "themes/lifestyle/womans_day": "disabled",
-      "themes/enthusiast/womens_health": "disabled"
+      "themes/enthusiast/best_products": "enabled"
     },
     "group": "enthusiast"
   },
@@ -272,61 +84,154 @@
       "primitives": "enabled",
       "alias": "enabled",
       "themes/white-label": "enabled",
-      "themes/enthusiast/mens_health": "enabled",
-      "themes/alta": "disabled",
-      "auto/autoweek": "disabled",
-      "themes/enthusiast/best_products": "disabled",
-      "themes/enthusiast/biography": "disabled",
-      "themes/lifestyle/cosmopolitan": "disabled",
-      "themes/lifestyle/country_living": "disabled",
-      "themes/lifestyle/delish": "disabled",
-      "themes/lifestyle/good_housekeeping": "disabled",
-      "themes/lifestyle/harpers_bazaar": "disabled",
-      "themes/lifestyle/house_beautiful": "disabled",
-      "themes/enthusiast/prevention": "disabled",
-      "themes/enthusiast/popular_mechanics": "disabled",
-      "themes/lifestyle/redbook": "disabled",
-      "themes/enthusiast/runners_world": "disabled",
-      "themes/lifestyle/seventeen": "disabled",
-      "themes/shondaland": "disabled",
-      "themes/lifestyle/pioneer_woman": "disabled",
-      "themes/fashion/town_and_country": "disabled",
-      "themes/fashion/veranda": "disabled",
-      "themes/lifestyle/womans_day": "disabled",
-      "themes/enthusiast/womens_health": "disabled"
+      "themes/enthusiast/mens_health": "enabled"
     },
     "group": "enthusiast"
   },
   {
-    "id": "c478a3be3ef06c3133f76c60730955a6a5db6dba",
-    "name": "alta",
+    "id": "03385ae67a9ee01378d771654d0b84c53002885a",
+    "name": "oprah_daily",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
       "themes/white-label": "enabled",
-      "themes/alta": "enabled",
-      "auto/autoweek": "disabled",
-      "themes/enthusiast/best_products": "disabled",
-      "themes/enthusiast/biography": "disabled",
-      "themes/lifestyle/cosmopolitan": "disabled",
-      "themes/lifestyle/country_living": "disabled",
-      "themes/lifestyle/delish": "disabled",
-      "themes/lifestyle/good_housekeeping": "disabled",
-      "themes/lifestyle/harpers_bazaar": "disabled",
-      "themes/lifestyle/house_beautiful": "disabled",
-      "themes/enthusiast/prevention": "disabled",
-      "themes/enthusiast/popular_mechanics": "disabled",
-      "themes/lifestyle/redbook": "disabled",
-      "themes/enthusiast/runners_world": "disabled",
-      "themes/lifestyle/seventeen": "disabled",
-      "themes/shondaland": "disabled",
-      "themes/lifestyle/pioneer_woman": "disabled",
-      "themes/fashion/town_and_country": "disabled",
-      "themes/fashion/veranda": "disabled",
-      "themes/lifestyle/womans_day": "disabled",
-      "themes/enthusiast/womens_health": "disabled"
+      "themes/enthusiast/oprah daily": "enabled"
     },
-    "group": "global"
+    "group": "enthusiast"
+  },
+  {
+    "id": "f920b1ab1ac700838e23510e1793d7b3ee4176f7",
+    "name": "prevention",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/white-label": "enabled",
+      "themes/enthusiast/prevention": "enabled"
+    },
+    "group": "enthusiast"
+  },
+  {
+    "id": "9717233397c9f359a4e3a92f1718376e80ffdf85",
+    "name": "runners_world",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/white-label": "enabled",
+      "themes/enthusiast/runners_world": "enabled"
+    },
+    "group": "enthusiast"
+  },
+  {
+    "id": "73d5b0603b71496112be89fbb39a60188d859120",
+    "name": "esquire",
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/fashion/esquire": "enabled",
+      "themes/white-label": "enabled"
+    },
+    "$figmaStyleReferences": {},
+    "group": "fashion"
+  },
+  {
+    "id": "55888248163dd255cb1cf38ac2348990c0be8e94",
+    "name": "elle_decor",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/white-label": "enabled",
+      "themes/enthusiast/bicycling": "enabled",
+      "themes/fashion/elle_decor": "enabled"
+    },
+    "group": "fashion"
+  },
+  {
+    "id": "9053b5ac1ae433705020ea40288b1c43b27b857a",
+    "name": "cosmopolitan",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/white-label": "enabled",
+      "themes/lifestyle/cosmopolitan": "enabled"
+    },
+    "group": "lifestyle"
+  },
+  {
+    "id": "7307c26294bc36c47c3dc036721193696541ece1",
+    "name": "delish",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/white-label": "enabled",
+      "themes/lifestyle/delish": "enabled"
+    },
+    "group": "lifestyle"
+  },
+  {
+    "id": "dee19c88f4c455ac91215bcce9bcce7bb2d3d357",
+    "name": "good_housekeeping",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/white-label": "enabled",
+      "themes/fashion/elle_decor": "enabled",
+      "themes/lifestyle/good_housekeeping": "enabled"
+    },
+    "group": "lifestyle"
+  },
+  {
+    "id": "8a377617d1dfcdff265348decf5f19a217188825",
+    "name": "country_living",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/white-label": "enabled",
+      "themes/lifestyle/country_living": "enabled"
+    },
+    "group": "lifestyle"
+  },
+  {
+    "id": "f26a5b0ca0c1ac892d70855d4d8aff8ef1910908",
+    "name": "house_beautiful",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/white-label": "enabled",
+      "themes/lifestyle/house_beautiful": "enabled"
+    },
+    "group": "lifestyle"
+  },
+  {
+    "id": "74f16e310dbc9f789c1cb2b36ad7c90d93ed3996",
+    "name": "the_pioneer_woman",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/white-label": "enabled",
+      "themes/lifestyle/pioneer_woman": "enabled"
+    },
+    "group": "lifestyle"
+  },
+  {
+    "id": "3416107578e4f9241f4b43736d5fd1523ff4d727",
+    "name": "popular_mechanics",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/white-label": "enabled",
+      "themes/enthusiast/popular_mechanics": "enabled"
+    },
+    "group": "enthusiast"
   }
 ]
