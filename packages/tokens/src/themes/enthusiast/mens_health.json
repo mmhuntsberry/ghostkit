@@ -195,10 +195,6 @@
             "value": "#000",
             "type": "color"
           },
-          "brand": {
-            "value": "#202020",
-            "type": "color"
-          },
           "accent": {
             "value": "{primitive.brand.royal_purple}",
             "type": "color"
