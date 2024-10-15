@@ -104,7 +104,7 @@
           "text": {
             "primary": {
               "default": {
-                "value": "{palette.neutral.64}",
+                "value": "{palette.neutral.98}",
                 "type": "color"
               }
             },

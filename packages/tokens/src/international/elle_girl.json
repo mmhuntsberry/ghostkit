@@ -1,0 +1,34 @@
+{
+  "primitive": {
+    "brand": {
+      "cherry_red": {
+        "value": "#E70E56",
+        "type": "color"
+      },
+      "lavender_purple": {
+        "value": "#8D5FBF",
+        "type": "color"
+      },
+      "peach_pink": {
+        "value": "#F9A5B8",
+        "type": "color"
+      },
+      "lime_green": {
+        "value": "#D0F953",
+        "type": "color"
+      },
+      "charcoal_black": {
+        "value": "#222222",
+        "type": "color"
+      },
+      "royal_violet": {
+        "value": "#601FA5",
+        "type": "color"
+      },
+      "lilac_mist": {
+        "value": "#EFDEF8",
+        "type": "color"
+      }
+    }
+  }
+}

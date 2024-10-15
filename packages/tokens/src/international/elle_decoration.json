@@ -1,0 +1,14 @@
+{
+  "primitive": {
+    "brand": {
+      "sky_blue": {
+        "value": "#3777BC",
+        "type": "color"
+      },
+      "frost_white": {
+        "value": "#FFFFFFD9",
+        "type": "color"
+      }
+    }
+  }
+}

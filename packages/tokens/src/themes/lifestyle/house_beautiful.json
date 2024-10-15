@@ -48,7 +48,7 @@
           "text": {
             "primary": {
               "default": {
-                "value": "{palette.neutral.45}",
+                "value": "{palette.neutral.9}",
                 "type": "color"
               }
             },
@@ -96,7 +96,7 @@
           "text": {
             "primary": {
               "default": {
-                "value": "{palette.neutral.64}",
+                "value": "{palette.neutral.98}",
                 "type": "color"
               }
             }
@@ -114,11 +114,11 @@
       "typography": {
         "sm": {
           "value": {
-            "fontFamily": "Domine",
+            "fontFamily": "Visuelt, Georgia, Times, Sans-serif",
             "fontSize": "{font-size.5xs}",
             "lineHeight": "{line-height.default}",
             "letterSpacing": "{letter-spacing.2xs}",
-            "textCase": "{text-case.uppercase}"
+            "textCase": "{text-case.capitalize}"
           },
           "type": "typography"
         }

@@ -1,0 +1,18 @@
+{
+  "primitive": {
+    "brand": {
+      "mint": {
+        "value": "#96E2D5",
+        "type": "color"
+      },
+      "icy_white": {
+        "value": "#E6F8F5",
+        "type": "color"
+      },
+      "teal": {
+        "value": "#00836D",
+        "type": "color"
+      }
+    }
+  }
+}

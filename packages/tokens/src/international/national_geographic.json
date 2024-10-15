@@ -1,0 +1,18 @@
+{
+  "primitive": {
+    "brand": {
+      "deep_navy_blue": {
+        "value": "#1B3163",
+        "type": "color"
+      },
+      "bright_yellow": {
+        "value": "#FEF278",
+        "type": "color"
+      },
+      "soft_light_yellow": {
+        "value": "#FFFAC9",
+        "type": "color"
+      }
+    }
+  }
+}

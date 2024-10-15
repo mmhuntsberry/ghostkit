@@ -1,0 +1,14 @@
+{
+  "primitive": {
+    "brand": {
+      "neon_green": {
+        "value": "#62ED46",
+        "type": "color"
+      },
+      "forest_green": {
+        "value": "#284B36",
+        "type": "color"
+      }
+    }
+  }
+}

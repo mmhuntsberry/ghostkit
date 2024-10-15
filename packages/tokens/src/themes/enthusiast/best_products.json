@@ -116,7 +116,7 @@
           "text": {
             "primary": {
               "default": {
-                "value": "{palette.neutral.64}",
+                "value": "{palette.neutral.98}",
                 "type": "color"
               }
             }
@@ -134,7 +134,7 @@
       "typography": {
         "sm": {
           "value": {
-            "fontFamily": "Domine",
+            "fontFamily": "Campton, Helvetica, Arial, Sans-serif",
             "fontSize": "{font-size.5xs}",
             "lineHeight": "{line-height.default}",
             "letterSpacing": "{letter-spacing.2xs}",

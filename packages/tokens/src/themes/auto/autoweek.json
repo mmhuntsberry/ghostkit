@@ -1,0 +1,54 @@
+{
+  "primitive": {
+    "brand": {
+      "charcoal": {
+        "value": "#434343",
+        "type": "color"
+      },
+      "deep_black": {
+        "value": "#1B1A1A",
+        "type": "color"
+      },
+      "light_grey": {
+        "value": "#B4B3B3",
+        "type": "color"
+      },
+      "pale_white": {
+        "value": "#FFFFFD9",
+        "type": "color"
+      },
+      "teal_blue": {
+        "value": "#668892",
+        "type": "color"
+      },
+      "crimson_red": {
+        "value": "#BB322F",
+        "type": "color"
+      },
+      "ivory_white": {
+        "value": "#EFEDF9",
+        "type": "color"
+      },
+      "sun_yellow": {
+        "value": "#E6B72A",
+        "type": "color"
+      },
+      "sky_blue": {
+        "value": "#53DDD9",
+        "type": "color"
+      },
+      "aquamarine": {
+        "value": "#80D9A6",
+        "type": "color"
+      },
+      "dark_grey": {
+        "value": "#343434",
+        "type": "color"
+      },
+      "silver": {
+        "value": "#ECECE",
+        "type": "color"
+      }
+    }
+  }
+}

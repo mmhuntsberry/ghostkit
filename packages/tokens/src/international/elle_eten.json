@@ -1,0 +1,14 @@
+{
+  "primitive": {
+    "brand": {
+      "silver_gray": {
+        "value": "#BDBDBD",
+        "type": "color"
+      },
+      "blush_pink": {
+        "value": "#DB86BE",
+        "type": "color"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "primitive": {
+    "brand": {
+      "plum": {
+        "value": "#8A3A65",
+        "type": "color"
+      },
+      "soft_cream": {
+        "value": "#F4F1EB",
+        "type": "color"
+      }
+    }
+  }
+}

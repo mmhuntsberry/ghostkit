@@ -1,0 +1,22 @@
+{
+  "primitive": {
+    "brand": {
+      "deep_teal": {
+        "value": "#00837D",
+        "type": "color"
+      },
+      "soft_cream": {
+        "value": "#E9E5D6",
+        "type": "color"
+      },
+      "ocean_green": {
+        "value": "#007E78",
+        "type": "color"
+      },
+      "charcoal": {
+        "value": "#242424",
+        "type": "color"
+      }
+    }
+  }
+}

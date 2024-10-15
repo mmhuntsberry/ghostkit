@@ -144,11 +144,11 @@
       "typography": {
         "sm": {
           "value": {
-            "fontFamily": "Domine",
+            "fontFamily": "Avenir, Helvetica, Arial, Sans-serif",
             "fontSize": "{font-size.5xs}",
             "lineHeight": "{line-height.default}",
-            "letterSpacing": "{letter-spacing.2xs}",
-            "textCase": "{text-case.uppercase}"
+            "letterSpacing": "{letter-spacing.sm}",
+            "textCase": "{text-case.capitalize}"
           },
           "type": "typography"
         }

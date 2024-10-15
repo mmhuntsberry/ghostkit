@@ -70,7 +70,7 @@
           "text": {
             "primary": {
               "default": {
-                "value": "{palette.neutral.45}",
+                "value": "{brand.primary}",
                 "type": "color"
               }
             },
@@ -136,11 +136,12 @@
       "typography": {
         "sm": {
           "value": {
-            "fontFamily": "Domine",
+            "fontFamily": "Gotham, Gotham-fallback, Georgia, Times, Sans-serif",
             "fontSize": "{font-size.5xs}",
             "lineHeight": "{line-height.default}",
-            "letterSpacing": "{letter-spacing.2xs}",
-            "textCase": "{text-case.uppercase}"
+            "letterSpacing": "{letter-spacing.md}",
+            "textCase": "{text-case.uppercase}",
+            "fontWeight": "Medium"
           },
           "type": "typography"
         }

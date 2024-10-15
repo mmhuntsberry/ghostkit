@@ -1,0 +1,14 @@
+{
+  "primitive": {
+    "brand": {
+      "coral_pink": {
+        "value": "#FF515D",
+        "type": "color"
+      },
+      "bright_red": {
+        "value": "#FF0000",
+        "type": "color"
+      }
+    }
+  }
+}

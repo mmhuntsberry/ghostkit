@@ -58,7 +58,7 @@
           "text": {
             "primary": {
               "default": {
-                "value": "{palette.neutral.45}",
+                "value": "{palette.neutral.9}",
                 "type": "color"
               }
             },
@@ -124,11 +124,12 @@
       "typography": {
         "sm": {
           "value": {
-            "fontFamily": "Domine",
+            "fontFamily": "AvantGarde, Helvetica, Arial, sans-serif",
             "fontSize": "{font-size.5xs}",
             "lineHeight": "{line-height.default}",
-            "letterSpacing": "{letter-spacing.2xs}",
-            "textCase": "{text-case.uppercase}"
+            "letterSpacing": "{letter-spacing.sm}",
+            "textCase": "{text-case.uppercase}",
+            "fontWeight": "{font-weight.bold}"
           },
           "type": "typography"
         }

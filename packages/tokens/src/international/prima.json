@@ -1,0 +1,14 @@
+{
+  "primitive": {
+    "brand": {
+      "vibrant_magenta": {
+        "value": "#E5007D",
+        "type": "color"
+      },
+      "deep_plum": {
+        "value": "#683257",
+        "type": "color"
+      }
+    }
+  }
+}

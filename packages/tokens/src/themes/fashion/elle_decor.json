@@ -40,7 +40,7 @@
           "text": {
             "primary": {
               "default": {
-                "value": "{palette.neutral.45}",
+                "value": "{palette.neutral.9}",
                 "type": "color"
               }
             },
@@ -88,7 +88,7 @@
           "text": {
             "primary": {
               "default": {
-                "value": "{palette.neutral.64}",
+                "value": "{palette.neutral.98}",
                 "type": "color"
               }
             }
@@ -106,10 +106,10 @@
       "typography": {
         "sm": {
           "value": {
-            "fontFamily": "Domine",
+            "fontFamily": "Central, Helvetica, Arial, Sans-serif",
             "fontSize": "{font-size.5xs}",
             "lineHeight": "{line-height.default}",
-            "letterSpacing": "{letter-spacing.2xs}",
+            "letterSpacing": "{letter-spacing.sm}",
             "textCase": "{text-case.uppercase}"
           },
           "type": "typography"

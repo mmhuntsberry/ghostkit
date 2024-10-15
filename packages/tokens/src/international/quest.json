@@ -1,0 +1,22 @@
+{
+  "primitive": {
+    "brand": {
+      "bright_red": {
+        "value": "#E2001A",
+        "type": "color"
+      },
+      "sunny_yellow": {
+        "value": "#FDD630",
+        "type": "color"
+      },
+      "ocean_blue": {
+        "value": "#1B6EBA",
+        "type": "color"
+      },
+      "cream_white": {
+        "value": "#FFFDDC",
+        "type": "color"
+      }
+    }
+  }
+}

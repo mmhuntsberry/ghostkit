@@ -1,0 +1,10 @@
+{
+  "primitive": {
+    "brand": {
+      "golden_yellow": {
+        "value": "#FFCC00",
+        "type": "color"
+      }
+    }
+  }
+}
