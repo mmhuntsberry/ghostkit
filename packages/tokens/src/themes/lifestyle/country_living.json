@@ -1,11 +1,11 @@
 {
   "brand": {
     "primary": {
-      "value": "{primitive.brand.deep_teal}",
+      "value": "{palette.brand.deep_teal}",
       "type": "color"
     }
   },
-  "primitive": {
+  "palette": {
     "brand": {
       "deep_teal": {
         "value": "#0A5C80",
@@ -38,135 +38,6 @@
       "aqua_teal": {
         "value": "#009DA8",
         "type": "color"
-      }
-    }
-  },
-  "component": {
-    "search": {
-      "on_light": {
-        "border": {
-          "primary": {
-            "solid": {
-              "default": {
-                "value": {
-                  "borderColor": "{brand.primary}"
-                },
-                "type": "composition"
-              }
-            }
-          }
-        },
-        "color": {
-          "background": {
-            "primary": {
-              "solid": {
-                "default": {
-                  "value": "{palette.neutral.98}",
-                  "type": "color"
-                }
-              }
-            }
-          },
-          "text": {
-            "primary": {
-              "default": {
-                "value": "{brand.primary}",
-                "type": "color"
-              }
-            },
-            "brand": {
-              "default": {
-                "value": "{brand.primary}",
-                "type": "color"
-              }
-            }
-          },
-          "icon": {
-            "primary": {
-              "default": {
-                "value": "{brand.primary}",
-                "type": "color"
-              }
-            }
-          }
-        }
-      },
-      "on_dark": {
-        "border": {
-          "primary": {
-            "solid": {
-              "default": {
-                "value": {
-                  "borderColor": "{brand.primary}"
-                },
-                "type": "composition"
-              }
-            }
-          }
-        },
-        "color": {
-          "background": {
-            "primary": {
-              "solid": {
-                "default": {
-                  "value": "{palette.neutral.9}",
-                  "type": "color"
-                }
-              }
-            }
-          },
-          "text": {
-            "primary": {
-              "default": {
-                "value": "{palette.neutral.64}",
-                "type": "color"
-              }
-            }
-          },
-          "icon": {
-            "primary": {
-              "default": {
-                "value": "{brand.primary}",
-                "type": "color"
-              }
-            }
-          }
-        }
-      },
-      "typography": {
-        "sm": {
-          "value": {
-            "fontFamily": "Gotham, Gotham-fallback, Georgia, Times, Sans-serif",
-            "fontSize": "{font-size.5xs}",
-            "lineHeight": "{line-height.default}",
-            "letterSpacing": "{letter-spacing.md}",
-            "textCase": "{text-case.uppercase}",
-            "fontWeight": "Medium"
-          },
-          "type": "typography"
-        }
-      },
-      "size": {
-        "sm": {
-          "value": "{size.sm}",
-          "type": "dimension"
-        }
-      },
-      "space": {
-        "sm": {
-          "sm": {
-            "value": "{size.sm}",
-            "type": "dimension"
-          }
-        }
-      },
-      "gap": {
-        "sm": {
-          "sm": {
-            "value": "{size.sm}",
-            "type": "dimension"
-          }
-        }
       }
     }
   }

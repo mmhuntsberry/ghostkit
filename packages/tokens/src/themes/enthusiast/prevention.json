@@ -1,11 +1,11 @@
 {
   "brand": {
     "primary": {
-      "value": "{primitive.brand.aqua_teal}",
+      "value": "{palette.brand.aqua_teal}",
       "type": "color"
     }
   },
-  "primitive": {
+  "palette": {
     "brand": {
       "aqua_teal": {
         "value": "#44C1C5",
@@ -26,131 +26,6 @@
       "deep_sea_blue": {
         "value": "#088092",
         "type": "color"
-      }
-    }
-  },
-  "component": {
-    "search": {
-      "on_light": {
-        "border": {
-          "primary": {
-            "solid": {
-              "default": {
-                "value": {
-                  "borderColor": "{brand.primary}"
-                },
-                "type": "composition"
-              }
-            }
-          }
-        },
-        "color": {
-          "background": {
-            "primary": {
-              "solid": {
-                "default": {
-                  "value": "{palette.neutral.98}",
-                  "type": "color"
-                }
-              }
-            }
-          },
-          "text": {
-            "primary": {
-              "default": {
-                "value": "{palette.neutral.9}",
-                "type": "color"
-              }
-            },
-            "brand": {
-              "default": {
-                "value": "{brand.primary}",
-                "type": "color"
-              }
-            }
-          },
-          "icon": {
-            "primary": {
-              "default": {
-                "value": "{palette.neutral.9}",
-                "type": "color"
-              }
-            }
-          }
-        }
-      },
-      "on_dark": {
-        "border": {
-          "primary": {
-            "solid": {
-              "default": {
-                "value": {
-                  "borderColor": "{brand.primary}"
-                },
-                "type": "composition"
-              }
-            }
-          }
-        },
-        "color": {
-          "background": {
-            "primary": {
-              "solid": {
-                "default": {
-                  "value": "{palette.neutral.9}",
-                  "type": "color"
-                }
-              }
-            }
-          },
-          "text": {
-            "primary": {
-              "default": {
-                "value": "{palette.neutral.64}",
-                "type": "color"
-              }
-            }
-          },
-          "icon": {
-            "primary": {
-              "default": {
-                "value": "{palette.neutral.98}",
-                "type": "color"
-              }
-            }
-          }
-        }
-      },
-      "typography": {
-        "sm": {
-          "value": {
-            "fontFamily": "AvantGarde, Helvetica, Arial, sans-serif",
-            "fontSize": "{font-size.5xs}",
-            "lineHeight": "{line-height.default}",
-            "letterSpacing": "{letter-spacing.sm}",
-            "textCase": "{text-case.uppercase}",
-            "fontWeight": "{font-weight.bold}"
-          },
-          "type": "typography"
-        }
-      },
-      "size": {
-        "sm": {
-          "value": "{size.sm}",
-          "type": "dimension"
-        }
-      },
-      "space": {
-        "sm": {
-          "value": "{size.sm}",
-          "type": "dimension"
-        }
-      },
-      "gap": {
-        "sm": {
-          "value": "{size.sm}",
-          "type": "dimension"
-        }
       }
     }
   }

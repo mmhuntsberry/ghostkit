@@ -1,5 +1,5 @@
 {
-  "primitive": {
+  "palette": {
     "brand": {
       "pure_black": {
         "value": "#000000",
@@ -12,24 +12,6 @@
       "pale_cream": {
         "value": "#F0EDE6",
         "type": "color"
-      }
-    }
-  },
-  "component": {
-    "search": {
-      "on_light": {
-        "background": {
-          "color": {
-            "primary": {
-              "solid": {
-                "default": {
-                  "value": "{primitive.brand.soft_white}",
-                  "type": "color"
-                }
-              }
-            }
-          }
-        }
       }
     }
   }

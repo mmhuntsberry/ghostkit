@@ -1,5 +1,5 @@
 {
-  "primitive": {
+  "palette": {
     "brand": {
       "midnight_blue": {
         "value": "#242D39",
@@ -75,7 +75,7 @@
             "solid": {
               "default": {
                 "value": {
-                  "borderColor": "{primitive.brand.snow_white}"
+                  "borderColor": "{palette.brand.snow_white}"
                 },
                 "type": "composition"
               }
@@ -104,7 +104,7 @@
           "icon": {
             "primary": {
               "default": {
-                "value": "{primitive.brand.snow_white}",
+                "value": "{palette.brand.snow_white}",
                 "type": "color"
               }
             }

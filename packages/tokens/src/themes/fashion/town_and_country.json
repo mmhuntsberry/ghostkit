@@ -1,5 +1,5 @@
 {
-  "primitive": {
+  "palette": {
     "brand": {
       "soft_grey": {
         "value": "#F1F2F4",
@@ -25,38 +25,8 @@
   },
   "brand": {
     "primary": {
-      "value": "{primitive.brand.crimson_red}",
+      "value": "{palette.brand.crimson_red}",
       "type": "color"
-    }
-  },
-  "component": {
-    "search": {
-      "on_light": {
-        "border": {
-          "primary": {
-            "solid": {
-              "default": {
-                "value": {
-                  "borderColor": "{brand.primary}"
-                },
-                "type": "composition"
-              }
-            }
-          }
-        },
-        "background": {
-          "color": {
-            "primary": {
-              "solid": {
-                "default": {
-                  "value": "{primitive.brand.soft_white}",
-                  "type": "color"
-                }
-              }
-            }
-          }
-        }
-      }
     }
   }
 }

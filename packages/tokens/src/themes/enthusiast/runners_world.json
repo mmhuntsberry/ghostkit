@@ -1,11 +1,11 @@
 {
   "brand": {
     "primary": {
-      "value": "{primitive.brand.aqua_blue}",
+      "value": "{palette.brand.aqua_blue}",
       "type": "color"
     }
   },
-  "primitive": {
+  "palette": {
     "brand": {
       "aqua_blue": {
         "value": "#59E7ED",
@@ -34,130 +34,6 @@
       "pale_aqua": {
         "value": "#E4F8F8",
         "type": "color"
-      }
-    }
-  },
-  "component": {
-    "search": {
-      "on_light": {
-        "border": {
-          "primary": {
-            "solid": {
-              "default": {
-                "value": {
-                  "borderColor": "{brand.primary}"
-                },
-                "type": "composition"
-              }
-            }
-          }
-        },
-        "color": {
-          "background": {
-            "primary": {
-              "solid": {
-                "default": {
-                  "value": "{palette.neutral.98}",
-                  "type": "color"
-                }
-              }
-            }
-          },
-          "text": {
-            "primary": {
-              "default": {
-                "value": "{palette.neutral.45}",
-                "type": "color"
-              }
-            },
-            "brand": {
-              "default": {
-                "value": "{brand.primary}",
-                "type": "color"
-              }
-            }
-          },
-          "icon": {
-            "primary": {
-              "default": {
-                "value": "{brand.primary}",
-                "type": "color"
-              }
-            }
-          }
-        }
-      },
-      "on_dark": {
-        "border": {
-          "primary": {
-            "solid": {
-              "default": {
-                "value": {
-                  "borderColor": "{brand.primary}"
-                },
-                "type": "composition"
-              }
-            }
-          }
-        },
-        "color": {
-          "background": {
-            "primary": {
-              "solid": {
-                "default": {
-                  "value": "{palette.neutral.9}",
-                  "type": "color"
-                }
-              }
-            }
-          },
-          "text": {
-            "primary": {
-              "default": {
-                "value": "{palette.neutral.64}",
-                "type": "color"
-              }
-            }
-          },
-          "icon": {
-            "primary": {
-              "default": {
-                "value": "{brand.primary}",
-                "type": "color"
-              }
-            }
-          }
-        }
-      },
-      "typography": {
-        "sm": {
-          "value": {
-            "fontFamily": "Domine",
-            "fontSize": "{font-size.5xs}",
-            "lineHeight": "{line-height.default}",
-            "letterSpacing": "{letter-spacing.2xs}",
-            "textCase": "{text-case.uppercase}"
-          },
-          "type": "typography"
-        }
-      },
-      "size": {
-        "sm": {
-          "value": "{size.sm}",
-          "type": "dimension"
-        }
-      },
-      "space": {
-        "sm": {
-          "value": "{size.sm}",
-          "type": "dimension"
-        }
-      },
-      "gap": {
-        "sm": {
-          "value": "{size.sm}",
-          "type": "dimension"
-        }
       }
     }
   }
