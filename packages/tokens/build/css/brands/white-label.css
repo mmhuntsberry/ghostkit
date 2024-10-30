@@ -1,90 +1,270 @@
-
-:root, 
+:root,
 :host {
---white-label-palette-brand-primary: hsla(0, 0%, 9%, 1);
---white-label-font-families-sans_serif-primary: Inter;
---white-label-button-light-color-background-primary-solid-default: hsla(0, 0%, 9%, 1);
---white-label-button-light-color-background-primary-solid-hover: hsla(0, 0%, 15%, 1);
---white-label-button-light-color-background-primary-solid-active: hsla(0, 0%, 5%, 1);
---white-label-button-light-color-background-primary-transparent-default: transparent;
---white-label-button-light-color-background-primary-transparent-hover: hsla(0, 0%, 96%, 1);
---white-label-button-light-color-background-primary-transparent-active: hsla(0, 0%, 90%, 1);
---white-label-button-light-color-text-primary-solid-default: hsla(0, 0%, 96%, 1);
---white-label-button-light-color-text-primary-solid-hover: hsla(0, 0%, 96%, 1);
---white-label-button-light-color-text-primary-solid-active: hsla(0, 0%, 96%, 1);
---white-label-button-light-color-icon-primary-solid-default: hsla(0, 0%, 96%, 1);
---white-label-button-light-color-icon-primary-solid-hover: hsla(0, 0%, 96%, 1);
---white-label-button-light-color-icon-primary-solid-active: hsla(0, 0%, 96%, 1);
---white-label-button-light-border-primary-solid-default-border: solid;
---white-label-button-light-border-primary-solid-default-border-color: hsla(0, 0%, 5%, 1);
---white-label-button-light-border-primary-solid-default-border-width: 1px;
---white-label-button-light-border-primary-solid-hover-border: solid;
---white-label-button-light-border-primary-solid-hover-border-color: hsla(0, 0%, 15%, 1);
---white-label-button-light-border-primary-solid-hover-border-width: 1px;
---white-label-button-light-border-primary-solid-active-border: solid;
---white-label-button-light-border-primary-solid-active-border-color: hsla(0, 0%, 5%, 1);
---white-label-button-light-border-primary-solid-active-border-width: 1px;
---white-label-button-light-border-primary-transparent-default-border: solid;
---white-label-button-light-border-primary-transparent-default-border-color: transparent;
---white-label-button-light-border-primary-transparent-default-border-width: 1px;
---white-label-button-light-border-primary-transparent-hover-border: solid;
---white-label-button-light-border-primary-transparent-hover-border-color: hsla(0, 0%, 96%, 1);
---white-label-button-light-border-primary-transparent-hover-border-width: 1px;
---white-label-button-light-border-primary-transparent-active-border: solid;
---white-label-button-light-border-primary-transparent-active-border-color: hsla(0, 0%, 90%, 1);
---white-label-button-light-border-primary-transparent-active-border-width: 1px;
---white-label-button-typography-xs: 600 0.833rem/1 Inter;
---white-label-button-typography-sm: 600 1rem/1 Inter;
---white-label-button-typography-default: 600 1.2rem/1 Inter;
-=======
---white-label-button-typography-default-font-family: Inter;
---white-label-button-typography-default-font-weight: 600;
---white-label-button-typography-default-font-size: 1.2rem;
---white-label-button-typography-default-line-height: 1;
---white-label-button-typography-default-letter-spacing: -0.02em;
---white-label-button-size-xs: 4px;
---white-label-button-size-sm: 8px;
---white-label-button-size-default: 0.75rem;
---white-label-button-gap-comfortable: 8px;
---white-label-button-space-xs: 4px;
---white-label-button-space-sm: 8px;
---white-label-button-space-default: 16px;
---white-label-button-shape-default: 4px;
---white-label-button-dark-color-background-primary-solid-default: hsla(0, 0%, 96%, 1);
---white-label-button-dark-color-background-primary-solid-hover: hsla(0, 0%, 98%, 1);
---white-label-button-dark-color-background-primary-solid-active: hsla(0, 0%, 90%, 1);
---white-label-button-dark-color-background-primary-transparent-default: transparent;
---white-label-button-dark-color-background-primary-transparent-hover: hsla(0, 0%, 15%, 1);
---white-label-button-dark-color-background-primary-transparent-active: hsla(0, 0%, 5%, 1);
---white-label-button-dark-color-text-primary-solid-default: hsla(0, 0%, 9%, 1);
---white-label-button-dark-color-text-primary-solid-hover: hsla(0, 0%, 9%, 1);
---white-label-button-dark-color-text-primary-solid-active: hsla(0, 0%, 9%, 1);
---white-label-button-dark-color-text-primary-transparent-default: hsla(0, 0%, 96%, 1);
---white-label-button-dark-color-text-primary-transparent-hover: hsla(0, 0%, 9%, 1);
---white-label-button-dark-color-text-primary-transparent-active: hsla(0, 0%, 9%, 1);
---white-label-button-dark-color-icon-primary-solid-default: hsla(0, 0%, 9%, 1);
---white-label-button-dark-color-icon-primary-solid-hover: hsla(0, 0%, 9%, 1);
---white-label-button-dark-color-icon-primary-solid-active: hsla(0, 0%, 9%, 1);
---white-label-button-dark-color-icon-primary-transparent-default: hsla(0, 0%, 96%, 1);
---white-label-button-dark-color-icon-primary-transparent-hover: hsla(0, 0%, 9%, 1);
---white-label-button-dark-color-icon-primary-transparent-active: hsla(0, 0%, 9%, 1);
---white-label-button-dark-border-primary-solid-default-border: solid;
---white-label-button-dark-border-primary-solid-default-border-color: hsla(0, 0%, 96%, 1);
---white-label-button-dark-border-primary-solid-default-border-width: 1px;
---white-label-button-dark-border-primary-solid-hover-border: solid;
---white-label-button-dark-border-primary-solid-hover-border-color: hsla(0, 0%, 98%, 1);
---white-label-button-dark-border-primary-solid-hover-border-width: 1px;
---white-label-button-dark-border-primary-solid-active-border: solid;
---white-label-button-dark-border-primary-solid-active-border-color: hsla(0, 0%, 90%, 1);
---white-label-button-dark-border-primary-solid-active-border-width: 1px;
---white-label-button-dark-border-primary-transparent-default-border: solid;
---white-label-button-dark-border-primary-transparent-default-border-color: hsla(0, 0%, 96%, 1);
---white-label-button-dark-border-primary-transparent-default-border-width: 1px;
---white-label-button-dark-border-primary-transparent-hover-border: solid;
---white-label-button-dark-border-primary-transparent-hover-border-color: hsla(0, 0%, 98%, 1);
---white-label-button-dark-border-primary-transparent-hover-border-width: 1px;
---white-label-button-dark-border-primary-transparent-active-border: solid;
---white-label-button-dark-border-primary-transparent-active-border-color: hsla(0, 0%, 90%, 1);
---white-label-button-dark-border-primary-transparent-active-border-width: 1px;
---white-label-disabled: 0.32;
+  --white-label-palette-brand-primary: hsla(0, 0%, 9%, 1);
+  --white-label-font-families-sans_serif-primary: Inter;
+  --white-label-button-light-color-background-primary-solid-default: hsla(
+    0,
+    0%,
+    9%,
+    1
+  );
+  --white-label-button-light-color-background-primary-solid-hover: hsla(
+    0,
+    0%,
+    15%,
+    1
+  );
+  --white-label-button-light-color-background-primary-solid-active: hsla(
+    0,
+    0%,
+    5%,
+    1
+  );
+  --white-label-button-light-color-background-primary-transparent-default: transparent;
+  --white-label-button-light-color-background-primary-transparent-hover: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --white-label-button-light-color-background-primary-transparent-active: hsla(
+    0,
+    0%,
+    90%,
+    1
+  );
+  --white-label-button-light-color-text-primary-solid-default: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --white-label-button-light-color-text-primary-solid-hover: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --white-label-button-light-color-text-primary-solid-active: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --white-label-button-light-color-icon-primary-solid-default: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --white-label-button-light-color-icon-primary-solid-hover: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --white-label-button-light-color-icon-primary-solid-active: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --white-label-button-light-border-primary-solid-default-border: solid;
+  --white-label-button-light-border-primary-solid-default-border-color: hsla(
+    0,
+    0%,
+    5%,
+    1
+  );
+  --white-label-button-light-border-primary-solid-default-border-width: 1px;
+  --white-label-button-light-border-primary-solid-hover-border: solid;
+  --white-label-button-light-border-primary-solid-hover-border-color: hsla(
+    0,
+    0%,
+    15%,
+    1
+  );
+  --white-label-button-light-border-primary-solid-hover-border-width: 1px;
+  --white-label-button-light-border-primary-solid-active-border: solid;
+  --white-label-button-light-border-primary-solid-active-border-color: hsla(
+    0,
+    0%,
+    5%,
+    1
+  );
+  --white-label-button-light-border-primary-solid-active-border-width: 1px;
+  --white-label-button-light-border-primary-transparent-default-border: solid;
+  --white-label-button-light-border-primary-transparent-default-border-color: transparent;
+  --white-label-button-light-border-primary-transparent-default-border-width: 1px;
+  --white-label-button-light-border-primary-transparent-hover-border: solid;
+  --white-label-button-light-border-primary-transparent-hover-border-color: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --white-label-button-light-border-primary-transparent-hover-border-width: 1px;
+  --white-label-button-light-border-primary-transparent-active-border: solid;
+  --white-label-button-light-border-primary-transparent-active-border-color: hsla(
+    0,
+    0%,
+    90%,
+    1
+  );
+  --white-label-button-light-border-primary-transparent-active-border-width: 1px;
+  --white-label-button-typography-xs-font-family: Inter;
+  --white-label-button-typography-xs-font-weight: 600;
+  --white-label-button-typography-xs-font-size: 0.833rem;
+  --white-label-button-typography-xs-line-height: 1;
+  --white-label-button-typography-xs-letter-spacing: -0.02em;
+  --white-label-button-typography-sm-font-family: Inter;
+  --white-label-button-typography-sm-font-weight: 600;
+  --white-label-button-typography-sm-font-size: 1rem;
+  --white-label-button-typography-sm-line-height: 1;
+  --white-label-button-typography-sm-letter-spacing: -0.02em;
+  --white-label-button-typography-default-font-family: Inter;
+  --white-label-button-typography-default-font-weight: 600;
+  --white-label-button-typography-default-font-size: 1.2rem;
+  --white-label-button-typography-default-line-height: 1;
+  --white-label-button-typography-default-letter-spacing: -0.02em;
+  --white-label-button-size-xs: 4px;
+  --white-label-button-size-sm: 8px;
+  --white-label-button-size-default: 0.75rem;
+  --white-label-button-gap-comfortable: 8px;
+  --white-label-button-space-cozy: 4px;
+  --white-label-button-space-compact: 8px;
+  --white-label-button-space-comfortable: 16px;
+  --white-label-button-shape-default: 4px;
+  --white-label-button-dark-color-background-primary-solid-default: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --white-label-button-dark-color-background-primary-solid-hover: hsla(
+    0,
+    0%,
+    98%,
+    1
+  );
+  --white-label-button-dark-color-background-primary-solid-active: hsla(
+    0,
+    0%,
+    90%,
+    1
+  );
+  --white-label-button-dark-color-background-primary-transparent-default: transparent;
+  --white-label-button-dark-color-background-primary-transparent-hover: hsla(
+    0,
+    0%,
+    15%,
+    1
+  );
+  --white-label-button-dark-color-background-primary-transparent-active: hsla(
+    0,
+    0%,
+    5%,
+    1
+  );
+  --white-label-button-dark-color-text-primary-solid-default: hsla(
+    0,
+    0%,
+    9%,
+    1
+  );
+  --white-label-button-dark-color-text-primary-solid-hover: hsla(0, 0%, 9%, 1);
+  --white-label-button-dark-color-text-primary-solid-active: hsla(0, 0%, 9%, 1);
+  --white-label-button-dark-color-text-primary-transparent-default: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --white-label-button-dark-color-text-primary-transparent-hover: hsla(
+    0,
+    0%,
+    9%,
+    1
+  );
+  --white-label-button-dark-color-text-primary-transparent-active: hsla(
+    0,
+    0%,
+    9%,
+    1
+  );
+  --white-label-button-dark-color-icon-primary-solid-default: hsla(
+    0,
+    0%,
+    9%,
+    1
+  );
+  --white-label-button-dark-color-icon-primary-solid-hover: hsla(0, 0%, 9%, 1);
+  --white-label-button-dark-color-icon-primary-solid-active: hsla(0, 0%, 9%, 1);
+  --white-label-button-dark-color-icon-primary-transparent-default: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --white-label-button-dark-color-icon-primary-transparent-hover: hsla(
+    0,
+    0%,
+    9%,
+    1
+  );
+  --white-label-button-dark-color-icon-primary-transparent-active: hsla(
+    0,
+    0%,
+    9%,
+    1
+  );
+  --white-label-button-dark-border-primary-solid-default-border: solid;
+  --white-label-button-dark-border-primary-solid-default-border-color: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --white-label-button-dark-border-primary-solid-default-border-width: 1px;
+  --white-label-button-dark-border-primary-solid-hover-border: solid;
+  --white-label-button-dark-border-primary-solid-hover-border-color: hsla(
+    0,
+    0%,
+    98%,
+    1
+  );
+  --white-label-button-dark-border-primary-solid-hover-border-width: 1px;
+  --white-label-button-dark-border-primary-solid-active-border: solid;
+  --white-label-button-dark-border-primary-solid-active-border-color: hsla(
+    0,
+    0%,
+    90%,
+    1
+  );
+  --white-label-button-dark-border-primary-solid-active-border-width: 1px;
+  --white-label-button-dark-border-primary-transparent-default-border: solid;
+  --white-label-button-dark-border-primary-transparent-default-border-color: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --white-label-button-dark-border-primary-transparent-default-border-width: 1px;
+  --white-label-button-dark-border-primary-transparent-hover-border: solid;
+  --white-label-button-dark-border-primary-transparent-hover-border-color: hsla(
+    0,
+    0%,
+    98%,
+    1
+  );
+  --white-label-button-dark-border-primary-transparent-hover-border-width: 1px;
+  --white-label-button-dark-border-primary-transparent-active-border: solid;
+  --white-label-button-dark-border-primary-transparent-active-border-color: hsla(
+    0,
+    0%,
+    90%,
+    1
+  );
+  --white-label-button-dark-border-primary-transparent-active-border-width: 1px;
+  --white-label-disabled: 0.32;
 }

@@ -1,75 +1,24 @@
 :root,
 :host {
   --elle-palette-brand-primary: #000;
-  --elle-font-families-serif-primary: Modern MT Pro;
-  --elle-font-families-sans_serif-primary: Neue Haas Unica Pro, Helvetica;
-  --elle-button-color-background-primary-solid-default-on_light: #000;
-  --elle-button-color-background-primary-solid-hover-on_light: #fff;
-  --elle-button-color-background-primary-solid-active-on_light: #fff;
-  --elle-button-color-background-primary-transparent-default-on_light: transparent;
-  --elle-button-color-background-primary-transparent-hover-on_light: hsla(
-    0,
-    0%,
-    96%,
-    1
-  );
-  --elle-button-color-background-primary-transparent-active-on_light: hsla(
-    0,
-    0%,
-    90%,
-    1
-  );
-  --elle-button-color-text-on_dark: #fff;
-  --elle-button-color-text-on_light: #000;
-  --elle-button-color-icon-on_dark: hsla(0, 0%, 96%, 1);
-  --elle-button-color-icon-on_light: #000;
-  --elle-button-border-primary-solid-default-on_light-border: solid;
-  --elle-button-border-primary-solid-default-on_light-border-color: #000;
-  --elle-button-border-primary-solid-default-on_light-border-width: 1px;
-  --elle-button-border-primary-solid-hover-on_light-border: solid;
-  --elle-button-border-primary-solid-hover-on_light-border-color: #000;
-  --elle-button-border-primary-solid-hover-on_light-border-width: 1px;
-  --elle-button-border-primary-solid-active-on_light-border: solid;
-  --elle-button-border-primary-solid-active-on_light-border-color: #000;
-  --elle-button-border-primary-solid-active-on_light-border-width: 1px;
-  --elle-button-border-primary-solid-disabled-on_light-border: solid;
-  --elle-button-border-primary-solid-disabled-on_light-border-color: #000;
-  --elle-button-border-primary-solid-disabled-on_light-border-width: 1px;
-  --elle-button-border-primary-transparent-default-on_light-border: solid;
-  --elle-button-border-primary-transparent-default-on_light-border-color: transparent;
-  --elle-button-border-primary-transparent-default-on_light-border-width: 1px;
-  --elle-button-border-primary-transparent-hover-on_light-border: solid;
-  --elle-button-border-primary-transparent-hover-on_light-border-color: hsla(
-    0,
-    0%,
-    96%,
-    1
-  );
-  --elle-button-border-primary-transparent-hover-on_light-border-width: 1px;
-  --elle-button-border-primary-transparent-active-on_light-border: solid;
-  --elle-button-border-primary-transparent-active-on_light-border-color: hsla(
-    0,
-    0%,
-    90%,
-    1
-  );
-  --elle-button-border-primary-transparent-active-on_light-border-width: 1px;
-  --elle-button-border-primary-transparent-disabled-on_light-border: solid;
-  --elle-button-border-primary-transparent-disabled-on_light-border-color: transparent;
-  --elle-button-border-primary-transparent-disabled-on_light-border-width: 1px;
-  --elle-button-typography-xs-font-family: Neue Haas Unica Pro, Helvetica;
+  --elle-font-families-serif-primary: Modern MT Pro, Times New Roman, serif;
+  --elle-font-families-sans_serif-primary: Neue Haas Unica Pro, Helvetica, Arial,
+    sans-serif;
+  --elle-button-typography-xs-font-family: Neue Haas Unica Pro, Helvetica, Arial,
+    sans-serif;
   --elle-button-typography-xs-font-weight: 400;
   --elle-button-typography-xs-font-size: 1rem;
   --elle-button-typography-xs-line-height: 1;
   --elle-button-typography-xs-letter-spacing: -0.02em;
   --elle-button-typography-xs-text-case: capitalize;
-  --elle-button-typography-sm-font-family: Neue Haas Unica Pro, Helvetica;
+  --elle-button-typography-sm-font-family: Neue Haas Unica Pro;
   --elle-button-typography-sm-font-weight: 400;
   --elle-button-typography-sm-font-size: 1rem;
   --elle-button-typography-sm-line-height: 1;
   --elle-button-typography-sm-letter-spacing: -0.02em;
   --elle-button-typography-sm-text-case: capitalize;
-  --elle-button-typography-default-font-family: Neue Haas Unica Pro, Helvetica;
+  --elle-button-typography-default-font-family: Neue Haas Unica Pro, Helvetica,
+    Arial, sans-serif;
   --elle-button-typography-default-font-weight: 400;
   --elle-button-typography-default-font-size: 1.2rem;
   --elle-button-typography-default-line-height: 1;
@@ -83,4 +32,87 @@
   --elle-button-space-cozy: 8px;
   --elle-button-space-comfortable: 16px;
   --elle-button-shape-default: 0px;
+  --elle-button-light-color-background-primary-solid-default: #000;
+  --elle-button-light-color-background-primary-solid-hover: #fff;
+  --elle-button-light-color-background-primary-solid-active: #fff;
+  --elle-button-light-color-background-primary-transparent-default: transparent;
+  --elle-button-light-color-background-primary-transparent-hover: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --elle-button-light-color-background-primary-transparent-active: hsla(
+    0,
+    0%,
+    90%,
+    1
+  );
+  --elle-button-light-color-text-primary-solid-default: #fff;
+  --elle-button-light-color-text-primary-solid-hover: #000;
+  --elle-button-light-color-text-primary-solid-active: #000;
+  --elle-button-light-color-icon-primary-solid-default: #fff;
+  --elle-button-light-color-icon-primary-solid-hover: #000;
+  --elle-button-light-color-icon-primary-solid-active: #000;
+  --elle-button-light-border-primary-solid-default-border: solid;
+  --elle-button-light-border-primary-solid-default-border-color: #000;
+  --elle-button-light-border-primary-solid-default-border-width: 1px;
+  --elle-button-light-border-primary-solid-hover-border: solid;
+  --elle-button-light-border-primary-solid-hover-border-color: #000;
+  --elle-button-light-border-primary-solid-hover-border-width: 1px;
+  --elle-button-light-border-primary-solid-active-border: solid;
+  --elle-button-light-border-primary-solid-active-border-color: #000;
+  --elle-button-light-border-primary-solid-active-border-width: 1px;
+  --elle-button-light-border-primary-transparent-default-border: solid;
+  --elle-button-light-border-primary-transparent-default-border-color: transparent;
+  --elle-button-light-border-primary-transparent-default-border-width: 1px;
+  --elle-button-light-border-primary-transparent-hover-border: solid;
+  --elle-button-light-border-primary-transparent-hover-border-color: hsla(
+    0,
+    0%,
+    96%,
+    1
+  );
+  --elle-button-light-border-primary-transparent-hover-border-width: 1px;
+  --elle-button-light-border-primary-transparent-active-border: solid;
+  --elle-button-light-border-primary-transparent-active-border-color: hsla(
+    0,
+    0%,
+    90%,
+    1
+  );
+  --elle-button-light-border-primary-transparent-active-border-width: 1px;
+  --elle-button-dark-color-background-primary-solid-default: #fff;
+  --elle-button-dark-color-background-primary-solid-hover: #fff;
+  --elle-button-dark-color-background-primary-solid-active: #fff;
+  --elle-button-dark-color-text-primary-solid-default: #000;
+  --elle-button-dark-color-text-primary-solid-hover: #000;
+  --elle-button-dark-color-text-primary-solid-active: #000;
+  --elle-button-dark-color-icon-primary-solid-default: #000;
+  --elle-button-dark-color-icon-primary-solid-hover: #000;
+  --elle-button-dark-color-icon-primary-solid-active: #000;
+  --elle-button-dark-border-primary-solid-default-border: solid;
+  --elle-button-dark-border-primary-solid-default-border-color: #fff;
+  --elle-button-dark-border-primary-solid-default-border-width: 1px;
+  --elle-button-dark-border-primary-solid-hover-border: solid;
+  --elle-button-dark-border-primary-solid-hover-border-color: #fff;
+  --elle-button-dark-border-primary-solid-hover-border-width: 1px;
+  --elle-button-dark-border-primary-solid-active-border: solid;
+  --elle-button-dark-border-primary-solid-active-border-color: #fff;
+  --elle-button-dark-border-primary-solid-active-border-width: 1px;
+  --elle-button-dark-border-primary-solid-disabled-border: solid;
+  --elle-button-dark-border-primary-solid-disabled-border-color: #000;
+  --elle-button-dark-border-primary-solid-disabled-border-width: 1px;
+  --elle-button-dark-border-primary-transparent-default-border: solid;
+  --elle-button-dark-border-primary-transparent-default-border-color: #000;
+  --elle-button-dark-border-primary-transparent-default-border-width: 1px;
+  --elle-button-dark-border-primary-transparent-hover-border: solid;
+  --elle-button-dark-border-primary-transparent-hover-border-color: #fff;
+  --elle-button-dark-border-primary-transparent-hover-border-width: 1px;
+  --elle-button-dark-border-primary-transparent-active-border: solid;
+  --elle-button-dark-border-primary-transparent-active-border-color: #fff;
+  --elle-button-dark-border-primary-transparent-active-border-width: 1px;
+  --elle-button-dark-border-primary-transparent-disabled-border: solid;
+  --elle-button-dark-border-primary-transparent-disabled-border-color: #000;
+  --elle-button-dark-border-primary-transparent-disabled-border-width: 1px;
 }

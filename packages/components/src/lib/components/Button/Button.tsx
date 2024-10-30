@@ -7,23 +7,28 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
   size?: "xs" | "sm" | "default";
   brand?: string;
+  mode?: "light" | "dark";
 }
 
 const StyledButton = styled.button<ButtonProps>`
   box-sizing: border-box;
 
   align-items: center;
-  background-color: ${({ brand }) =>
-    `var(--${brand}-button-color-background-primary-solid-default-on_light)`};
-  border-color: ${({ brand }) =>
-    `var(--${brand}-button-color-border-primary-default-on_light)`};
-  border-style: var(--solid); // TODO: Make this dynamic based on mode
-  border-width: var(--border-width-thin);
+  background-color: ${({ brand, mode }) =>
+    `var(--${brand}-button-${mode}-color-background-primary-solid-default)`};
+  border-color: ${({ brand, mode }) =>
+    `var(--${brand}-button-${mode}-color-border-primary-solid-default-border-color)`};
+  border-style: ${({ brand, mode }) =>
+    `var(--${brand}-button-${mode}-border-primary-solid-default-border)`};
+  border-width: ${({ brand, mode }) =>
+    `var(--${brand}-button-${mode}-border-primary-solid-default-border-width)`};
   border-radius: ${({ brand }) => `var(--${brand}-button-shape-default)`};
-  color: ${({ brand }) => `var(--${brand}-button-color-text-on_dark)`};
+  color: ${({ brand, mode }) =>
+    `var(--${brand}-button-${mode}-color-text-primary-solid-default)`};
   cursor: pointer;
   display: flex;
   gap: ${({ brand }) => `var(--${brand}-button-gap-comfortable)`};
+  height: 3rem;
   font-weight: ${({ brand, size = "default" }) =>
     `var(--${brand}-button-typography-${size}-font-weight)`};
   font-size: ${({ brand, size = "default" }) =>
@@ -34,7 +39,6 @@ const StyledButton = styled.button<ButtonProps>`
     `var(--${brand}-button-typography-${size}-letter-spacing)`};
   font-family: ${({ brand }) =>
     `var(--${brand}-button-typography-default-font-family)`};
-
   justify-content: center;
   outline: none;
   padding-block: ${({ brand }) => `var(--${brand}-button-size-default)`};
@@ -46,13 +50,16 @@ const StyledButton = styled.button<ButtonProps>`
       brand === "bicycling" ? `translateY(2px)` : "none"};
   }
 
-  transition: background 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 
   &:not(:disabled):hover {
-    background-color: ${({ brand }) =>
-      `var(--${brand}-button-color-background-primary-solid-hover-on_light)`};
-    border-color: ${({ brand }) =>
-      `var(--${brand}-button-color-border-primary-hover-on_light)`};
+    background-color: ${({ brand, mode }) =>
+      `var(--${brand}-button-${mode}-color-background-primary-solid-hover)`};
+    border-color: ${({ brand, mode }) =>
+      `var(--${brand}-button-${mode}-color-border-primary-solid-hover)`};
+    color: ${({ brand, mode }) =>
+      `var(--${brand}-button-${mode}-color-text-primary-solid-hover)`};
   }
 
   &:disabled {
@@ -61,10 +68,12 @@ const StyledButton = styled.button<ButtonProps>`
   }
 
   &:not(:disabled):active {
-    background-color: ${({ brand }) =>
-      `var(--${brand}-button-color-background-primary-solid-active-on_light)`};
-    border-color: ${({ brand }) =>
-      `var(--${brand}-button-color-border-primary-active-on_light)`};
+    background-color: ${({ brand, mode }) =>
+      `var(--${brand}-button-${mode}-color-background-primary-solid-active)`};
+    border-color: ${({ brand, mode }) =>
+      `var(--${brand}-button-${mode}-color-border-primary-solid-active)`};
+    color: ${({ brand, mode }) =>
+      `var(--${brand}-button-${mode}-color-text-primary-solid-active)`};
   }
 `;
 
@@ -72,11 +81,18 @@ export const Button: React.FC<ButtonProps> = ({
   children,
   disabled = false,
   size = "default",
+  mode = "light",
   ...props
 }) => {
   const brand = useContext(BrandContext);
   return (
-    <StyledButton brand={brand} disabled={disabled} size={size} {...props}>
+    <StyledButton
+      brand={brand}
+      disabled={disabled}
+      size={size}
+      mode={mode}
+      {...props}
+    >
       {children}
     </StyledButton>
   );
