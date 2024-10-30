@@ -1,10 +1,4 @@
 {
-  "brand": {
-    "primary": {
-      "value": "{palette.brand.lavender_pink}",
-      "type": "color"
-    }
-  },
   "palette": {
     "brand": {
       "soft_ice_blue": {
@@ -47,6 +41,12 @@
         "value": "#CF4C35",
         "type": "color"
       }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.soft_ice_blue}",
+      "type": "color"
     }
   }
 }

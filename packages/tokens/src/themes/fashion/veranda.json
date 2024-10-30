@@ -45,7 +45,7 @@
   },
   "brand": {
     "primary": {
-      "value": "{palette.brand.crimson_red}",
+      "value": "{palette.brand.midnight_blue}",
       "type": "color"
     }
   }

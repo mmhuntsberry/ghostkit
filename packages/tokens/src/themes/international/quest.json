@@ -18,5 +18,11 @@
         "type": "color"
       }
     }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.bright_red}",
+      "type": "color"
+    }
   }
 }

@@ -10,5 +10,11 @@
         "type": "color"
       }
     }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.neon_green}",
+      "type": "color"
+    }
   }
 }

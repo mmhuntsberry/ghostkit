@@ -14,5 +14,11 @@
         "type": "color"
       }
     }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.crimson_red}",
+      "type": "color"
+    }
   }
 }

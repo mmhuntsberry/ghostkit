@@ -30,5 +30,11 @@
         "type": "color"
       }
     }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.cherry_red}",
+      "type": "color"
+    }
   }
 }

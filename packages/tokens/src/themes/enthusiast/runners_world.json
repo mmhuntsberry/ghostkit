@@ -1,10 +1,4 @@
 {
-  "brand": {
-    "primary": {
-      "value": "{palette.brand.aqua_blue}",
-      "type": "color"
-    }
-  },
   "palette": {
     "brand": {
       "aqua_blue": {
@@ -35,6 +29,12 @@
         "value": "#E4F8F8",
         "type": "color"
       }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.aqua_blue}",
+      "type": "color"
     }
   }
 }

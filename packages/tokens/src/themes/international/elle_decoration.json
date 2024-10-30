@@ -10,5 +10,11 @@
         "type": "color"
       }
     }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.sky_blue}",
+      "type": "color"
+    }
   }
 }

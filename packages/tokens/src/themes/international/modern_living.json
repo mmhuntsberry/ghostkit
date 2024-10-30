@@ -18,5 +18,11 @@
         "type": "color"
       }
     }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.deep_teal}",
+      "type": "color"
+    }
   }
 }

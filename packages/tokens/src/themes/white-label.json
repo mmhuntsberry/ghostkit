@@ -6,5 +6,11 @@
         "type": "color"
       }
     }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.default}",
+      "type": "color"
+    }
   }
 }

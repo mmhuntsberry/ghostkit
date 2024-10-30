@@ -1,10 +1,4 @@
 {
-  "brand": {
-    "primary": {
-      "value": "{palette.brand.crimson_red}",
-      "type": "color"
-    }
-  },
   "palette": {
     "brand": {
       "crimson_red": {
@@ -27,6 +21,12 @@
         "value": "#878787",
         "type": "color"
       }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.crimson_red}",
+      "type": "color"
     }
   }
 }

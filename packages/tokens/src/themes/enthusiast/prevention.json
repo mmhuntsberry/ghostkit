@@ -1,10 +1,4 @@
 {
-  "brand": {
-    "primary": {
-      "value": "{palette.brand.aqua_teal}",
-      "type": "color"
-    }
-  },
   "palette": {
     "brand": {
       "aqua_teal": {
@@ -27,6 +21,12 @@
         "value": "#088092",
         "type": "color"
       }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.aqua_teal}",
+      "type": "color"
     }
   }
 }

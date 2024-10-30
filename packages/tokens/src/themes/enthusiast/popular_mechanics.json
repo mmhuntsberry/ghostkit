@@ -1,10 +1,4 @@
 {
-  "brand": {
-    "primary": {
-      "value": "{palette.brand.forest_green}",
-      "type": "color"
-    }
-  },
   "palette": {
     "brand": {
       "forest_green": {
@@ -35,6 +29,12 @@
         "value": "#F8F8F8",
         "type": "color"
       }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.forest_green}",
+      "type": "color"
     }
   }
 }

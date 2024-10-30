@@ -26,5 +26,11 @@
         "type": "color"
       }
     }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.brick_red}",
+      "type": "color"
+    }
   }
 }

@@ -22,5 +22,11 @@
         "type": "color"
       }
     }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.candy_pink}",
+      "type": "color"
+    }
   }
 }

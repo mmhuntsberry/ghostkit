@@ -1,10 +1,4 @@
 {
-  "brand": {
-    "primary": {
-      "value": "{palette.brand.ocean_blue}",
-      "type": "color"
-    }
-  },
   "primitive": {
     "brand": {
       "ocean_blue": {
@@ -27,6 +21,12 @@
         "value": "#F1FAFE",
         "type": "color"
       }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.ocean_blue}",
+      "type": "color"
     }
   }
 }

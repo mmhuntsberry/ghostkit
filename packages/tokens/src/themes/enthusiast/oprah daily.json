@@ -1,10 +1,4 @@
 {
-  "brand": {
-    "primary": {
-      "value": "{palette.brand.cherry_red}",
-      "type": "color"
-    }
-  },
   "palette": {
     "brand": {
       "cherry_red": {
@@ -63,6 +57,12 @@
         "value": "#0C4A6E",
         "type": "color"
       }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.cherry_red}",
+      "type": "color"
     }
   }
 }

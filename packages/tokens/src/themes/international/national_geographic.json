@@ -14,5 +14,11 @@
         "type": "color"
       }
     }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.deep_navy_blue}",
+      "type": "color"
+    }
   }
 }

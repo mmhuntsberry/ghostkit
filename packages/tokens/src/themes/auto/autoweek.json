@@ -1,54 +1,56 @@
 {
   "palette": {
     "brand": {
-      "charcoal": {
-        "value": "#434343",
-        "type": "color"
-      },
-      "deep_black": {
-        "value": "#1B1A1A",
-        "type": "color"
-      },
-      "light_grey": {
-        "value": "#B4B3B3",
-        "type": "color"
-      },
-      "pale_white": {
-        "value": "#FFFFFD9",
-        "type": "color"
-      },
-      "teal_blue": {
-        "value": "#668892",
+      "goldenrod_yellow": {
+        "value": "#FFC84E",
         "type": "color"
       },
       "crimson_red": {
-        "value": "#BB322F",
+        "value": "#EB3135",
+        "type": "color"
+      },
+      "teal_green": {
+        "value": "#2C6F74",
+        "type": "color"
+      },
+      "burnt_orange": {
+        "value": "#E96C28",
+        "type": "color"
+      },
+      "pale_sage": {
+        "value": "#DAE5D3",
         "type": "color"
       },
       "ivory_white": {
-        "value": "#EFEDF9",
+        "value": "#F8F4F5",
         "type": "color"
       },
-      "sun_yellow": {
-        "value": "#E6B72A",
+      "charcoal_gray": {
+        "value": "#454148",
         "type": "color"
       },
-      "sky_blue": {
-        "value": "#53DDD9",
+      "fire_engine_red": {
+        "value": "#CB1418",
         "type": "color"
       },
-      "aquamarine": {
-        "value": "#80D9A6",
+      "amber_yellow": {
+        "value": "#FFB81B",
         "type": "color"
       },
-      "dark_grey": {
-        "value": "#343434",
+      "sunset_orange": {
+        "value": "#FFC035",
         "type": "color"
       },
-      "silver": {
-        "value": "#ECECE",
+      "jet_black": {
+        "value": "#242424",
         "type": "color"
       }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.goldenrod_yellow}",
+      "type": "color"
     }
   }
 }
