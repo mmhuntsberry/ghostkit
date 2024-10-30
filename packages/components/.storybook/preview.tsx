@@ -1,12 +1,16 @@
 // import "../../tokens/build/css/index.css";
 import "../../../node_modules/@mmhuntsberry/tokens/build/css/index.css";
+import "@mmhuntsberry/tokens/themes/white-label";
+import "@mmhuntsberry/tokens/themes/bicycling";
+import "@mmhuntsberry/tokens/themes/elle";
 // import "@mmhuntsberry/fonts";
-import React, { useEffect, useContext } from "react";
-import { Meta, StoryContext } from "@storybook/react";
+import React, { useEffect } from "react";
+import { StoryContext } from "@storybook/react";
 
 export const BrandContext = React.createContext("white-label");
 
 export const decorators = [
+  //@ts-expect-error StoryContext is not typed correctly
   (Story, context: StoryContext) => {
     useEffect(() => {
       const brand = context.globals.brand;
@@ -37,9 +41,8 @@ export const globalTypes = {
       // icon: "globe",
       title: "Brand",
       items: [
-        "primitive",
+        // "primitive",
         "white-label",
-
         // "alta",
         // "autoweek",
         // "best-products",

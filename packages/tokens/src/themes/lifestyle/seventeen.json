@@ -1,0 +1,32 @@
+{
+  "palette": {
+    "brand": {
+      "candy_pink": {
+        "value": "#FF92DE",
+        "type": "color"
+      },
+      "soft_gray": {
+        "value": "#F3F3F3",
+        "type": "color"
+      },
+      "lime_green": {
+        "value": "#EEFFAE",
+        "type": "color"
+      },
+      "blush_cream": {
+        "value": "#F1DCE1D9",
+        "type": "color"
+      },
+      "translucent_white": {
+        "value": "#FFFFFFF2",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.candy_pink}",
+      "type": "color"
+    }
+  }
+}

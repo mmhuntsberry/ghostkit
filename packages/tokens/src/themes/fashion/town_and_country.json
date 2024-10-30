@@ -1,0 +1,32 @@
+{
+  "palette": {
+    "brand": {
+      "soft_grey": {
+        "value": "#F1F2F4",
+        "type": "color"
+      },
+      "midnight_navy": {
+        "value": "#030929",
+        "type": "color"
+      },
+      "crimson_red": {
+        "value": "#9A0500",
+        "type": "color"
+      },
+      "deep_navy": {
+        "value": "#092958",
+        "type": "color"
+      },
+      "translucent_midnight_navy": {
+        "value": "#030929D9",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.crimson_red}",
+      "type": "color"
+    }
+  }
+}

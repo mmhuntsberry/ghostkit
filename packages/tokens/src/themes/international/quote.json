@@ -1,0 +1,32 @@
+{
+  "palette": {
+    "brand": {
+      "deep_red": {
+        "value": "#951714",
+        "type": "color"
+      },
+      "warm_taupe": {
+        "value": "#796E5D",
+        "type": "color"
+      },
+      "midnight_blue": {
+        "value": "#232C5B",
+        "type": "color"
+      },
+      "forest_green": {
+        "value": "#194135",
+        "type": "color"
+      },
+      "light_grey": {
+        "value": "#F5F6F8",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.deep_red}",
+      "type": "color"
+    }
+  }
+}

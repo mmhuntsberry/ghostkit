@@ -1,0 +1,44 @@
+{
+  "palette": {
+    "brand": {
+      "sky_blue": {
+        "value": "#51B3E0",
+        "type": "color"
+      },
+      "rose_red": {
+        "value": "#DD4E57",
+        "type": "color"
+      },
+      "aqua_mint": {
+        "value": "#83EAD7",
+        "type": "color"
+      },
+      "blush_pink": {
+        "value": "#E5ADAE",
+        "type": "color"
+      },
+      "sunny_yellow": {
+        "value": "#E5E54F",
+        "type": "color"
+      },
+      "icy_blue": {
+        "value": "#BAE1F3",
+        "type": "color"
+      },
+      "pale_mint": {
+        "value": "#AFF1E5",
+        "type": "color"
+      },
+      "soft_rose": {
+        "value": "#F7E6E7",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.sky_blue}",
+      "type": "color"
+    }
+  }
+}

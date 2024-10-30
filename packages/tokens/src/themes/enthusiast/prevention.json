@@ -1,0 +1,32 @@
+{
+  "palette": {
+    "brand": {
+      "aqua_teal": {
+        "value": "#44C1C5",
+        "type": "color"
+      },
+      "pale_sky": {
+        "value": "#EAF4F5",
+        "type": "color"
+      },
+      "golden_yellow": {
+        "value": "#FCD029",
+        "type": "color"
+      },
+      "ocean_blue": {
+        "value": "#33A0A3",
+        "type": "color"
+      },
+      "deep_sea_blue": {
+        "value": "#088092",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.aqua_teal}",
+      "type": "color"
+    }
+  }
+}

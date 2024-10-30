@@ -1,38 +1,52 @@
 {
-  "brand-color-primary": {
-    "value": "{primitive.brand-color-primary.delish}",
-    "type": "color"
-  },
-  "brand-color-secondary": {
-    "value": "#004685",
-    "type": "color"
-  },
-  "brand-color-tertiary": {
-    "value": "#FF553E",
-    "type": "color"
-  },
-  "theme": {
-    "bg": {
-      "accent": {
-        "default": {
-          "value": "{brand-color-primary}",
-          "type": "color"
-        }
+  "palette": {
+    "brand": {
+      "soft_ice_blue": {
+        "value": "#EBF7FC",
+        "type": "color"
+      },
+      "aqua_cyan": {
+        "value": "#66ECEF",
+        "type": "color"
+      },
+      "coral_red": {
+        "value": "#FF553E",
+        "type": "color"
+      },
+      "lime_green": {
+        "value": "#ADCF21",
+        "type": "color"
+      },
+      "sunset_orange": {
+        "value": "#FFC035",
+        "type": "color"
+      },
+      "light_aqua": {
+        "value": "#C6E9F0",
+        "type": "color"
+      },
+      "deep_ocean_blue": {
+        "value": "#004685",
+        "type": "color"
+      },
+      "teal_blue": {
+        "value": "#278090",
+        "type": "color"
+      },
+      "charcoal_gray": {
+        "value": "#343434",
+        "type": "color"
+      },
+      "brick_red": {
+        "value": "#CF4C35",
+        "type": "color"
       }
     }
   },
-  "font-families": {
+  "brand": {
     "primary": {
-      "value": "GT Haptik",
-      "type": "fontFamilies"
-    },
-    "secondary": {
-      "value": "GT Haptik",
-      "type": "fontFamilies"
-    },
-    "tertiary": {
-      "value": "Avenir Next LT Pro",
-      "type": "fontFamilies"
+      "value": "{palette.brand.soft_ice_blue}",
+      "type": "color"
     }
   }
 }

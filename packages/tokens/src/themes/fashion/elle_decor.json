@@ -1,0 +1,20 @@
+{
+  "palette": {
+    "brand": {
+      "sky_blue": {
+        "value": "#3777BC",
+        "type": "color"
+      },
+      "soft_white": {
+        "value": "#FFFFFFD9",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.sky_blue}",
+      "type": "color"
+    }
+  }
+}

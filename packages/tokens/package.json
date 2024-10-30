@@ -11,7 +11,10 @@
     "./normalize": "./normalize.css",
     "./primitives": "./build/css/primitives.css",
     "./alias": "./build/css/alias.css",
-    "./themes/all": "./build/css/index.css"
+    "./themes/all": "./build/css/index.css",
+    "./themes/white-label": "./build/css/brands/white-label.css",
+    "./themes/bicycling": "./build/css/brands/bicycling.css",
+    "./themes/elle": "./build/css/brands/elle.css"
   },
   "type": "commonjs",
   "scripts": {
