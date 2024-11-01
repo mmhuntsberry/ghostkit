@@ -28,5 +28,52 @@
       "value": "{palette.brand.ocean_blue}",
       "type": "color"
     }
+  },
+  "component": {
+    "search": {
+      "color": {
+        "background": {
+          "default": {
+            "value": "{palette.neutral.0}",
+            "type": "color"
+          }
+        },
+        "icon": {
+          "default": {
+            "value": "{brand.primary}",
+            "type": "color"
+          }
+        },
+        "text": {
+          "placeholder": {
+            "value": "{palette.neutral.64}",
+            "type": "color"
+          }
+        }
+      },
+      "border": {
+        "default": {
+          "value": {
+            "border": "solid",
+            "borderColor": "{brand.primary}",
+            "borderWidthBottom": "{border-width.medium}"
+          },
+          "type": "composition"
+        }
+      },
+      "typography": {
+        "default": {
+          "value": {
+            "fontFamily": "Domine, Domine-fallback, Helvetica, Arial, Sans-serif",
+            "fontWeight": "{font-weight.regular}",
+            "fontSize": "{font-size.6xs}",
+            "lineHeight": "{line-height.auto}",
+            "letterSpacing": "{letter-spacing.default}",
+            "textCase": "{text-case.uppercase}"
+          },
+          "type": "typography"
+        }
+      }
+    }
   }
 }

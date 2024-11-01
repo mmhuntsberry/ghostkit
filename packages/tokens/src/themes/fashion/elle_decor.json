@@ -16,5 +16,56 @@
       "value": "{palette.brand.sky_blue}",
       "type": "color"
     }
+  },
+  "component": {
+    "search": {
+      "color": {
+        "background": {
+          "default": {
+            "value": "{palette.neutral.0}",
+            "type": "color"
+          }
+        },
+        "icon": {
+          "default": {
+            "value": "{palette.neutral.100}",
+            "type": "color"
+          }
+        },
+        "text": {
+          "placeholder": {
+            "value": "{palette.neutral.45}",
+            "type": "color"
+          },
+          "value": {
+            "value": "{palette.neutral.100}",
+            "type": "color"
+          }
+        }
+      },
+      "typography": {
+        "default": {
+          "value": {
+            "fontFamily": "Lausanne, Lausanne-fallback, Arial, sans-serif",
+            "fontWeight": "{font-weight.regular}",
+            "fontSize": "{font-size.6xs}",
+            "lineHeight": "{line-height.auto}",
+            "letterSpacing": "{letter-spacing.default}",
+            "textCase": "{text-case.uppercase}"
+          },
+          "type": "typography"
+        }
+      },
+      "border": {
+        "default": {
+          "value": {
+            "border": "solid",
+            "borderColor": "{palette.neutral.100}",
+            "borderWidthBottom": "{border-width.medium}"
+          },
+          "type": "composition"
+        }
+      }
+    }
   }
 }
