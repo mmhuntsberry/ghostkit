@@ -131,15 +131,15 @@
             },
             "accent": {
               "default": {
-                "value": "{brand.secondary}",
+                "value": "{brand.primary}",
                 "type": "color"
               },
               "hover": {
-                "value": "{brand.secondary}",
+                "value": "{brand.primary}",
                 "type": "color"
               },
               "active": {
-                "value": "{brand.secondary}",
+                "value": "{brand.primary}",
                 "type": "color"
               }
             }
@@ -163,15 +163,15 @@
             },
             "accent": {
               "default": {
-                "value": "{brand.secondary}",
+                "value": "{brand.primary}",
                 "type": "color"
               },
               "hover": {
-                "value": "{brand.secondary}",
+                "value": "{brand.primary}",
                 "type": "color"
               },
               "active": {
-                "value": "{brand.secondary}",
+                "value": "{brand.primary}",
                 "type": "color"
               }
             }
