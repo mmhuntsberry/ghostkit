@@ -59,7 +59,7 @@
         "default": {
           "value": {
             "border": "solid",
-            "borderColor": "{brand.secondary}",
+            "borderColor": "{brand.primary}",
             "borderWidthBottom": "{border-width.medium}"
           },
           "type": "composition"
