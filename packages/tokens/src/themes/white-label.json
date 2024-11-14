@@ -98,15 +98,15 @@
             },
             "accent": {
               "default": {
-                "value": "{palette.neutral.100}",
+                "value": "{palette.neutral.0}",
                 "type": "color"
               },
               "hover": {
-                "value": "{palette.neutral.100}",
+                "value": "{palette.neutral.0}",
                 "type": "color"
               },
               "active": {
-                "value": "{palette.neutral.100}",
+                "value": "{palette.neutral.0}",
                 "type": "color"
               }
             }
