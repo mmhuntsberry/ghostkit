@@ -50,12 +50,12 @@
       "typography": {
         "default": {
           "value": {
-            "fontFamily": "Lausanne, Lausanne-fallback, Arial, sans-serif",
-            "fontWeight": "{font-weight.regular}",
+            "fontWeight": "Bold normal",
             "fontSize": "{font-size.6xs}",
             "lineHeight": "{line-height.auto}",
             "letterSpacing": "{letter-spacing.default}",
-            "textCase": "{text-case.uppercase}"
+            "textCase": "{text-case.uppercase}",
+            "fontFamily": "{font-families.sans_serif.primary}"
           },
           "type": "typography"
         }
@@ -169,6 +169,14 @@
             }
           }
         }
+      }
+    }
+  },
+  "font-families": {
+    "sans_serif": {
+      "primary": {
+        "value": "Central",
+        "type": "fontFamilies"
       }
     }
   }
