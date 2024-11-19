@@ -243,6 +243,24 @@
             "type": "composition"
           }
         }
+      },
+      "color": {
+        "background": {
+          "default": {
+            "value": "{palette.neutral.100}",
+            "type": "color"
+          }
+        },
+        "text": {
+          "placeholder": {
+            "value": "{palette.neutral.45}",
+            "type": "color"
+          },
+          "value": {
+            "value": "{palette.neutral.0}",
+            "type": "color"
+          }
+        }
       }
     }
   },

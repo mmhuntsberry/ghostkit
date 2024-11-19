@@ -55,7 +55,7 @@
             "lineHeight": "{line-height.auto}",
             "letterSpacing": "{letter-spacing.default}",
             "textCase": "{text-case.uppercase}",
-            "fontFamily": "{font-families.sans_serif.primary}"
+            "fontFamily": "Central"
           },
           "type": "typography"
         }
@@ -167,6 +167,26 @@
                 "type": "color"
               }
             }
+          }
+        }
+      }
+    },
+    "input": {
+      "color": {
+        "background": {
+          "default": {
+            "value": "{palette.neutral.100}",
+            "type": "color"
+          }
+        },
+        "text": {
+          "placeholder": {
+            "value": "{palette.neutral.45}",
+            "type": "color"
+          },
+          "value": {
+            "value": "{palette.neutral.100}",
+            "type": "color"
           }
         }
       }
