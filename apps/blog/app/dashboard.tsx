@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Button } from "@mmhuntsberry/components";
+// import { Button } from "@mmhuntsberry/components";
 
 const Dashboard = () => {
   // const [isCssLoaded, setIsCssLoaded] = useState(false);
@@ -27,8 +27,8 @@ const Dashboard = () => {
   return (
     <div>
       <h1>Dashboard</h1>
-      <Button brand={process.env.NEXT_PUBLIC_SITE_TYPE}>Click me</Button>
-      <Button>Click me</Button>
+      <button data-brand={process.env.NEXT_PUBLIC_SITE_TYPE}>Click me</button>
+      <button>Click me</button>
     </div>
   );
 };
