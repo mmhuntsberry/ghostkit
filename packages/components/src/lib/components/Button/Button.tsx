@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import styled from "@emotion/styled";
-import { BrandContext } from "../../../../.storybook/preview";
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
@@ -82,9 +81,9 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false,
   size = "default",
   mode = "light",
+  brand = "bicycling",
   ...props
 }) => {
-  const brand = useContext(BrandContext);
   return (
     <StyledButton
       brand={brand}

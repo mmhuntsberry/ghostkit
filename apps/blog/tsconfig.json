@@ -30,7 +30,8 @@
     "../dist/blog/.next/types/**/*.ts",
     "next-env.d.ts",
     "../../dist/apps/blog/.next/types/**/*.ts",
-    "../../apps/blog/.next/types/**/*.ts"
+    "../../apps/blog/.next/types/**/*.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

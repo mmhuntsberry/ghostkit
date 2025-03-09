@@ -38,15 +38,16 @@
     "build": {
       "cache": true
     },
-    "e2e": {
-      "cache": true
-    },
     "build-storybook": {
       "cache": true
     },
-    "@nx/vite:test": {
-      "cache": true,
-      "inputs": ["default", "^default"]
+    "@nx/eslint:lint": {
+      "inputs": [
+        "default",
+        "{workspaceRoot}/.eslintrc.json",
+        "{workspaceRoot}/.eslintignore"
+      ],
+      "cache": true
     }
   },
   "tasksRunnerOptions": {
@@ -55,5 +56,7 @@
         "cacheableOperations": ["build-storybook"]
       }
     }
-  }
+  },
+  "useInferencePlugins": false,
+  "useLegacyCache": true
 }

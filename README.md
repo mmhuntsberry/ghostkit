@@ -1,3 +1,13 @@
+# Neurotales
+
+nx serve neurotales # for next dev
+nx build neurotales # for next build
+nx start neurotales # for next start
+nx lint neurotales # for next lint
+nx seed neurotales # for seed script
+nx db:push neurotales # for drizzle-kit push
+nx db:studio neurotales # for drizzle-kit studio
+
 # phantom-ui
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>

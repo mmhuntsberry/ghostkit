@@ -1,0 +1,81 @@
+{
+  "name": "@mmhuntsberry/neurotales",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/neurotales",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/neurotales",
+        "outputPath": "dist/apps/neurotales"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/neurotales"
+        },
+        "production": {
+          "generatePackageJson": true
+        }
+      }
+    },
+
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "@mmhuntsberry/neurotales:build",
+        "dev": true,
+        "port": 3000
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "@mmhuntsberry/neurotales:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "@mmhuntsberry/neurotales:build:production",
+          "dev": false
+        }
+      }
+    },
+    "start": {
+      "executor": "@nx/next:server",
+      "options": {
+        "buildTarget": "@mmhuntsberry/neurotales:build:production",
+        "dev": false
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/neurotales/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "seed": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsx scripts/seed.ts",
+        "cwd": "apps/neurotales"
+      }
+    },
+    "db:push": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "drizzle-kit push",
+        "cwd": "apps/neurotales"
+      }
+    },
+    "db:studio": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "drizzle-kit studio",
+        "cwd": "apps/neurotales"
+      }
+    }
+  },
+  "tags": []
+}
