@@ -58,5 +58,6 @@
     }
   },
   "useInferencePlugins": false,
-  "useLegacyCache": true
+  "useLegacyCache": false,
+  "useExperimentalCache": true
 }
