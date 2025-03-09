@@ -13,66 +13,50 @@ const StyledButton = styled.button<ButtonProps>`
   box-sizing: border-box;
 
   align-items: center;
-  background-color: ${({ brand, mode }) =>
-    `var(--${brand}-button-${mode}-color-background-primary-solid-default)`};
-  border-color: ${({ brand, mode }) =>
-    `var(--${brand}-button-${mode}-color-border-primary-solid-default-border-color)`};
-  border-style: ${({ brand, mode }) =>
-    `var(--${brand}-button-${mode}-border-primary-solid-default-border)`};
-  border-width: ${({ brand, mode }) =>
-    `var(--${brand}-button-${mode}-border-primary-solid-default-border-width)`};
-  border-radius: ${({ brand }) => `var(--${brand}-button-shape-default)`};
-  color: ${({ brand, mode }) =>
-    `var(--${brand}-button-${mode}-color-text-primary-solid-default)`};
+  background-color: ${(props) => `var(--button-theme-bg-primary-default-fill)`};
+  border: ${(props) => `--button-theme-border-primary-default-border-color)`};
+  border-radius: ${(props) =>
+    `var(--button-size-border-default-border-radius)`};
+  color: ${(props) => `var(--button-theme-text-default-fill)`};
   cursor: pointer;
   display: flex;
-  gap: ${({ brand }) => `var(--${brand}-button-gap-comfortable)`};
-  height: 3rem;
-  font-weight: ${({ brand, size = "default" }) =>
-    `var(--${brand}-button-typography-${size}-font-weight)`};
-  font-size: ${({ brand, size = "default" }) =>
-    `var(--${brand}-button-typography-${size}-font-size)`};
-  line-height: ${({ brand, size = "default" }) =>
-    `var(--${brand}-button-typography-${size}-line-height)`};
-  letter-spacing: ${({ brand, size = "default" }) =>
-    `var(--${brand}-button-typography-${size}-letter-spacing)`};
-  font-family: ${({ brand }) =>
-    `var(--${brand}-button-typography-default-font-family)`};
+  font-family: ${(props) => `var(--button-size-text-default-font-families)`};
+  font-size: ${(props) => `var(--button-size-text-default-font-sizes)`};
+  font-weight: ${(props) => `var(--button-size-text-default-font-weights)`};
+  letter-spacing: ${(props) =>
+    `var(--button-size-text-default-letter-spacing)`};
   justify-content: center;
   outline: none;
-  padding-block: ${({ brand }) => `var(--${brand}-button-size-default)`};
-  padding-inline: var(--bicycling-button-space-comfortable);
-  text-transform: var(--uppercase);
-
-  span {
-    transform: ${({ brand }) =>
-      brand === "bicycling" ? `translateY(2px)` : "none"};
-  }
+  padding-block: ${(props) => `var(--button-size-bg-default-vertical-padding)`};
+  padding-inline: ${(props) =>
+    `var(--button-size-bg-default-horizontal-padding)`};
+  text-transform: ${(props) => `var(--button-size-text-default-text-case)`};
 
   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
     color 0.2s ease-in-out;
 
-  &:not(:disabled):hover {
-    background-color: ${({ brand, mode }) =>
-      `var(--${brand}-button-${mode}-color-background-primary-solid-hover)`};
-    border-color: ${({ brand, mode }) =>
-      `var(--${brand}-button-${mode}-color-border-primary-solid-hover)`};
-    color: ${({ brand, mode }) =>
-      `var(--${brand}-button-${mode}-color-text-primary-solid-hover)`};
+  &:hover {
+    background-color: ${(props) => `var(--button-theme-bg-primary-hover-fill)`};
   }
 
   &:disabled {
-    opacity: var(--opacity-disabled);
+    background-color: ${(props) =>
+      `var(--button-theme-bg-primary-disabled-fill)`};
+    color: ${(props) => `var(--button-theme-text-disabled-fill)`};
+    border: ${(props) =>
+      `var(--${customProp(
+        props
+      )}button-theme-border-primary-disabled-border-color)`};
     cursor: not-allowed;
   }
 
-  &:not(:disabled):active {
-    background-color: ${({ brand, mode }) =>
-      `var(--${brand}-button-${mode}-color-background-primary-solid-active)`};
-    border-color: ${({ brand, mode }) =>
-      `var(--${brand}-button-${mode}-color-border-primary-solid-active)`};
-    color: ${({ brand, mode }) =>
-      `var(--${brand}-button-${mode}-color-text-primary-solid-active)`};
+  &:active {
+    background-color: ${(props) =>
+      `var(--button-theme-bg-primary-active-fill)`};
+    border: ${(props) =>
+      `var(--${customProp(
+        props
+      )}button-theme-border-primary-active-border-color)`};
   }
 `;
 
