@@ -4,9 +4,9 @@ import type { StorybookConfig } from "@storybook/react-vite";
 const config: StorybookConfig = {
   stories: [
     "../src/docs/stories/**/*.mdx",
-    "../src/docs/stories/**/*.stories.@(js|jsx|ts|tsx|mdx)",
+    "../src/docs/stories/**/*.@(mdx|stories.@(js|jsx|ts|tsx))",
     "../src/lib/**/*.mdx",
-    "../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)",
+    "../src/lib/**/*.@(mdx|stories.@(js|jsx|ts|tsx))"
   ],
 
   addons: [
@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-interactions"),
     getAbsolutePath("@storybook/addon-coverage"),
     getAbsolutePath("@storybook/addon-mdx-gfm"),
+    "@chromatic-com/storybook"
   ],
 
   framework: {
@@ -25,9 +26,11 @@ const config: StorybookConfig = {
     },
   },
 
-  docs: {
-    // autodocs: true,
-  },
+  docs: {},
+
+  typescript: {
+    reactDocgen: "react-docgen-typescript"
+  }
 };
 
 export default config;

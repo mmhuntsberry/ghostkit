@@ -1,0 +1,40 @@
+{
+  "palette": {
+    "brand": {
+      "forest_green": {
+        "value": "#1C6a65",
+        "type": "color"
+      },
+      "vermilion_red": {
+        "value": "#F04E3E",
+        "type": "color"
+      },
+      "bright_yellow": {
+        "value": "#FEF837",
+        "type": "color"
+      },
+      "slate_gray": {
+        "value": "#595959",
+        "type": "color"
+      },
+      "graphite_gray": {
+        "value": "#414141",
+        "type": "color"
+      },
+      "pale_gray": {
+        "value": "#ECECEC",
+        "type": "color"
+      },
+      "off_white": {
+        "value": "#F8F8F8",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.forest_green}",
+      "type": "color"
+    }
+  }
+}

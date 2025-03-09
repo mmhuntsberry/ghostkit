@@ -1,0 +1,62 @@
+{
+  "name": "@mmhuntsberry/copy-paste",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/copy-paste",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/copy-paste",
+        "outputPath": "dist/apps/copy-paste"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/copy-paste"
+        },
+        "production": {
+          "generatePackageJson": true
+        }
+      }
+    },
+    "build:plugin": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "esbuild apps/copy-paste/plugin/code.ts --bundle --target=es6 --outfile=dist/apps/copy-paste/plugin/code.js",
+          "esbuild apps/copy-paste/plugin/ui.ts --bundle --target=es6 --outfile=dist/apps/copy-paste/plugin/ui.js --loader:.js=jsx --loader:.ts=tsx",
+          "cp apps/copy-paste/plugin/ui.html dist/apps/copy-paste/plugin/ui.html"
+        ]
+      },
+      "configurations": {
+        "watch": {
+          "commands": [
+            "esbuild apps/copy-paste/plugin/code.ts --bundle --target=es6 --outfile=dist/apps/copy-paste/plugin/code.js --watch",
+            "cp apps/copy-paste/plugin/ui.html dist/apps/copy-paste/plugin/ui.html"
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "@mmhuntsberry/copy-paste:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "@mmhuntsberry/copy-paste:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "@mmhuntsberry/copy-paste:build:production",
+          "dev": false
+        }
+      }
+    }
+  },
+  "tags": []
+}

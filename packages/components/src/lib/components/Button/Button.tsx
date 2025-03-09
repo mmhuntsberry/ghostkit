@@ -1,22 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "@emotion/styled";
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
   disabled?: boolean;
-
-  mode?: string;
-  size?: "sm" | "md" | "lg";
+  size?: "xs" | "sm" | "default";
   brand?: string;
+  mode?: "light" | "dark";
 }
 
-const customProp = (props: ButtonProps) =>
-  props.brand !== "primitive" ? `${props.brand}-` : "";
-
 const StyledButton = styled.button<ButtonProps>`
-  * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
 
   align-items: center;
   background-color: ${(props) => `var(--button-theme-bg-primary-default-fill)`};
@@ -38,7 +32,8 @@ const StyledButton = styled.button<ButtonProps>`
     `var(--button-size-bg-default-horizontal-padding)`};
   text-transform: ${(props) => `var(--button-size-text-default-text-case)`};
 
-  transition: background 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 
   &:hover {
     background-color: ${(props) => `var(--button-theme-bg-primary-hover-fill)`};
@@ -68,19 +63,17 @@ const StyledButton = styled.button<ButtonProps>`
 export const Button: React.FC<ButtonProps> = ({
   children,
   disabled = false,
-
+  size = "default",
   mode = "light",
-  size = "md",
-  brand = "",
+  brand = "bicycling",
   ...props
 }) => {
-  console.log(brand);
   return (
     <StyledButton
-      disabled={disabled}
-      mode={mode}
-      size={size}
       brand={brand}
+      disabled={disabled}
+      size={size}
+      mode={mode}
       {...props}
     >
       {children}

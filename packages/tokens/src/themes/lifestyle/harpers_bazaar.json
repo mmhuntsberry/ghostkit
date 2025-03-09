@@ -1,0 +1,32 @@
+{
+  "palette": {
+    "brand": {
+      "pure_black": {
+        "value": "#000000",
+        "type": "color"
+      },
+      "crimson_red": {
+        "value": "#AA0703",
+        "type": "color"
+      },
+      "bright_red": {
+        "value": "#FF0000",
+        "type": "color"
+      },
+      "slate_gray": {
+        "value": "#77747B",
+        "type": "color"
+      },
+      "blush_red": {
+        "value": "#FF5E5E",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.pure_black}",
+      "type": "color"
+    }
+  }
+}

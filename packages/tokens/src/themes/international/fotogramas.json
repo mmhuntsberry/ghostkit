@@ -1,0 +1,20 @@
+{
+  "palette": {
+    "brand": {
+      "crimson_red": {
+        "value": "#B92D36",
+        "type": "color"
+      },
+      "blush_pink": {
+        "value": "#FF5D67",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.crimson_red}",
+      "type": "color"
+    }
+  }
+}

@@ -2,262 +2,235 @@
   {
     "id": "3e82fcd4e5aef9ac095ce65814c158753190d5aa",
     "name": "primitives",
-    "group": "global",
     "selectedTokenSets": {
       "primitives": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "$figmaStyleReferences": {},
+    "group": "global"
   },
   {
     "id": "ef7ff7a13e5bd1a1deb05e4d23cead3ef35263ae",
     "name": "alias",
-    "group": "global",
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "$figmaStyleReferences": {},
+    "group": "global"
   },
   {
     "id": "a8395904ecd54c828855b55fc60d5914daeb19d0",
     "name": "white-label",
-    "group": "global",
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
       "themes/white-label": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "$figmaStyleReferences": {},
+    "group": "global"
   },
   {
-    "id": "3451c340ea9857acaad5af28411e0f81f680d099",
+    "id": "c478a3be3ef06c3133f76c60730955a6a5db6dba",
     "name": "alta",
-    "group": "global",
+    "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
+      "themes/white-label": "enabled",
       "themes/alta": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "group": "global"
   },
   {
-    "id": "810e0afa7a37364d3ebc1f81ae39847388c5eb26",
-    "name": "autoweek",
-    "group": "global",
-    "selectedTokenSets": {
-      "primitives": "enabled",
-      "alias": "enabled",
-      "themes/autos/autoweek": "source"
-    },
-    "$figmaStyleReferences": {}
-  },
-  {
-    "id": "1deb7aa69baa36b5b698fe73405bde061f29a109",
-    "name": "best-products",
-    "group": "global",
-    "selectedTokenSets": {
-      "primitives": "enabled",
-      "alias": "enabled",
-      "themes/enthusiast/best-products": "source"
-    },
-    "$figmaStyleReferences": {}
-  },
-  {
-    "id": "627a4b7051325a1ab93b7f15d43c7ad41501a038",
-    "name": "biography",
-    "group": "global",
-    "selectedTokenSets": {
-      "primitives": "enabled",
-      "alias": "enabled",
-      "themes/enthusiast/biography": "source"
-    },
-    "$figmaStyleReferences": {}
-  },
-  {
-    "id": "dbd2e349398fc9bf50aa9130ab36e6eda8dd6d39",
+    "id": "8932453834a66e9fde9f37edecc222496163f380",
     "name": "bicycling",
-    "group": "global",
+    "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/enthusiast/bicycling": "source"
+      "themes/enthusiast/bicycling": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "group": "global"
   },
   {
-    "id": "26fdd80c67998b0065aed3757bf6dcc486f7fe20",
-    "name": "car-and-driver",
-    "group": "global",
+    "id": "a61935ab8b3090c176327f316513acb84f092dda",
+    "name": "elle",
+    "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/autos/car-and-driver": "source"
+      "themes/white-label": "enabled",
+      "themes/fashion/elle": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "group": "global"
   },
   {
-    "id": "9c7577e76b813507c401f42718f9dc94103dd2e4",
-    "name": "cosmopolitan",
-    "group": "global",
+    "id": "ae2dbe83d82cefe3ad4d12aba7d37b02a60bc0c1",
+    "name": "best_products",
+    "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/fashion/cosmopolitan": "source"
+      "themes/white-label": "enabled",
+      "themes/enthusiast/best_products": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "group": "enthusiast"
   },
   {
-    "id": "fee20b70696e53e30bf87daae833f55e61d17f4c",
-    "name": "country-living",
-    "group": "global",
+    "id": "29a7a7de6ab921e37fc8c921d85e72e498dae1e2",
+    "name": "mens_health",
+    "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/lifestyle/country-living": "source"
+      "themes/white-label": "enabled",
+      "themes/enthusiast/mens_health": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "group": "enthusiast"
   },
   {
-    "id": "db4f67e7c2391f4fe37bdc9b470b278c73d9883c",
-    "name": "delish",
-    "group": "global",
+    "id": "03385ae67a9ee01378d771654d0b84c53002885a",
+    "name": "oprah_daily",
+    "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/lifestyle/delish": "source"
+      "themes/white-label": "enabled",
+      "themes/enthusiast/oprah daily": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "group": "enthusiast"
   },
   {
-    "id": "67d420d2aa95e3dac1d0c4b93b65701bc2a8630c",
-    "name": "esquire",
-    "group": "global",
+    "id": "f920b1ab1ac700838e23510e1793d7b3ee4176f7",
+    "name": "prevention",
+    "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/fashion/esquire": "source"
+      "themes/white-label": "enabled",
+      "themes/enthusiast/prevention": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "group": "enthusiast"
+  },
+  {
+    "id": "9717233397c9f359a4e3a92f1718376e80ffdf85",
+    "name": "runners_world",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "primitives": "enabled",
+      "alias": "enabled",
+      "themes/white-label": "enabled",
+      "themes/enthusiast/runners_world": "enabled"
+    },
+    "group": "enthusiast"
   },
   {
     "id": "73d5b0603b71496112be89fbb39a60188d859120",
-    "name": "elle",
-    "group": "global",
+    "name": "esquire",
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/fashion/elle": "source"
+      "themes/fashion/esquire": "enabled",
+      "themes/white-label": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "$figmaStyleReferences": {},
+    "group": "fashion"
   },
   {
-    "id": "3b4a1d369f12cdbf83478423764f7b0f7130c6a6",
-    "name": "elle-decor",
-    "group": "global",
+    "id": "55888248163dd255cb1cf38ac2348990c0be8e94",
+    "name": "elle_decor",
+    "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/fashion/elle-decor": "source"
+      "themes/white-label": "enabled",
+      "themes/fashion/elle_decor": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "group": "fashion"
   },
   {
-    "id": "fc14efaff0a2f07d2096751eb28bae96424e9edd",
-    "name": "good-houskeeping",
-    "group": "global",
+    "id": "9053b5ac1ae433705020ea40288b1c43b27b857a",
+    "name": "cosmopolitan",
+    "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/lifestyle/good-housekeeping": "source"
+      "themes/white-label": "enabled",
+      "themes/lifestyle/cosmopolitan": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "group": "lifestyle"
   },
   {
-    "id": "ef9ad46efb461af7cbdb5b3bb3d6a1ec92ca5b43",
-    "name": "harpers-bazaar",
-    "group": "global",
+    "id": "7307c26294bc36c47c3dc036721193696541ece1",
+    "name": "delish",
+    "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/fashion/harpers-bazaar": "source"
+      "themes/white-label": "enabled",
+      "themes/lifestyle/delish": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "group": "lifestyle"
   },
   {
-    "id": "64135b61813278721a4a92a234609da6e8c4064b",
-    "name": "house-beautiful",
-    "group": "global",
+    "id": "dee19c88f4c455ac91215bcce9bcce7bb2d3d357",
+    "name": "good_housekeeping",
+    "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/lifestyle/house-beautiful": "source"
+      "themes/white-label": "enabled",
+      "themes/fashion/elle_decor": "enabled",
+      "themes/lifestyle/good_housekeeping": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "group": "lifestyle"
   },
   {
-    "id": "1fbec976370b37728553df951982b11c99ba02ed",
-    "name": "mens-health",
-    "group": "global",
+    "id": "8a377617d1dfcdff265348decf5f19a217188825",
+    "name": "country_living",
+    "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/enthusiast/mens-health": "source"
+      "themes/white-label": "enabled",
+      "themes/lifestyle/country_living": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "group": "lifestyle"
   },
   {
-    "id": "5af643b2e15aae4b38cc4a166cc652cf5f7c829a",
-    "name": "oprah-daily",
-    "group": "global",
+    "id": "f26a5b0ca0c1ac892d70855d4d8aff8ef1910908",
+    "name": "house_beautiful",
+    "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/enthusiast/oprah-daily": "source"
+      "themes/white-label": "enabled",
+      "themes/lifestyle/house_beautiful": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "group": "lifestyle"
   },
   {
-    "id": "e4fb1083ae1bfc869d24ab255c3dee9f61a45c90",
-    "name": "popular-mechanics",
-    "group": "global",
+    "id": "74f16e310dbc9f789c1cb2b36ad7c90d93ed3996",
+    "name": "the_pioneer_woman",
+    "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/enthusiast/popular-mechanics": "source"
+      "themes/white-label": "enabled",
+      "themes/lifestyle/pioneer_woman": "enabled"
     },
-    "$figmaStyleReferences": {}
+    "group": "lifestyle"
   },
   {
-    "id": "b6f341029737d81a01578089768a633ea67220d9",
-    "name": "prevention",
-    "group": "global",
+    "id": "3416107578e4f9241f4b43736d5fd1523ff4d727",
+    "name": "popular_mechanics",
+    "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "primitives": "enabled",
       "alias": "enabled",
-      "themes/lifestyle/prevention": "source"
+      "themes/white-label": "enabled",
+      "themes/enthusiast/popular_mechanics": "enabled"
     },
-    "$figmaStyleReferences": {}
-  },
-  {
-    "id": "31b607cd93e73a80e9887f838d76dd0b4e0bf03e",
-    "name": "redbook",
-    "group": "global",
-    "selectedTokenSets": {
-      "primitives": "enabled",
-      "alias": "enabled",
-      "themes/lifestyle/redbook": "source"
-    },
-    "$figmaStyleReferences": {}
-  },
-  {
-    "id": "b01ddb9e75f45282a51b08e955d7779c47356b4d",
-    "name": "road-and-track",
-    "group": "global",
-    "selectedTokenSets": {
-      "primitives": "enabled",
-      "alias": "enabled",
-      "themes/autos/road-and-track": "source"
-    },
-    "$figmaStyleReferences": {}
+    "group": "enthusiast"
   }
 ]

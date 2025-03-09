@@ -1,0 +1,32 @@
+{
+  "palette": {
+    "brand": {
+      "crimson_red": {
+        "value": "#D2232E",
+        "type": "color"
+      },
+      "bright_yellow": {
+        "value": "#FFF200",
+        "type": "color"
+      },
+      "charcoal_black": {
+        "value": "#202020",
+        "type": "color"
+      },
+      "slate_gray": {
+        "value": "#696969",
+        "type": "color"
+      },
+      "ash_gray": {
+        "value": "#878787",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.crimson_red}",
+      "type": "color"
+    }
+  }
+}

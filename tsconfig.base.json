@@ -17,7 +17,8 @@
     "paths": {
       "@mmhuntsberry/components": ["packages/components/src/index.ts"],
       "@mmhuntsberry/fonts": ["packages/fonts"],
-      "@mmhuntsberry/tokens": ["packages/tokens/build/css/index.css"]
+      "@mmhuntsberry/tokens": ["packages/tokens/build/css/index.css"],
+      "web": ["packages/web/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -15,7 +15,7 @@ export default function RootLayout({
   try {
     if (process.env.NEXT_PUBLIC_SITE_TYPE?.length) {
       theme =
-        require(`@mmhuntsberry/tokens/${process.env.NEXT_PUBLIC_SITE_TYPE}`).default;
+        require(`@mmhuntsberry/tokens/themes/${process.env.NEXT_PUBLIC_SITE_TYPE}`).default;
     } else {
       theme = require(`@mmhuntsberry/tokens`).default;
     }
@@ -24,7 +24,6 @@ export default function RootLayout({
     // Optionally, provide a fallback or throw an error if needed
     theme = null; // or some fallback theme
   }
-
   return (
     <html lang="en">
       <body>{children}</body>

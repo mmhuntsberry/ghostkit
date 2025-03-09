@@ -1,0 +1,24 @@
+{
+  "palette": {
+    "brand": {
+      "crimson_red": {
+        "value": "#CD0708",
+        "type": "color"
+      },
+      "soft_coral": {
+        "value": "#FF5F5F",
+        "type": "color"
+      },
+      "sky_blue": {
+        "value": "#3F90D5",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.crimson_red}",
+      "type": "color"
+    }
+  }
+}

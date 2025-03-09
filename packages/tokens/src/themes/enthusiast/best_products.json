@@ -1,0 +1,48 @@
+{
+  "palette": {
+    "brand": {
+      "royal_blue": {
+        "value": "#1C1C9B",
+        "type": "color"
+      },
+      "teal_green": {
+        "value": "#1A847F",
+        "type": "color"
+      },
+      "cobalt_blue": {
+        "value": "#4747D9",
+        "type": "color"
+      },
+      "fire_red": {
+        "value": "#E22D21",
+        "type": "color"
+      },
+      "blush_pink": {
+        "value": "#F8E4DD",
+        "type": "color"
+      },
+      "aqua_blue": {
+        "value": "#24ADCC",
+        "type": "color"
+      },
+      "deep_navy": {
+        "value": "#181885",
+        "type": "color"
+      },
+      "lavender_blue": {
+        "value": "#6767E4",
+        "type": "color"
+      },
+      "pale_aqua": {
+        "value": "#EAF6F6",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.royal_blue}",
+      "type": "color"
+    }
+  }
+}

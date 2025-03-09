@@ -1,50 +1,167 @@
 {
-  "brand-color-primary": {
-    "value": "{primitive.brand-color-primary.esquire}",
-    "type": "color"
-  },
-  "brand-color-secondary": {
-    "value": "#F5F6F8",
-    "type": "color"
-  },
-  "brand-color-tertiary": {
-    "value": "#515150",
-    "type": "color"
-  },
-  "theme": {
-    "bg": {
-      "accent": {
-        "default": {
-          "value": "{brand-color-primary}",
-          "type": "color"
-        }
+  "palette": {
+    "brand": {
+      "crimson_red": {
+        "value": "#FF3A30",
+        "type": "color"
       }
     }
   },
-  "font-families": {
+  "brand": {
     "primary": {
-      "value": "Lausanne",
-      "type": "fontFamilies"
-    },
-    "secondary": {
-      "value": "Glanz",
-      "type": "fontFamilies"
-    },
-    "tertiary": {
-      "value": "Flecha M",
-      "type": "fontFamilies"
+      "value": "{palette.brand.crimson_red}",
+      "type": "color"
     }
   },
-  "font-weights": {
-    "regular": {
-      "value": "550",
-      "type": "fontWeights",
-      "description": "Remapped ‘Regular’ to ‘550’ to address the font weight rendering incompatibility within Figma."
+  "component": {
+    "search": {
+      "color": {
+        "background": {
+          "default": {
+            "value": "{palette.neutral.100}",
+            "type": "color"
+          }
+        },
+        "icon": {
+          "default": {
+            "value": "{palette.neutral.0}",
+            "type": "color"
+          }
+        },
+        "text": {
+          "placeholder": {
+            "value": "{palette.neutral.45}",
+            "type": "color"
+          },
+          "value": {
+            "value": "{palette.neutral.0}",
+            "type": "color"
+          }
+        }
+      },
+      "border": {
+        "default": {
+          "value": {
+            "border": "solid",
+            "borderColor": "{palette.neutral.100}",
+            "borderWidthBottom": "{border-width.medium}"
+          },
+          "type": "composition"
+        }
+      },
+      "typography": {
+        "default": {
+          "value": {
+            "fontFamily": "Lausanne, Lausanne-fallback, Arial, sans-serif",
+            "fontSize": "{font-size.6xs}",
+            "lineHeight": "{line-height.auto}",
+            "letterSpacing": "{letter-spacing.default}",
+            "textCase": "{text-case.uppercase}",
+            "fontWeight": "{font-weight.bold}"
+          },
+          "type": "typography"
+        }
+      }
     },
-    "bold": {
-      "value": "550",
-      "type": "fontWeights",
-      "description": "Remapped ‘Bold’ to ‘700’ to address the font weight rendering incompatibility within Figma."
+    "button": {
+      "color": {
+        "background": {
+          "transparent": {
+            "primary": {
+              "default": {
+                "value": "transparent",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{palette.neutral.96}",
+                "type": "color"
+              },
+              "active": {
+                "value": "{palette.neutral.90}",
+                "type": "color"
+              }
+            },
+            "accent": {
+              "default": {
+                "value": "transparent",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{palette.neutral.96}",
+                "type": "color"
+              },
+              "active": {
+                "value": "{palette.neutral.90}",
+                "type": "color"
+              }
+            }
+          }
+        },
+        "icon": {
+          "transparent": {
+            "primary": {
+              "default": {
+                "value": "{palette.neutral.100}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{palette.neutral.100}",
+                "type": "color"
+              },
+              "active": {
+                "value": "{palette.neutral.100}",
+                "type": "color"
+              }
+            },
+            "accent": {
+              "default": {
+                "value": "{brand.primary}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{brand.primary}",
+                "type": "color"
+              },
+              "active": {
+                "value": "{brand.primary}",
+                "type": "color"
+              }
+            }
+          }
+        },
+        "text": {
+          "transparent": {
+            "primary": {
+              "default": {
+                "value": "{palette.neutral.100}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{palette.neutral.100}",
+                "type": "color"
+              },
+              "active": {
+                "value": "{palette.neutral.100}",
+                "type": "color"
+              }
+            },
+            "accent": {
+              "default": {
+                "value": "{palette.neutral.100}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{palette.neutral.100}",
+                "type": "color"
+              },
+              "active": {
+                "value": "{palette.neutral.100}",
+                "type": "color"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -1,17 +1,13 @@
 import React, { useContext } from "react";
-import { BrandContext } from "../../../../../.storybook/preview";
+
 import { Button } from "../Button";
 
-export const Demo = (props) => {
-  const brand = useContext(BrandContext);
-
+export const Demo = (props: any) => {
   return (
     <div>
-      <h1>This is a {brand} branded story</h1>
-
-      <Button {...props} brand={brand || "white-label"}>
-        Button Text
-      </Button>
+      <Button {...props}>{props.children}</Button>
     </div>
   );
 };
+
+export default Demo;

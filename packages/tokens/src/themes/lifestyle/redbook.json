@@ -1,30 +1,28 @@
 {
-  "brand-color-primary": {
-    "value": "{primitive.brand-color-primary.redbook}",
-    "type": "color"
-  },
-  "brand-color-secondary": {
-    "value": "#69DCBF",
-    "type": "color"
-  },
-  "brand-color-tertiary": {
-    "value": "#B2003C",
-    "type": "color"
-  },
-  "theme": {
-    "bg": {
-      "accent": {
-        "default": {
-          "value": "{brand-color-primary}",
-          "type": "color"
-        }
+  "palette": {
+    "brand": {
+      "crimson_pink": {
+        "value": "#D30C4F",
+        "type": "color"
+      },
+      "mint_green": {
+        "value": "#69DCBF",
+        "type": "color"
+      },
+      "deep_magenta": {
+        "value": "#B2003C",
+        "type": "color"
+      },
+      "blush_pink": {
+        "value": "#F8BBD0",
+        "type": "color"
       }
     }
   },
-  "font-families": {
+  "brand": {
     "primary": {
-      "value": "Century Gothic",
-      "type": "fontFamilies"
+      "value": "{palette.brand.crimson_pink}",
+      "type": "color"
     }
   }
 }

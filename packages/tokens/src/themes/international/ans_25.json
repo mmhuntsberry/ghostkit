@@ -1,0 +1,20 @@
+{
+  "palette": {
+    "brand": {
+      "coral_pink": {
+        "value": "#FF515D",
+        "type": "color"
+      },
+      "bright_red": {
+        "value": "#FF0000",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.coral_pink}",
+      "type": "color"
+    }
+  }
+}

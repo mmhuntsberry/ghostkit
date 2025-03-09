@@ -1,0 +1,20 @@
+{
+  "palette": {
+    "brand": {
+      "bright_red": {
+        "value": "#E6032A",
+        "type": "color"
+      },
+      "soft_pink": {
+        "value": "#FFCDCC",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.bright_red}",
+      "type": "color"
+    }
+  }
+}

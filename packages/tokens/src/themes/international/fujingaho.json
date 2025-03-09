@@ -1,0 +1,24 @@
+{
+  "palette": {
+    "brand": {
+      "rust_orange": {
+        "value": "#BE3E18",
+        "type": "color"
+      },
+      "deep_brown": {
+        "value": "#4B2402",
+        "type": "color"
+      },
+      "carmine_red": {
+        "value": "#B30011",
+        "type": "color"
+      }
+    }
+  },
+  "brand": {
+    "primary": {
+      "value": "{palette.brand.rust_orange}",
+      "type": "color"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+
+:root, 
+:host {
+--white-label-palette-brand-default: hsla(0, 0%, 9%, 1);
+--white-label-component-button-border-default-border: solid;
+--white-label-component-button-border-default-border-color: transparent;
+--white-label-component-button-border-default-border-width: 2px;
+--white-label-component-button-border-hover-border: solid;
+--white-label-component-button-border-hover-border-color: hsla(0, 0%, 96%, 1);
+--white-label-component-button-border-hover-border-width: 2px;
+--white-label-component-button-border-active-border: solid;
+--white-label-component-button-border-active-border-color: hsla(0, 0%, 90%, 1);
+--white-label-component-button-border-active-border-width: 2px;
+--white-label-component-button-typography-default-font-family: Inter;
+--white-label-component-button-typography-default-font-weight: 600;
+--white-label-component-button-typography-default-font-size: 0.833rem;
+--white-label-component-button-typography-default-line-height: 1.2;
+--white-label-component-button-typography-default-letter-spacing: 0em;
+--white-label-component-button-typography-default-text-case: capitalize;
+--white-label-component-button-size-xs: 4px;
+--white-label-component-button-size-sm: 8px;
+--white-label-component-search-border-width-medium: 2px;
+--white-label-component-input-border-all-default-border: solid;
+--white-label-component-input-border-all-default-border-color: hsla(0, 0%, 83%, 1);
+--white-label-component-input-border-all-default-border-width: 2px;
+--white-label-component-input-border-bottom-default-border: solid;
+--white-label-component-input-border-bottom-default-border-color: hsla(0, 0%, 9%, 1);
+--white-label-component-input-border-none-default-border: solid;
+--white-label-component-input-border-none-default-border-color: transparent;
+--white-label-component-input-border-none-default-border-width: 2px;
+--white-label-disabled: 0.32;
+}

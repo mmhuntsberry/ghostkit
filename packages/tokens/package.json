@@ -12,8 +12,14 @@
     "./primitives": "./build/css/primitives.css",
     "./alias": "./build/css/alias.css",
     "./themes/all": "./build/css/index.css",
+<<<<<<< HEAD
+    "./themes/white-label": "./build/css/brands/white-label.css",
+    "./themes/bicycling": "./build/css/brands/bicycling.css",
+    "./themes/elle": "./build/css/brands/elle.css"
+=======
     "./bicycling": "./build/css/brands/bicycling/bicycling.css",
     "./white-label": "./build/css/brands/white-label/white-label.css"
+>>>>>>> main
   },
   "type": "commonjs",
   "scripts": {
