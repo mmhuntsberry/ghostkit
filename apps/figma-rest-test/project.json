@@ -1,0 +1,81 @@
+{
+  "name": "@mmhuntsberry/figma-rest-test",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/figma-rest-test",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/figma-rest-test",
+        "outputPath": "dist/apps/figma-rest-test"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/figma-rest-test"
+        },
+        "production": {
+          "generatePackageJson": true
+        }
+      }
+    },
+
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "@mmhuntsberry/figma-rest-test:build",
+        "dev": true,
+        "port": 3000
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "@mmhuntsberry/figma-rest-test:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "@mmhuntsberry/figma-rest-test:build:production",
+          "dev": false
+        }
+      }
+    },
+    "start": {
+      "executor": "@nx/next:server",
+      "options": {
+        "buildTarget": "@mmhuntsberry/figma-rest-test:build:production",
+        "dev": false
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/figma-rest-test/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "seed": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsx scripts/seed.ts",
+        "cwd": "apps/figma-rest-test"
+      }
+    },
+    "db:push": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "drizzle-kit push",
+        "cwd": "apps/figma-rest-test"
+      }
+    },
+    "db:studio": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "drizzle-kit studio",
+        "cwd": "apps/figma-rest-test"
+      }
+    }
+  },
+  "tags": []
+}
