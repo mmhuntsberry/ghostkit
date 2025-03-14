@@ -33,7 +33,8 @@
       "configurations": {
         "development": {
           "buildTarget": "@mmhuntsberry/figma-rest-test:build:development",
-          "dev": true
+          "dev": true,
+          "port": 3000
         },
         "production": {
           "buildTarget": "@mmhuntsberry/figma-rest-test:build:production",
@@ -41,13 +42,16 @@
         }
       }
     },
+
     "start": {
       "executor": "@nx/next:server",
       "options": {
-        "buildTarget": "@mmhuntsberry/figma-rest-test:build:production",
-        "dev": false
+        "buildTarget": "@mmhuntsberry/figma-rest-test:build:development",
+        "dev": true,
+        "port": 3000
       }
     },
+
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
@@ -55,6 +59,7 @@
         "lintFilePatterns": ["apps/figma-rest-test/**/*.{ts,tsx,js,jsx}"]
       }
     },
+
     "seed": {
       "executor": "nx:run-commands",
       "options": {
@@ -62,6 +67,7 @@
         "cwd": "apps/figma-rest-test"
       }
     },
+
     "db:push": {
       "executor": "nx:run-commands",
       "options": {
@@ -69,6 +75,7 @@
         "cwd": "apps/figma-rest-test"
       }
     },
+
     "db:studio": {
       "executor": "nx:run-commands",
       "options": {

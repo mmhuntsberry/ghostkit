@@ -42,7 +42,8 @@
     "../dist/blog/.next/types/**/*.ts",
     ".next/types/**/*.ts",
     "next-env.d.ts",
-    "../../dist/apps/neurotales/.next/types/**/*.ts"
+    "../../dist/apps/neurotales/.next/types/**/*.ts",
+    "../../apps/figma-rest-test/.next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
