@@ -16,7 +16,10 @@
     "build-storybook": "npx nx run components:build-storybook",
     "test-storybook": "npx test-storybook --url http://localhost:4400/ --coverage --config-dir packages/components/.storybook",
     "chromatic": "npx chromatic",
-    "dev:portfolio": "npx nx serve portfolio --dev"
+    "dev:portfolio": "npx nx serve portfolio --dev",
+    "neurotales:dev": "npx nx serve neurotales",
+    "matthewhuntsberry:dev": "npx nx serve matthewhuntsberry",
+    "some-peoples-kids:dev": "npx nx serve some-peoples-kids"
   },
   "private": true,
   "devDependencies": {
@@ -134,7 +137,7 @@
     "lucide-react": "^0.475.0",
     "mysql2": "^3.2.0",
     "nanoid": "^5.1.2",
-    "next": "^15.2.2-canary.5",
+    "next": "^15.3.0-canary.10",
     "next-sanity": "^9.9.0",
     "openai": "^4.83.0",
     "pg": "^8.13.3",

@@ -1,0 +1,87 @@
+{
+  "name": "@mmhuntsberry/matthewhuntsberry",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/matthewhuntsberry",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/matthewhuntsberry",
+        "outputPath": "dist/apps/matthewhuntsberry"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/matthewhuntsberry"
+        },
+        "production": {
+          "generatePackageJson": true
+        }
+      }
+    },
+    "scrape": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsx scripts/scrape.ts",
+        "cwd": "apps/matthewhuntsberry"
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "@mmhuntsberry/matthewhuntsberry:build",
+        "dev": true,
+        "port": 3000
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "@mmhuntsberry/matthewhuntsberry:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "@mmhuntsberry/matthewhuntsberry:build:production",
+          "dev": false
+        }
+      }
+    },
+    "start": {
+      "executor": "@nx/next:server",
+      "options": {
+        "buildTarget": "@mmhuntsberry/matthewhuntsberry:build:production",
+        "dev": false
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/matthewhuntsberry/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "seed": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsx scripts/seed.ts",
+        "cwd": "apps/matthewhuntsberry"
+      }
+    },
+    "db:push": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "drizzle-kit push",
+        "cwd": "apps/matthewhuntsberry"
+      }
+    },
+    "db:studio": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "drizzle-kit studio",
+        "cwd": "apps/matthewhuntsberry"
+      }
+    }
+  },
+  "tags": []
+}

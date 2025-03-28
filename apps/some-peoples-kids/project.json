@@ -1,0 +1,87 @@
+{
+  "name": "@mmhuntsberry/some-peoples-kids",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/some-peoples-kids",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/some-peoples-kids",
+        "outputPath": "dist/apps/some-peoples-kids"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/some-peoples-kids"
+        },
+        "production": {
+          "generatePackageJson": true
+        }
+      }
+    },
+    "scrape": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsx scripts/scrape.ts",
+        "cwd": "apps/some-peoples-kids"
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "@mmhuntsberry/some-peoples-kids:build",
+        "dev": true,
+        "port": 3000
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "@mmhuntsberry/some-peoples-kids:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "@mmhuntsberry/some-peoples-kids:build:production",
+          "dev": false
+        }
+      }
+    },
+    "start": {
+      "executor": "@nx/next:server",
+      "options": {
+        "buildTarget": "@mmhuntsberry/some-peoples-kids:build:production",
+        "dev": false
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/some-peoples-kids/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "seed": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsx scripts/seed.ts",
+        "cwd": "apps/some-peoples-kids"
+      }
+    },
+    "db:push": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "drizzle-kit push",
+        "cwd": "apps/some-peoples-kids"
+      }
+    },
+    "db:studio": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "drizzle-kit studio",
+        "cwd": "apps/some-peoples-kids"
+      }
+    }
+  },
+  "tags": []
+}

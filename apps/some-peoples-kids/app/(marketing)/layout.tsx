@@ -5,6 +5,14 @@ import { headers } from "next/headers";
 import Link from "../../components/Link";
 import "../globals.css";
 
+import {
+  cutMeOut1,
+  cutMeOut2,
+  cutMeOut3,
+  punk,
+  specialElite,
+} from "../../fonts";
+
 export default async function MarketingLayout({
   children,
 }: {
@@ -12,8 +20,11 @@ export default async function MarketingLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        <header className="box-border border-b border-gray-100 bg-white py-xs max-h-[64px]">
+      <body
+        // className="antialiased"
+        className={`antialiased ${punk.variable} ${specialElite.variable} ${cutMeOut1.variable} ${cutMeOut2.variable} ${cutMeOut3.variable}`}
+      >
+        {/* <header className="box-border border-b border-gray-100 bg-white py-xs max-h-[64px]">
           <div className="container mx-auto flex items-center justify-between px-4">
             <div className="flex items-center gap-md">
               <Link
@@ -62,7 +73,7 @@ export default async function MarketingLayout({
               </Link>
             </div>
           </div>
-        </header>
+        </header> */}
         <main className="flex-1">{children}</main>
         <footer className="border-t border-gray-200 bg-white">
           {/* Footer content */}
