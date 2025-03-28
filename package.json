@@ -157,7 +157,7 @@
     "sanity": "^3.20.1",
     "speakingurl": "^14.0.1",
     "storybook": "^8.2.8",
-    "style-dictionary-utils": "^2.4.1",
+    "style-dictionary": "^4.3.3",
     "tailwind-merge": "^3.0.2",
     "tslib": "^2.3.0",
     "uuid": "^11.1.0",

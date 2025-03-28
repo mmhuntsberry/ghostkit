@@ -7,19 +7,14 @@
   "targets": {
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
       "options": {
-        "command": "node build-themes.js",
-        "cwd": "packages/tokens/src"
+        "command": "style-dictionary build --config config.js",
+        "cwd": "packages/tokens"
       },
+      "defaultConfiguration": "production",
       "configurations": {
-        "development": {
-          "mode": "development"
-        },
-        "production": {
-          "mode": "production"
-        }
+        "production": {},
+        "development": {}
       }
     },
     "pack": {

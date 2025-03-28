@@ -1,4 +1,9 @@
-@import "./primitives.css";
-@import "./alias.css";
-/* @import "./brands/bicycling/bicycling.css"; */
-/* @import "./brands/white-label/white-label.css"; */
+
+:root,
+:host {
+--ds-theme-palette-content-brand: #000;
+--ds-theme-palette-action-background-primary-solid-default: #000;
+--ds-theme-palette-action-background-primary-solid-hover: #000;
+--ds-theme-palette-action-background-primary-solid-active: #000;
+--ds-palette-gray-0: #000;
+}

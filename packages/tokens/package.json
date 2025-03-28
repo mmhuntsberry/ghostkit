@@ -7,18 +7,11 @@
     ".": {
       "import": "./build/css/index.css",
       "require": "./build/css/index.css"
-    },
-    "./normalize": "./normalize.css",
-    "./primitives": "./build/css/primitives.css",
-    "./alias": "./build/css/alias.css",
-    "./themes/all": "./build/css/index.css",
-    "./themes/white-label": "./build/css/brands/white-label.css",
-    "./themes/bicycling": "./build/css/brands/bicycling.css",
-    "./themes/elle": "./build/css/brands/elle.css"
+    }
   },
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
-    "build": "node build-themes.js",
+    "build": "style-dictionary build --config config.js",
     "pack": "mkdir -p dist && cp -r src/themes package.json normalize.css dist/"
   },
   "repository": {
@@ -31,8 +24,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "style-dictionary": "^3.8.0",
-    "@tokens-studio/sd-transforms": "0.9.1"
-  }
+  "dependencies": {}
 }
