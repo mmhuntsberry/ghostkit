@@ -36,6 +36,7 @@
     "**/*.ts",
     "**/*.tsx",
     "../../apps/blog/.next/types/**/*.ts",
+    "../../apps/some-peoples-kids/.next/types/**/*.ts",
     "../../dist/apps/blog/.next/types/**/*.ts",
     "../../dist/apps/copy-paste/.next/types/**/*.ts",
     "../../dist/apps/neurotales/.next/types/**/*.ts",
@@ -44,7 +45,7 @@
     ".next/types/**/*.ts",
     "fonts/index.ss",
     "next-env.d.ts",
-    "../../apps/some-peoples-kids/.next/types/**/*.ts"
+    "../../dist/apps/some-peoples-kids/.next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

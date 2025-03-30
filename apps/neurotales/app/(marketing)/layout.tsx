@@ -17,7 +17,6 @@ export default async function MarketingLayout({
           <div className="container mx-auto flex items-center justify-between px-4">
             <div className="flex items-center gap-md">
               <Link
-                as={NextLink}
                 href="/"
                 variant="neutral"
                 background="transparent"
@@ -28,7 +27,6 @@ export default async function MarketingLayout({
               </Link>
               <nav className="hidden md:flex gap-xs">
                 <Link
-                  as={NextLink}
                   href="/features"
                   variant="neutral"
                   background="transparent"
@@ -36,28 +34,20 @@ export default async function MarketingLayout({
                   Features
                 </Link>
                 <Link
-                  as={NextLink}
                   href="/pricing"
                   variant="neutral"
                   background="transparent"
                 >
                   Pricing
                 </Link>
-                <Link
-                  as={NextLink}
-                  href="/faq"
-                  variant="neutral"
-                  background="transparent"
-                >
+                <Link href="/faq" variant="neutral" background="transparent">
                   FAQ
                 </Link>
               </nav>
             </div>
             <div className="flex items-center gap-4">
-              <Link as={NextLink} href="/signin">
-                Sign in
-              </Link>
-              <Link as={NextLink} href="/signup" background="outlined">
+              <Link href="/signin">Sign in</Link>
+              <Link href="/signup" background="outlined">
                 Sign up
               </Link>
             </div>

@@ -1,8 +1,6 @@
 // app/(marketing)/layout.tsx
 import React from "react";
-import NextLink from "next/link";
-import { headers } from "next/headers";
-import Link from "../../components/Link";
+
 import "../globals.css";
 
 import {
