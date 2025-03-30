@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { punk, specialElite, cutMeOut2 } from "../../../fonts";
-import { Dot } from "lucide-react";
+import { Send, LoaderCircle } from "lucide-react";
+
 export default function SubscribePage() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -38,7 +40,7 @@ export default function SubscribePage() {
   return (
     <form
       onSubmit={subscribe}
-      className="relative min-h-screen bg-primary-500 flex flex-col justify-center gap-2xl overflow-hidden"
+      className="relative min-h-screen bg-primary-500 flex flex-col justify-center overflow-hidden px-md"
     >
       <div className="container w-min mx-auto flex flex-col justify-center z-10">
         <h2
@@ -57,10 +59,15 @@ export default function SubscribePage() {
           Kids
         </h2>
       </div>
-
-      <div className="flex container w-[512px] mx-auto justify-center -rotate-2 bg-neutral-900 z-10">
+      <div className="flex container mx-auto justify-center">
+        <Image src="/a.png" alt="a" width={128} height={128} />
+      </div>
+      <div className="flex container mx-auto justify-center">
+        <Image src="/novel.png" alt="novel" width={256} height={256} />
+      </div>
+      <div className="flex container max-w-full md:max-w-[512px] mx-auto mt-2xl justify-center -rotate-2 bg-neutral-900 z-10">
         <p
-          className={`text-white text-xl ${cutMeOut2.className} text-center px-2 py-1`}
+          className={`text-white text-xl-fluid ${cutMeOut2.className} text-center px-2 py-1`}
         >
           Subscribe.
           <br />
@@ -68,7 +75,7 @@ export default function SubscribePage() {
         </p>
       </div>
 
-      <div className="flex container w-[512px] mx-auto z-10 flex-col gap-2 mt-2xl">
+      <div className="flex container mx-auto max-w-full md:max-w-[512px] z-10 flex-col gap-2 mt-2xl">
         <div className="flex">
           <input
             type="email"
@@ -81,26 +88,21 @@ export default function SubscribePage() {
           <button
             type="submit"
             disabled={loading}
-            className={`transition-colors duration-300 ease-in-out font-specialElite bg-neutral-900 hover:bg-neutral-800 active:bg-neutral-1000 whitespace-nowrap text-2xl leading-2xl rounded-none text-white w-max px-md py-xs disabled:opacity-50`}
+            className={`transition-colors duration-300 ease-in-out font-specialElite bg-neutral-900 hover:bg-neutral-800 active:bg-neutral-1000 whitespace-nowrap text-2xl leading-2xl rounded-none text-white w-max px-md py-xs disabled:opacity-50 flex items-center gap-md`}
           >
+            <span className="hidden md:inline-block">
+              {loading ? "Sending" : "Sign up"}
+            </span>
             {loading ? (
-              <span className="animate-pulse">
-                <span className="animate-pulse">
-                  <Dot />
-                </span>
-                <span className="animate-pulse">
-                  <Dot />
-                </span>
-                <span className="animate-pulse">
-                  <Dot />
-                </span>
-              </span>
+              <LoaderCircle className="animate-spin" size={32} />
             ) : (
-              "Sign up!"
+              <Send strokeWidth={2} size={32} />
             )}
           </button>
         </div>
-        <p className={` text-xl font-specialElite text-white min-h-[1.5rem]`}>
+        <p
+          className={`text-xl-fluid font-specialElite text-white min-h-[1.5rem]`}
+        >
           {message}
         </p>
       </div>

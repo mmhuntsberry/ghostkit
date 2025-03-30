@@ -2,7 +2,11 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -21,7 +25,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     }
   },
   "include": [
@@ -32,12 +38,13 @@
     "../../apps/blog/.next/types/**/*.ts",
     "../../dist/apps/blog/.next/types/**/*.ts",
     "../../dist/apps/copy-paste/.next/types/**/*.ts",
+    "../../dist/apps/neurotales/.next/types/**/*.ts",
     "../blog/.next/types/**/*.ts",
     "../dist/blog/.next/types/**/*.ts",
     ".next/types/**/*.ts",
+    "fonts/index.ss",
     "next-env.d.ts",
-    "../../dist/apps/neurotales/.next/types/**/*.ts",
-    "fonts/index.ss"
+    "../../apps/some-peoples-kids/.next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
