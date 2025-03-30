@@ -67,15 +67,13 @@ export default function SubscribePage() {
       </div>
       <div className="flex container max-w-full md:max-w-[512px] mx-auto mt-2xl justify-center -rotate-2 bg-neutral-900 z-10">
         <p
-          className={`text-white text-xl-fluid ${cutMeOut2.className} text-center px-2 py-1`}
+          className={`text-white text-4xl-fluid ${cutMeOut2.className} text-center px-2 py-1`}
         >
-          Subscribe.
-          <br />
-          Because authority hates it.
+          Stay tuned!
         </p>
       </div>
 
-      <div className="flex container mx-auto max-w-full md:max-w-[512px] z-10 flex-col gap-2 mt-2xl">
+      <div className="flex container mx-auto max-w-full md:max-w-[512px] z-10 flex-col gap-2 mt-4xl">
         <div className="flex">
           <input
             type="email"
