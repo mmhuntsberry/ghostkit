@@ -3,15 +3,15 @@
   "version": "0.0.0-replace",
   "description": "",
   "main": "./build/css/index.css",
+  "type": "commonjs",
   "exports": {
     ".": {
       "import": "./build/css/index.css",
       "require": "./build/css/index.css"
     }
   },
-  "type": "module",
   "scripts": {
-    "build": "style-dictionary build --config config.js",
+    "build": "style-dictionary build --config config.mjs",
     "pack": "mkdir -p dist && cp -r src/themes package.json normalize.css dist/"
   },
   "repository": {
