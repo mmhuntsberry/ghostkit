@@ -9,7 +9,7 @@ import {
 import { eq, inArray } from "drizzle-orm";
 import fetch from "node-fetch";
 
-const FIGMA_TOKEN = process.env.FIGMA_API_KEY!;
+const FIGMA_API_KEY = process.env.FIGMA_API_KEY!;
 const FILE_KEY = "d7n9iZ8nIf8AsfiWsDVzM9";
 const FIGMA_VARIABLES_URL = `https://api.figma.com/v1/files/${FILE_KEY}/variables`;
 
@@ -161,7 +161,7 @@ async function postAllToFigma() {
   const resp = await fetch(FIGMA_VARIABLES_URL, {
     method: "POST",
     headers: {
-      "X-Figma-Token": FIGMA_TOKEN,
+      "X-Figma-Token": FIGMA_API_KEY,
       "Content-Type": "application/json",
     },
     body: JSON.stringify(body),

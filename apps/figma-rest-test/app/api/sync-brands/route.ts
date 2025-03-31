@@ -48,7 +48,7 @@ function makeEphemeralId(prefix: string, raw: string) {
  */
 export async function POST() {
   try {
-    const FIGMA_TOKEN = process.env.FIGMA_API_KEY!;
+    const FIGMA_API_KEY = process.env.FIGMA_API_KEY!;
     const FILE_KEY = process.env.FILE_ID!;
     const FIGMA_VARIABLES_URL = `https://api.figma.com/v1/files/${FILE_KEY}/variables`;
 
@@ -229,7 +229,7 @@ export async function POST() {
     const response = await fetch(FIGMA_VARIABLES_URL, {
       method: "POST",
       headers: {
-        "X-Figma-Token": FIGMA_TOKEN,
+        "X-Figma-Token": FIGMA_API_KEY,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(figmaPayload),

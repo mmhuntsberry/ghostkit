@@ -4,20 +4,20 @@ import fs from "fs";
 import path from "path";
 import fetch from "node-fetch";
 
-const FIGMA_FILE_KEY = process.env.FIGMA_FILE_KEY;
-const FIGMA_TOKEN = process.env.FIGMA_TOKEN;
+const FILE_ID = process.env.FILE_ID;
+const FIGMA_API_KEY = process.env.FIGMA_API_KEY;
 const OUTPUT_DIR = path.resolve("packages/tokens");
 
-if (!FIGMA_FILE_KEY || !FIGMA_TOKEN) {
-  console.error("❌ Missing FIGMA_FILE_KEY or FIGMA_TOKEN");
+if (!FILE_ID || !FIGMA_API_KEY) {
+  console.error("❌ Missing FILE_ID or FIGMA_API_KEY");
   process.exit(1);
 }
 
 const headers = {
-  "X-Figma-Token": FIGMA_TOKEN,
+  "X-Figma-Token": FIGMA_API_KEY,
 };
 
-const VARIABLES_URL = `https://api.figma.com/v1/files/${FIGMA_FILE_KEY}/variables/local`;
+const VARIABLES_URL = `https://api.figma.com/v1/files/${FILE_ID}/variables/local`;
 
 function rgbaToHex({ r, g, b, a }) {
   const toHex = (v) =>

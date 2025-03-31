@@ -23,20 +23,19 @@ jobs:
 
       - name: 📦 Install dependencies
         run: npm install
+        # If your monorepo uses workspaces, you might do:
+        # run: npm install --workspaces
         working-directory: ${{ github.workspace }}
-        # (If your monorepo uses workspaces, adjust this command accordingly)
 
       - name: 🔑 Configure Figma API credentials
         env:
-          FIGMA_FILE_KEY: ${{ secrets.FIGMA_FILE_KEY }}
-          FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
-        run: echo "Figma File: $FIGMA_FILE_KEY"  # (Optional: just to confirm env is set)
-        # The FIGMA_TOKEN is kept secret. Ensure it has read access to Variables&#8203;:contentReference[oaicite:0]{index=0}.
+          FILE_ID: ${{ secrets.FILE_ID }}
+          FIGMA_API_KEY: ${{ secrets.FIGMA_API_KEY }}
+        run: echo "Figma File: $FILE_ID"
+        # The FIGMA_API_KEY is kept secret. Ensure it has read access to Variables.
 
       - name: 🏷️ Export Figma tokens to JSON
         run: node packages/tokens/export-figma-tokens.js
         env:
-          FIGMA_FILE_KEY: ${{ secrets.FIGMA_FILE_KEY }}
-          FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
-        # Runs the Node script to fetch variables via Figma API and output JSON files.
-
+          FILE_ID: ${{ secrets.FILE_ID }}
+          FIGMA_API_KEY: ${{ secrets.FIGMA_API_KEY }}
