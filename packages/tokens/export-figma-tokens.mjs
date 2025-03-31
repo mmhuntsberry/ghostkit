@@ -1,4 +1,4 @@
-// packages/tokens/export-figma-tokens.js
+// packages/tokens/export-figma-tokens.mjs
 
 import fs from "fs";
 import path from "path";
@@ -47,24 +47,29 @@ function setNestedToken(obj, pathArray, value) {
     process.exit(1);
   }
 
-  const { meta } = await res.json();
-  const { variables, variableCollections } = meta;
+  const json = await res.json();
+  const { meta } = json;
+  let variables = meta.variables;
+  // If variables is not an array, convert it to an array using Object.values.
+  if (!Array.isArray(variables)) {
+    variables = Object.values(variables);
+  }
+  const variableCollections = meta.variableCollections;
 
   const idToName = {};
-  const idToVariable = {};
-
   for (const v of variables) {
     idToName[v.id] = v.name;
-    idToVariable[v.id] = v;
   }
 
   const primitives = {};
   const aliases = {};
 
+  // Process each variable using the default mode from its collection.
   for (const v of variables) {
     const collection = variableCollections.find(
       (c) => c.id === v.variableCollectionId
     );
+    if (!collection) continue;
     const modeId = collection.defaultModeId;
     const value = v.valuesByMode?.[modeId];
     const namePath = v.name.split(".");
@@ -78,18 +83,15 @@ function setNestedToken(obj, pathArray, value) {
       }
     } else {
       let resolvedValue = value;
-
       if (v.resolvedType === "COLOR") {
         resolvedValue = rgbaToHex(value);
       }
-
       setNestedToken(primitives, namePath, resolvedValue);
     }
   }
 
-  // Write output files
+  // Write output files to packages/tokens/
   if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-
   fs.writeFileSync(
     path.join(OUTPUT_DIR, "primitives.json"),
     JSON.stringify(primitives, null, 2)
