@@ -22,7 +22,7 @@ jobs:
           node-version: "18" # Use Node.js 18+ (which supports fetch API)
 
       - name: 📦 Install dependencies
-        run: npm install
+        run: npm install --force
         working-directory: ${{ github.workspace }}
 
       - name: 🔑 Configure Figma API credentials
