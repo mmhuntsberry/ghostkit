@@ -33,7 +33,7 @@ jobs:
           echo "Figma File: $FILE_ID"
 
       - name: 🏷️ Export Figma tokens to JSON
-        run: node packages/tokens/export-figma-tokens.js
+        run: node packages/tokens/export-figma-tokens.mjs
         env:
           FILE_ID: ${{ secrets.FILE_ID }}
           FIGMA_API_KEY: ${{ secrets.FIGMA_API_KEY }}
