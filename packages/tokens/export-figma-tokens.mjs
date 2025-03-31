@@ -49,12 +49,18 @@ function setNestedToken(obj, pathArray, value) {
 
   const json = await res.json();
   const { meta } = json;
+
+  // Ensure variables is an array
   let variables = meta.variables;
-  // If variables is not an array, convert it to an array using Object.values.
   if (!Array.isArray(variables)) {
     variables = Object.values(variables);
   }
-  const variableCollections = meta.variableCollections;
+
+  // Ensure variableCollections is an array
+  let variableCollections = meta.variableCollections;
+  if (!Array.isArray(variableCollections)) {
+    variableCollections = Object.values(variableCollections);
+  }
 
   const idToName = {};
   for (const v of variables) {
