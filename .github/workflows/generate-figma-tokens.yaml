@@ -1,0 +1,43 @@
+name: Generate Figma Tokens
+
+# Run manually or when specific files change (e.g., config or script changes)
+on:
+  workflow_dispatch: {}  # Allow manual trigger in GitHub UI
+  push:
+    branches: [ main ]
+    paths:
+      - 'packages/tokens/**'       # Token scripts or config files
+      - '.github/workflows/generate-figma-tokens.yml'
+
+jobs:
+  export-tokens:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🕸️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'       # Use Node.js 18+ (which supports fetch API)
+
+      - name: 📦 Install dependencies
+        run: npm install
+        working-directory: ${{ github.workspace }}
+        # (If your monorepo uses workspaces, adjust this command accordingly)
+
+      - name: 🔑 Configure Figma API credentials
+        env:
+          FILE_ID: ${{ secrets.FILE_ID }}
+          FIGMA_API_KEY: ${{ secrets.FIGMA_API_KEY }}
+        run: echo "Figma File: $FILE_ID"  # (Optional: just to confirm env is set)
+        # The FIGMA_API_KEY is kept secret. Ensure it has read access to Variables&#8203;:contentReference[oaicite:0]{index=0}.
+
+      - name: 🏷️ Export Figma tokens to JSON
+        run: node packages/tokens/export-figma-tokens.js
+        env:
+          FILE_ID: ${{ secrets.FILE_ID }}
+          FIGMA_API_KEY: ${{ secrets.FIGMA_API_KEY }}
+        # Runs the Node script to fetch variables via Figma API and output JSON files.
+
+      - name:
