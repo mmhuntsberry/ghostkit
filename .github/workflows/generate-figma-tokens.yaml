@@ -23,8 +23,14 @@ jobs:
         with:
           node-version: "18" # Use Node.js 18+ (which supports fetch API)
 
+      - name: Set npm registry
+        run: npm config set registry https://registry.npmjs.org/
+
+      - name: Clear npm cache
+        run: npm cache clean --force
+
       - name: 📦 Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm install --legacy-peer-deps --registry=https://registry.npmjs.org/
         working-directory: ${{ github.workspace }}
 
       - name: 🔑 Configure Figma API credentials
