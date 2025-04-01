@@ -1,0 +1,152 @@
+{
+  "ELLE-Primary": {
+    "value": "Modern MT Pro"
+  },
+  "ELLE-Secondary": {
+    "value": "Neue Haas Unica Pro"
+  },
+  "ELLE-Tertiary": {
+    "value": "Neue Haas Unica Pro"
+  },
+  "Overlays/Black Alpha/3": {
+    "value": "#0000000E"
+  },
+  "font-family/font-family-primary": {
+    "value": "Austin"
+  },
+  "font-family/font-family-secondary": {
+    "value": "Madera"
+  },
+  "Alton-bold": {
+    "value": 900
+  },
+  "Gazpacho-Bold": {
+    "value": "Bold"
+  },
+  "palette/brand/1": {
+    "value": "#FFFFFF"
+  },
+  "palette/brand/2": {
+    "value": "#FFFFFF"
+  },
+  "palette/brand/3": {
+    "value": "#FFFFFF"
+  },
+  "palette/brand/4": {
+    "value": "#FFFFFF"
+  },
+  "palette/brand/5": {
+    "value": "#FFFFFF"
+  },
+  "palette/brand/6": {
+    "value": "#FFFFFF"
+  },
+  "palette/brand/7": {
+    "value": "#FFFFFF"
+  },
+  "palette/brand/8": {
+    "value": "#FFFFFF"
+  },
+  "palette/brand/9": {
+    "value": "#FFFFFF"
+  },
+  "palette/brand/10": {
+    "value": "#FFFFFF"
+  },
+  "palette/brand/11": {
+    "value": "#FFFFFF"
+  },
+  "palette/brand/12": {
+    "value": "#FFFFFF"
+  },
+  "palette/brand/13": {
+    "value": "#FFFFFF"
+  },
+  "palette/brand/14": {
+    "value": "#FFFFFF"
+  },
+  "Brand-Primary": {
+    "value": "ITC Avant Garde Gothic Pro"
+  },
+  "Brand-Secondary": {
+    "value": "TT Ramillas"
+  },
+  "font/line-height/2xl": {
+    "value": 28
+  },
+  "font/line-height/3xl": {
+    "value": 32
+  },
+  "font/line-height/5xl": {
+    "value": 52
+  },
+  "WHN-Primary": {
+    "value": "Altone"
+  },
+  "Colors/Black": {
+    "value": "#000000"
+  },
+  "Colors/White": {
+    "value": "#FFFFFF"
+  },
+  "Fonts/Letter Spacing/n2": {
+    "value": -0.23999999463558197
+  },
+  "WHN-24": {
+    "value": 24
+  },
+  "WHN-Secondary": {
+    "value": "#EBFF7C"
+  },
+  "brandColorTertiary": {
+    "value": "#202020"
+  },
+  "White": {
+    "value": "#FFFFFF"
+  },
+  "brandColorQuartenary": {
+    "value": "#696969"
+  },
+  "Tertiary Turquoise": {
+    "value": "#14B8A6"
+  },
+  "Fonts/Line Height/lineheight-24": {
+    "value": 24
+  },
+  "Fonts/Sizes/20px": {
+    "value": 20
+  },
+  "Fonts/Sizes/22px": {
+    "value": 22
+  },
+  "Core/white": {
+    "value": "#FFFFFF"
+  },
+  "font/letter-spacing/8xl": {
+    "value": -2
+  },
+  "_size/12": {
+    "value": 12
+  },
+  "_font/letter-spacing/n2": {
+    "value": -0.23999999463558197
+  },
+  "_font/letter-spacing/4": {
+    "value": 0.47999998927116394
+  },
+  "_palette/Black": {
+    "value": "#000000"
+  },
+  "_palette/White": {
+    "value": "#FFFFFF"
+  },
+  "Fonts/line-height/lineheight-14": {
+    "value": 14
+  },
+  "Fonts/line-height/lineheight-32": {
+    "value": 32
+  },
+  "_palette/gray/23": {
+    "value": "#333842"
+  }
+}
