@@ -2,6 +2,9 @@
   "name": "ghostkit",
   "version": "0.0.1",
   "license": "MIT",
+  "overrides": {
+    "decamelize": "^6.0.0"
+  },
   "scripts": {
     "dev:plugin": "concurrently \"nx serve copy-paste\" \"tsc -w -p apps/copy-paste/plugin/tsconfig.json\"",
     "dev:copy-paste": "concurrently -n plugin,next 'nx run copy-paste:build:plugin --watch' 'nx serve copy-paste'",
