@@ -21,13 +21,19 @@ jobs:
       - name: 🟢 Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18" # Use Node.js 18+ (which supports fetch API)
+          node-version: "20" # Try using Node.js 20
 
       - name: Set npm registry
         run: npm config set registry https://registry.npmjs.org/
 
       - name: Clear npm cache
         run: npm cache clean --force
+
+      - name: Show npm config
+        run: npm config list
+
+      - name: Remove lock file and node_modules
+        run: rm -rf node_modules package-lock.json || echo "Nothing to remove"
 
       - name: 📦 Install dependencies
         run: npm install --legacy-peer-deps --registry=https://registry.npmjs.org/
