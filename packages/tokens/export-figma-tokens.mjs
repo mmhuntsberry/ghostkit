@@ -30,6 +30,10 @@ function rgbaToHex({ r, g, b, a }) {
     : `#${base}${toHex(a).toUpperCase()}`;
 }
 
+/**
+ * Given an array of keys, traverse (or create) nested objects until the last key
+ * and set that key to { value: ... }.
+ */
 function setNestedToken(obj, pathArray, value) {
   let current = obj;
   for (let i = 0; i < pathArray.length - 1; i++) {
@@ -62,6 +66,7 @@ function setNestedToken(obj, pathArray, value) {
     variableCollections = Object.values(variableCollections);
   }
 
+  // Build a lookup for variable IDs to names.
   const idToName = {};
   for (const v of variables) {
     idToName[v.id] = v.name;
@@ -78,14 +83,24 @@ function setNestedToken(obj, pathArray, value) {
     if (!collection) continue;
     const modeId = collection.defaultModeId;
     const value = v.valuesByMode?.[modeId];
-    const namePath = v.name.split(".");
+
+    // Force a 3-level structure: [group, subgroup, key]
+    let namePath = v.name.split(".");
+    if (namePath.length > 3) {
+      namePath = namePath.slice(0, 3);
+    }
 
     if (!value) continue;
 
     if (value.type === "VARIABLE_ALIAS") {
       const referencedName = idToName[value.id];
       if (referencedName) {
-        setNestedToken(aliases, namePath, `{${referencedName}}`);
+        // Force the referenced name into a 3-level structure as well.
+        let aliasNamePath = referencedName.split(".");
+        if (aliasNamePath.length > 3) {
+          aliasNamePath = aliasNamePath.slice(0, 3);
+        }
+        setNestedToken(aliases, namePath, `{${aliasNamePath.join(".")}}`);
       }
     } else {
       let resolvedValue = value;
@@ -97,7 +112,9 @@ function setNestedToken(obj, pathArray, value) {
   }
 
   // Write output files to packages/tokens/
-  if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+  if (!fs.existsSync(OUTPUT_DIR)) {
+    fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+  }
   fs.writeFileSync(
     path.join(OUTPUT_DIR, "primitives.json"),
     JSON.stringify(primitives, null, 2)
