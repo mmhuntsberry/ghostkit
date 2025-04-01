@@ -31,7 +31,7 @@ function rgbaToHex({ r, g, b, a }) {
 }
 
 /**
- * Given an array of keys, traverse (or create) nested objects until the last key
+ * Given an array of keys, traverse (or create) nested objects until the last key,
  * and set that key to { value: ... }.
  */
 function setNestedToken(obj, pathArray, value) {
@@ -84,8 +84,9 @@ function setNestedToken(obj, pathArray, value) {
     const modeId = collection.defaultModeId;
     const value = v.valuesByMode?.[modeId];
 
-    // Force a 3-level structure: [group, subgroup, key]
-    let namePath = v.name.split(".");
+    // Use "/" as delimiter if present; otherwise, use "."
+    const delimiter = v.name.includes("/") ? "/" : ".";
+    let namePath = v.name.split(delimiter);
     if (namePath.length > 3) {
       namePath = namePath.slice(0, 3);
     }
@@ -95,8 +96,8 @@ function setNestedToken(obj, pathArray, value) {
     if (value.type === "VARIABLE_ALIAS") {
       const referencedName = idToName[value.id];
       if (referencedName) {
-        // Force the referenced name into a 3-level structure as well.
-        let aliasNamePath = referencedName.split(".");
+        const aliasDelimiter = referencedName.includes("/") ? "/" : ".";
+        let aliasNamePath = referencedName.split(aliasDelimiter);
         if (aliasNamePath.length > 3) {
           aliasNamePath = aliasNamePath.slice(0, 3);
         }
