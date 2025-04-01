@@ -31,8 +31,7 @@ function rgbaToHex({ r, g, b, a }) {
 }
 
 /**
- * Given an array of keys, traverse (or create) nested objects until the last key,
- * and set that key to { value: ... }.
+ * Traverse (or create) nested objects using an array of keys and set the last key to { value: ... }.
  */
 function setNestedToken(obj, pathArray, value) {
   let current = obj;
@@ -54,76 +53,102 @@ function setNestedToken(obj, pathArray, value) {
   const json = await res.json();
   const { meta } = json;
 
-  // Ensure variables is an array
+  // Ensure variables is an array.
   let variables = meta.variables;
   if (!Array.isArray(variables)) {
     variables = Object.values(variables);
   }
 
-  // Ensure variableCollections is an array
+  // Ensure variableCollections is an array.
   let variableCollections = meta.variableCollections;
   if (!Array.isArray(variableCollections)) {
     variableCollections = Object.values(variableCollections);
   }
 
-  // Build a lookup for variable IDs to names.
+  // Build a mapping from variable IDs to names.
   const idToName = {};
   for (const v of variables) {
     idToName[v.id] = v.name;
   }
 
-  const primitives = {};
-  const aliases = {};
+  // Build a mapping from mode IDs to mode names using the collections.
+  const modeIdToName = {};
+  for (const collection of variableCollections) {
+    if (collection.modes) {
+      for (const mode of collection.modes) {
+        modeIdToName[mode.id] = mode.name;
+      }
+    }
+  }
 
-  // Process each variable using the default mode from its collection.
+  // Create objects to hold primitives and aliases for each mode.
+  const primitivesByMode = {};
+  const aliasesByMode = {};
+
+  // Iterate over each variable.
   for (const v of variables) {
-    const collection = variableCollections.find(
-      (c) => c.id === v.variableCollectionId
-    );
-    if (!collection) continue;
-    const modeId = collection.defaultModeId;
-    const value = v.valuesByMode?.[modeId];
-
-    // Use "/" as delimiter if present; otherwise, use "."
+    // Determine the delimiter for splitting the variable name.
     const delimiter = v.name.includes("/") ? "/" : ".";
     let namePath = v.name.split(delimiter);
     if (namePath.length > 3) {
       namePath = namePath.slice(0, 3);
     }
 
-    if (!value) continue;
+    // Iterate over all mode IDs present in this variable's values.
+    const modeIds = Object.keys(v.valuesByMode || {});
+    for (const modeId of modeIds) {
+      // Initialize mode objects if needed.
+      if (!primitivesByMode[modeId]) primitivesByMode[modeId] = {};
+      if (!aliasesByMode[modeId]) aliasesByMode[modeId] = {};
 
-    if (value.type === "VARIABLE_ALIAS") {
-      const referencedName = idToName[value.id];
-      if (referencedName) {
-        const aliasDelimiter = referencedName.includes("/") ? "/" : ".";
-        let aliasNamePath = referencedName.split(aliasDelimiter);
-        if (aliasNamePath.length > 3) {
-          aliasNamePath = aliasNamePath.slice(0, 3);
+      const value = v.valuesByMode[modeId];
+      if (!value) continue;
+
+      if (value.type === "VARIABLE_ALIAS") {
+        const referencedName = idToName[value.id];
+        if (referencedName) {
+          const aliasDelimiter = referencedName.includes("/") ? "/" : ".";
+          let aliasNamePath = referencedName.split(aliasDelimiter);
+          if (aliasNamePath.length > 3) {
+            aliasNamePath = aliasNamePath.slice(0, 3);
+          }
+          setNestedToken(
+            aliasesByMode[modeId],
+            namePath,
+            `{${aliasNamePath.join(".")}}`
+          );
         }
-        setNestedToken(aliases, namePath, `{${aliasNamePath.join(".")}}`);
+      } else {
+        let resolvedValue = value;
+        if (v.resolvedType === "COLOR") {
+          resolvedValue = rgbaToHex(value);
+        }
+        setNestedToken(primitivesByMode[modeId], namePath, resolvedValue);
       }
-    } else {
-      let resolvedValue = value;
-      if (v.resolvedType === "COLOR") {
-        resolvedValue = rgbaToHex(value);
-      }
-      setNestedToken(primitives, namePath, resolvedValue);
     }
   }
 
-  // Write output files to packages/tokens/
+  // Ensure the output directory exists.
   if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   }
-  fs.writeFileSync(
-    path.join(OUTPUT_DIR, "primitives.json"),
-    JSON.stringify(primitives, null, 2)
-  );
-  fs.writeFileSync(
-    path.join(OUTPUT_DIR, "alias.json"),
-    JSON.stringify(aliases, null, 2)
-  );
 
-  console.log("✅ Design tokens exported to primitives.json and alias.json");
+  // Write separate output files for each mode.
+  for (const modeId of Object.keys(primitivesByMode)) {
+    const modeName = modeIdToName[modeId] || modeId;
+    fs.writeFileSync(
+      path.join(OUTPUT_DIR, `primitives_${modeName}.json`),
+      JSON.stringify(primitivesByMode[modeId], null, 2)
+    );
+  }
+
+  for (const modeId of Object.keys(aliasesByMode)) {
+    const modeName = modeIdToName[modeId] || modeId;
+    fs.writeFileSync(
+      path.join(OUTPUT_DIR, `alias_${modeName}.json`),
+      JSON.stringify(aliasesByMode[modeId], null, 2)
+    );
+  }
+
+  console.log("✅ Design tokens exported for all modes.");
 })();
