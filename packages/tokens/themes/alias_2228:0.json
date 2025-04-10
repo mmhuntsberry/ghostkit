@@ -17,59 +17,96 @@
         "value": "{_palette.yellow.11}"
       }
     },
+    "action": {
+      "background": {
+        "value": "{palette.neutral.alpha-08}"
+      },
+      "border": {
+        "value": "{palette.neutral.alpha-08}"
+      },
+      "content": {
+        "value": "{palette.neutral.darkest}"
+      }
+    },
     "content": {
       "default": {
         "value": "{palette.neutral.darkest}"
       },
-      "secondary": {
-        "value": "{palette.neutral.800}"
-      },
-      "tertiary": {
+      "default-hover": {
         "value": "{palette.neutral.600}"
       },
-      "inverse": {
-        "value": "{palette.neutral.darkest}"
+      "default-active": {
+        "value": "{palette.neutral.600}"
+      },
+      "subtle": {
+        "value": "{palette.neutral.500}"
+      },
+      "knockout": {
+        "value": "{palette.neutral.lightest}"
+      },
+      "knockout-hover": {
+        "value": "{palette.neutral.200}"
       },
       "brand": {
         "value": "{palette.primary.1000}"
       },
+      "brand-hover": {
+        "value": "{palette.primary.800}"
+      },
+      "brand-active": {
+        "value": "{palette.primary.700}"
+      },
       "on-brand": {
+        "value": "{palette.neutral.lightest}"
+      },
+      "link": {
+        "value": "{palette.brand.1}"
+      },
+      "link-hover": {
+        "value": "{palette.neutral.600}"
+      },
+      "link-knockout": {
         "value": "{palette.neutral.lightest}"
       },
       "disabled": {
         "value": "{palette.neutral.lightest}"
       }
     },
+    "brand": {
+      "1": {
+        "value": "{palette.neutral.darkest}"
+      }
+    },
     "primary": {
       "100": {
-        "value": "{_palette.gray.96}"
+        "value": "{palette.neutral.100}"
       },
       "200": {
-        "value": "{_palette.gray.93}"
+        "value": "{palette.neutral.200}"
       },
       "300": {
-        "value": "{_palette.gray.84}"
+        "value": "{palette.neutral.300}"
       },
       "400": {
-        "value": "{_palette.gray.74}"
+        "value": "{palette.neutral.400}"
       },
       "500": {
-        "value": "{_palette.gray.58}"
+        "value": "{palette.neutral.500}"
       },
       "600": {
-        "value": "{_palette.gray.46}"
+        "value": "{palette.neutral.600}"
       },
       "700": {
-        "value": "{_palette.gray.34}"
+        "value": "{palette.neutral.700}"
       },
       "800": {
-        "value": "{_palette.gray.23}"
+        "value": "{palette.neutral.800}"
       },
       "900": {
-        "value": "{_palette.gray.16}"
+        "value": "{palette.neutral.900}"
       },
       "1000": {
-        "value": "{_palette.gray.11}"
+        "value": "{palette.neutral.1000}"
       }
     },
     "neutral": {
@@ -144,11 +181,8 @@
       }
     },
     "family": {
-      "primary": {
-        "value": "{_font.family.source-sans-3}"
-      },
-      "secondary": {
-        "value": "{_font.family.source-sans-3}"
+      "default": {
+        "value": "{_font.family.mac-default}"
       }
     },
     "size": {
@@ -213,6 +247,29 @@
       "lg": {
         "value": "{_size.4}"
       }
+    },
+    "radius": {
+      "square": {
+        "value": "{_size.0}"
+      },
+      "2xs": {
+        "value": "{_size.4}"
+      },
+      "xs": {
+        "value": "{_size.8}"
+      },
+      "sm": {
+        "value": "{_size.12}"
+      },
+      "md": {
+        "value": "{_size.16}"
+      },
+      "lg": {
+        "value": "{_size.20}"
+      },
+      "rounded": {
+        "value": "{_size.1024}"
+      }
     }
   },
   "layout": {
@@ -255,23 +312,6 @@
       "value": "{_opacity.48}"
     }
   },
-  "radius": {
-    "square": {
-      "value": "{_size.0}"
-    },
-    "sm": {
-      "value": "{_size.8}"
-    },
-    "md": {
-      "value": "{_size.16}"
-    },
-    "lg": {
-      "value": "{_size.32}"
-    },
-    "rounded": {
-      "value": "{_size.1024}"
-    }
-  },
   "space": {
     "none": {
       "value": "{_size.0}"
@@ -305,19 +345,6 @@
     },
     "4xl": {
       "value": "{_size.64}"
-    }
-  },
-  "component": {
-    "button": {
-      "background": {
-        "value": "{palette.neutral.200-alpha}"
-      },
-      "border": {
-        "value": "{palette.neutral.200-alpha}"
-      },
-      "content": {
-        "value": "{palette.neutral.darkest}"
-      }
     }
   }
 }
