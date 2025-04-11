@@ -267,20 +267,6 @@
       }
     }
   },
-  "spacing": {
-    "2xs": {
-      "value": 4
-    },
-    "xs": {
-      "value": 8
-    },
-    "sm": {
-      "value": 12
-    },
-    "4xl": {
-      "value": 64
-    }
-  },
   "_size": {
     "1": {
       "value": 1
@@ -722,6 +708,20 @@
     },
     "88": {
       "value": 88
+    }
+  },
+  "spacing": {
+    "2xs": {
+      "value": 4
+    },
+    "xs": {
+      "value": 8
+    },
+    "sm": {
+      "value": 12
+    },
+    "4xl": {
+      "value": 64
     }
   }
 }
