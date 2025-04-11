@@ -49,10 +49,10 @@ function setNestedToken(obj, pathArray, value) {
   }
 
   const { meta } = await res.json();
-  let variables = Array.isArray(meta.variables)
+  const variables = Array.isArray(meta.variables)
     ? meta.variables
     : Object.values(meta.variables);
-  let variableCollections = Array.isArray(meta.variableCollections)
+  const variableCollections = Array.isArray(meta.variableCollections)
     ? meta.variableCollections
     : Object.values(meta.variableCollections);
 
@@ -61,11 +61,21 @@ function setNestedToken(obj, pathArray, value) {
     idToName[v.id] = v.name;
   }
 
-  // Create a complete map of modeId => friendlyName across all collections
+  // 🔥 NEW: Dynamically resolve modeId → friendly name from each variable's collection
   const modeIdToName = {};
-  for (const collection of variableCollections) {
-    for (const mode of collection?.modes || []) {
-      modeIdToName[mode.id] = mode.name;
+  for (const v of variables) {
+    const collection = variableCollections.find(
+      (c) => c.id === v.variableCollectionId
+    );
+    if (!collection || !collection.modes) continue;
+
+    for (const modeId of Object.keys(v.valuesByMode || {})) {
+      if (!modeIdToName[modeId]) {
+        const found = collection.modes.find((m) => m.id === modeId);
+        if (found) {
+          modeIdToName[modeId] = found.name;
+        }
+      }
     }
   }
 
@@ -81,7 +91,6 @@ function setNestedToken(obj, pathArray, value) {
     const delimiter = v.name.includes("/") ? "/" : ".";
     const namePath = v.name.split(delimiter).slice(0, 3);
 
-    // Handle default mode primitive
     const defaultModeId = collection.defaultModeId;
     const defaultValue = v.valuesByMode?.[defaultModeId];
 
@@ -91,7 +100,6 @@ function setNestedToken(obj, pathArray, value) {
       setNestedToken(primitives, namePath, value);
     }
 
-    // Handle aliases across all modes
     for (const [modeId, val] of Object.entries(v.valuesByMode || {})) {
       if (!val || val.type !== "VARIABLE_ALIAS") continue;
 
@@ -106,6 +114,7 @@ function setNestedToken(obj, pathArray, value) {
       const refPath = referencedName
         .split(referencedName.includes("/") ? "/" : ".")
         .slice(0, 3);
+
       setNestedToken(
         aliasesByModeName[modeName],
         namePath,
@@ -117,21 +126,19 @@ function setNestedToken(obj, pathArray, value) {
   if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   if (!fs.existsSync(THEMES_DIR)) fs.mkdirSync(THEMES_DIR, { recursive: true });
 
-  // Write primitives
   fs.writeFileSync(
     path.join(OUTPUT_DIR, "primitives.json"),
     JSON.stringify(primitives, null, 2)
   );
 
-  // Write aliases per mode using friendly names
-  for (const [modeName, aliasData] of Object.entries(aliasesByModeName)) {
+  for (const [modeName, data] of Object.entries(aliasesByModeName)) {
     fs.writeFileSync(
       path.join(THEMES_DIR, `alias_${modeName}.json`),
-      JSON.stringify(aliasData, null, 2)
+      JSON.stringify(data, null, 2)
     );
   }
 
-  console.log("✅ Exported:");
+  console.log("✅ Export complete:");
   console.log("• primitives.json");
   Object.keys(aliasesByModeName).forEach((mode) => {
     console.log(`• themes/alias_${mode}.json`);
