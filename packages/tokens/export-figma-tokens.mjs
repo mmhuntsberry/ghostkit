@@ -13,26 +13,12 @@ if (!FILE_ID || !FIGMA_API_KEY) {
   process.exit(1);
 }
 
-// Cleanup: Delete previous output files/folders
-if (fs.existsSync(THEMES_DIR)) {
-  fs.rmSync(THEMES_DIR, { recursive: true, force: true });
-  console.log(`✅ Deleted existing themes folder: ${THEMES_DIR}`);
-}
-if (fs.existsSync(path.join(OUTPUT_DIR, "primitives.json"))) {
-  fs.rmSync(path.join(OUTPUT_DIR, "primitives.json"), { force: true });
-  console.log("✅ Deleted existing primitives.json file");
-}
-fs.mkdirSync(THEMES_DIR, { recursive: true });
-
 const VARIABLES_URL = `https://api.figma.com/v1/files/${FILE_ID}/variables/local`;
 
 const headers = {
   "X-Figma-Token": FIGMA_API_KEY,
 };
 
-/**
- * Convert Figma RGBA (values in [0,1]) to a hex string.
- */
 function rgbaToHex({ r, g, b, a }) {
   const toHex = (val) =>
     Math.round(val * 255)
@@ -44,16 +30,11 @@ function rgbaToHex({ r, g, b, a }) {
     : `#${base}${toHex(a).toUpperCase()}`;
 }
 
-/**
- * Traverse (or create) nested objects from an array of keys and set the last key to { value: ... }.
- */
 function setNestedToken(obj, pathArray, value) {
   let current = obj;
   for (let i = 0; i < pathArray.length - 1; i++) {
     const key = pathArray[i];
-    if (!current[key]) {
-      current[key] = {};
-    }
+    if (!current[key]) current[key] = {};
     current = current[key];
   }
   current[pathArray.at(-1)] = { value };
@@ -67,7 +48,6 @@ function setNestedToken(obj, pathArray, value) {
   }
 
   const { meta } = await res.json();
-
   const variables = Array.isArray(meta.variables)
     ? meta.variables
     : Object.values(meta.variables);
@@ -75,13 +55,18 @@ function setNestedToken(obj, pathArray, value) {
     ? meta.variableCollections
     : Object.values(meta.variableCollections);
 
-  // Build a mapping from variable IDs to names.
-  const idToName = {};
-  for (const v of variables) {
-    idToName[v.id] = v.name;
+  // Cleanup
+  if (fs.existsSync(THEMES_DIR)) {
+    fs.rmSync(THEMES_DIR, { recursive: true, force: true });
+    console.log("🧹 Cleaned old themes directory");
   }
+  if (fs.existsSync(path.join(OUTPUT_DIR, "primitives.json"))) {
+    fs.rmSync(path.join(OUTPUT_DIR, "primitives.json"), { force: true });
+    console.log("🧹 Removed old primitives.json");
+  }
+  fs.mkdirSync(THEMES_DIR, { recursive: true });
 
-  // Global mapping from modeId → friendly mode name.
+  // Build mode ID → mode name map (e.g. 4223:7 → Hearst)
   const modeIdToName = {};
   for (const collection of variableCollections) {
     for (const mode of collection?.modes || []) {
@@ -89,6 +74,11 @@ function setNestedToken(obj, pathArray, value) {
         modeIdToName[mode.id] = mode.name;
       }
     }
+  }
+
+  const idToName = {};
+  for (const v of variables) {
+    idToName[v.id] = v.name;
   }
 
   const primitives = {};
@@ -103,22 +93,25 @@ function setNestedToken(obj, pathArray, value) {
     const delimiter = v.name.includes("/") ? "/" : ".";
     const namePath = v.name.split(delimiter).slice(0, 3);
 
-    // Use default mode for primitive tokens.
     const defaultModeId = collection.defaultModeId;
     const defaultValue = v.valuesByMode?.[defaultModeId];
+
     if (defaultValue && defaultValue.type !== "VARIABLE_ALIAS") {
       const value =
         v.resolvedType === "COLOR" ? rgbaToHex(defaultValue) : defaultValue;
       setNestedToken(primitives, namePath, value);
     }
 
-    // Process alias tokens for all modes.
     for (const [modeId, tokenValue] of Object.entries(v.valuesByMode || {})) {
       if (!tokenValue || tokenValue.type !== "VARIABLE_ALIAS") continue;
 
-      const modeName = modeIdToName[modeId] || modeId;
-      if (!aliasesByModeName[modeName]) {
-        aliasesByModeName[modeName] = {};
+      const friendlyName = modeIdToName[modeId] || modeId;
+      const safeFileName = friendlyName
+        .replace(/[^\w\s-]/g, "")
+        .replace(/\s+/g, "-");
+
+      if (!aliasesByModeName[safeFileName]) {
+        aliasesByModeName[safeFileName] = {};
       }
 
       const referencedName = idToName[tokenValue.id];
@@ -128,25 +121,22 @@ function setNestedToken(obj, pathArray, value) {
       const refPath = referencedName.split(refDelimiter).slice(0, 3);
 
       setNestedToken(
-        aliasesByModeName[modeName],
+        aliasesByModeName[safeFileName],
         namePath,
         `{${refPath.join(".")}}`
       );
     }
   }
 
-  // Write primitives file.
   fs.writeFileSync(
     path.join(OUTPUT_DIR, "primitives.json"),
     JSON.stringify(primitives, null, 2)
   );
-  console.log(`✅ Wrote primitives.json`);
+  console.log("✅ Wrote primitives.json");
 
-  // Write alias tokens per mode into the themes folder, using friendly mode names.
-  for (const [modeId, aliasData] of Object.entries(aliasesByModeName)) {
-    const friendlyName = modeIdToName[modeId] || modeId;
-    const filePath = path.join(THEMES_DIR, `alias_${friendlyName}.json`);
-    fs.writeFileSync(filePath, JSON.stringify(aliasData, null, 2));
+  for (const [modeName, data] of Object.entries(aliasesByModeName)) {
+    const filePath = path.join(THEMES_DIR, `alias_${modeName}.json`);
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
     console.log(`✅ Wrote ${filePath}`);
   }
 
