@@ -49,7 +49,8 @@ ${dictionary.allTokens
 });
 
 export default {
-  source: ["src/**/*.json"],
+  source: ["alias.json", "primtives.json"],
+  // source: ["src/**/*.json"],
   platforms: {
     css: {
       prefix: "ds",
