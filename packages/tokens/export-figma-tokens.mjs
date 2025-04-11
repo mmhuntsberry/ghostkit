@@ -61,20 +61,12 @@ function setNestedToken(obj, pathArray, value) {
     idToName[v.id] = v.name;
   }
 
-  // 🔥 NEW: Dynamically resolve modeId → friendly name from each variable's collection
+  // ✅ Global: Build modeId → modeName map from all collections
   const modeIdToName = {};
-  for (const v of variables) {
-    const collection = variableCollections.find(
-      (c) => c.id === v.variableCollectionId
-    );
-    if (!collection || !collection.modes) continue;
-
-    for (const modeId of Object.keys(v.valuesByMode || {})) {
-      if (!modeIdToName[modeId]) {
-        const found = collection.modes.find((m) => m.id === modeId);
-        if (found) {
-          modeIdToName[modeId] = found.name;
-        }
+  for (const collection of variableCollections) {
+    for (const mode of collection?.modes || []) {
+      if (!modeIdToName[mode.id]) {
+        modeIdToName[mode.id] = mode.name;
       }
     }
   }
