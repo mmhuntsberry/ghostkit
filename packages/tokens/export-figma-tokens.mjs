@@ -1,5 +1,3 @@
-// packages/tokens/export-figma-tokens.mjs
-
 import fs from "fs";
 import path from "path";
 import fetch from "node-fetch";
@@ -15,31 +13,24 @@ if (!FILE_ID || !FIGMA_API_KEY) {
   process.exit(1);
 }
 
-// Figma Variables API endpoint for local variables
 const VARIABLES_URL = `https://api.figma.com/v1/files/${FILE_ID}/variables/local`;
 
 const headers = {
   "X-Figma-Token": FIGMA_API_KEY,
 };
 
-/**
- * Convert Figma's RGBA color (0..1) to a hex string.
- */
 function rgbaToHex({ r, g, b, a }) {
   const toHex = (val) =>
     Math.round(val * 255)
       .toString(16)
       .padStart(2, "0");
+
   const base = `${toHex(r)}${toHex(g)}${toHex(b)}`;
   return a === 1
     ? `#${base.toUpperCase()}`
     : `#${base}${toHex(a).toUpperCase()}`;
 }
 
-/**
- * Traverse (or create) nested objects from an array of keys
- * and set the last key = { value: ... }.
- */
 function setNestedToken(obj, pathArray, value) {
   let current = obj;
   for (let i = 0; i < pathArray.length - 1; i++) {
@@ -51,7 +42,6 @@ function setNestedToken(obj, pathArray, value) {
 }
 
 (async () => {
-  // 1. Fetch all local variables from Figma
   const res = await fetch(VARIABLES_URL, { headers });
   if (!res.ok) {
     console.error("❌ Failed to fetch variables:", res.statusText);
@@ -59,121 +49,91 @@ function setNestedToken(obj, pathArray, value) {
   }
 
   const { meta } = await res.json();
-  let variables = meta.variables;
-  let variableCollections = meta.variableCollections;
+  let variables = Array.isArray(meta.variables)
+    ? meta.variables
+    : Object.values(meta.variables);
+  let variableCollections = Array.isArray(meta.variableCollections)
+    ? meta.variableCollections
+    : Object.values(meta.variableCollections);
 
-  // Convert to arrays if needed
-  if (!Array.isArray(variables)) {
-    variables = Object.values(variables);
-  }
-  if (!Array.isArray(variableCollections)) {
-    variableCollections = Object.values(variableCollections);
-  }
-
-  // Build a map from variable IDs -> variable name
   const idToName = {};
   for (const v of variables) {
     idToName[v.id] = v.name;
   }
 
-  // Create an object for primitives (default mode only)
+  // Create a complete map of modeId => friendlyName across all collections
+  const modeIdToName = {};
+  for (const collection of variableCollections) {
+    for (const mode of collection?.modes || []) {
+      modeIdToName[mode.id] = mode.name;
+    }
+  }
+
   const primitives = {};
-  // We'll build aliases in a structure keyed by the *friendly mode name*:
-  // e.g., { "Alta": { ...tokens }, "Delish": { ...tokens } }
   const aliasesByModeName = {};
 
-  // 2. Iterate over variables to populate primitives & aliases
   for (const v of variables) {
-    // Determine the variable collection for this variable
     const collection = variableCollections.find(
       (c) => c.id === v.variableCollectionId
     );
     if (!collection) continue;
 
-    // Delimiter: if name includes "/", split on "/", else split on "."
     const delimiter = v.name.includes("/") ? "/" : ".";
-    let namePath = v.name.split(delimiter);
-    // Limit depth to 3
-    if (namePath.length > 3) {
-      namePath = namePath.slice(0, 3);
-    }
+    const namePath = v.name.split(delimiter).slice(0, 3);
 
-    // 2A. Handle the default mode for primitives
+    // Handle default mode primitive
     const defaultModeId = collection.defaultModeId;
     const defaultValue = v.valuesByMode?.[defaultModeId];
+
     if (defaultValue && defaultValue.type !== "VARIABLE_ALIAS") {
-      // It's a primitive token for default mode
-      let resolvedValue = defaultValue;
-      if (v.resolvedType === "COLOR") {
-        resolvedValue = rgbaToHex(defaultValue);
-      }
-      setNestedToken(primitives, namePath, resolvedValue);
+      const value =
+        v.resolvedType === "COLOR" ? rgbaToHex(defaultValue) : defaultValue;
+      setNestedToken(primitives, namePath, value);
     }
 
-    // 2B. Handle all modes for alias tokens
-    // Each mode in the variable's valuesByMode is a potential alias
-    const modeIds = Object.keys(v.valuesByMode || {});
-    for (const modeId of modeIds) {
-      const val = v.valuesByMode[modeId];
-      // We only care if it's an alias
+    // Handle aliases across all modes
+    for (const [modeId, val] of Object.entries(v.valuesByMode || {})) {
       if (!val || val.type !== "VARIABLE_ALIAS") continue;
 
-      // Find the user-friendly mode name from this variable's collection
-      let modeName = modeId; // fallback to ID
-      if (collection.modes) {
-        const modeObj = collection.modes.find((m) => m.id === modeId);
-        if (modeObj && modeObj.name) {
-          modeName = modeObj.name; // e.g. "Alta", "Delish", etc.
-        }
-      }
-
-      // If we haven't created an object for this mode name yet, do so
+      const modeName = modeIdToName[modeId] || modeId;
       if (!aliasesByModeName[modeName]) {
         aliasesByModeName[modeName] = {};
       }
 
-      // Build the alias reference
       const referencedName = idToName[val.id];
       if (!referencedName) continue;
-      // Delimiter for the *referenced* variable
-      const refDelimiter = referencedName.includes("/") ? "/" : ".";
-      let aliasNamePath = referencedName.split(refDelimiter);
-      if (aliasNamePath.length > 3) {
-        aliasNamePath = aliasNamePath.slice(0, 3);
-      }
 
+      const refPath = referencedName
+        .split(referencedName.includes("/") ? "/" : ".")
+        .slice(0, 3);
       setNestedToken(
         aliasesByModeName[modeName],
         namePath,
-        `{${aliasNamePath.join(".")}}`
+        `{${refPath.join(".")}}`
       );
     }
   }
 
-  // 3. Ensure output directories exist
-  if (!fs.existsSync(OUTPUT_DIR)) {
-    fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-  }
-  if (!fs.existsSync(THEMES_DIR)) {
-    fs.mkdirSync(THEMES_DIR, { recursive: true });
-  }
+  if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+  if (!fs.existsSync(THEMES_DIR)) fs.mkdirSync(THEMES_DIR, { recursive: true });
 
-  // 4. Write primitives to a single file in packages/tokens
+  // Write primitives
   fs.writeFileSync(
     path.join(OUTPUT_DIR, "primitives.json"),
     JSON.stringify(primitives, null, 2)
   );
 
-  // 5. Write each mode's alias tokens using the friendly mode name for the file
-  for (const modeName of Object.keys(aliasesByModeName)) {
-    // e.g., alias_Alta.json, alias_Delish.json, etc.
+  // Write aliases per mode using friendly names
+  for (const [modeName, aliasData] of Object.entries(aliasesByModeName)) {
     fs.writeFileSync(
       path.join(THEMES_DIR, `alias_${modeName}.json`),
-      JSON.stringify(aliasesByModeName[modeName], null, 2)
+      JSON.stringify(aliasData, null, 2)
     );
   }
 
-  console.log(
-    "✅ Design tokens exported to primitives.json and themes/alias_<friendly-mode-name>.json"
-  );
+  console.log("✅ Exported:");
+  console.log("• primitives.json");
+  Object.keys(aliasesByModeName).forEach((mode) => {
+    console.log(`• themes/alias_${mode}.json`);
+  });
 })();
