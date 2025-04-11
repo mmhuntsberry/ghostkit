@@ -13,11 +13,12 @@ if (!FILE_ID || !FIGMA_API_KEY) {
   process.exit(1);
 }
 
-const VARIABLES_URL = `https://api.figma.com/v1/files/${FILE_ID}/variables/local`;
-
 const headers = {
   "X-Figma-Token": FIGMA_API_KEY,
 };
+
+const VARIABLES_LOCAL = `https://api.figma.com/v1/files/${FILE_ID}/variables/local`;
+const VARIABLES_PUBLISHED = `https://api.figma.com/v1/files/${FILE_ID}/variables/published`;
 
 function rgbaToHex({ r, g, b, a }) {
   const toHex = (val) =>
@@ -40,35 +41,50 @@ function setNestedToken(obj, pathArray, value) {
   current[pathArray.at(-1)] = { value };
 }
 
-(async () => {
-  const res = await fetch(VARIABLES_URL, { headers });
+// Clean old output
+if (fs.existsSync(THEMES_DIR)) {
+  fs.rmSync(THEMES_DIR, { recursive: true, force: true });
+}
+if (fs.existsSync(path.join(OUTPUT_DIR, "primitives.json"))) {
+  fs.rmSync(path.join(OUTPUT_DIR, "primitives.json"), { force: true });
+}
+fs.mkdirSync(THEMES_DIR, { recursive: true });
+
+const fetchJSON = async (url) => {
+  const res = await fetch(url, { headers });
   if (!res.ok) {
-    console.error("❌ Failed to fetch variables:", res.statusText);
+    console.error(`❌ Failed to fetch: ${url}`, res.statusText);
     process.exit(1);
   }
+  return res.json();
+};
 
-  const { meta } = await res.json();
-  const variables = Array.isArray(meta.variables)
-    ? meta.variables
-    : Object.values(meta.variables);
-  const variableCollections = Array.isArray(meta.variableCollections)
-    ? meta.variableCollections
-    : Object.values(meta.variableCollections);
+(async () => {
+  const [localData, publishedData] = await Promise.all([
+    fetchJSON(VARIABLES_LOCAL),
+    fetchJSON(VARIABLES_PUBLISHED),
+  ]);
 
-  // Cleanup
-  if (fs.existsSync(THEMES_DIR)) {
-    fs.rmSync(THEMES_DIR, { recursive: true, force: true });
-    console.log("🧹 Cleaned old themes directory");
+  const variables = Array.isArray(localData.meta.variables)
+    ? localData.meta.variables
+    : Object.values(localData.meta.variables);
+
+  const allCollections = [
+    ...(Array.isArray(localData.meta.variableCollections)
+      ? localData.meta.variableCollections
+      : Object.values(localData.meta.variableCollections)),
+    ...(Array.isArray(publishedData.meta.variableCollections)
+      ? publishedData.meta.variableCollections
+      : Object.values(publishedData.meta.variableCollections)),
+  ];
+
+  const idToName = {};
+  for (const v of variables) {
+    idToName[v.id] = v.name;
   }
-  if (fs.existsSync(path.join(OUTPUT_DIR, "primitives.json"))) {
-    fs.rmSync(path.join(OUTPUT_DIR, "primitives.json"), { force: true });
-    console.log("🧹 Removed old primitives.json");
-  }
-  fs.mkdirSync(THEMES_DIR, { recursive: true });
 
-  // Build mode ID → mode name map (e.g. 4223:7 → Hearst)
   const modeIdToName = {};
-  for (const collection of variableCollections) {
+  for (const collection of allCollections) {
     for (const mode of collection?.modes || []) {
       if (!modeIdToName[mode.id]) {
         modeIdToName[mode.id] = mode.name;
@@ -76,16 +92,11 @@ function setNestedToken(obj, pathArray, value) {
     }
   }
 
-  const idToName = {};
-  for (const v of variables) {
-    idToName[v.id] = v.name;
-  }
-
   const primitives = {};
   const aliasesByModeName = {};
 
   for (const v of variables) {
-    const collection = variableCollections.find(
+    const collection = allCollections.find(
       (c) => c.id === v.variableCollectionId
     );
     if (!collection) continue;
@@ -95,7 +106,6 @@ function setNestedToken(obj, pathArray, value) {
 
     const defaultModeId = collection.defaultModeId;
     const defaultValue = v.valuesByMode?.[defaultModeId];
-
     if (defaultValue && defaultValue.type !== "VARIABLE_ALIAS") {
       const value =
         v.resolvedType === "COLOR" ? rgbaToHex(defaultValue) : defaultValue;
@@ -105,13 +115,10 @@ function setNestedToken(obj, pathArray, value) {
     for (const [modeId, tokenValue] of Object.entries(v.valuesByMode || {})) {
       if (!tokenValue || tokenValue.type !== "VARIABLE_ALIAS") continue;
 
-      const friendlyName = modeIdToName[modeId] || modeId;
-      const safeFileName = friendlyName
-        .replace(/[^\w\s-]/g, "")
-        .replace(/\s+/g, "-");
-
-      if (!aliasesByModeName[safeFileName]) {
-        aliasesByModeName[safeFileName] = {};
+      const modeName = modeIdToName[modeId] || modeId;
+      const safeName = modeName.replace(/[^\w\s-]/g, "").replace(/\s+/g, "-");
+      if (!aliasesByModeName[safeName]) {
+        aliasesByModeName[safeName] = {};
       }
 
       const referencedName = idToName[tokenValue.id];
@@ -119,9 +126,8 @@ function setNestedToken(obj, pathArray, value) {
 
       const refDelimiter = referencedName.includes("/") ? "/" : ".";
       const refPath = referencedName.split(refDelimiter).slice(0, 3);
-
       setNestedToken(
-        aliasesByModeName[safeFileName],
+        aliasesByModeName[safeName],
         namePath,
         `{${refPath.join(".")}}`
       );
@@ -135,7 +141,7 @@ function setNestedToken(obj, pathArray, value) {
   console.log("✅ Wrote primitives.json");
 
   for (const [modeName, data] of Object.entries(aliasesByModeName)) {
-    const filePath = path.join(THEMES_DIR, `alias_${modeName}.json`);
+    const filePath = path.join(THEMES_DIR, `${modeName}.json`);
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
     console.log(`✅ Wrote ${filePath}`);
   }
