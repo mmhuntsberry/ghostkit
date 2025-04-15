@@ -1,4 +1,4 @@
-import { Demo as Button } from "./demos/Button";
+import { Button } from "./Button";
 import type { ButtonProps } from "./Button";
 import { ArrowRight } from "@phosphor-icons/react";
 

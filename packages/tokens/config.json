@@ -1,0 +1,19 @@
+{
+  "source": ["tokens_new/*.json"],
+  "platforms": {
+    "CSS": {
+      "buildPath": "build/css//",
+      "prefix": "",
+      "transformGroup": "css",
+      "files": [
+        {
+          "destination": "variables.css",
+          "format": "css/variables",
+          "options": {
+            "outputReferences": true
+          }
+        }
+      ]
+    }
+  }
+}
