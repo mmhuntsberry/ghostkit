@@ -2,7 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 import { db } from "../../../db";
 import { stories, storyPages } from "../../../db/schema";
-import { fetchBestPecsImages } from "../../utils/fetchPecsImages";
+import { fetchBestPecsImagesSemantic } from "../../../lib/cloudinary";
+
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -20,28 +24,28 @@ export async function POST(req: NextRequest) {
       userId,
     } = await req.json();
 
-    // Prompt creation
+    // Build a prompt for the AI to generate a story
     const prompt = `
-      Generate a friendly social story titled "${title}" about "${scenario}" for a child named ${childName}, 
-      who is ${age} years old and uses the pronouns ${pronouns}. 
-      Include special considerations: ${specialNeedsDetails || "none"}. 
-      Separate the story into 4-5 pages clearly.
+      Generate a friendly, concise social story titled "${title}" about "${scenario}" 
+      for ${childName}, age ${age}, pronouns ${pronouns}. 
+      Special considerations: ${specialNeedsDetails || "none"}. 
+      Please split the story clearly into 4-5 paragraphs, each representing a page.
     `;
 
+    // Generate story text using OpenAI Chat API
     const aiResponse = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: [{ role: "user", content: prompt }],
     });
 
     const storyText = aiResponse.choices[0].message.content.trim();
-
-    // Split the AI response into pages
+    // Split the story into pages by detecting double line breaks
     const pages = storyText.split(/\n{2,}/);
 
-    // Fetch relevant images from Cloudinary
-    const { pecs } = await fetchBestPecsImages(storyText);
+    // Use semantic search to fetch best images for the story text
+    const { pecs } = await fetchBestPecsImagesSemantic(storyText);
 
-    // Save the story
+    // Save the main story record into the database
     const [newStory] = await db
       .insert(stories)
       .values({
@@ -55,12 +59,11 @@ export async function POST(req: NextRequest) {
       })
       .returning();
 
-    // Insert pages into DB
+    // Save each story page along with the paired image URL
     await Promise.all(
       pages.map(async (content, idx) => {
-        const keyConcepts = Object.keys(pecs);
-        const imageUrl = pecs[keyConcepts[idx]] || null;
-
+        // Use the image for this page based on the index in the semantic mapping
+        const imageUrl = pecs[idx.toString()] || null;
         await db.insert(storyPages).values({
           storyId: newStory.id,
           pageNumber: idx + 1,
@@ -71,7 +74,7 @@ export async function POST(req: NextRequest) {
       })
     );
 
-    return NextResponse.json({ storyId: newStory.id }, { status: 200 });
+    return NextResponse.json({ storyId: newStory.id });
   } catch (error) {
     console.error("Error generating or saving story:", error);
     return NextResponse.json({ error: error.message }, { status: 500 });

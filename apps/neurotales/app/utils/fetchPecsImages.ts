@@ -1,4 +1,4 @@
-import cloudinary from "../../lib/cloudinary";
+import cloudinary from "cloudinary";
 import { extractKeyConcepts } from "../../lib/extractConcepts";
 import dotenv from "dotenv";
 
@@ -11,6 +11,9 @@ export async function fetchBestPecsImages(story: string) {
       type: "upload",
       prefix: "pecs/",
       max_results: 100,
+      cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+      api_key: process.env.CLOUDINARY_API_KEY,
+      api_secret: process.env.CLOUDINARY_API_SECRET,
     });
 
     const allImages = response.resources.map((image) => ({
