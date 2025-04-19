@@ -155,7 +155,7 @@ export default {
   // Include both the primitives and alias files so that references in alias tokens work.
   source: [
     path.resolve("tokens_new/primitives.White Label.json"),
-    path.resolve("tokens_new/alias.Best Products.json"),
+    path.resolve("tokens_new/alias.Delish.json"),
   ],
 
   platforms: {
@@ -173,7 +173,7 @@ export default {
       ],
       files: [
         {
-          destination: "best-products.css",
+          destination: "delish.css",
           format: formats.cssVariables,
           options: {
             outputReferences: true,

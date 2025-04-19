@@ -833,7 +833,7 @@
           },
           "solid-hover": {
             "$type": "color",
-            "$value": "{palette.neutral.darkest}",
+            "$value": "{palette.brand.3}",
             "$description": "",
             "$extensions": {
               "com.figma": {
@@ -849,7 +849,7 @@
           },
           "solid-active": {
             "$type": "color",
-            "$value": "{palette.neutral.darkest}",
+            "$value": "{palette.primary.800}",
             "$description": "",
             "$extensions": {
               "com.figma": {
@@ -979,7 +979,7 @@
           },
           "outlined-hover": {
             "$type": "color",
-            "$value": "{palette.neutral.200-alpha}",
+            "$value": "{palette.brand.3}",
             "$description": "",
             "$extensions": {
               "com.figma": {
@@ -995,7 +995,7 @@
           },
           "outlined-active": {
             "$type": "color",
-            "$value": "{palette.neutral.300-alpha}",
+            "$value": "{palette.primary.800}",
             "$description": "",
             "$extensions": {
               "com.figma": {
@@ -1079,7 +1079,7 @@
           },
           "solid-hover": {
             "$type": "color",
-            "$value": "{palette.neutral.darkest}",
+            "$value": "{palette.primary.700}",
             "$description": "",
             "$extensions": {
               "com.figma": {
@@ -1095,7 +1095,7 @@
           },
           "solid-active": {
             "$type": "color",
-            "$value": "{palette.neutral.darkest}",
+            "$value": "{palette.primary.800}",
             "$description": "",
             "$extensions": {
               "com.figma": {
@@ -1225,7 +1225,7 @@
           },
           "outlined-hover": {
             "$type": "color",
-            "$value": "{palette.neutral.600}",
+            "$value": "{palette.brand.3}",
             "$description": "",
             "$extensions": {
               "com.figma": {
@@ -1241,7 +1241,7 @@
           },
           "outlined-active": {
             "$type": "color",
-            "$value": "{palette.neutral.600}",
+            "$value": "{palette.primary.800}",
             "$description": "",
             "$extensions": {
               "com.figma": {
@@ -1471,7 +1471,7 @@
           },
           "outlined-hover": {
             "$type": "color",
-            "$value": "{palette.neutral.darkest}",
+            "$value": "{palette.neutral.lightest}",
             "$description": "",
             "$extensions": {
               "com.figma": {
@@ -1487,7 +1487,7 @@
           },
           "outlined-active": {
             "$type": "color",
-            "$value": "{palette.neutral.darkest}",
+            "$value": "{palette.neutral.lightest}",
             "$description": "",
             "$extensions": {
               "com.figma": {
@@ -1667,7 +1667,7 @@
       },
       "brand-hover": {
         "$type": "color",
-        "$value": "{palette.primary.600}",
+        "$value": "{palette.primary.700}",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -1683,7 +1683,7 @@
       },
       "brand-active": {
         "$type": "color",
-        "$value": "{palette.primary.600}",
+        "$value": "{palette.primary.800}",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -2007,7 +2007,7 @@
     "primary": {
       "100": {
         "$type": "color",
-        "$value": "{palette.brand.1}",
+        "$value": "#FEF1F5",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -2023,7 +2023,7 @@
       },
       "200": {
         "$type": "color",
-        "$value": "{palette.brand.1}",
+        "$value": "#FDD8E5",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -2039,7 +2039,7 @@
       },
       "300": {
         "$type": "color",
-        "$value": "{palette.brand.1}",
+        "$value": "#FAADC7",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -2055,7 +2055,7 @@
       },
       "400": {
         "$type": "color",
-        "$value": "{palette.brand.1}",
+        "$value": "#F66999",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -2071,7 +2071,7 @@
       },
       "500": {
         "$type": "color",
-        "$value": "{palette.brand.1}",
+        "$value": "#F43E7B",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -2103,7 +2103,7 @@
       },
       "700": {
         "$type": "color",
-        "$value": "{palette.brand.1}",
+        "$value": "{palette.brand.3}",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -2119,7 +2119,7 @@
       },
       "800": {
         "$type": "color",
-        "$value": "{palette.brand.1}",
+        "$value": "#750028",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -2135,7 +2135,7 @@
       },
       "900": {
         "$type": "color",
-        "$value": "{palette.brand.1}",
+        "$value": "#52001C",
         "$description": "",
         "$extensions": {
           "com.figma": {
@@ -2151,7 +2151,7 @@
       },
       "1000": {
         "$type": "color",
-        "$value": "{palette.brand.1}",
+        "$value": "#2E000F",
         "$description": "",
         "$extensions": {
           "com.figma": {
