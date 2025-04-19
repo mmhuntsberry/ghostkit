@@ -377,6 +377,8 @@
   --space-2xl: var(--_size-32);
   --space-3xl: var(--_size-48);
   --space-4xl: var(--_size-64);
+  --container-action-radius-sm: var(--_size-8);
+  --container-action-radius-default: var(--_size-8);
   --palette-action-background-primary-solid-default: var(--palette-primary-600);
   --palette-action-background-primary-outlined-default: var(--palette-neutral-lightest);
   --palette-action-background-primary-transparent-default: var(--palette-neutral-lightest);

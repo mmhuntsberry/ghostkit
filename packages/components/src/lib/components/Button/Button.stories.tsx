@@ -1,25 +1,37 @@
-import { Button } from "./Button";
+import { Meta, StoryObj } from "@storybook/react/*";
 import type { ButtonProps } from "./Button";
-import { ArrowRight } from "@phosphor-icons/react";
+import { Button } from "./Button";
+// import { ArrowRight } from "@phosphor-icons/react";
 
-export default {
+const meta: Meta<typeof Button> = {
   component: Button,
-  parameters: {},
+  title: "Button",
+  tags: ["autodocs"],
+  argTypes: {
+    background: {
+      options: ["solid", "outlined", "transparent"],
+      control: { type: "select" },
+    },
+    size: {
+      options: ["md", "lg", "xl"],
+      control: { type: "select" },
+    },
+    variant: {
+      options: ["primary", "neutral"],
+      control: { type: "select" },
+    },
+  },
 };
 
-export const Primary = {
-  render: (args: ButtonProps) => <Button>Label</Button>,
-};
+export default meta;
+type Story = StoryObj<typeof Button>;
 
-export const IconRight = {
-  render: (args: ButtonProps) => (
-    <Button>
-      <span>Label</span>
-      <ArrowRight size={24} />
-    </Button>
-  ),
-};
-
-export const Disabled = {
-  render: (args: ButtonProps) => <Button disabled>Label</Button>,
+export const Default: Story = {
+  args: {
+    variant: "primary",
+    size: "xl",
+    background: "solid",
+    disabled: false,
+    children: "Button",
+  },
 };

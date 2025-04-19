@@ -14,7 +14,7 @@
  * Run with:
  *   npx style-dictionary build --config config.mjs
  **********************************************************************/
-
+import path from "path";
 import StyleDictionary from "style-dictionary";
 import { formats, transformGroups } from "style-dictionary/enums";
 
@@ -147,32 +147,37 @@ StyleDictionary.registerTransform(customSizeTransform);
 StyleDictionary.registerTransform(customLetterSpacingTransform);
 StyleDictionary.registerTransform(customLineHeightTransform);
 StyleDictionary.registerTransform(customOpacityTransform);
-
+// ───────────────────────────────────────────────────────────────
 // EXPORT CONFIGURATION
+// ───────────────────────────────────────────────────────────────
+
 export default {
-  source: ["tokens_new/*.json"],
+  // Include both the primitives and alias files so that references in alias tokens work.
+  source: [
+    path.resolve("tokens_new/primitives.White Label.json"),
+    path.resolve("tokens_new/alias.White Label.json"),
+  ],
 
   platforms: {
     css: {
       buildPath: "build/css/",
-      prefix: "",
-      // Order is important. Here we use built-in transforms to add CTI attributes
-      // and convert colors to HSL, then our custom size transform, then our custom naming transform.
+      resolveReferences: false,
       transforms: [
-        "attribute/cti",
-        "color/hsl",
+        "attribute/cti", // Adds metadata (category, type, item)
+        "color/hsl", // Convert colors to HSL where applicable
         "custom/size/transform",
-        "custom/name/kebab",
         "custom/letter-spacing/transform",
         "custom/line-height/transform",
         "custom/opacity/decimal",
+        "custom/name/kebab",
       ],
       files: [
         {
-          destination: "variables.css",
+          destination: "white-label.css",
           format: formats.cssVariables,
           options: {
             outputReferences: true,
+            // resolveReferences: false,
           },
         },
       ],

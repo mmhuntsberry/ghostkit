@@ -1,5 +1,5 @@
 import React from "react";
-// import styles from "./button.module.css";
+import styles from "./button.module.css";
 import cn from "classnames";
 
 interface ExtendedCSSProperties extends React.CSSProperties {
@@ -40,7 +40,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         {...rest}
         ref={ref}
-        // className={cn(styles.base, styles.button, rest.className)}
+        className={cn(styles.base, styles.button, rest.className)}
         data-background={background}
         data-loading={loading}
         data-mode={mode}

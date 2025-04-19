@@ -6,8 +6,16 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./build/css/index.css",
-      "require": "./build/css/index.css"
+      "import": "./build/css/variables.css",
+      "require": "./build/css/variables.css"
+    },
+    "./brand/delish": {
+      "import": "./build/css/delish.css",
+      "require": "./build/css/delish.css"
+    },
+    "./brand/prevention": {
+      "import": "./build/css/prevention.css",
+      "require": "./build/css/prevention.css"
     }
   },
   "scripts": {

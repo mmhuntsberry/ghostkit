@@ -6,7 +6,7 @@ const config: StorybookConfig = {
     "../src/docs/stories/**/*.mdx",
     "../src/docs/stories/**/*.@(mdx|stories.@(js|jsx|ts|tsx))",
     "../src/lib/**/*.mdx",
-    "../src/lib/**/*.@(mdx|stories.@(js|jsx|ts|tsx))"
+    "../src/lib/**/*.@(mdx|stories.@(js|jsx|ts|tsx))",
   ],
 
   addons: [
@@ -14,7 +14,7 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-interactions"),
     getAbsolutePath("@storybook/addon-coverage"),
     getAbsolutePath("@storybook/addon-mdx-gfm"),
-    "@chromatic-com/storybook"
+    "@chromatic-com/storybook",
   ],
 
   framework: {
@@ -28,9 +28,14 @@ const config: StorybookConfig = {
 
   docs: {},
 
+  staticDirs: [
+    // The left side is your local path; the right side (if using an object) is the public URL
+    { from: "../../tokens/build", to: "/build" },
+  ],
+
   typescript: {
-    reactDocgen: "react-docgen-typescript"
-  }
+    reactDocgen: "react-docgen-typescript",
+  },
 };
 
 export default config;
