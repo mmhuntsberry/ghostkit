@@ -192,3 +192,15 @@
   padding-inline-end: var(--space-md);
   max-height: var(--space-3xl);
 }
+
+.button[data-radius="rounded"] {
+  border-radius: var(--container-action-radius-default);
+}
+
+.button[data-radius="md"] {
+  border-radius: var(--container-action-radius-md);
+}
+
+.button[data-radius="square"] {
+  border-radius: var(--container-action-radius-square);
+}

@@ -16,7 +16,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
   loading?: boolean;
   mode?: "light" | "dark";
-  rounded?: "left" | "right" | "both" | "none";
+  radius?: "rounded" | "md" | "square";
   size?: "md" | "lg" | "xl";
   style?: ExtendedCSSProperties;
   variant?: "primary" | "neutral" | "danger";
@@ -30,7 +30,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       loading = false,
       mode = "light",
       size = "xl",
-      rounded = "both",
+      radius = "md",
       variant = "primary",
       ...rest
     }: ButtonProps,
@@ -44,7 +44,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         data-background={background}
         data-loading={loading}
         data-mode={mode}
-        data-rounded={rounded}
+        data-radius={radius}
         data-size={size}
         data-variant={variant}
       >

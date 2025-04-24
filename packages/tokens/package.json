@@ -19,7 +19,10 @@
     }
   },
   "scripts": {
-    "build": "style-dictionary build --config config.mjs",
+    "build": "npx style-dictionary build --config config-copy.mjs --verbose",
+    "build:delish": "npx style-dictionary build --config config-delish.mjs --verbose",
+    "build:prevention": "npx style-dictionary build --config config-prevention.mjs --verbose",
+    "pull:tokens": "node export-figma-tokens.mjs",
     "pack": "mkdir -p dist && cp -r src/themes package.json normalize.css dist/"
   },
   "repository": {

@@ -1,7 +1,8 @@
-import { Meta, StoryObj } from "@storybook/react/*";
+import { Meta, StoryFn } from "@storybook/react";
+import { useGlobals } from "@storybook/preview-api"; // ✅ correct
+
 import type { ButtonProps } from "./Button";
 import { Button } from "./Button";
-// import { ArrowRight } from "@phosphor-icons/react";
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -24,14 +25,23 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Button>;
 
-export const Default: Story = {
-  args: {
-    variant: "primary",
-    size: "xl",
-    background: "solid",
-    disabled: false,
-    children: "Button",
-  },
+const Template: StoryFn<ButtonProps> = (args) => {
+  const g = useGlobals();
+
+  switch (g[0].brand) {
+    case "delish":
+      return <Button {...args} radius="square" />;
+    default:
+      return <Button {...args} radius="rounded" />;
+  }
+};
+
+export const Default = Template.bind({});
+Default.args = {
+  variant: "primary",
+  size: "xl",
+  background: "solid",
+  disabled: false,
+  children: "Button",
 };
