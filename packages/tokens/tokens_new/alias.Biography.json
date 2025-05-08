@@ -3439,6 +3439,20 @@
       }
     }
   },
+  "bg": {
+    "$type": "color",
+    "$value": "#FFFFFF",
+    "$description": "",
+    "$extensions": {
+      "com.figma": {
+        "hiddenFromPublishing": false,
+        "scopes": [
+          "ALL_SCOPES"
+        ],
+        "codeSyntax": {}
+      }
+    }
+  },
   "border": {
     "width": {
       "none": {
@@ -4949,34 +4963,36 @@
       }
     },
     "card": {
-      "horizontal": {
-        "2xs": {
-          "$type": "number",
-          "$value": 0,
-          "$description": "",
-          "$extensions": {
-            "com.figma": {
-              "hiddenFromPublishing": false,
-              "scopes": [
-                "ALL_SCOPES"
-              ],
-              "codeSyntax": {}
+      "size": {
+        "horizontal": {
+          "2xs": {
+            "$type": "number",
+            "$value": 0,
+            "$description": "",
+            "$extensions": {
+              "com.figma": {
+                "hiddenFromPublishing": false,
+                "scopes": [
+                  "ALL_SCOPES"
+                ],
+                "codeSyntax": {}
+              }
             }
           }
-        }
-      },
-      "vertical": {
-        "2xs": {
-          "$type": "number",
-          "$value": 0,
-          "$description": "",
-          "$extensions": {
-            "com.figma": {
-              "hiddenFromPublishing": false,
-              "scopes": [
-                "ALL_SCOPES"
-              ],
-              "codeSyntax": {}
+        },
+        "vertical": {
+          "2xs": {
+            "$type": "number",
+            "$value": 0,
+            "$description": "",
+            "$extensions": {
+              "com.figma": {
+                "hiddenFromPublishing": false,
+                "scopes": [
+                  "ALL_SCOPES"
+                ],
+                "codeSyntax": {}
+              }
             }
           }
         }

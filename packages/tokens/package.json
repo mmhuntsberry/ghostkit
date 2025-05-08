@@ -2,23 +2,18 @@
   "name": "@mmhuntsberry/tokens",
   "version": "0.0.0-replace",
   "description": "",
-  "main": "./build/css/index.css",
   "type": "module",
+  "main": "./build/css/index.css",
   "exports": {
-    ".": {
-      "import": "./build/css/variables.css",
-      "require": "./build/css/variables.css"
-    },
-    "./brand/delish": {
-      "import": "./build/css/delish.css",
-      "require": "./build/css/delish.css"
-    },
-    "./brand/prevention": {
-      "import": "./build/css/prevention.css",
-      "require": "./build/css/prevention.css"
-    }
+    ".": "./build/css/index.css",
+    "./*": "./build/css/*.css",
+    "./variables": "./build/css/variables.css",
+    "./brand/delish": "./build/css/delish.css",
+    "./brand/prevention": "./build/css/prevention.css",
+    "./white-label": "./build/css/white-label.css"
   },
   "scripts": {
+    "prebuild": "node preprocess-tokens.mjs",
     "build": "npx style-dictionary build --config config-copy.mjs --verbose",
     "build:delish": "npx style-dictionary build --config config-delish.mjs --verbose",
     "build:prevention": "npx style-dictionary build --config config-prevention.mjs --verbose",

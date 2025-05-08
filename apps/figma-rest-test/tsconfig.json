@@ -2,11 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "target": "ES2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -25,9 +21,7 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     }
   },
   "include": [
@@ -43,7 +37,8 @@
     ".next/types/**/*.ts",
     "next-env.d.ts",
     "../../dist/apps/neurotales/.next/types/**/*.ts",
-    "../../apps/figma-rest-test/.next/types/**/*.ts"
+    "../../apps/figma-rest-test/.next/types/**/*.ts",
+    "scripts/mcp-rest-layers.ts"
   ],
   "exclude": [
     "node_modules",

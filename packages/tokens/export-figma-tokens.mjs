@@ -1,12 +1,10 @@
 /**********************************************************************
- * myScript.mjs
  *
  * One-file script that:
  *   1) Reads variables from Figma (using the local endpoint)
  *   2) Generates nested JSON tokens following a W3C-like design token
  *      structure—with each file named {collectionName}.{modeName}.json.
  *
- * The generated output is written to the "tokens_new" folder.
  **********************************************************************/
 
 import fs from "fs";
