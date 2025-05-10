@@ -19,7 +19,7 @@ export const SummaryCard: FC<SummaryCardProps> = ({ text }) => (
       padding: "var(--space-2xs)",
       borderRadius: "var(--border-radius-sm)",
       // boxShadow: "var(--shadow-sm)",
-      border: "1px solid var(--palette-neutral-400)",
+      // border: "1px solid var(--palette-neutral-400)",
     }}
   >
     {text}
@@ -56,6 +56,7 @@ export default function DashboardPage() {
           throw new Error(`Health API error: ${resHealth.status}`);
 
         const jsonTrend = await resTrend.json();
+        console.log(jsonTrend);
         const jsonUsage = await resUsage.json();
         const jsonHealth = await resHealth.json();
 
@@ -97,7 +98,7 @@ export default function DashboardPage() {
         className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow flex flex-col"
       >
         <h2 className="text-lg font-medium mb-2">Component Insertions (90d)</h2>
-        <InsertionChart data={trend} width={400} height={250} />
+        <InsertionChart data={trend} />
       </div>
 
       {/* Top Component Usages */}

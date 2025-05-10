@@ -8,8 +8,8 @@ const sourceSans3 = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Neurotales",
-  description: "Neurotales is a platform for creating and sharing stories.",
+  title: "Figma Analytics",
+  description: "Figma Analytics",
 };
 
 export default function RootLayout({

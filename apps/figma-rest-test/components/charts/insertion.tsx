@@ -19,6 +19,7 @@ export default function InsertionChart({
   data = [],
   height = 300,
 }: InsertionChartProps) {
+  console.log({ data });
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 

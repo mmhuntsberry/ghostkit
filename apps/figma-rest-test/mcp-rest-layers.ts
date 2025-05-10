@@ -1,13 +1,11 @@
-// apps/figma-rest-test/mcp_rest_layers.ts
+// File: apps/figma-rest-test/mcp_rest_layers.ts
 // -------------------------------------------------------------
-// Unified MCP+REST wrapper for Figma:
-// 1. Boots the community MCP server (read-only, LLM-friendly JSON)
-// 2. Proxies GET /mcp/* and /figma/* to the upstream MCP server
-// 3. Exposes essential REST helpers (images, writes) that MCP lacks
+// Unified MCP+REST wrapper for Figma
+// MCP server is now expected to run independently on port 3333
+// This Express server proxies GETs and provides REST helpers
 // -------------------------------------------------------------
 
 import express from "express";
-import { spawn } from "child_process";
 import fetch from "node-fetch";
 import dotenv from "dotenv";
 
@@ -16,58 +14,63 @@ dotenv.config();
 // -------------------------------------------------------------
 // CONFIGURATION
 // -------------------------------------------------------------
-const FIGMA_API_TOKEN = process.env.FIGMA_API_KEY;
+const FIGMA_API_TOKEN =
+  process.env.FIGMA_API_KEY || process.env.FIGMA_API_TOKEN;
+
 if (!FIGMA_API_TOKEN) {
   console.error("⚠️ Missing FIGMA_API_TOKEN in environment");
   process.exit(1);
 }
+
 const LOCAL_MCP_PORT = Number(process.env.MCP_PORT || 3333);
 const APP_PORT = Number(process.env.APP_PORT || 4000);
 
 // -------------------------------------------------------------
-// 1. SPAWN the figma-developer-mcp server
-// -------------------------------------------------------------
-const mcpProcess = spawn(
-  "npx",
-  [
-    "figma-developer-mcp",
-    `--figma-api-key=${FIGMA_API_TOKEN}`,
-    `--port=${LOCAL_MCP_PORT}`,
-    `--cache-root=./tmp/mcp-cache`,
-    "--docs",
-  ],
-  { stdio: "inherit", shell: true }
-);
-process.on("exit", () => mcpProcess.kill());
-
-// -------------------------------------------------------------
-// 2. EXPRESS app: proxy MCP and add REST helpers
+// EXPRESS app: proxy MCP and add REST helpers
 // -------------------------------------------------------------
 const app = express();
 app.use(express.json());
 
-// Helper: forward any GET to underlying MCP server
-async function forwardMcp(req: express.Request, res: express.Response) {
-  try {
-    // Strip `/mcp` prefix so upstream sees native routes
-    let upstreamPath = req.originalUrl;
-    if (upstreamPath.startsWith("/mcp")) {
-      upstreamPath = upstreamPath.replace(/^\/mcp/, "");
-    }
-    const url = `http://localhost:${LOCAL_MCP_PORT}${upstreamPath}`;
-    const upstream = await fetch(url, {
-      headers: { "X-Figma-Token": FIGMA_API_TOKEN, Accept: "application/json" },
-    });
-    res.status(upstream.status);
-    upstream.body.pipe(res);
-  } catch (err) {
-    console.error("MCP proxy error", err);
-    res.status(500).json({ error: "MCP proxy failure" });
-  }
-}
+// -------------------------------------------------------------
+// GET /mcp/figma/file/:fileId → calls MCP via JSON-RPC
+// -------------------------------------------------------------
+app.get("/mcp/figma/file/:fileId", async (req, res) => {
+  const { fileId } = req.params;
+  const upstreamUrl = `http://localhost:${LOCAL_MCP_PORT}/mcp`;
 
-// Proxy GET for both /mcp/* and native /figma/* routes
-app.get(["/mcp/*", "/figma/*"], forwardMcp);
+  try {
+    const response = await fetch(upstreamUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Figma-Token": FIGMA_API_TOKEN,
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        jsonrpc: "2.0",
+        id: 1,
+        method: "tools/call",
+        params: {
+          name: "figma.file",
+          arguments: { fileKey: fileId },
+        },
+      }),
+    });
+
+    const json = await response.json();
+
+    if (json.error) {
+      return res.status(500).json({ error: json.error.message });
+    }
+
+    res.json(json.result);
+  } catch (err: any) {
+    console.error("GET /mcp/figma/file/:fileId error:", err.message);
+    res
+      .status(500)
+      .json({ error: "Proxy to MCP failed", details: err.message });
+  }
+});
 
 // -------------------------------------------------------------
 // REST helper: image export via Figma REST API
@@ -77,7 +80,9 @@ app.get("/rest/images/:fileId/:nodeId", async (req, res) => {
   try {
     const metaRes = await fetch(
       `https://api.figma.com/v1/images/${fileId}?ids=${nodeId}&format=png`,
-      { headers: { "X-Figma-Token": FIGMA_API_TOKEN } }
+      {
+        headers: { "X-Figma-Token": FIGMA_API_TOKEN },
+      }
     );
     const meta = await metaRes.json();
     const url = meta.images?.[nodeId];
@@ -86,7 +91,7 @@ app.get("/rest/images/:fileId/:nodeId", async (req, res) => {
     res.setHeader("Content-Type", "image/png");
     imgRes.body.pipe(res);
   } catch (err: any) {
-    console.error("Image proxy error", err.message);
+    console.error("Image proxy error:", err.message);
     res.status(500).json({ error: err.message });
   }
 });
@@ -112,22 +117,17 @@ app.post("/rest/components/:componentId/description", async (req, res) => {
     const body = await updateRes.json();
     res.status(updateRes.status).json(body);
   } catch (err: any) {
-    console.error("REST update error", err.message);
+    console.error("REST update error:", err.message);
     res.status(500).json({ error: err.message });
   }
 });
 
 // -------------------------------------------------------------
-// START the unified server
+// START the Express proxy server
 // -------------------------------------------------------------
 app.listen(APP_PORT, () => {
-  console.log(
-    `🚀 Unified MCP+REST server listening on http://localhost:${APP_PORT}`
-  );
-  console.log(`  • Proxy JSON: GET /mcp/figma/file/:fileId`);
-  console.log(`  • Native JSON: GET /figma/file/:fileId`);
-  console.log(`  • Image export: GET /rest/images/:fileId/:nodeId`);
-  console.log(
-    `  • Write helper: POST /rest/components/:componentId/description`
-  );
+  console.log(`🚀 Proxy+REST server listening on http://localhost:${APP_PORT}`);
+  console.log(`  • GET /mcp/figma/file/:fileId`);
+  console.log(`  • GET /rest/images/:fileId/:nodeId`);
+  console.log(`  • POST /rest/components/:componentId/description`);
 });
