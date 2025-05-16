@@ -1,5 +1,20 @@
-const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
-  return <div>{children}</div>;
+// apps/neurotales/app/layout.tsx
+// import "./globals.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "NeuroTales",
+  description: "Animated SVG demo",
 };
 
-export default DashboardLayout;
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}

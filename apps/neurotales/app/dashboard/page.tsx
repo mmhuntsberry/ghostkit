@@ -1,3 +1,9 @@
+import SvgAnimation from "../../components/SvgAnimation";
+
 export default async function DashboardPage() {
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      <SvgAnimation />
+    </div>
+  );
 }

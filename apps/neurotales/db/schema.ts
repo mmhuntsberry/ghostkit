@@ -119,6 +119,8 @@ export const storyPages = pgTable("story_pages", {
     enum: ["cloudinary", "unsplash", "pexels", "upload"],
   }),
   imageExternalId: text("image_external_id"), // external id for cloudinary or other APIs
+  imageAlt: text("image_alt"), // <-- NEW
+  imageTitle: text("image_title"), // <-- NEW
 
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),

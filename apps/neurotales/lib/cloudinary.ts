@@ -2,6 +2,7 @@
 import cloudinary from "cloudinary";
 import dotenv from "dotenv";
 import { getEmbedding, cosineSimilarity } from "./embeddings";
+import OpenAI from "openai";
 
 dotenv.config();
 
@@ -12,63 +13,169 @@ cloudinary.v2.config({
   secure: true,
 });
 
-/**
- * Simple function to fetch images from Cloudinary under the 'pecs/' folder.
- */
-export async function fetchImagesFromCloudinary() {
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const SIMILARITY_THRESHOLD = 0.75;
+
+function isMonsterImage(publicId: string): boolean {
+  const id = publicId.toLowerCase();
+  return /(^|[_\-/])monster([_\-/]|$)/.test(id);
+}
+
+export async function fetchImagesFromCloudinary(
+  style: "default" | "monster" = "default"
+) {
   const { resources } = await cloudinary.v2.api.resources({
     type: "upload",
     prefix: "pecs/",
     max_results: 200,
+    context: true,
   });
-  return resources.map((img) => ({
-    // Clean filename to be used as descriptive text
-    name: img.public_id.replace("pecs/", "").toLowerCase(),
-    url: img.secure_url,
-  }));
+
+  return resources
+    .filter((img) => {
+      const monster = isMonsterImage(img.public_id);
+      return style === "monster" ? monster : !monster;
+    })
+    .map((img) => ({
+      name: img.public_id.replace("pecs/", "").toLowerCase(),
+      url: img.secure_url,
+      public_id: img.public_id,
+      description: img.context?.custom?.alt || img.public_id,
+    }));
 }
 
-/**
- * Uses semantic search to match the meaning of the story text with image names.
- * This function computes the embedding of the story text and compares it to the embeddings
- * of each image's name (used as a description). Returns a mapping of page indices (as strings) to image URLs.
- */
-export async function fetchBestPecsImagesSemantic(
-  story: string
-): Promise<{ pecs: Record<string, string> }> {
-  try {
-    // Get an embedding for the whole story text
-    const storyEmbedding = await getEmbedding(story);
+export async function fetchBestPecsImagesWithFallback(
+  pages: string[],
+  style: "default" | "monster" = "default"
+): Promise<
+  Record<
+    string,
+    {
+      url: string;
+      source: string;
+      alt?: string;
+      title?: string;
+    }
+  >
+> {
+  const primaryImages = await fetchImagesFromCloudinary(style);
+  const fallbackImages =
+    style === "monster" ? await fetchImagesFromCloudinary("default") : [];
 
-    // Get images from Cloudinary
-    const images = await fetchImagesFromCloudinary();
+  const results: Record<
+    string,
+    { url: string; source: string; alt?: string; title?: string }
+  > = {};
+  const usedImageUrls = new Set<string>();
 
-    // Compute embeddings for each image's name (as its description)
-    const imageEmbeddings = await Promise.all(
-      images.map(async (img) => {
-        const embedding = await getEmbedding(img.name);
-        return { ...img, embedding };
-      })
+  const embedAll = async (imgs: typeof primaryImages) =>
+    Promise.all(
+      imgs.map(async (img) => ({
+        ...img,
+        embedding: await getEmbedding(img.description || img.name),
+      }))
     );
 
-    // Sort images by cosine similarity to the story embedding
-    const sortedImages = imageEmbeddings.sort((a, b) => {
-      const simA = cosineSimilarity(storyEmbedding, a.embedding);
-      const simB = cosineSimilarity(storyEmbedding, b.embedding);
-      return simB - simA;
-    });
+  const primaryEmbeddings = await embedAll(primaryImages);
+  const fallbackEmbeddings = await embedAll(fallbackImages);
 
-    // For simplicity, select the top 4 images for the 4 pages
-    const topImages = sortedImages.slice(0, 4);
-    const pecs: Record<string, string> = {};
-    topImages.forEach((img, idx) => {
-      pecs[idx.toString()] = img.url;
-    });
+  for (let i = 0; i < pages.length; i++) {
+    const text = pages[i];
+    const textEmbedding = await getEmbedding(text);
 
-    console.log("Semantic PECS mapping:", pecs);
-    return { pecs };
-  } catch (error) {
-    console.error("Error fetching semantic PECS images:", error);
-    return { pecs: {} };
+    let bestMatch = null;
+    let bestSim = -1;
+
+    for (const img of [...primaryEmbeddings, ...fallbackEmbeddings]) {
+      const sim = cosineSimilarity(textEmbedding, img.embedding);
+      if (
+        sim > bestSim &&
+        sim >= SIMILARITY_THRESHOLD &&
+        !usedImageUrls.has(img.url)
+      ) {
+        bestMatch = img;
+        bestSim = sim;
+      }
+    }
+
+    if (bestMatch) {
+      usedImageUrls.add(bestMatch.url);
+      results[i.toString()] = {
+        url: bestMatch.url,
+        source: "cloudinary",
+        alt: bestMatch.description,
+        title: bestMatch.name,
+      };
+      continue;
+    }
+
+    try {
+      const prompt = {
+        task: "Create a PECS-style educational image.",
+        style: {
+          type: "PECS (Picture Exchange Communication System)",
+          reference:
+            "https://nationalautismresources.com/the-picture-exchange-communication-system-pecs/",
+          visual_description:
+            "Flat, vector-based, minimalistic design with bold black outlines, solid colors, minimal internal detail, and child-friendly iconography. High contrast for accessibility.",
+        },
+        output: {
+          formats: ["PNG"],
+          dimensions: "512x512",
+          transparent_background: true,
+          optimize_for_contrast: true,
+        },
+        content: {
+          image_subject: style === "monster" ? `Monster ${text}` : text,
+          scene_guidance:
+            style === "monster"
+              ? `Depict "${text}" using a cute, child-safe cartoon monster character performing the action. The monster should be colorful, friendly, and easily readable in PECS style.`
+              : `Clearly depict "${text}" as a singular, child-friendly action or object.`,
+        },
+        metadata: {
+          title: text.slice(0, 60),
+          alt: `PECS-style visual showing: ${text}`,
+          description: `Educational image supporting communication about: ${text}`,
+          tags:
+            style === "monster"
+              ? ["pecs", "communication", "autism", "monster"]
+              : ["pecs", "communication", "autism"],
+          category: "story",
+          lang: "en",
+        },
+      };
+
+      const aiResp = await openai.images.generate({
+        model: "dall-e-3",
+        prompt: JSON.stringify(prompt),
+        size: "512x512",
+        quality: "standard",
+        n: 1,
+      });
+
+      const url = aiResp.data?.[0]?.url;
+      results[i.toString()] = url
+        ? {
+            url,
+            source: "openai",
+            alt: prompt.metadata.alt,
+            title: prompt.metadata.title,
+          }
+        : {
+            url: "https://via.placeholder.com/512?text=No+Image",
+            source: "placeholder",
+            alt: "Placeholder image",
+            title: "Missing image",
+          };
+    } catch {
+      results[i.toString()] = {
+        url: "https://via.placeholder.com/512?text=No+Image",
+        source: "placeholder",
+        alt: "Placeholder image",
+        title: "Missing image",
+      };
+    }
   }
+
+  return results;
 }

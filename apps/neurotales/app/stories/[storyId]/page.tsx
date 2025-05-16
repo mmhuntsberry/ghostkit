@@ -85,6 +85,8 @@ export default async function StoryPage({
         {/* Show the page's image plus the swap button */}
         {currentPage.imageUrl && (
           <StoryPageImage
+            altText={currentPage.imageAlt}
+            titleText={currentPage.imageTitle}
             initialImageUrl={currentPage.imageUrl}
             storyPageId={currentPage.id}
           />
