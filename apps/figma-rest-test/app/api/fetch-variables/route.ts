@@ -1,6 +1,6 @@
 // app/api/figma-css/route.js
 
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -9,7 +9,13 @@ dotenv.config();
  * Convert a token value to a CSS value.
  * If it’s a color object (with r, g, b, a) convert it to rgba().
  */
-function tokenValueToCSS(value) {
+type TokenValue =
+  | string
+  | number
+  | { r: number; g: number; b: number; a: number }
+  | null;
+
+function tokenValueToCSS(value: TokenValue) {
   if (
     value &&
     typeof value === "object" &&
@@ -31,14 +37,14 @@ function tokenValueToCSS(value) {
  * Convert a token name to a valid CSS variable name.
  * Example: "Neutral color/Neutral Alpha/2" => "neutral-color-neutral-alpha-2"
  */
-function toCssVariableName(name) {
+function toCssVariableName(name: string) {
   return name
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 }
 
-export async function GET(request) {
+export async function GET(request: NextRequest) {
   // Use your environment variables.
   const FIGMA_API_KEY = process.env.FIGMA_API_KEY;
   const FILE_ID = process.env.FILE_ID;
@@ -73,7 +79,7 @@ export async function GET(request) {
   // console.log("Figma data:", JSON.stringify(figmaData, null, 2));
 
   // Process the tokens.
-  const tokens = {};
+  const tokens: Record<string, TokenValue> = {};
   const variables = figmaData.meta?.variables || {};
 
   for (const tokenId in variables) {

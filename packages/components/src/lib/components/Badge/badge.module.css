@@ -1,0 +1,72 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-default, "SF Pro", sans-serif);
+  font-weight: 600;
+  box-sizing: border-box;
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+  user-select: none;
+}
+
+.badge[data-size="sm"] {
+  font-size: var(--badge-font-size-sm, 12px);
+  line-height: var(--badge-line-height-sm, 1.33);
+  letter-spacing: var(--badge-letter-spacing-sm, 0.04em);
+  padding: 2px 4px;
+}
+.badge[data-size="md"] {
+  font-size: var(--badge-font-size-md, 14px);
+  line-height: var(--badge-line-height-md, 1.14);
+  letter-spacing: var(--badge-letter-spacing-md, 0.03em);
+  padding: 4px 8px;
+}
+.badge[data-size="lg"] {
+  font-size: var(--badge-font-size-lg, 16px);
+  line-height: var(--badge-line-height-lg, 1.14);
+  letter-spacing: var(--badge-letter-spacing-lg, 0.03em);
+  padding: 8px;
+}
+
+.badge[data-radius="square"] {
+  border-radius: var(--container-informational-radius-sm);
+}
+.badge[data-radius="md"] {
+  border-radius: var(--container-informational-radius-sm);
+}
+.badge[data-radius="rounded"] {
+  border-radius: var(--container-informational-radius-default);
+}
+
+.badge[data-color="primary"] {
+  background-color: var(--palette-informational-background-primary);
+  color: var(--palette-informational-content-knockout);
+}
+.badge[data-color="neutral-dark"] {
+  background-color: var(--palette-informational-background-neutral-dark);
+  color: var(--palette-informational-content-default);
+}
+.badge[data-color="neutral-light"] {
+  background-color: var(--palette-informational-background-neutral-light);
+  color: var(--palette-informational-content-default);
+}
+.badge[data-color="knockout"] {
+  background-color: var(--palette-informational-background-knockout);
+  color: var(--palette-informational-content-knockout);
+}
+.badge[data-color="warning"] {
+  background-color: var(--palette-informational-background-warning);
+  color: var(--palette-informational-content-default);
+}
+.badge[data-color="highlight"] {
+  background-color: var(--palette-informational-background-highlight);
+  color: var(--palette-informational-content-default);
+}
+.badge[data-color="danger"] {
+  background-color: var(--palette-informational-background-danger);
+  color: var(--palette-informational-content-default);
+}
+.badge[data-color="success"] {
+  background-color: var(--palette-informational-background-success);
+  color: var(--palette-informational-content-default);
+}

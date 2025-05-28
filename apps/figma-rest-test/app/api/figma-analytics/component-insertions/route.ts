@@ -1,16 +1,18 @@
 // File: apps/figma-rest-test/app/api/figma-analytics/component-insertions/route.ts
-
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import dotenv from "dotenv";
+
 dotenv.config();
 
-// Env variables
-const FIGMA_TOKEN = process.env.FIGMA_API_KEY!;
-const LIBRARY_FILE_KEY = process.env.FIGMA_FILE_ID!;
-const DS_TEAM_NAME = process.env.FIGMA_DS_TEAM_NAME!; // e.g. "Hearst Design System"
+const FIGMA_TOKEN = process.env.FIGMA_API_KEY;
+const LIBRARY_FILE_KEY = process.env.FIGMA_FILE_ID;
+const DS_TEAM_NAME = process.env.FIGMA_DS_TEAM_NAME;
 
-// Types for team-level actions
+if (!FIGMA_TOKEN) throw new Error("Missing FIGMA_API_KEY");
+if (!LIBRARY_FILE_KEY) throw new Error("Missing FIGMA_FILE_ID");
+// DS_TEAM_NAME optional
+
 interface TeamActionRow {
   week: string;
   insertions: number;
@@ -23,52 +25,65 @@ interface TeamActionsResponse {
   next_page?: boolean;
 }
 
-// Helper to call Figma Analytics
 async function figmaFetch<T>(path: string): Promise<T> {
   const res = await fetch(
     `https://api.figma.com/v1/analytics/libraries/${LIBRARY_FILE_KEY}/${path}`,
-    { headers: { "X-FIGMA-TOKEN": FIGMA_TOKEN } }
+    { headers: { "X-FIGMA-TOKEN": FIGMA_TOKEN as string } }
   );
   if (!res.ok) {
-    const txt = await res.text();
-    throw new Error(`Figma API error ${res.status}: ${txt}`);
+    const body = await res.text();
+    console.error("Figma API error payload:", body);
+    throw new Error(`Figma API error ${res.status}: ${body}`);
   }
   return res.json() as Promise<T>;
 }
 
-export async function GET(_req: NextRequest) {
-  // Define 90-day window
-  const endDate = new Date().toISOString().slice(0, 10);
-  const startDate = new Date(Date.now() - 90 * 24 * 60 * 60 * 1000)
-    .toISOString()
-    .slice(0, 10);
+function formatDate(d: Date): string {
+  return d.toISOString().split("T")[0];
+}
 
-  // 1️⃣ Fetch component actions grouped by TEAM
-  const { rows } = await figmaFetch<TeamActionsResponse>(
-    `component/actions?group_by=team&start_date=${startDate}&end_date=${endDate}`
-  );
+export async function GET(req: NextRequest) {
+  try {
+    const url = new URL(req.url);
+    const days = Math.max(1, Number(url.searchParams.get("days") || "90"));
+    const excludeSelf = url.searchParams.get("excludeSelf") !== "false";
 
-  // 2️⃣ Exclude your own Design System team
-  const external = rows.filter((r) => r.team_name !== DS_TEAM_NAME);
+    const endDate = formatDate(new Date());
+    const startDate = formatDate(new Date(Date.now() - days * 864e5));
 
-  // 3️⃣ Aggregate insertions & detachments per week
-  const agg: Record<string, { insertions: number; detachments: number }> = {};
-  external.forEach((r) => {
-    const wk = r.week;
-    if (!agg[wk]) agg[wk] = { insertions: 0, detachments: 0 };
-    agg[wk].insertions += r.insertions;
-    agg[wk].detachments += r.detachments;
-  });
+    const { rows } = await figmaFetch<TeamActionsResponse>(
+      `component/actions?group_by=team&start_date=${startDate}&end_date=${endDate}`
+    );
 
-  // 4️⃣ Build sorted array of weekly data
-  const data = Object.entries(agg)
-    .map(([week, { insertions, detachments }]) => ({
-      week,
-      insertions,
-      detachments,
-    }))
-    .sort((a, b) => a.week.localeCompare(b.week));
+    const filtered =
+      excludeSelf && DS_TEAM_NAME
+        ? rows.filter((r) => r.team_name !== DS_TEAM_NAME)
+        : rows;
 
-  // Return JSON
-  return NextResponse.json({ startDate, endDate, data });
+    const agg: Record<string, { insertions: number; detachments: number }> = {};
+    filtered.forEach((r) => {
+      if (!agg[r.week]) agg[r.week] = { insertions: 0, detachments: 0 };
+      agg[r.week].insertions += r.insertions;
+      agg[r.week].detachments += r.detachments;
+    });
+
+    const data = Object.entries(agg)
+      .map(([week, { insertions, detachments }]) => ({
+        week,
+        insertions,
+        detachments,
+      }))
+      .sort((a, b) => a.week.localeCompare(b.week));
+
+    const response = NextResponse.json({ startDate, endDate, days, data });
+    response.headers.set(
+      "Cache-Control",
+      "public, max-age=300, stale-while-revalidate=3600"
+    );
+    return response;
+  } catch (err: unknown) {
+    console.error(err);
+    const msg = err instanceof Error ? err.message : String(err);
+    return NextResponse.json({ error: msg }, { status: 500 });
+  }
 }

@@ -1243,7 +1243,10 @@
       "$extensions": {
         "com.figma": {
           "hiddenFromPublishing": false,
-          "scopes": [],
+          "scopes": [
+            "GAP",
+            "FONT_VARIATIONS"
+          ],
           "codeSyntax": {}
         }
       }

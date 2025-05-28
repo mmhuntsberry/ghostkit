@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HDS Primary Button Variants</title>
+    <style>
+      :root {
+        --primary: #1c1c1c;
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=SF+Pro:wght@600&display=swap");
+      .primary-solid-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        background: #1c1c1c;
+        color: #ffffff;
+        border: 1px solid #1c1c1c;
+        border-radius: 8px;
+        padding: 12px 16px;
+        font-family: "SF Pro", Arial, sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        cursor: pointer;
+        transition: background 0.2s, border-color 0.2s;
+      }
+      .primary-solid-button:hover {
+        background: #232323;
+        border-color: #232323;
+      }
+      .primary-solid-button:active {
+        background: #181818;
+        border-color: #181818;
+      }
+      .primary-solid-button img {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        filter: brightness(0) invert(1); /* white icon */
+      }
+      .primary-transparent-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        background: transparent;
+        color: #1c1c1c;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        padding: 12px 16px;
+        font-family: "SF Pro", Arial, sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        cursor: pointer;
+        transition: background 0.2s, border-color 0.2s;
+      }
+
+      .primary-transparent-button:hover {
+        background: #f5f5f5;
+      }
+      .primary-transparent-button:active {
+        background: #e0e0e0;
+      }
+      .primary-transparent-button img {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        filter: none; /* default icon color */
+      }
+      .primary-outlined-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        background: #fff;
+        color: #1c1c1c;
+        border: 1px solid #1c1c1c;
+        border-radius: 8px;
+        padding: 12px 16px;
+        font-family: "SF Pro", Arial, sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        cursor: pointer;
+        transition: background 0.2s, border-color 0.2s;
+      }
+      .primary-outlined-button:hover {
+        background: #f5f5f5;
+        border-color: #1c1c1c;
+      }
+      .primary-outlined-button:active {
+        background: #e0e0e0;
+        border-color: #1c1c1c;
+      }
+      .primary-outlined-button img {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        filter: none; /* default icon color */
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Primary Solid</h2>
+    <button class="primary-solid-button">
+      <img src="plus-circle.svg" alt="Plus Circle Icon" />
+      <span>Label</span>
+    </button>
+    <h2>Primary Transparent</h2>
+    <button class="primary-transparent-button">
+      <img src="plus-circle.svg" alt="Plus Circle Icon" />
+      <span>Label</span>
+    </button>
+    <h2>Primary Outlined</h2>
+    <button class="primary-outlined-button">
+      <img src="plus-circle.svg" alt="Plus Circle Icon" />
+      <span>Label</span>
+    </button>
+  </body>
+</html>

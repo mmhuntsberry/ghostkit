@@ -5,13 +5,11 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-// Ensure PAT and file key are set
 const FIGMA_TOKEN = process.env.FIGMA_API_KEY;
 const LIBRARY_FILE_KEY = process.env.FIGMA_FILE_ID;
 if (!FIGMA_TOKEN) throw new Error("Define FIGMA_API_KEY");
 if (!LIBRARY_FILE_KEY) throw new Error("Define FIGMA_FILE_ID");
 
-// Figma Library Analytics response types
 interface FigmaUsageRow {
   component_key: string;
   component_name: string;
@@ -25,19 +23,16 @@ interface FigmaUsageResponse {
   next_page?: boolean;
 }
 
-// Output shape for dashboard
 export interface UsageRow {
   componentName: string;
-  usages: number;
   teamsUsing: number;
   filesUsing: number;
 }
 
-// Figma API helper using X-FIGMA-TOKEN
 async function figmaFetch<T>(path: string): Promise<T> {
   const res = await fetch(
     `https://api.figma.com/v1/analytics/libraries/${LIBRARY_FILE_KEY}/${path}`,
-    { headers: { "X-FIGMA-TOKEN": FIGMA_TOKEN } }
+    { headers: { "X-FIGMA-TOKEN": FIGMA_TOKEN as string } }
   );
   if (!res.ok) {
     const txt = await res.text();
@@ -46,25 +41,62 @@ async function figmaFetch<T>(path: string): Promise<T> {
   return res.json() as Promise<T>;
 }
 
-// Fetch usage grouped by component
+function isLikelyComponent(name: string): boolean {
+  return (
+    !name.includes("=") &&
+    !name.includes(":") &&
+    !/^(size|mode|aspect|background)/i.test(name)
+  );
+}
+
+function normalizeComponentName(name: string): string {
+  return name.split(/,|=/)[0].trim();
+}
+
 async function getComponentUsages(): Promise<UsageRow[]> {
   const response = await figmaFetch<FigmaUsageResponse>(
     `component/usages?group_by=component`
   );
-  return response.rows.map((r) => ({
-    componentName: r.component_name,
-    usages: r.usages,
-    teamsUsing: r.teams_using,
-    filesUsing: r.files_using,
+
+  const deduped = new Map<string, { teamsUsing: number; filesUsing: number }>();
+
+  for (const row of response.rows) {
+    const rawName = row.component_name.trim();
+    if (!isLikelyComponent(rawName)) continue;
+
+    const baseName = normalizeComponentName(rawName);
+
+    if (!deduped.has(baseName)) {
+      deduped.set(baseName, {
+        teamsUsing: row.teams_using,
+        filesUsing: row.files_using,
+      });
+    } else {
+      const existing = deduped.get(baseName)!;
+      deduped.set(baseName, {
+        teamsUsing: existing.teamsUsing + row.teams_using,
+        filesUsing: existing.filesUsing + row.files_using,
+      });
+    }
+  }
+
+  return Array.from(deduped.entries()).map(([componentName, stats]) => ({
+    componentName,
+    teamsUsing: stats.teamsUsing,
+    filesUsing: stats.filesUsing,
   }));
 }
 
-// API route handler
 export async function GET(request: NextRequest) {
   try {
     const usages = await getComponentUsages();
-    // return top 10 sorted by usages
-    const top = usages.sort((a, b) => b.usages - a.usages).slice(0, 10);
+    const top = usages
+      .filter((u) => u.filesUsing > 0)
+      .sort((a, b) => b.filesUsing - a.filesUsing)
+      .slice(0, 10);
+
+    console.log("Top Components by filesUsing:", top);
+
     return NextResponse.json({ top });
   } catch (err: unknown) {
     console.error(err);

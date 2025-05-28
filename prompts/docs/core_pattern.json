@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Core Pattern Documentation Schema",
+  "type": "object",
+  "properties": {
+    "patternName": {
+      "type": "string",
+      "description": "The name of the core pattern (e.g., Action, Informational)."
+    },
+    "category": {
+      "type": "string",
+      "description": "Pattern category (e.g., Actions, Navigation, Form Controls)."
+    },
+    "overview": {
+      "type": "string",
+      "description": "High-level summary of the pattern and its purpose."
+    },
+    "whyUse": {
+      "type": "string",
+      "description": "Rationale for why this pattern exists and when to use it."
+    },
+    "structure": {
+      "type": "string",
+      "description": "Description of the pattern’s anatomy, states, and key variants."
+    },
+    "variants": {
+      "type": "array",
+      "description": "List of pattern variants (e.g. background styles, sizes).",
+      "items": {
+        "$ref": "#/definitions/patternVariant"
+      }
+    },
+    "usageGuidelines": {
+      "type": "string",
+      "description": "Do’s and don’ts or implementation notes for consistent use."
+    },
+    "sharedTokenUsage": {
+      "type": "array",
+      "description": "Design tokens (typography, color, spacing) reused by this pattern.",
+      "items": { "type": "string" }
+    },
+    "examples": {
+      "type": "array",
+      "description": "Example components or real-world uses of this core pattern.",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["patternName", "category", "overview", "whyUse", "variants"],
+  "definitions": {
+    "patternVariant": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Variant name (e.g., solid, outlined, transparent)."
+        },
+        "description": {
+          "type": "string",
+          "description": "Explanation of when and why to use this variant."
+        }
+      },
+      "required": ["name", "description"]
+    }
+  }
+}

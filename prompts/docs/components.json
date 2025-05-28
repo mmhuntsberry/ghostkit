@@ -1,0 +1,211 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Component Documentation Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The component’s canonical name (e.g. Button, Card, Icon)."
+    },
+    "overview": {
+      "type": "string",
+      "description": "A brief summary of the component’s purpose and when to use it."
+    },
+    "designPrinciples": {
+      "type": "array",
+      "description": "Guiding principles that drive your component’s UX and visual decisions.",
+      "items": {
+        "$ref": "#/definitions/designPrinciple"
+      }
+    },
+    "variants": {
+      "type": "array",
+      "description": "Different stylistic or behavioral variants of this component.",
+      "items": {
+        "$ref": "#/definitions/variant"
+      }
+    },
+    "props": {
+      "type": "array",
+      "description": "API surface of the component (props, slots, etc.).",
+      "items": {
+        "$ref": "#/definitions/prop"
+      }
+    },
+    "accessibility": {
+      "$ref": "#/definitions/accessibility"
+    },
+    "responsiveness": {
+      "$ref": "#/definitions/responsiveness"
+    },
+    "statesAndInteractions": {
+      "type": "array",
+      "description": "User states (hover, focus, disabled) and interactive behaviors.",
+      "items": {
+        "$ref": "#/definitions/stateInteraction"
+      }
+    },
+    "codeExamples": {
+      "type": "array",
+      "description": "Copy-and-paste snippets demonstrating common use cases.",
+      "items": {
+        "$ref": "#/definitions/codeExample"
+      }
+    },
+    "figmaLink": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the source Figma file or node."
+    },
+    "tokenMappings": {
+      "type": "array",
+      "description": "Design tokens (Figma/Tailwind/CSS/JS) used by this component.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tokenName": {
+            "type": "string",
+            "description": "The token’s identifier (e.g. color/primary, spacing/md)."
+          },
+          "purpose": {
+            "type": "string",
+            "description": "What this token drives in the component (e.g. background, padding)."
+          }
+        },
+        "required": ["tokenName"]
+      }
+    }
+  },
+  "required": ["name", "overview", "designPrinciples"],
+  "definitions": {
+    "designPrinciple": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Short title of the principle."
+        },
+        "description": {
+          "type": "string",
+          "description": "Full explanation of the principle."
+        }
+      },
+      "required": ["title", "description"]
+    },
+    "variant": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Variant name (e.g. primary, outlined)."
+        },
+        "description": {
+          "type": "string",
+          "description": "When and why to use this variant."
+        },
+        "usageGuidelines": {
+          "type": "string",
+          "description": "Any additional do’s/don’ts or constraints."
+        }
+      },
+      "required": ["name", "description"]
+    },
+    "prop": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Property name (e.g. size, disabled)."
+        },
+        "type": {
+          "type": "string",
+          "description": "Data type (e.g. string, boolean, union)."
+        },
+        "default": {
+          "description": "Default value if omitted."
+        },
+        "description": {
+          "type": "string",
+          "description": "Explanation of the prop’s effect."
+        }
+      },
+      "required": ["name", "type"]
+    },
+    "accessibility": {
+      "type": "object",
+      "properties": {
+        "guidelines": {
+          "type": "array",
+          "description": "List of plain-language A11Y best practices.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "codeExamples": {
+          "type": "array",
+          "description": "ARIA or semantic HTML examples.",
+          "items": {
+            "$ref": "#/definitions/codeExample"
+          }
+        }
+      },
+      "required": ["guidelines"]
+    },
+    "responsiveness": {
+      "type": "object",
+      "properties": {
+        "breakpoints": {
+          "type": "array",
+          "description": "List of supported breakpoints (e.g. sm, md, lg).",
+          "items": {
+            "type": "string"
+          }
+        },
+        "behaviors": {
+          "type": "array",
+          "description": "How the component adapts (stack, resize, hide).",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["breakpoints", "behaviors"]
+    },
+    "stateInteraction": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "string",
+          "description": "Name of the state (e.g. hover, focus)."
+        },
+        "description": {
+          "type": "string",
+          "description": "What changes visually or behaviorally."
+        },
+        "interaction": {
+          "type": "string",
+          "description": "Trigger or user action (e.g. onClick, onHover)."
+        }
+      },
+      "required": ["state", "description"]
+    },
+    "codeExample": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string",
+          "description": "Language or framework (e.g. JSX, HTML, SCSS)."
+        },
+        "code": {
+          "type": "string",
+          "description": "The snippet itself."
+        },
+        "description": {
+          "type": "string",
+          "description": "What this example demonstrates."
+        }
+      },
+      "required": ["language", "code"]
+    }
+  }
+}
