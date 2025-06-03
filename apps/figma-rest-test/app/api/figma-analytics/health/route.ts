@@ -13,7 +13,7 @@ if (!OPENAI_KEY) throw new Error("Missing OPENAI_API_KEY");
 async function fetchFigma<T>(path: string): Promise<T> {
   const res = await fetch(
     `https://api.figma.com/v1/analytics/libraries/${LIBRARY_FILE_KEY}/${path}`,
-    { headers: { "X-FIGMA-TOKEN": FIGMA_TOKEN } }
+    { headers: { "X-FIGMA-TOKEN": FIGMA_TOKEN || "" } }
   );
   if (!res.ok) throw new Error(`Figma API error: ${res.status}`);
   return res.json() as Promise<T>;

@@ -43,6 +43,29 @@
       }
     },
 
+    "export-to-neon": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/figma-rest-test",
+        "commands": [
+          {
+            "command": "tsx scripts/export-to-neon.ts"
+          }
+        ]
+      }
+    },
+    "generate-brand-css": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/figma-rest-test",
+        "commands": [
+          {
+            "command": "tsx scripts/generate-brand-css.ts"
+          }
+        ]
+      }
+    },
+
     "start": {
       "executor": "@nx/next:server",
       "options": {

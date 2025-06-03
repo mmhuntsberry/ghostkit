@@ -1,8 +1,10 @@
+// apps/figma-rest-test/db/index.ts
+
 import { drizzle as drizzleNeon } from "drizzle-orm/neon-http";
 import { drizzle as drizzlePostgres } from "drizzle-orm/node-postgres";
 import { neon } from "@neondatabase/serverless";
 
-import * as schema from "./design-tokens-schema";
+import * as schema from "./design-tokens-schema"; // <-- now this file exports `brands`
 
 export const db = process.env.VERCEL
   ? drizzleNeon({
@@ -14,3 +16,5 @@ export const db = process.env.VERCEL
       schema,
       casing: "snake_case",
     });
+
+export { schema };

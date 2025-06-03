@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import puppeteer from "puppeteer";
+import puppeteer, { Page } from "puppeteer";
 import { saveScrapedData } from "../../../db/actions";
 import { brandDetails } from "../../data/brands";
 import { toKebabCase } from "../../utils/helpers";
@@ -99,7 +99,7 @@ export async function GET() {
       }
 
       if (selectedFrame) {
-        framePage = selectedFrame;
+        framePage = selectedFrame as unknown as Page;
         console.log(`✅ Switched to iframe with ${maxElements} elements.`);
       }
     }
@@ -174,8 +174,8 @@ export async function GET() {
           const td = row.querySelector("td");
           if (th && td) {
             fonts.push({
-              category: th.textContent.trim(),
-              fontFamily: td.textContent.trim(),
+              category: th.textContent?.trim() || "",
+              fontFamily: td.textContent?.trim() || "",
             });
           }
         });

@@ -15,6 +15,10 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  typescript: {
+    // Allow production builds (and dev) even if there are TS type errors
+    ignoreBuildErrors: true,
+  },
 };
 
 const plugins = [

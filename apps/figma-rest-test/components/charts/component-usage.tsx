@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useEffect } from "react";
 import * as d3 from "d3";
-import type { UsageRow } from "../../api/figma-analytics/component-usages/route";
+import type { UsageRow } from "../../app/api/figma-analytics/component-usages/route";
 
 interface UsageBarChartProps {
   data: UsageRow[];
