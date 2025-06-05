@@ -24,6 +24,7 @@
     "matthewhuntsberry:dev": "npx nx serve matthewhuntsberry",
     "some-peoples-kids:dev": "npx nx serve some-peoples-kids",
     "figma-rest-test:dev": "npx nx run figma-rest-test:merge-tokens && npx nx run figma-rest-test:build-brand-css && npx nx serve figma-rest-test",
+    "figma-rest-test:build": "npx nx run figma-rest-test:merge-tokens && npx nx run figma-rest-test:build-brand-css && npx nx build figma-rest-test",
     "dupe": "git archive -o ghostkit.zip HEAD"
   },
   "private": true,
