@@ -146,7 +146,7 @@ export default {
 
   platforms: {
     css: {
-      buildPath: "build/css/",
+      buildPath: "public/brands/",
       resolveReferences: false,
       transforms: [
         "attribute/cti", // Adds metadata (category, type, item)
@@ -159,7 +159,7 @@ export default {
       ],
       files: [
         {
-          destination: "prevention.css",
+          destination: `${process.env.BRAND_SLUG}.css`,
           format: formats.cssVariables,
           options: {
             outputReferences: true,

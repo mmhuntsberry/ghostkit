@@ -66,6 +66,29 @@
       }
     },
 
+    "merge-tokens": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/figma-rest-test",
+        "commands": [
+          {
+            "command": "tsx scripts/merge-tokens-to-file.ts"
+          }
+        ]
+      }
+    },
+
+    "build-brand-css": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/figma-rest-test",
+        "commands": [
+          {
+            "command": "npx style-dictionary build --config scripts/config-brand.mjs"
+          }
+        ]
+      }
+    },
     "start": {
       "executor": "@nx/next:server",
       "options": {
