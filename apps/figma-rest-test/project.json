@@ -12,10 +12,7 @@
         "root": "apps/figma-rest-test",
         "outputPath": "dist/apps/figma-rest-test"
       },
-      "dependsOn": [
-        "@mmhuntsberry/figma-rest-test:merge-tokens",
-        "@mmhuntsberry/figma-rest-test:build-brand-css"
-      ],
+      "dependsOn": [],
       "configurations": {
         "development": {
           "outputPath": "apps/figma-rest-test"
