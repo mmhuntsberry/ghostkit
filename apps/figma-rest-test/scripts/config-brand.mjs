@@ -4,6 +4,8 @@ import path from "path";
 import StyleDictionary from "style-dictionary";
 import { formats, transformGroups } from "style-dictionary/enums";
 
+import "dotenv/config";
+
 // CUSTOM NAMING TRANSFORM
 const customNamingTransform = {
   name: "custom/name/kebab",
@@ -139,7 +141,7 @@ StyleDictionary.registerTransform(customOpacityTransform);
 
 export default {
   // Include both the primitives and alias files so that references in alias tokens work.
-  source: [path.resolve("tokens_preprocessed/alias-prevention.json")],
+  source: [path.resolve(`tokens_preprocessed/${process.env.BRAND_SLUG}.json`)],
 
   platforms: {
     css: {
