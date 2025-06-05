@@ -1,3 +1,5 @@
+// /Users/matt.huntsberry/Desktop/ghostkit/packages/tokens/config-copy.mjs
+
 import StyleDictionary from "style-dictionary";
 
 export default {

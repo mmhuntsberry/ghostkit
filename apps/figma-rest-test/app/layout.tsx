@@ -4,6 +4,8 @@ import "./globals.css";
 
 const BRAND = process.env.BRAND_SLUG;
 
+console.log({ BRAND });
+
 const sourceSans3 = Source_Sans_3({
   subsets: ["latin"],
   variable: "--font-source-sans-3",

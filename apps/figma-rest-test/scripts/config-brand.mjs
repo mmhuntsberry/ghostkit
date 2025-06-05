@@ -139,10 +139,7 @@ StyleDictionary.registerTransform(customOpacityTransform);
 
 export default {
   // Include both the primitives and alias files so that references in alias tokens work.
-  source: [
-    path.resolve("tokens_new/primitives.White Label.json"),
-    path.resolve("tokens_new/alias.Prevention.json"),
-  ],
+  source: [path.resolve("tokens_preprocessed/alias-prevention.json")],
 
   platforms: {
     css: {

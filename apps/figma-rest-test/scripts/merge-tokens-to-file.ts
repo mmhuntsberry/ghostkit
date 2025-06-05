@@ -1,4 +1,3 @@
-// scripts/merge-tokens-to-file.ts (run with tsx or node)
 import { writeFileSync, mkdirSync } from "fs";
 import { join } from "path";
 import { drizzle } from "drizzle-orm/neon-http";
@@ -17,6 +16,7 @@ if (!DATABASE_URL) throw new Error("DATABASE_URL is required");
 if (!BRAND_SLUG) throw new Error("BRAND_SLUG is required");
 
 const db = drizzle(neon(DATABASE_URL), { schema, casing: "snake_case" });
+
 async function loadTokens(slug: string) {
   const [row] = await db
     .select({ tokens: schema.brands.tokens })
@@ -29,7 +29,11 @@ async function loadTokens(slug: string) {
 (async () => {
   const primitives = await loadTokens(PRIMITIVES_SLUG);
   const alias = await loadTokens(BRAND_SLUG);
+
+  // Deep merge: alias takes precedence over primitives
   const merged = deepmerge(primitives, alias);
+
+  // Optional: flatten or resolve references here if your tokens use {foo.bar} refs
 
   const outDir = "tokens_preprocessed";
   mkdirSync(outDir, { recursive: true });
