@@ -1,0 +1,49 @@
+{
+  "top": [
+    {
+      "componentName": "Button",
+      "teamsUsing": 10,
+      "filesUsing": 32
+    },
+    {
+      "componentName": "IconButton",
+      "teamsUsing": 6,
+      "filesUsing": 10
+    },
+    {
+      "componentName": "Badge",
+      "teamsUsing": 3,
+      "filesUsing": 6
+    },
+    {
+      "componentName": "Link/IconOnly",
+      "teamsUsing": 2,
+      "filesUsing": 3
+    },
+    {
+      "componentName": "Link/StandAlone",
+      "teamsUsing": 2,
+      "filesUsing": 3
+    },
+    {
+      "componentName": "Card/GridItem",
+      "teamsUsing": 1,
+      "filesUsing": 2
+    },
+    {
+      "componentName": "Input",
+      "teamsUsing": 2,
+      "filesUsing": 2
+    },
+    {
+      "componentName": "Chip",
+      "teamsUsing": 1,
+      "filesUsing": 1
+    },
+    {
+      "componentName": "Modal",
+      "teamsUsing": 1,
+      "filesUsing": 1
+    }
+  ]
+}

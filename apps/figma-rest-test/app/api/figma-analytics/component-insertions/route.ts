@@ -2,6 +2,8 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import dotenv from "dotenv";
+import fs from "fs";
+import path from "path";
 
 dotenv.config();
 
@@ -42,6 +44,13 @@ function formatDate(d: Date): string {
   return d.toISOString().split("T")[0];
 }
 
+// --- Fallback path for snapshots ---
+const SNAPSHOT_PATH = path.resolve(
+  process.cwd(),
+  "figma-snapshots",
+  "component-insertions.latest.json"
+);
+
 export async function GET(req: NextRequest) {
   try {
     const url = new URL(req.url);
@@ -75,13 +84,38 @@ export async function GET(req: NextRequest) {
       }))
       .sort((a, b) => a.week.localeCompare(b.week));
 
-    const response = NextResponse.json({ startDate, endDate, days, data });
+    const responseData = { startDate, endDate, days, data };
+
+    // --- Save a snapshot for fallback ---
+    try {
+      fs.mkdirSync(path.dirname(SNAPSHOT_PATH), { recursive: true });
+      fs.writeFileSync(
+        SNAPSHOT_PATH,
+        JSON.stringify(responseData, null, 2),
+        "utf-8"
+      );
+    } catch (snapErr) {
+      console.warn("Could not write fallback snapshot:", snapErr);
+    }
+
+    const response = NextResponse.json(responseData);
     response.headers.set(
       "Cache-Control",
       "public, max-age=300, stale-while-revalidate=3600"
     );
     return response;
   } catch (err: unknown) {
+    // --- Fallback to last snapshot ---
+    if (fs.existsSync(SNAPSHOT_PATH)) {
+      const fallback = JSON.parse(fs.readFileSync(SNAPSHOT_PATH, "utf-8"));
+      return NextResponse.json({
+        ...fallback,
+        fallback: true,
+        error: err instanceof Error ? err.message : String(err),
+      });
+    }
+
+    // --- No snapshot available: regular error ---
     console.error(err);
     const msg = err instanceof Error ? err.message : String(err);
     return NextResponse.json({ error: msg }, { status: 500 });

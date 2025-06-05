@@ -1,0 +1,57 @@
+{
+  "startDate": "2025-03-07",
+  "endDate": "2025-06-05",
+  "days": 90,
+  "data": [
+    {
+      "week": "2025-03-30",
+      "insertions": 27,
+      "detachments": 0
+    },
+    {
+      "week": "2025-04-06",
+      "insertions": 18,
+      "detachments": 1
+    },
+    {
+      "week": "2025-04-13",
+      "insertions": 96,
+      "detachments": 0
+    },
+    {
+      "week": "2025-04-20",
+      "insertions": 261,
+      "detachments": 2
+    },
+    {
+      "week": "2025-04-27",
+      "insertions": 134,
+      "detachments": 1
+    },
+    {
+      "week": "2025-05-04",
+      "insertions": 344,
+      "detachments": 0
+    },
+    {
+      "week": "2025-05-11",
+      "insertions": 888,
+      "detachments": 0
+    },
+    {
+      "week": "2025-05-18",
+      "insertions": 960,
+      "detachments": 6
+    },
+    {
+      "week": "2025-05-25",
+      "insertions": 339,
+      "detachments": 8
+    },
+    {
+      "week": "2025-06-01",
+      "insertions": 25,
+      "detachments": 0
+    }
+  ]
+}

@@ -1,7 +1,9 @@
-// apps/figma-rest-test/app/api/figma-analytics/component-usages/route.ts
+// File: apps/figma-rest-test/app/api/figma-analytics/component-usages/route.ts
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import dotenv from "dotenv";
+import fs from "fs";
+import path from "path";
 
 dotenv.config();
 
@@ -87,6 +89,13 @@ async function getComponentUsages(): Promise<UsageRow[]> {
   }));
 }
 
+// --- Fallback path for snapshots ---
+const SNAPSHOT_PATH = path.resolve(
+  process.cwd(),
+  "figma-snapshots",
+  "component-usages.latest.json"
+);
+
 export async function GET(request: NextRequest) {
   try {
     const usages = await getComponentUsages();
@@ -97,8 +106,33 @@ export async function GET(request: NextRequest) {
 
     console.log("Top Components by filesUsing:", top);
 
+    // --- Save a snapshot for fallback ---
+    try {
+      fs.mkdirSync(path.dirname(SNAPSHOT_PATH), { recursive: true });
+      fs.writeFileSync(
+        SNAPSHOT_PATH,
+        JSON.stringify({ top }, null, 2),
+        "utf-8"
+      );
+    } catch (snapErr) {
+      console.warn("Could not write fallback snapshot:", snapErr);
+    }
+
+    console.log("Snapshot saved to:", SNAPSHOT_PATH);
+
     return NextResponse.json({ top });
   } catch (err: unknown) {
+    // --- Fallback to last snapshot ---
+    if (fs.existsSync(SNAPSHOT_PATH)) {
+      const fallback = JSON.parse(fs.readFileSync(SNAPSHOT_PATH, "utf-8"));
+      return NextResponse.json({
+        ...fallback,
+        fallback: true,
+        error: err instanceof Error ? err.message : String(err),
+      });
+    }
+
+    // --- No snapshot available: regular error ---
     console.error(err);
     const msg = err instanceof Error ? err.message : String(err);
     return NextResponse.json({ error: msg }, { status: 500 });

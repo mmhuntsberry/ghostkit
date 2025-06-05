@@ -1,3 +1,5 @@
+// File: apps/figma-rest-test/app/api/figma-analytics/health/route.ts
+
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import dotenv from "dotenv";
