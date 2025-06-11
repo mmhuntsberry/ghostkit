@@ -3,25 +3,25 @@
     {
       "componentName": "Button",
       "teamsUsing": 10,
-      "filesUsing": 32
+      "filesUsing": 35
     },
     {
       "componentName": "IconButton",
       "teamsUsing": 6,
-      "filesUsing": 10
+      "filesUsing": 12
     },
     {
       "componentName": "Badge",
       "teamsUsing": 3,
-      "filesUsing": 6
-    },
-    {
-      "componentName": "Link/IconOnly",
-      "teamsUsing": 2,
-      "filesUsing": 3
+      "filesUsing": 7
     },
     {
       "componentName": "Link/StandAlone",
+      "teamsUsing": 3,
+      "filesUsing": 4
+    },
+    {
+      "componentName": "Link/IconOnly",
       "teamsUsing": 2,
       "filesUsing": 3
     },

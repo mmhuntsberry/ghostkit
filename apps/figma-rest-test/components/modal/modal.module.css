@@ -1,0 +1,103 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+}
+
+.overlay[data-mode="dark"] {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+}
+
+.content {
+  background-color: var(--palette-neutral-lightest);
+  border-radius: var(--border-radius-xs);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-md);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--layout-md);
+}
+.content:focus {
+  outline: none;
+}
+.content[data-size="spacious"] {
+  width: var(--layout-sm);
+}
+.content[data-mode="dark"] {
+  background-color: var(--palette-neutral-darkest);
+}
+
+.title {
+  margin: var(--space-4xs);
+  /* margin-block-start: var(--spacing-sm); */
+  color: var(--palette-neutral-darkest);
+  font-family: var(--font-families-default);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-xl);
+  line-height: var(--line-height-xl);
+  text-align: var(center);
+}
+.title[data-mode="dark"] {
+  color: var(--palette-neutral-lightest);
+}
+
+.description {
+  margin: var(--space-4xs);
+  margin-block-start: var(--space-sm);
+  color: var(--palette-neutral-400);
+  font-family: var(--font-families-default);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weights-regular);
+  letter-spacing: var(--letter-spacing-2xs);
+  line-height: var(--line-heights-2xs);
+  /* text-align: var(--center); */
+}
+.description[data-mode="dark"] {
+  color: var(--palette-neutral-lightest);
+}
+
+.icon {
+  background-color: var(--palette-neutral-200);
+  width: min-content;
+  display: flex;
+  justify-content: center;
+  border-radius: var(--_primitive-6);
+  padding: var(--space-2xs);
+  margin: 0 auto;
+}
+.icon[data-type="destructive"],
+.icon[data-type="error"] {
+  background-color: var(--palette-danger-100);
+}
+.icon[data-type="success"] {
+  background-color: var(--palette-success-100);
+}
+.icon[data-type="loading"],
+.icon[data-mode="dark"][data-type="loading"] {
+  background-color: transparent;
+}
+.icon[data-mode="dark"] {
+  background-color: var(--palette-neutral-900);
+}
+.icon[data-mode="dark"][data-type="destructive"],
+.icon[data-mode="dark"][data-type="error"] {
+  background-color: var(--palette-danger-900);
+}
+.icon[data-mode="dark"][data-type="success"] {
+  background-color: var(--palette-success-900);
+}
+
+.content[data-size="md"] {
+  width: var(--layout-md);
+}
+.content[data-size="lg"] {
+  width: var(--layout-lg);
+}
+.content[data-size="xl"] {
+  width: var(--layout-xl);
+}

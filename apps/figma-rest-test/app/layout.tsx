@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Source_Sans_3 } from "next/font/google";
+
 import "./globals.css";
 
 const BRAND = process.env.BRAND_SLUG;
 
 console.log({ BRAND });
-
-const sourceSans3 = Source_Sans_3({
-  subsets: ["latin"],
-  variable: "--font-source-sans-3",
-});
 
 export const metadata: Metadata = {
   title: "Figma Analytics",
@@ -23,9 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="stylesheet" href={`/brands/${BRAND}.css`} />
+      <head>
+        <link rel="stylesheet" href={`/brands/${BRAND}.css`} />
+      </head>
 
-      <body className={`${sourceSans3.variable}  antialiased`}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
