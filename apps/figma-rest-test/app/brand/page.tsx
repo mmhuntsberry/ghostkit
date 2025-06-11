@@ -60,15 +60,15 @@ export default function BrandPage() {
           </ModalDescription>
           <ModalClose>
             <Button
-              variant="primary"
-              background="solid"
+              variant="neutral"
+              background="trans"
               className={styles.button}
               size="lg"
             >
               Cancel
             </Button>
             <Button
-              variant="primary"
+              variant="neutral"
               background="solid"
               className={styles.button}
               size="lg"
