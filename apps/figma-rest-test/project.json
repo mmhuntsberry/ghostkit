@@ -44,7 +44,7 @@
       }
     },
 
-    "export-to-neon": {
+    "export-to-db": {
       "executor": "nx:run-commands",
       "options": {
         "cwd": "apps/figma-rest-test",

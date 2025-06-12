@@ -13,6 +13,10 @@ import {
   ModalX,
 } from "../../components/modal/modal";
 import modalStyles from "../../components/modal/modal.module.css";
+import { Input } from "../../components/Input/input";
+import { EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
+
+import React from "react";
 
 export default function BrandPage() {
   return (
@@ -46,7 +50,6 @@ export default function BrandPage() {
           <div
             style={{
               display: "flex",
-              // flexDirection: "column",
               justifyContent: "space-between",
               alignItems: "baseline",
               gap: "var(--space-4xs)",
@@ -55,27 +58,58 @@ export default function BrandPage() {
             <ModalTitle className={modalStyles.title}>Modal Title</ModalTitle>
             <ModalX />
           </div>
+
           <ModalDescription className={modalStyles.description}>
             Modal Description
           </ModalDescription>
-          <ModalClose>
-            <Button
-              variant="neutral"
-              background="trans"
-              className={styles.button}
-              size="lg"
-            >
-              Cancel
-            </Button>
-            <Button
-              variant="neutral"
-              background="solid"
-              className={styles.button}
-              size="lg"
-            >
-              Sign in
-            </Button>
-          </ModalClose>
+
+          {/* Input field with EnvelopeSimple icon */}
+          <div
+            style={{
+              margin: "var(--space-md) 0",
+              display: "flex",
+              flexDirection: "column",
+              gap: "var(--space-sm, 12px)",
+            }}
+          >
+            <Input
+              placeholder="Email"
+              variant="outlined"
+              icon={<EnvelopeSimple size={24} />}
+            />
+            <Input placeholder="Password" variant="outlined" type="password" />
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+              alignItems: "baseline",
+              gap: "var(--space-xs)",
+              marginTop: "var(--space-2xs)",
+            }}
+          >
+            <ModalClose>
+              <Button
+                variant="neutral"
+                background="transparent"
+                className={styles.button}
+                size="lg"
+              >
+                Cancel
+              </Button>
+            </ModalClose>
+            <ModalClose>
+              <Button
+                variant="primary"
+                background="solid"
+                className={styles.button}
+                size="lg"
+              >
+                Sign in
+              </Button>
+            </ModalClose>
+          </div>
         </ModalContent>
       </Modal>
     </div>

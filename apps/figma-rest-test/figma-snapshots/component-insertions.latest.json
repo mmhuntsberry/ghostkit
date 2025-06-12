@@ -1,6 +1,6 @@
 {
-  "startDate": "2025-03-13",
-  "endDate": "2025-06-11",
+  "startDate": "2025-03-14",
+  "endDate": "2025-06-12",
   "days": 90,
   "data": [
     {
@@ -51,6 +51,11 @@
     {
       "week": "2025-06-01",
       "insertions": 363,
+      "detachments": 0
+    },
+    {
+      "week": "2025-06-08",
+      "insertions": 100,
       "detachments": 0
     }
   ]

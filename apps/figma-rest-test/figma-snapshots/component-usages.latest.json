@@ -3,12 +3,12 @@
     {
       "componentName": "Button",
       "teamsUsing": 10,
-      "filesUsing": 35
+      "filesUsing": 36
     },
     {
       "componentName": "IconButton",
       "teamsUsing": 6,
-      "filesUsing": 12
+      "filesUsing": 13
     },
     {
       "componentName": "Badge",
@@ -37,11 +37,6 @@
     },
     {
       "componentName": "Chip",
-      "teamsUsing": 1,
-      "filesUsing": 1
-    },
-    {
-      "componentName": "Modal",
       "teamsUsing": 1,
       "filesUsing": 1
     }

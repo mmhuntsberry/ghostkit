@@ -1,0 +1,41 @@
+{
+  "task": "Build or update a component from Figma",
+  "component": "Input",
+  "tech": "React + CSS Modules + Radix UI (if new and available, otherwise fallback on html)",
+  "destination": "/Users/matt.huntsberry/Desktop/ghostkit/apps/figma-rest-test/components/input",
+  "figma": {
+    "url": "https://www.figma.com/design/APVsrKR3zk0Flt5VyqSgvv/Hearst-Design-System?node-id=5779-853&t=gd72e5cCoFJVkOFB-4"
+  },
+  "files": [
+    {
+      "name": "input.tsx",
+      "type": "component",
+      "style": "CSS Modules",
+      "usesTokens": true,
+      "propsFromVariants": true,
+      "dataAttributesForVariants": true,
+      "styleProp": true,
+      "restProps": true,
+      "baseComponentLib": "Radix UI Primitives (if new)"
+    },
+    {
+      "name": "input.module.css",
+      "type": "style",
+      "style": "CSS Modules",
+      "tokensSource": "CSS variables",
+      "hybridStyling": "Use data attributes for variant control, class selectors for core styles/layout",
+      "reference": "Learn conventions from existing .module.css files in /Users/matt.huntsberry/Desktop/ghostkit/apps/figma-rest-test/components/button/button.module.css"
+    }
+  ],
+  "constraints": [
+    "Check for an existing component in the codebase and extend/reuse if possible.",
+    "If building from scratch, use Radix UI Primitives as the base. Only if Radix has a suitable primitive component otherwise fallback on html.",
+    "Use data attributes for variant control (e.g., data-variant, data-mode) and class selectors for core styles/layout, following conventions in /packages/foundations/build/css/components.",
+    "Reference only tokens (CSS custom properties) as seen from figma and matching the naming convention but transformed to css custom properties",
+    "Do not use primitives or hardcoded values.",
+    "Icons must be from the approved icon system (e.g., Phosphor Icons).",
+    "Component must use React.forwardRef and support style/rest props.",
+    "All variant and state props must be reflected as data attributes for easy testing and styling.",
+    "Learn and match all styling and structure conventions from existing .module.css files and demo usage."
+  ]
+}
