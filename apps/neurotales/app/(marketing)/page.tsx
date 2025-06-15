@@ -1,148 +1,165 @@
-import Link from "next/link";
-import { Timestamp } from "../../components/Timestamp"; // ✅ Using your Timestamp component
+import Header from "../../components/header/header";
+import headerStyles from "../../components/header/header.module.css";
+import {
+  List,
+  House,
+  SignIn,
+  UserCircle,
+  Sparkle,
+  CheckSquare,
+} from "@phosphor-icons/react/dist/ssr";
+import Image from "next/image";
+import { Button } from "../../../../packages/components/src/index";
+import styles from "./marketing-page.module.css";
 
-export default async function LandingPage() {
+export default async function DashboardPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900">
-      {/* Hero Section */}
-      <main className="flex-1">
-        <div className="max-w-7xl mx-auto px-6 sm:px-12 py-16 sm:py-24 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white tracking-tight">
-            AI-powered{" "}
-            <span className="text-blue-600 dark:text-blue-400">
-              social stories
-            </span>{" "}
-            <br className="hidden sm:block" />
-            for neurodivergent learners
+    <div>
+      <Header className={headerStyles.header}>
+        {/* mobile-only buttons */}
+        <div className="flex items-center space-x-2 sm:hidden">
+          <Button
+            variant="primary"
+            size="md"
+            background="transparent"
+            disabled={true}
+          >
+            <List size={16} />
+          </Button>
+          <Button
+            variant="primary"
+            size="md"
+            background="transparent"
+            disabled={true}
+          >
+            <House size={16} />
+          </Button>
+          <h2 className={headerStyles.title}>
+            <span className={headerStyles.titlePartBold}>Neuro</span>
+            <span className={headerStyles.titlePartItalic}>Tales</span>
+          </h2>
+        </div>
+        {/* default buttons (sm+) */}
+        <div className="hidden sm:flex items-center">
+          <Button variant="primary" background="transparent" disabled={true}>
+            <List size={24} />
+          </Button>
+          <Button variant="primary" background="transparent" disabled={true}>
+            <House size={24} />
+          </Button>
+          <h2 className={headerStyles.title}>
+            <span className={headerStyles.titlePartBold}>Neuro</span>
+            <span className={headerStyles.titlePartItalic}>Tales</span>
+          </h2>
+        </div>
+
+        {/* …same pattern for Sign up / Sign in */}
+        <div className="flex items-center">
+          <div className="sm:hidden flex">
+            <Button variant="primary" size="md" disabled={true}>
+              <SignIn size={16} />
+            </Button>
+            <Button
+              variant="primary"
+              size="md"
+              background="transparent"
+              disabled={true}
+            >
+              <UserCircle size={16} />
+            </Button>
+          </div>
+          <div className="hidden sm:flex">
+            <Button variant="primary" disabled={true}>
+              <span className="hidden sm:block">Sign up</span>
+              <SignIn size={24} />
+            </Button>
+            <Button variant="primary" background="transparent" disabled={true}>
+              <span className="hidden sm:block">Sign in</span>
+              <UserCircle size={24} />
+            </Button>
+          </div>
+        </div>
+      </Header>
+      <div className="flex-1 flex flex-col lg:flex-row">
+        <div className="flex-1 flex flex-col justify-center px-8">
+          <h1 className={styles.headline}>
+            Let&apos;s build a <span className={styles.underline}>story.</span>
           </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-600 dark:text-gray-300">
-            Instantly create <strong>personalized</strong> social stories for
-            children with autism and other neurodivergent learners.{" "}
-            <strong>Designed for parents, therapists, and educators</strong>
-            —powered by AI.
+          <p className={styles.subheadline}>
+            NeuroTales makes social stories simple. Built with experts. Made for
+            real kids, real fast.
           </p>
-          <div className="mt-10 flex justify-center gap-4">
-            <Link href="/signup">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-lg font-medium">
-                Get Started for Free
-              </button>
-            </Link>
-            <Link href="#features">
-              <button className="bg-gray-300 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white px-6 py-3 rounded-md text-lg font-medium">
-                Learn More
-              </button>
-            </Link>
+          <Button
+            style={{ width: "fit-content" }}
+            variant="primary"
+            background="solid"
+            disabled={true}
+          >
+            <Sparkle size={24} />
+            Try Our Generated Story Builder
+          </Button>
+          <div className="mt-12">
+            <h2 className={styles.supportingText}>
+              Social stories are powerful.
+              <br />
+              But time-consuming to make.
+              <br />
+              <span className={styles.greenHeadline}>
+                NeuroTales makes it simple.
+              </span>
+            </h2>
           </div>
+          {/* Feature grid below supporting text and Sloeg */}
         </div>
-      </main>
 
-      {/* Features Section */}
-      <section id="features" className="py-20 bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-6 sm:px-12 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Why NeuroTales?
-          </h2>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-            Transform the way you create **social stories** with AI-driven
-            assistance.
-          </p>
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="p-6 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                Personalized AI Stories
-              </h3>
-              <p className="mt-2 text-gray-600 dark:text-gray-300">
-                Generate **custom** social stories based on your child’s needs
-                in **seconds**.
-              </p>
-            </div>
-            {/* Feature 2 */}
-            <div className="p-6 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                Visual Learning Support
-              </h3>
-              <p className="mt-2 text-gray-600 dark:text-gray-300">
-                Integrated with **PECS images, Unsplash, and Cloudinary** to
-                provide relevant visuals.
-              </p>
-            </div>
-            {/* Feature 3 */}
-            <div className="p-6 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                Download & Share
-              </h3>
-              <p className="mt-2 text-gray-600 dark:text-gray-300">
-                Export your stories as **PDFs or PowerPoint slides** for offline
-                use and easy sharing.
-              </p>
-            </div>
+        <div className="items-center justify-center hidden lg:flex">
+          <Image
+            src="/images/sleog.svg"
+            alt="NeuroTales Illustration"
+            className="  object-contain object-center "
+            width={400}
+            height={400}
+          />
+        </div>
+      </div>
+      <ul className="grid grid-cols-1 md:grid-cols-2 gap-sm mt-16 px-8">
+        <li className={styles.featureCell}>
+          <CheckSquare size={32} color="var(--palette-primary-100)" />
+          <div>
+            <h4 className={styles.featureTitle}>Built-in Visuals</h4>
+            <p className={styles.featureText}>
+              Pick a topic, we'll suggest images.
+            </p>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6 sm:px-12 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Trusted by Parents & Therapists
-          </h2>
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-              <p className="text-gray-600 dark:text-gray-300">
-                “NeuroTales has completely changed how I create social stories
-                for my child!”
-              </p>
-              <h4 className="mt-4 font-semibold text-gray-900 dark:text-white">
-                - Sarah, Autism Parent
-              </h4>
-            </div>
-            <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-              <p className="text-gray-600 dark:text-gray-300">
-                “As a therapist, this saves me **hours**. AI suggestions are
-                spot on!”
-              </p>
-              <h4 className="mt-4 font-semibold text-gray-900 dark:text-white">
-                - Dr. Emily, ABA Therapist
-              </h4>
-            </div>
-            <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-              <p className="text-gray-600 dark:text-gray-300">
-                “Absolutely love how fast and customizable it is for my
-                students.”
-              </p>
-              <h4 className="mt-4 font-semibold text-gray-900 dark:text-white">
-                - Mike, Special Ed Teacher
-              </h4>
-            </div>
+        </li>
+        <li className={styles.featureCell}>
+          <CheckSquare size={32} color="var(--palette-primary-100)" />
+          <div>
+            <h4 className={styles.featureTitle}>Ready in seconds</h4>
+            <p className={styles.featureText}>
+              Sharable PDF versions available
+            </p>
           </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-16 bg-blue-600 dark:bg-info-700 text-white text-center">
-        <h2 className="text-3xl font-bold">Start Creating Stories Today</h2>
-        <p className="mt-4 text-lg">
-          Sign up and generate your first story in seconds.
-        </p>
-        <div className="mt-6">
-          <Link href="/signup">
-            <button className="bg-white text-blue-600 px-6 py-3 rounded-md text-lg font-medium">
-              Get Started for Free
-            </button>
-          </Link>
-        </div>
-      </section>
-
-      {/* Footer with Timestamp Component */}
-      <footer className="border-t border-gray-200 dark:border-gray-700 py-8">
-        <div className="max-w-7xl mx-auto px-6 sm:px-12 text-center text-gray-500 dark:text-gray-400">
-          <p>
-            © <Timestamp /> NeuroTales. Built to empower neurodivergent
-            learners.
-          </p>
-        </div>
-      </footer>
+        </li>
+        <li className={styles.featureCell}>
+          <CheckSquare size={32} color="var(--palette-primary-100)" />
+          <div>
+            <h4 className={styles.featureTitle}>Built-in Visuals</h4>
+            <p className={styles.featureText}>
+              Pick a topic, we'll suggest images.
+            </p>
+          </div>
+        </li>
+        <li className={styles.featureCell}>
+          <CheckSquare size={32} color="var(--palette-primary-100)" />
+          <div>
+            <h4 className={styles.featureTitle}>Ready in seconds</h4>
+            <p className={styles.featureText}>
+              Sharable PDF versions available
+            </p>
+          </div>
+        </li>
+      </ul>
     </div>
   );
 }

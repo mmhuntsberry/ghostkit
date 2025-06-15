@@ -1,62 +1,26 @@
-// app/(marketing)/layout.tsx
-import React from "react";
-import NextLink from "next/link";
-import { headers } from "next/headers";
-import Link from "../../components/Link";
-import "../globals.css";
+// apps/neurotales/app/layout.tsx
+// import "./globals.css";
+import type { Metadata } from "next";
 
-export default async function MarketingLayout({
+export const metadata: Metadata = {
+  title: "NeuroTales",
+  description: "Animated SVG demo",
+};
+
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        <header className="box-border border-b border-gray-100 bg-white py-xs max-h-[64px]">
-          <div className="container mx-auto flex items-center justify-between px-4">
-            <div className="flex items-center gap-md">
-              <Link
-                href="/"
-                variant="neutral"
-                background="transparent"
-                className="!text-4xl hover:bg-white hover:border-white"
-                selectable={false}
-              >
-                NeuroTales
-              </Link>
-              <nav className="hidden md:flex gap-xs">
-                <Link
-                  href="/features"
-                  variant="neutral"
-                  background="transparent"
-                >
-                  Features
-                </Link>
-                <Link
-                  href="/pricing"
-                  variant="neutral"
-                  background="transparent"
-                >
-                  Pricing
-                </Link>
-                <Link href="/faq" variant="neutral" background="transparent">
-                  FAQ
-                </Link>
-              </nav>
-            </div>
-            <div className="flex items-center gap-4">
-              <Link href="/signin">Sign in</Link>
-              <Link href="/signup" background="outlined">
-                Sign up
-              </Link>
-            </div>
-          </div>
-        </header>
-        <main className="flex-1">{children}</main>
-        <footer className="border-t border-gray-200 bg-white">
-          {/* Footer content */}
-        </footer>
+      <body
+        style={{
+          maxWidth: "var(--layout-3xl)",
+          margin: "96px auto",
+        }}
+      >
+        {children}
       </body>
     </html>
   );
