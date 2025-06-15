@@ -1,25 +1,59 @@
+// apps/neurotales/next.config.js
 //@ts-check
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require("path");
+// Destructure so it’s constructable
+const { TsconfigPathsPlugin } = require("tsconfig-paths-webpack-plugin");
 const { composePlugins, withNx } = require("@nx/next");
 
-/**
- * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
- **/
+/** @type {import('@nx/next/plugins/with-nx').WithNxOptions} */
 const nextConfig = {
   experimental: {
     dynamicIO: true,
   },
   nx: {
-    // Set this to true if you would like to use SVGR
-    // See: https://github.com/gregberge/svgr
     svgr: false,
+  },
+
+  webpack(config, { isServer }) {
+    // 1) Alias '@' to your app root
+    config.resolve.alias = config.resolve.alias || {};
+    config.resolve.alias["@"] = path.resolve(__dirname);
+
+    // 2) Apply tsconfig-paths plugin so Webpack reads your tsconfig paths
+    config.resolve.plugins = config.resolve.plugins || [];
+    config.resolve.plugins.push(
+      new TsconfigPathsPlugin({
+        extensions: config.resolve.extensions,
+      })
+    );
+
+    if (isServer) {
+      // 3) Treat certain dynamic modules as externals
+      const dynamicExternals = ["clone-deep", "merge-deep"];
+      const origExternals = Array.isArray(config.externals)
+        ? config.externals
+        : [config.externals];
+      config.externals = [
+        ...origExternals,
+        /**
+         * @param {{ context: string; request: string }} ctx
+         * @param {string} req
+         * @param {(err: Error|null, result?: string) => void} cb
+         */
+        (ctx, req, cb) => {
+          if (dynamicExternals.includes(req)) {
+            // treat as a CommonJS external
+            return cb(null, "commonjs " + req);
+          }
+          // no error, no override
+          cb(null);
+        },
+      ];
+    }
+
+    return config;
   },
 };
 
-const plugins = [
-  // Add more Next.js plugins to this list if needed.
-  withNx,
-];
-
-module.exports = composePlugins(...plugins)(nextConfig);
+module.exports = composePlugins(withNx)(nextConfig);

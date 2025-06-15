@@ -1,57 +1,37 @@
-/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import viteTsConfigPaths from "vite-tsconfig-paths";
+import tsconfigPaths from "vite-tsconfig-paths";
 import dts from "vite-plugin-dts";
-import * as path from "path";
+import path from "path";
 
 export default defineConfig({
-  cacheDir: "../../node_modules/.vite/components",
+  // run Vite from the lib folder
+  root: __dirname,
 
-  plugins: [
-    dts({
-      entryRoot: "src",
-      tsConfigFilePath: path.join(__dirname, "tsconfig.lib.json"),
-      skipDiagnostics: true,
-    }),
-    react(),
-    viteTsConfigPaths({
-      root: "../../",
-    }),
-  ],
-
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [
-  //    viteTsConfigPaths({
-  //      root: '../../',
-  //    }),
-  //  ],
-  // },
-
-  // Configuration for building your library.
-  // See: https://vitejs.dev/guide/build.html#library-mode
   build: {
-    outDir: "../../dist",
-    reportCompressedSize: true,
-    commonjsOptions: { transformMixedEsModules: true },
     lib: {
-      // Could also be a dictionary or array of multiple entry points.
-      entry: "src/index.ts",
+      // your entry point
+      entry: path.resolve(__dirname, "src/index.ts"),
       name: "components",
-      fileName: "index",
-      // Change this to the formats you want to support.
-      // Don't forget to update your package.json as well.
       formats: ["es", "cjs"],
+      fileName: (format) => `components.${format}.js`,
     },
+    // output next to the workspace dist folder
+    outDir: path.resolve(__dirname, "../../dist/packages/components"),
+    emptyOutDir: true,
     rollupOptions: {
-      // External packages that should not be bundled into your library.
-      external: [
-        "react",
-        "react-dom",
-        "react/jsx-runtime",
-        "@mmhuntsberry/tokens",
-      ],
+      external: ["react", "react-dom"],
+      output: {
+        globals: { react: "React", "react-dom": "ReactDOM" },
+      },
     },
   },
+
+  plugins: [
+    react(),
+    // make TS path aliases work
+    tsconfigPaths({ projects: [path.resolve(__dirname, "tsconfig.lib.json")] }),
+    // generate .d.ts files
+    dts({ tsConfigFilePath: path.resolve(__dirname, "tsconfig.lib.json") }),
+  ],
 });

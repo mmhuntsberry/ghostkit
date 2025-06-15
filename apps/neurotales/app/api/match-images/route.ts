@@ -13,13 +13,13 @@ export async function POST(req: NextRequest) {
       max_results: 100,
     });
 
-    const allImages = response.resources.map((image) => ({
+    const allImages = response.resources.map((image: any) => ({
       name: image.public_id.replace("pecs/", "").replace(/%20/g, " "),
       url: image.secure_url,
     }));
 
     const pecsMap = keyConcepts.reduce((acc, concept) => {
-      const matchedImage = allImages.find((pec) =>
+      const matchedImage = allImages.find((pec: any) =>
         pec.name.toLowerCase().includes(concept)
       );
       if (matchedImage) acc[concept] = matchedImage.url;

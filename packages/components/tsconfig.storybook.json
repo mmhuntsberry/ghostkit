@@ -1,8 +1,10 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "emitDecoratorMetadata": true,
-    "outDir": ""
+    "composite": true,
+    "outDir": "../../dist/out-tsc",
+    "module": "commonjs",
+    "types": ["node"]
   },
   "files": [
     "../../node_modules/@nx/react/typings/styled-jsx.d.ts",
@@ -21,11 +23,9 @@
   ],
   "include": [
     "src/**/*.stories.ts",
+    "src/**/*.stories.tsx",
     "src/**/*.stories.js",
     "src/**/*.stories.jsx",
-    "src/**/*.stories.tsx",
-    "src/**/*.stories.mdx",
-    ".storybook/*.js",
-    ".storybook/*.ts"
+    "src/**/*.stories.mdx"
   ]
 }

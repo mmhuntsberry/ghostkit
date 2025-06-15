@@ -1,9 +1,10 @@
+// apps/neurotales/app/api/generate-story/route.ts
+
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 import { db } from "../../../db";
 import { stories, storyPages } from "../../../db/schema";
 import { fetchBestPecsImagesSemantic } from "../../../lib/cloudinary";
-
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -11,6 +12,13 @@ dotenv.config();
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
+
+interface ImageData {
+  url: string;
+  source: string;
+  alt?: string;
+  title?: string;
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -38,12 +46,22 @@ export async function POST(req: NextRequest) {
       messages: [{ role: "user", content: prompt }],
     });
 
+    if (
+      !aiResponse.choices ||
+      aiResponse.choices.length === 0 ||
+      !aiResponse.choices[0].message?.content
+    ) {
+      throw new Error("OpenAI returned no message content");
+    }
+
     const storyText = aiResponse.choices[0].message.content.trim();
     // Split the story into pages by detecting double line breaks
     const pages = storyText.split(/\n{2,}/);
 
-    // Use semantic search to fetch best images for the story text
-    const { pecs } = await fetchBestPecsImagesSemantic(storyText);
+    // Fetch a semantic mapping of page-index → image data
+    const pecs: Record<string, ImageData> = await fetchBestPecsImagesSemantic([
+      storyText,
+    ]);
 
     // Save the main story record into the database
     const [newStory] = await db
@@ -62,8 +80,9 @@ export async function POST(req: NextRequest) {
     // Save each story page along with the paired image URL
     await Promise.all(
       pages.map(async (content, idx) => {
-        // Use the image for this page based on the index in the semantic mapping
-        const imageUrl = pecs[idx.toString()] || null;
+        // Safely look up the image for this page index and extract its URL
+        const imageUrl = pecs[idx.toString()]?.url ?? null;
+
         await db.insert(storyPages).values({
           storyId: newStory.id,
           pageNumber: idx + 1,
@@ -75,8 +94,11 @@ export async function POST(req: NextRequest) {
     );
 
     return NextResponse.json({ storyId: newStory.id });
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error generating or saving story:", error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json(
+      { error: error.message || "Unknown error" },
+      { status: 500 }
+    );
   }
 }

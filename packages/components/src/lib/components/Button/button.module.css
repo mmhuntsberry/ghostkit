@@ -1,11 +1,11 @@
 .button {
-  background-color: var(--palette-action-background-primary-solid-default);
-  border-color: var(--palette-action-border-primary-solid-default);
+  background-color: var(--component-button-background-primary-solid-default);
+  border-color: var(--component-button-border-primary-solid-default);
   border-style: solid;
   border-width: var(--border-width-sm);
   border-radius: var(--container-action-radius-default);
   box-sizing: border-box;
-  color: var(--palette-action-content-primary-solid-default);
+  color: var(--component-button-content-primary-solid-default);
   cursor: pointer;
   display: inline-flex;
   gap: var(--space-2xs);
@@ -27,13 +27,13 @@
 }
 
 .button:not(:disabled):hover {
-  background-color: var(--palette-action-background-primary-solid-hover);
-  border-color: var(--palette-action-border-primary-solid-hover);
+  background-color: var(--component-button-background-primary-solid-hover);
+  border-color: var(--component-button-border-primary-solid-hover);
 }
 
 .button:not(:disabled):active {
-  background-color: var(--palette-action-background-primary-solid-active);
-  border-color: var(--palette-action-border-primary-solid-active);
+  background-color: var(--component-button-background-primary-solid-active);
+  border-color: var(--component-button-border-primary-solid-active);
 }
 
 .button:disabled {
@@ -42,9 +42,9 @@
 }
 
 .button[data-variant="primary"][data-background="outlined"] {
-  background-color: var(--palette-action-background-primary-outlined-default);
-  border-color: var(--palette-action-border-primary-outlined-default);
-  color: var(--palette-action-content-primary-outlined-default);
+  background-color: var(--component-button-background-primary-outlined-default);
+  border-color: var(--component-button-border-primary-outlined-default);
+  color: var(--component-button-content-primary-outlined-default);
   border-style: solid;
   border-width: var(--border-width-sm);
 }
@@ -52,75 +52,79 @@
 .button[data-variant="primary"][data-background="outlined"]:not(
     :disabled
   ):hover {
-  background-color: var(--palette-action-background-primary-outlined-hover);
-  border-color: var(--palette-action-border-primary-outlined-hover);
-  color: var(--palette-action-content-primary-outlined-hover);
+  background-color: var(--component-button-background-primary-outlined-hover);
+  border-color: var(--component-button-border-primary-outlined-hover);
+  color: var(--component-button-content-primary-outlined-hover);
 }
 
 .button[data-variant="primary"][data-background="outlined"]:not(
     :disabled
   ):active {
-  background-color: var(--palette-action-background-primary-outlined-active);
-  border-color: var(--palette-action-border-primary-outlined-active);
-  color: var(--palette-action-content-primary-outlined-active);
+  background-color: var(--component-button-background-primary-outlined-active);
+  border-color: var(--component-button-border-primary-outlined-active);
+  color: var(--component-button-content-primary-outlined-active);
 }
 
 .button[data-variant="primary"][data-background="outlined"]:disabled {
   opacity: var(--opacity-disabled);
   cursor: not-allowed;
-  border-color: var(--palette-action-border-primary-outlined-disabled);
-  color: var(--palette-action-content-primary-outlined-disabled);
+  border-color: var(--component-button-border-primary-outlined-disabled);
+  color: var(--component-button-content-primary-outlined-disabled);
 }
 
 .button[data-variant="primary"][data-background="transparent"] {
   background-color: transparent;
   border-color: transparent;
-  color: var(--palette-action-content-primary-transparent-default);
+  color: var(--component-button-content-primary-transparent-default);
 }
 
 .button[data-variant="primary"][data-background="transparent"]:not(
     :disabled
   ):hover {
-  background-color: var(--palette-action-background-primary-transparent-hover);
-  border-color: var(--palette-action-border-primary-transparent-hover);
-  color: var(--palette-action-content-primary-transparent-hover);
+  background-color: var(
+    --component-button-background-primary-transparent-hover
+  );
+  border-color: var(--component-button-border-primary-transparent-hover);
+  color: var(--component-button-content-primary-transparent-hover);
 }
 
 .button[data-variant="primary"][data-background="transparent"]:not(
     :disabled
   ):active {
-  background-color: var(--palette-action-background-primary-transparent-active);
-  border-color: var(--palette-action-border-primary-transparent-active);
-  color: var(--palette-action-content-primary-transparent-active);
+  background-color: var(
+    --component-button-background-primary-transparent-active
+  );
+  border-color: var(--component-button-border-primary-transparent-active);
+  color: var(--component-button-content-primary-transparent-active);
 }
 
 .button[data-variant="primary"][data-background="transparent"]:disabled {
   opacity: var(--opacity-disabled);
   cursor: not-allowed;
-  border-color: var(--palette-action-border-primary-transparent-disabled);
-  color: var(--palette-action-content-primary-transparent-disabled);
+  /* border-color: var(--component-button-border-primary-transparent-disabled); */
+  color: var(--component-button-content-primary-transparent-disabled);
 }
 
 .button[data-variant="neutral"][data-background="outlined"] {
-  background-color: var(--palette-action-background-neutral-outlined-default);
-  border-color: var(--palette-action-border-neutral-outlined-default);
-  color: var(--palette-action-content-neutral-outlined-default);
+  background-color: var(--component-button-background-neutral-outlined-default);
+  border-color: var(--component-button-border-neutral-outlined-default);
+  color: var(--component-button-content-neutral-outlined-default);
 }
 
 .button[data-variant="neutral"][data-background="outlined"]:not(
     :disabled
   ):hover {
-  background-color: var(--palette-action-background-neutral-outlined-hover);
-  border-color: var(--palette-action-border-neutral-outlined-hover);
-  color: var(--palette-action-content-neutral-outlined-hover);
+  background-color: var(--component-button-background-neutral-outlined-hover);
+  border-color: var(--component-button-border-neutral-outlined-hover);
+  color: var(--component-button-content-neutral-outlined-hover);
 }
 
 .button[data-variant="neutral"][data-background="outlined"]:not(
     :disabled
   ):active {
-  background-color: var(--palette-action-background-neutral-outlined-active);
-  border-color: var(--palette-action-border-neutral-outlined-active);
-  color: var(--palette-action-content-neutral-outlined-active);
+  background-color: var(--component-button-background-neutral-outlined-active);
+  border-color: var(--component-button-border-neutral-outlined-active);
+  color: var(--component-button-content-neutral-outlined-active);
 }
 
 .button[data-variant="neutral"][data-background="outlined"]:disabled {
@@ -130,26 +134,30 @@
 
 .button[data-variant="neutral"][data-background="transparent"] {
   background-color: var(
-    --palette-action-background-neutral-transparent-default
+    --component-button-background-neutral-transparent-default
   );
-  border-color: var(--palette-action-background-neutral-transparent-default);
-  color: var(--palette-action-content-neutral-transparent-default);
+  border-color: var(--component-button-background-neutral-transparent-default);
+  color: var(--component-button-content-neutral-transparent-default);
 }
 
 .button[data-variant="neutral"][data-background="transparent"]:not(
     :disabled
   ):hover {
-  background-color: var(--palette-action-background-neutral-transparent-hover);
+  background-color: var(
+    --component-button-background-neutral-transparent-hover
+  );
   border-color: transparent;
-  color: var(--palette-action-content-neutral-transparent-hover);
+  color: var(--component-button-content-neutral-transparent-hover);
 }
 
 .button[data-variant="neutral"][data-background="transparent"]:not(
     :disabled
   ):active {
-  background-color: var(--palette-action-background-neutral-transparent-active);
+  background-color: var(
+    --component-button-background-neutral-transparent-active
+  );
   border-color: transparent;
-  color: var(--palette-action-content-neutral-transparent-active);
+  color: var(--component-button-content-neutral-transparent-active);
 }
 
 .button[data-variant="neutral"][data-background="transparent"]:disabled {

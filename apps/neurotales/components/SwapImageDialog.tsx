@@ -1,122 +1,104 @@
-// components/SwapImageDialog.tsx
+// apps/neurotales/components/SwapImageDialog.tsx
 "use client";
 
 import * as Dialog from "@radix-ui/react-dialog";
 import * as Tabs from "@radix-ui/react-tabs";
-import { useState, useEffect, ChangeEvent } from "react";
+import { useState, useEffect } from "react";
 
-export type Image = {
+interface Image {
   url: string;
   name: string;
-};
+}
 
-export type SwapImageDialogProps = {
+interface SwapImageDialogProps {
   storyPageId: number;
-  onImageSelected: (imageUrl: string) => void;
-};
+  onImageSelected: (url: string) => void;
+}
 
 export function SwapImageDialog({
   storyPageId,
   onImageSelected,
 }: SwapImageDialogProps) {
-  // PECS images from Cloudinary
-  const [pecsImages, setPecsImages] = useState<Image[]>([]);
   const [pecsSearchQuery, setPecsSearchQuery] = useState("");
-
-  // Pexels images
-  const [pexelsImages, setPexelsImages] = useState<Image[]>([]);
+  const [pecsImages, setPecsImages] = useState<Image[]>([]);
   const [pexelsQuery, setPexelsQuery] = useState("");
-
-  // Upload state
+  const [pexelsImages, setPexelsImages] = useState<Image[]>([]);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
 
-  // Fetch PECS images from Cloudinary
-  const fetchPecsImages = async () => {
-    try {
-      const res = await fetch("/api/pecs-images");
-      const data = await res.json();
-      setPecsImages(data.images);
-    } catch (error) {
-      console.error("Error fetching PECS images:", error);
-    }
-  };
-
-  // Fetch Pexels images (pass query parameter)
-  const fetchPexelsImages = async (query: string) => {
-    try {
-      const res = await fetch(
-        `/api/pexels-images?query=${encodeURIComponent(query)}`
-      );
-      const data = await res.json();
-      setPexelsImages(data.images);
-    } catch (error) {
-      console.error("Error fetching Pexels images:", error);
-    }
-  };
-
-  // Fetch PECS images on mount
+  // ──────────────────────────────────────────────────────────────
+  // Fetch semantic PECS images once on mount (no prerender cache)
+  // ──────────────────────────────────────────────────────────────
   useEffect(() => {
-    fetchPecsImages();
+    interface PecsResponse {
+      pecs: Record<string, string>;
+    }
+
+    fetch("/api/pecs-images", { cache: "no-store" })
+      .then((res) => res.json() as Promise<PecsResponse>)
+      .then(({ pecs }) => {
+        const imgs: Image[] = Object.values(pecs).map((url, idx) => ({
+          url,
+          name: `Image ${idx + 1}`,
+        }));
+        setPecsImages(imgs);
+      })
+      .catch(console.error);
   }, []);
 
-  // Filter images based on search query for PECS tab
   const filteredPecs = pecsImages.filter((img) =>
     img.name.toLowerCase().includes(pecsSearchQuery.toLowerCase())
   );
 
-  // Filter images for Pexels tab
+  // ──────────────────────────────────────────────────────────────
+  // Fetch Pexels images on demand (opt‑out of prerender cache)
+  // ──────────────────────────────────────────────────────────────
+  const fetchPexelsImages = async (query: string) => {
+    const res = await fetch(
+      `/api/pexels-images?query=${encodeURIComponent(query)}`,
+      { cache: "no-store" }
+    );
+    const json: Image[] = await res.json();
+    setPexelsImages(json);
+  };
+
   const filteredPexels = pexelsImages.filter((img) =>
     img.name.toLowerCase().includes(pexelsQuery.toLowerCase())
   );
 
-  // Handle image selection from any tab
-  const handleSelect = async (imageUrl: string) => {
-    try {
-      await fetch(`/api/story-pages/${storyPageId}/image`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ imageUrl }),
-      });
-      onImageSelected(imageUrl);
-    } catch (error) {
-      console.error("Error updating image:", error);
-    }
+  // ──────────────────────────────────────────────────────────────
+  // Handlers
+  // ──────────────────────────────────────────────────────────────
+  const handleSelect = (url: string) => {
+    onImageSelected(url);
   };
 
-  // Handle file input change for upload
-  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files?.length) {
       setSelectedFile(e.target.files[0]);
     }
   };
 
-  // Handle file upload
   const handleUpload = async () => {
     if (!selectedFile) return;
     setUploading(true);
-    try {
-      const formData = new FormData();
-      formData.append("file", selectedFile);
-      const res = await fetch("/api/upload-image", {
-        method: "POST",
-        body: formData,
-      });
-      const data = await res.json();
-      if (data.url) {
-        await handleSelect(data.url);
-        onImageSelected(data.url);
-      } else {
-        console.error("Upload failed", data);
-      }
-    } catch (error) {
-      console.error("Error uploading image:", error);
-    } finally {
-      setUploading(false);
-      setSelectedFile(null);
-    }
+
+    const formData = new FormData();
+    formData.append("file", selectedFile);
+
+    const res = await fetch("/api/upload-image", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await res.json();
+    if (data.imageUrl) onImageSelected(data.imageUrl);
+    setUploading(false);
   };
 
+  // ──────────────────────────────────────────────────────────────
+  // UI
+  // ──────────────────────────────────────────────────────────────
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
@@ -130,32 +112,28 @@ export function SwapImageDialog({
           </Dialog.Title>
 
           <Tabs.Root defaultValue="pecs">
+            {/* ───── Tabs header ───── */}
             <Tabs.List className="flex gap-2 border-b mb-4">
-              <Tabs.Trigger
-                value="pecs"
-                className="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 data-[state=active]:bg-blue-600 data-[state=active]:text-white"
-              >
-                PECS
-              </Tabs.Trigger>
-              <Tabs.Trigger
-                value="pexels"
-                className="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 data-[state=active]:bg-blue-600 data-[state=active]:text-white"
-              >
-                Pexels
-              </Tabs.Trigger>
-              <Tabs.Trigger
-                value="upload"
-                className="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 data-[state=active]:bg-blue-600 data-[state=active]:text-white"
-              >
-                Upload
-              </Tabs.Trigger>
+              {[
+                { label: "PECS", value: "pecs" },
+                { label: "Pexels", value: "pexels" },
+                { label: "Upload", value: "upload" },
+              ].map((tab) => (
+                <Tabs.Trigger
+                  key={tab.value}
+                  value={tab.value}
+                  className="px-3 py-1 rounded bg-gray-200 hover:bg-gray-300 data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+                >
+                  {tab.label}
+                </Tabs.Trigger>
+              ))}
             </Tabs.List>
 
-            {/* PECS Tab */}
+            {/* ───── PECS tab ───── */}
             <Tabs.Content value="pecs" className="mt-4">
               <input
                 type="text"
-                placeholder="Search PECS images..."
+                placeholder="Search PECS images…"
                 value={pecsSearchQuery}
                 onChange={(e) => setPecsSearchQuery(e.target.value)}
                 className="mb-4 w-full border rounded px-2 py-1"
@@ -178,15 +156,13 @@ export function SwapImageDialog({
               </div>
             </Tabs.Content>
 
-            {/* Pexels Tab */}
+            {/* ───── Pexels tab ───── */}
             <Tabs.Content value="pexels" className="mt-4">
               <input
                 type="text"
-                placeholder="Search Pexels images..."
+                placeholder="Search Pexels images…"
                 value={pexelsQuery}
-                onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                  setPexelsQuery(e.target.value)
-                }
+                onChange={(e) => setPexelsQuery(e.target.value)}
                 className="mb-4 w-full border rounded px-2 py-1"
               />
               <button
@@ -213,7 +189,7 @@ export function SwapImageDialog({
               </div>
             </Tabs.Content>
 
-            {/* Upload Tab */}
+            {/* ───── Upload tab ───── */}
             <Tabs.Content value="upload" className="mt-4">
               <p className="mb-2">Upload your own image:</p>
               <input
@@ -227,7 +203,7 @@ export function SwapImageDialog({
                 disabled={!selectedFile || uploading}
                 className="px-3 py-1 rounded bg-green-600 text-white hover:bg-green-700 disabled:opacity-50"
               >
-                {uploading ? "Uploading..." : "Upload Image"}
+                {uploading ? "Uploading…" : "Upload"}
               </button>
             </Tabs.Content>
           </Tabs.Root>
@@ -242,5 +218,3 @@ export function SwapImageDialog({
     </Dialog.Root>
   );
 }
-
-export default SwapImageDialog;

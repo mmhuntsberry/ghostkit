@@ -1,4 +1,5 @@
 // lib/cloudinary.ts
+
 import cloudinary from "cloudinary";
 import dotenv from "dotenv";
 import { getEmbedding, cosineSimilarity } from "./embeddings";
@@ -6,69 +7,112 @@ import { getEmbedding, cosineSimilarity } from "./embeddings";
 dotenv.config();
 
 cloudinary.v2.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME!,
+  api_key: process.env.CLOUDINARY_API_KEY!,
+  api_secret: process.env.CLOUDINARY_API_SECRET!,
   secure: true,
 });
 
+// Raw shape returned by Cloudinary’s API
+interface CloudinaryResource {
+  public_id: string;
+  secure_url: string;
+}
+
+// Shape you expose to the rest of your app
+interface CloudinaryImage {
+  name: string;
+  url: string;
+  embedding?: number[];
+}
+
 /**
- * Simple function to fetch images from Cloudinary under the 'pecs/' folder.
+ * Simple function to fetch images under 'pecs/'.
  */
-export async function fetchImagesFromCloudinary() {
-  const { resources } = await cloudinary.v2.api.resources({
+export async function fetchImagesFromCloudinary(): Promise<CloudinaryImage[]> {
+  const response = await cloudinary.v2.api.resources({
     type: "upload",
     prefix: "pecs/",
     max_results: 200,
   });
-  return resources.map((img) => ({
-    // Clean filename to be used as descriptive text
-    name: img.public_id.replace("pecs/", "").toLowerCase(),
-    url: img.secure_url,
-  }));
+
+  const resources: CloudinaryResource[] = response.resources;
+
+  return resources.map(
+    (img: CloudinaryResource): CloudinaryImage => ({
+      name: img.public_id.replace("pecs/", "").toLowerCase(),
+      url: img.secure_url,
+    })
+  );
 }
 
 /**
- * Uses semantic search to match the meaning of the story text with image names.
- * This function computes the embedding of the story text and compares it to the embeddings
- * of each image's name (used as a description). Returns a mapping of page indices (as strings) to image URLs.
+ * Semantic matching of story text → images.
  */
 export async function fetchBestPecsImagesSemantic(
   story: string
 ): Promise<{ pecs: Record<string, string> }> {
   try {
-    // Get an embedding for the whole story text
     const storyEmbedding = await getEmbedding(story);
-
-    // Get images from Cloudinary
     const images = await fetchImagesFromCloudinary();
 
-    // Compute embeddings for each image's name (as its description)
-    const imageEmbeddings = await Promise.all(
-      images.map(async (img) => {
+    const imageEmbeddings: CloudinaryImage[] = await Promise.all(
+      images.map(async (img: CloudinaryImage) => {
         const embedding = await getEmbedding(img.name);
         return { ...img, embedding };
       })
     );
 
-    // Sort images by cosine similarity to the story embedding
-    const sortedImages = imageEmbeddings.sort((a, b) => {
-      const simA = cosineSimilarity(storyEmbedding, a.embedding);
-      const simB = cosineSimilarity(storyEmbedding, b.embedding);
+    const sorted = imageEmbeddings.sort((a, b) => {
+      const simA = cosineSimilarity(storyEmbedding, a.embedding!);
+      const simB = cosineSimilarity(storyEmbedding, b.embedding!);
       return simB - simA;
     });
 
-    // For simplicity, select the top 4 images for the 4 pages
-    const topImages = sortedImages.slice(0, 4);
+    const top4 = sorted.slice(0, 4);
     const pecs: Record<string, string> = {};
-    topImages.forEach((img, idx) => {
+    top4.forEach((img: CloudinaryImage, idx: number) => {
       pecs[idx.toString()] = img.url;
     });
 
-    console.log("Semantic PECS mapping:", pecs);
     return { pecs };
-  } catch (error) {
-    console.error("Error fetching semantic PECS images:", error);
+  } catch (err) {
+    console.error("Error fetching semantic PECS images:", err);
     return { pecs: {} };
   }
 }
+
+/**
+ * Example: filter images by a “monster” style flag.
+ */
+export async function fetchImagesByStyle(
+  style: "monster" | "regular"
+): Promise<CloudinaryImage[]> {
+  const response = await cloudinary.v2.api.resources({
+    type: "upload",
+    prefix: "pecs/",
+    max_results: 200,
+  });
+
+  const resources: CloudinaryResource[] = response.resources;
+
+  return resources
+    .filter((img: CloudinaryResource) => {
+      const monster = isMonsterImage(img.public_id);
+      return style === "monster" ? monster : !monster;
+    })
+    .map(
+      (img: CloudinaryResource): CloudinaryImage => ({
+        name: img.public_id,
+        url: img.secure_url,
+      })
+    );
+}
+
+/** Your helper to detect monster‐style names */
+function isMonsterImage(publicId: string): boolean {
+  // e.g. if your monster images all contain “monster_”
+  return publicId.includes("monster_");
+}
+
+export default fetchImagesFromCloudinary;

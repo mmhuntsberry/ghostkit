@@ -14,7 +14,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body
+        style={{
+          maxWidth: "var(--layout-3xl)",
+          margin: "96px auto",
+        }}
+      >
+        {children}
+      </body>
     </html>
   );
 }

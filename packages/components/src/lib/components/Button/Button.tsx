@@ -40,7 +40,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         {...rest}
         ref={ref}
-        className={cn(styles.base, styles.button, rest.className)}
+        className={cn(styles.button, rest.className)}
         data-background={background}
         data-loading={loading}
         data-mode={mode}

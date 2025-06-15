@@ -1,12 +1,22 @@
+// apps/neurotales/app/utils/fetchPecsImages.ts
+
 import cloudinary from "cloudinary";
 import { extractKeyConcepts } from "../../lib/extractConcepts";
 import dotenv from "dotenv";
 
 dotenv.config();
 
-export async function fetchBestPecsImages(story: string) {
+interface CloudinaryResource {
+  public_id: string;
+  secure_url: string;
+}
+
+export async function fetchBestPecsImages(
+  story: string
+): Promise<{ pecs: Record<string, string> }> {
   try {
     const keyConcepts = extractKeyConcepts(story);
+
     const response = await cloudinary.v2.api.resources({
       type: "upload",
       prefix: "pecs/",
@@ -16,21 +26,29 @@ export async function fetchBestPecsImages(story: string) {
       api_secret: process.env.CLOUDINARY_API_SECRET,
     });
 
-    const allImages = response.resources.map((image) => ({
-      name: image.public_id.replace("pecs/", "").replace(/%20/g, " "),
-      url: image.secure_url,
-    }));
+    // Narrow the type of each resource:
+    const allImages: Array<{ name: string; url: string }> =
+      response.resources.map((image: CloudinaryResource) => ({
+        name: image.public_id.replace("pecs/", "").replace(/%20/g, " "),
+        url: image.secure_url,
+      }));
 
-    const pecsMap = keyConcepts.reduce((acc, concept) => {
-      const matchedImage = allImages.find((pec) =>
-        pec.name.toLowerCase().includes(concept)
-      );
-      if (matchedImage) acc[concept] = matchedImage.url;
-      return acc;
-    }, {} as Record<string, string>);
+    // Build a map from concept → matching image URL
+    const pecsMap: Record<string, string> = keyConcepts.reduce(
+      (acc, concept) => {
+        const matched = allImages.find((pec) =>
+          pec.name.toLowerCase().includes(concept)
+        );
+        if (matched) {
+          acc[concept] = matched.url;
+        }
+        return acc;
+      },
+      {} as Record<string, string>
+    );
 
     return { pecs: pecsMap };
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error fetching PECS images:", error);
     return { pecs: {} };
   }

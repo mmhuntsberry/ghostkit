@@ -1,39 +1,41 @@
-// app/api/user-images/route.ts
+// apps/neurotales/app/api/user-images/route.ts
+
 import { NextRequest, NextResponse } from "next/server";
-import cloudinary from "cloudinary";
-import dotenv from "dotenv";
-
-dotenv.config();
-
-cloudinary.v2.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
-  secure: true,
-});
+import cloudinary from "@/lib/cloudinary";
 
 export async function GET(req: NextRequest) {
   try {
-    // Retrieve the current user's ID (based on your auth)
-    const session = {}; // Replace with your session retrieval logic
-    const userId = session?.user?.id || "anonymous";
+    // TODO: Replace this with your real session retrieval logic
+    // For now we type it as any so TS won’t complain about session.user
+    const session: any = {};
 
+    // Safely pull out the user ID (or fall back to "anonymous")
+    const userId = session.user?.id ?? "anonymous";
+
+    // Fetch all images the user has uploaded to Cloudinary under their folder
     const { resources } = await cloudinary.v2.api.resources({
       type: "upload",
-      prefix: `users/${userId}/uploads`,
-      max_results: 100,
+      prefix: `user-images/${userId}`,
+      max_results: 30,
     });
 
-    const images = resources.map((img) => ({
-      name: img.public_id.replace(`users/${userId}/uploads/`, "").toLowerCase(),
-      url: img.secure_url,
+    // Narrow the shape of each resource so TS knows about public_id and secure_url
+    interface CloudinaryResource {
+      public_id: string;
+      secure_url: string;
+    }
+
+    // Map them into simple name/url pairs
+    const images = resources.map((res: CloudinaryResource) => ({
+      name: res.public_id.split("/").pop() ?? res.public_id,
+      url: res.secure_url,
     }));
 
-    return NextResponse.json({ images });
-  } catch (error) {
+    return NextResponse.json(images);
+  } catch (error: any) {
     console.error("Error fetching user images:", error);
     return NextResponse.json(
-      { error: "Failed to fetch images" },
+      { error: error.message ?? "Unknown error" },
       { status: 500 }
     );
   }

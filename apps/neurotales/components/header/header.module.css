@@ -1,3 +1,33 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--palette-neutral-1000);
+}
+
 .title {
   font-size: var(--font-size-2xl);
+  color: var(--palette-content-brand);
+}
+
+.titlePartBold {
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+
+.titlePartItalic {
+  font-weight: var(--font-weight-light);
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: var(--font-size-xl);
+  }
 }

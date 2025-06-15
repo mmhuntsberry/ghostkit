@@ -1,6 +1,7 @@
 {
-  "name": "components",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "components",
+  "root": "packages/components",
   "sourceRoot": "packages/components/src",
   "projectType": "library",
   "tags": [],
@@ -17,36 +18,19 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "postcssConfig": "packages/components/postcss.config.js",
-        "outputPath": "dist/packages/components"
+        "tsConfig": "packages/components/tsconfig.lib.json",
+
+        "entryFile": "packages/components/src/index.ts",
+
+        "outputPath": "dist/packages/components",
+
+        "emptyOutDir": true,
+
+        "postcssConfig": "packages/components/postcss.config.js"
       },
       "configurations": {
-        "development": {
-          "mode": "development"
-        },
-        "production": {
-          "mode": "production"
-        }
-      }
-    },
-    "publish": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "npm publish",
-        "cwd": "dist"
-      }
-    },
-    "test-storybook": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "npm publish",
-        "cwd": "dist"
-      }
-    },
-    "release": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "dotenv release-it -- --config=./packages/components/.release-it.json"
+        "development": { "mode": "development" },
+        "production": { "mode": "production" }
       }
     },
     "test": {
@@ -57,35 +41,14 @@
         "passWithNoTests": true
       },
       "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
+        "ci": { "ci": true, "codeCoverage": true }
       }
     },
-    "storybook": {
-      "executor": "@nx/storybook:storybook",
+    "publish": {
+      "executor": "nx:run-commands",
       "options": {
-        "port": 4400,
-        "configDir": "packages/components/.storybook"
-      },
-      "configurations": {
-        "ci": {
-          "quiet": true
-        }
-      }
-    },
-    "build-storybook": {
-      "executor": "@nx/storybook:build",
-      "outputs": ["{options.outputDir}"],
-      "options": {
-        "outputDir": "dist/storybook/components",
-        "configDir": "packages/components/.storybook"
-      },
-      "configurations": {
-        "ci": {
-          "quiet": true
-        }
+        "command": "npm publish",
+        "cwd": "dist/packages/components"
       }
     }
   }

@@ -14,6 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "paths": {
       "@mmhuntsberry/components": ["packages/components/src/index.ts"],
       "@mmhuntsberry/fonts": ["packages/fonts"],
