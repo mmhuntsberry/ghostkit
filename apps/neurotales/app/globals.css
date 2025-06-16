@@ -586,8 +586,8 @@
   --container-informational-radius-sm: var(--border-radius-2xs);
   --container-informational-radius-default: var(--border-radius-xs);
 
-  --background: var(--palette-neutral-100);
-  --foreground: var(--palette-neutral-1000);
+  --background: var(--palette-neutral-1000);
+  --foreground: var(--palette-neutral-100);
 }
 
 @media (prefers-color-scheme: dark) {

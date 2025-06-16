@@ -17,7 +17,7 @@ export default async function DashboardPage() {
     <div>
       <Header className={headerStyles.header}>
         {/* mobile-only buttons */}
-        <div className="flex items-center space-x-2 sm:hidden">
+        <div className="flex items-center sm:hidden">
           <Button
             variant="primary"
             size="md"
