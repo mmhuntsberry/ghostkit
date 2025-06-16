@@ -105,7 +105,7 @@ export default function DashboardPage() {
 
   return (
     <div className="p-6 space-y-8">
-      <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100">
+      <h1 className="text-3xl font-bold  dark:text-gray-100">
         Design System Adoption & Health Dashboard
       </h1>
 

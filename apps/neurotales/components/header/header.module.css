@@ -27,7 +27,3 @@
 }
 
 @media (max-width: 640px) {
-  .title {
-    font-size: var(--font-size-xl);
-  }
-}

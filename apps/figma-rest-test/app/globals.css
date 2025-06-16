@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: var(--palette-neutral-lightest);
-  --foreground: var(--palette-neutral-darkest);
+  --background: var(--palette-neutral-darkest);
+  --foreground: var(--palette-neutral-lightest);
 }
 
 @media (prefers-color-scheme: dark) {
