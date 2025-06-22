@@ -251,7 +251,6 @@
 }
 
 .testimonialsSection {
-  margin-top: var(--layout-5xs);
   padding: var(--space-lg);
 
   /* text-align: center; */
