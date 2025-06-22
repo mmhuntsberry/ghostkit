@@ -359,6 +359,7 @@
   --layout-3xs: var(--_size-192);
   --layout-4xl: var(--_size-1600);
   --layout-4xs: var(--_size-144);
+  --layout-5xs: var(--_size-128);
 
   --opacity-disabled: var(--_opacity-48);
 
