@@ -322,7 +322,7 @@
   --fs-lg: clamp(1.14rem, 5.49vi + 0.04rem, 2.4rem);
   --fs-xl: clamp(1.21rem, 8.01vi + -0.39rem, 4.74rem);
   --fs-2xl: clamp(1.3rem, 11.41vi + -0.98rem, 6.31rem);
-  --fs-3xl: clamp(var(--font-size-2xl), 15vi + -2rem, var(--font-size-8xl));
+  --fs-3xl: clamp(2.2rem, 15vi + -2rem, var(--font-size-8xl));
 
   --border-width-lg: var(--_size-4);
   --border-width-md: var(--_size-2);

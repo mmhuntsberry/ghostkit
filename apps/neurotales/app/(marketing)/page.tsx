@@ -107,9 +107,9 @@ export default async function DashboardPage() {
             <Image
               src="/images/sleog.svg"
               alt="NeuroTales Illustration"
-              className={`object-contain object-center ${styles.illustration}`}
-              width={400}
-              height={400}
+              className={`object-contain object-center `}
+              width={512}
+              height={512}
             />
           </div>
         </section>
@@ -186,7 +186,7 @@ export default async function DashboardPage() {
         </section>
 
         <section className={styles.howItWorksSection}>
-          <div className={styles.howItWorksImage}>
+          <div className={`${styles.howItWorksImage}`}>
             <Image
               src="/images/king-fish.svg"
               alt="Illustration of a cartoon fish with a crown"
