@@ -1,28 +1,8 @@
 {
-  "startDate": "2025-03-18",
-  "endDate": "2025-06-16",
+  "startDate": "2025-05-01",
+  "endDate": "2025-07-30",
   "days": 90,
   "data": [
-    {
-      "week": "2025-03-30",
-      "insertions": 27,
-      "detachments": 0
-    },
-    {
-      "week": "2025-04-06",
-      "insertions": 18,
-      "detachments": 1
-    },
-    {
-      "week": "2025-04-13",
-      "insertions": 96,
-      "detachments": 0
-    },
-    {
-      "week": "2025-04-20",
-      "insertions": 261,
-      "detachments": 2
-    },
     {
       "week": "2025-04-27",
       "insertions": 134,
@@ -57,6 +37,36 @@
       "week": "2025-06-08",
       "insertions": 400,
       "detachments": 4
+    },
+    {
+      "week": "2025-06-15",
+      "insertions": 386,
+      "detachments": 10
+    },
+    {
+      "week": "2025-06-22",
+      "insertions": 624,
+      "detachments": 3
+    },
+    {
+      "week": "2025-06-29",
+      "insertions": 553,
+      "detachments": 1
+    },
+    {
+      "week": "2025-07-06",
+      "insertions": 318,
+      "detachments": 0
+    },
+    {
+      "week": "2025-07-13",
+      "insertions": 475,
+      "detachments": 3
+    },
+    {
+      "week": "2025-07-20",
+      "insertions": 429,
+      "detachments": 0
     }
   ]
 }

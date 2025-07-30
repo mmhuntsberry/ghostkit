@@ -1,0 +1,67 @@
+---
+description: Convert Figma interaction styles into CSS pseudo‑classes
+alwaysApply: false
+dependsOn:
+  - figma-mcp-to-react.mdc
+---
+
+When the selected layer contains `interactionDetails`:
+
+- Map `:hover` + `:pressed` → `:hover` / `:active`.
+- Map `focus-visible` → `:focus-visible`.
+- Extract effect tokens (shadow, opacity) and output them as custom properties.
+
+Append CSS to the generated `<Component>.module.css` like:
+
+```css
+.root:is(:hover, :active) {
+  --background: var(--token-bg-hover);
+  box-shadow: var(--token-shadow-pressed);
+}
+```
+
+Do not create a new template; mutate the existing CSS file in‑place.
+
+(≈ 95 words)
+
+---
+
+### 4. `figma-constraints-to-media.mdc`
+
+````mdc
+---
+description: Translate Figma constraints into container queries
+alwaysApply: false
+dependsOn:
+  - figma-mcp-to-react.mdc
+---
+
+If `design_context.layoutMode` includes min/max widths or auto‑layout “Hug” values:
+
+1. Determine breakpoint tokens (`sm`, `md`, `lg`) from `@tokens-map.json`.
+2. Append `@container` rules to `<Component>.module.css`:
+
+```css
+@container (min-width: var(--breakpoint-md)) {
+  .root {
+    gap: var(--space-md);
+    padding-inline: var(--space-lg);
+  }
+}
+
+Use container queries over media queries so nested components respond to parent size.
+
+(≈ 120 words)
+
+---
+
+#### Next steps
+
+1. **Add the four files** above to `.cursor/rules/`.
+2. **Create the four templates** referenced in file #2 (they’re ordinary code files, not rules).
+3. Test with a single Figma Button set.
+4. We’ll iterate: split rules further or tighten wording once you see real Cursor output.
+
+Let me know when you’ve run the first generation and we’ll refine!
+::contentReference[oaicite:0]{index=0}
+````

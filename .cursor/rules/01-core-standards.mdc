@@ -1,0 +1,40 @@
+---
+description: Global coding conventions for every DS component
+alwaysApply: true
+---
+
+**Architecture**
+
+- Write React + TypeScript 5.x, functional components only.
+- Use CSS Modules with PostCSS nesting; file name `<Component>.module.css`.
+- Import design tokens from `@mmhuntsberry/tokens`. Never hard‑code colour, radius, size, or spacing values.
+
+**Patterns**
+
+1. All components forward refs and export their Props interface.
+2. Variants map 1‑for‑1 to design‑system tokens (`data‑variant="primary"` etc.).
+3. ARIA roles and keyboard interaction must match WCAG 2.2 AA.
+
+**File layout**
+src/lib/components/<Component>/
+<Component>.tsx
+<Component>.module.css
+stories/<Component>.stories.tsx
+tests/<Component>.spec.tsx
+
+**Storybook**
+
+- Story must showcase every variant/size.
+- Use `controls` for props; attach Figma link in `parameters.design`.
+
+**Testing**
+
+- Jest + @testing-library/react.
+- Minimum: render, prop change, key accessibility role.
+
+**Release**
+
+- Add export to `src/index.ts`.
+- Follow Conventional Commits for version bump.
+
+(≈ 175 words)

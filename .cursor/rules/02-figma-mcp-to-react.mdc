@@ -1,0 +1,34 @@
+---
+description: Generate or update a React component from a Figma Dev‑Mode selection
+alwaysApply: false
+triggers:
+  - urlPattern: "https://www.figma.com/*node-id=*"
+templates:
+  - react: "@react-component-template.tmpl"
+  - css: "@css-module-template.css.tmpl"
+  - story: "@story-template.stories.tmpl"
+  - test: "@test-template.spec.tmpl"
+---
+
+**Workflow (agent)**
+
+1. Call `design_context` + `variables` on the Figma selection.
+2. Build a `<COMP_NAME>Props` interface: every `variantProperties` key becomes a union type.
+3. Map each returned `variableId` ➜ token name using `@tokens-map.json`.
+4. Fill template placeholders:
+
+   | Slot                | Value                   |
+   | ------------------- | ----------------------- |
+   | `<COMPONENT_NAME>`  | Cleaned Figma node name |
+   | `<PROPS_INTERFACE>` | Generated interface     |
+   | `<CLASSNAME_MAP>`   | CSS Module class names  |
+
+5. Write files to `src/lib/components/<Component>/`.
+6. Append export in `src/index.ts` if absent.
+
+**Limits**
+
+- Only process a single component‑set per invocation.
+- If an identical component already exists **and** Code Connect path matches, update variant list instead of regenerating.
+
+(≈ 210 words)

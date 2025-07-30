@@ -5,6 +5,7 @@ import { db } from "@/db"; // use alias (or "../../../db")
 import { stories, storyPages } from "@/db/schema";
 import { eq, asc } from "drizzle-orm";
 import Image from "next/image";
+import { SwapImageWrapper } from "./SwapImageWrapper";
 
 interface StoryContentProps {
   storyId: number;
@@ -39,20 +40,10 @@ export default function StoryContent({ storyId }: StoryContentProps) {
       <p className="mb-4 text-gray-700">{story.scenario}</p>
 
       {pages.map((page) => (
-        <div key={page.id} className="mb-6 bg-gray-100 p-4 rounded-lg">
+        <div key={page.id} className="mb-6  p-4 rounded-lg">
           <h2 className="font-semibold mb-2">Page {page.pageNumber}</h2>
 
-          {page.imageUrl && (
-            <Image
-              src={page.imageUrl}
-              alt={page.imageAlt ?? `Page ${page.pageNumber} image`}
-              title={page.imageTitle ?? ""}
-              width={300}
-              height={300}
-              className="mb-4 rounded"
-              priority
-            />
-          )}
+          {page.imageUrl && <SwapImageWrapper storyPageId={page.id} />}
 
           <p>{page.content}</p>
         </div>

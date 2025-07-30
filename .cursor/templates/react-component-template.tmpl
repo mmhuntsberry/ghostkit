@@ -1,0 +1,46 @@
+/* ⚠️ THIS FILE IS A TEMPLATE — it will be copied, filled, and
+   placed in src/lib/components/<Component>/<Component>.tsx.
+   Edits here affect every future generation.                           */
+
+/* eslint‑disable @typescript-eslint/consistent-type-imports */
+import * as React from "react";
+import clsx from "clsx";
+import styles from "./<COMPONENT_NAME>.module.css";
+
+/* -------------------------------------------------------------------- */
+/*  ✂︎  Cursor injects the generated interface below                     */
+/* -------------------------------------------------------------------- */
+<PROPS_INTERFACE>
+/* -------------------------------------------------------------------- */
+
+/**
+ * `<COMPONENT_NAME>`
+ * Auto‑generated from Figma Dev‑Mode MCP.
+ * The variant & size props map 1‑for‑1 to the Figma component‑set.
+ */
+export const <COMPONENT_NAME> = React.forwardRef<
+  HTMLButtonElement,
+  <COMPONENT_NAME>Props
+>(function <COMPONENT_NAME>(
+  {
+    /* ✂︎  Cursor inserts defaulted variant props here  */
+    className,
+    children,
+    ...rest
+  },
+  ref
+) {
+  return (
+    <button
+      ref={ref}
+      /* Data attributes make variant styling explicit in the DOM  */
+      /* ✂︎  Cursor adds data‑variant / data‑size etc. here          */
+      className={clsx(styles.root, <CLASSNAME_MAP>, className)}
+      {...rest}
+    >
+      {children}
+    </button>
+  );
+});
+
+<COMPONENT_NAME>.displayName = "<COMPONENT_NAME>";
