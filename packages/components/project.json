@@ -50,6 +50,21 @@
         "command": "npm publish",
         "cwd": "dist/packages/components"
       }
+    },
+    "storybook": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "packages/components/.storybook"
+      }
+    },
+    "build-storybook": {
+      "executor": "@nx/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "configDir": "packages/components/.storybook",
+        "outputPath": "dist/packages/components/storybook-static"
+      }
     }
   }
 }

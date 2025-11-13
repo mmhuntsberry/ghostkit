@@ -1,0 +1,45 @@
+.label {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.text {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  font-family: var(--font-family-default);
+  font-weight: var(--font-weight-normal);
+  text-align: left;
+  white-space: nowrap;
+  font-style: normal;
+  line-height: 0;
+}
+
+/* Size variants */
+.label[data-size="xs"] .text {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+.label[data-size="sm"] .text {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+  letter-spacing: var(--letter-spacing-md);
+}
+
+/* Variant styles */
+.label[data-variant="default"] .text {
+  color: var(--palette-content-default);
+}
+
+.label[data-variant="knockout"] .text {
+  color: var(--palette-content-knockout);
+}
+
+/* Adjust letter spacing for xs size */
+.label[data-size="xs"] .text {
+  letter-spacing: 0.4px;
+}
